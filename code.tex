@@ -1,0 +1,165 @@
+\chapter{SageMath Code}
+
+\lstset{language=Python} 
+
+\lstset{ 
+  backgroundcolor=\color{lightgray},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\scriptsize,        % the size of the fonts that are used for the code
+  frame=single
+  breaklines=true
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}
+}
+
+Here we include the library of functions written to obtain the results in Chapter 3. We give a brief description of the purpose of each function, and an explanation on the nature of inputs and outputs.
+
+First we have some auxillary functions. The function projection does X.
+\begin{lstlisting}
+def projection(P,F):
+    A = F.as_polyhedron().equations()[0].A()
+    b = F.as_polyhedron().equations()[0].b()
+    A = list(A)
+    B = vector(QQ,A)
+    B = denominator(B)*B
+    A = list(B)
+    B = matrix(ZZ,B)
+    K = B.right_kernel()
+    if P.dimension() == 1:
+        K = matrix(ZZ,[0])
+    else:
+        K = matrix(ZZ,K.basis())
+    return [K,A]
+\end{lstlisting}
+
+The functions acoeff and bcoeff calculate specific coefficients used at points where the Barvinok algorithm terminates. They take as input a face \(F\) of a polytope \(P\), together with a vector \(c \in N_\RR\) such that Y.
+\begin{lstlisting}
+def acoeff(F,c):
+    v_0 = F.vertices()[0].vector(); v_0
+    return exp(c.dot_product(v_0))
+
+def bcoeff(F,v):
+    u_0 = F.vertices()[0].vector()
+    return v.dot_product(u_0)
+\end{lstlisting}
+The function relvolume is simply a modification of the SageMath polytope volume method so that we may use it to calculate relative volumes of the faces of \(P\).
+\begin{lstlisting}
+def relvolume(P):
+    if P.dimension() == 0:
+        return 1
+    else:
+        return P.volume()
+\end{lstlisting}
+
+The function intexp:
+Calculates the integral of exp(c*x) dx over the polyhedron P recursively using the Barvinok method. Input is a polyhedron P,
+a sufficiently general vector L (not orthogonal, after projection, to c or any face of P at any stage of the recursion),
+and a vector c for the integrand. To optimize performance values obtained at faces are cached along the way.
+
+
+
+\begin{lstlisting}
+def intexp(P,L,c,face=None, cache=None):
+    if face is None: face = tuple(range(P.n_vertices()))
+    if cache is None:
+        cache = {}
+    if cache.has_key(frozenset(face)):
+        return cache[frozenset(face)]
+    I = 0
+    if c.is_zero():
+        cache[face]= relvolume(P)
+        return relvolume(P)
+    else:
+        for F in P.faces(P.dimension() -1):
+            ProjMatrix,A = projection(P,F)
+            n_F = -F.ambient_Hrepresentation()[0].A()
+            n_F = n_F/gcd(n_F)
+            coeff = acoeff(F,c)*(1/L.dot_product(c))*(L.dot_product(n_F))
+            c_F = ProjMatrix*c
+            L_F = ProjMatrix.insert_row(0,vector(ZZ,A)).transpose().solve_right(L)[1:]
+            v_0 = F.vertices()[0].vector(); v_0
+            Vert = [ProjMatrix.transpose().solve_right(v.vector() - v_0)  for v in F.vertices() ]
+            face_F = tuple([face[i] for i in F._ambient_Vrepresentation_indices])
+            P_F = Polyhedron(vertices = Vert, backend="cdd")
+            I = I + coeff*intexp(P_F,L_F,c_F,face_F,cache)
+    cache[frozenset(face)]=I
+    return I
+\end{lstlisting}
+
+The function intxexp:
+Calculates the integral of <x,v>*exp(<x,c>) dx over the polyhedron P recursively using the Barvinok method. Input is a polyhedron P,
+a sufficiently general vector L (not orthogonal, after projection, to c or any face of P at any stage of the recursion),
+and vectors c and v for the integrand. To optimize performance values obtained at faces are cached along the way.
+
+\begin{lstlisting}
+def intxexp(P,L,c,v,face=None,cache=None,cache2=None):
+    if face is None: face = tuple(range(P.n_vertices()))
+    if cache2 is None:
+        cache2 = {}
+    if cache is None:
+        cache = {}
+    if cache.has_key(frozenset(face)):
+        return cache[frozenset(face)] 
+    I = 0
+    if c.is_zero():
+        if v.is_zero() : return 0
+        for T in list(P.triangulate()):
+            T = [P.Vrepresentation()[ZZ(t)].vector() for t in T]
+            bary = sum(T)/len(T)
+            T = Polyhedron(vertices = T)
+            I = I + T.volume()*bary.dot_product(v)
+    else:
+        for F in P.faces(P.dimension() -1):
+                ProjMatrix = projection(P,F)
+                L_F  = ProjMatrix[0].insert_row(0,vector(ZZ,ProjMatrix[1])).transpose().solve_right(L)[1:]
+                c_F = ProjMatrix[0]*c
+                v_F = ProjMatrix[0]*v
+                v_0 = F.vertices()[0].vector(); v_0
+                Vert = [ProjMatrix[0].transpose().solve_right(w.vector() - v_0)  for w in F.vertices() ]
+                face_F = tuple([face[i] for i in F._ambient_Vrepresentation_indices])
+                P_F = Polyhedron(vertices = Vert,backend="cdd")
+                n_F = -F.ambient_Hrepresentation()[0].A()
+                n_F = n_F/gcd(n_F)
+                I = I + (L.dot_product(n_F)/L.dot_product(c))*acoeff(F,c)*(intxexp(P_F,L_F,c_F,v_F,face_F,cache,cache2) + bcoeff(F,v)*intexp(P_F,L_F,c_F,face_F,cache2)) - L.dot_product(n_F)*(v.dot_product(L)/(L.dot_product(c)^2))*acoeff(F,c)*intexp(P_F,L_F,c_F,face_F,cache2)
+    cache[frozenset(face)]=I
+    return I
+\end{lstlisting}
+
+The function degenerations returns the list of degneration polytopes of given combinatorial data of a T-variety, as defined in (ref). It takes inputs L and B, where L is a list of matrices and B is the base polytope. Each matrix in L represents a piecewise affine function on B in the following way: Suppose \(v_j\) are the columns of \(M\) in the list \(L\). We then form the piecewise affine function \(\phi_M(x_1,\dots,x_n) := \min_j \{ (1,x_1,x_2,\dots,x_n) \cdot v_j \} \)
+
+\begin{lstlisting}
+def degenerations(L,B):
+    dim = L[0].nrows()
+    genericfunction = matrix(QQ, dim, 1, lambda i, j: 0)
+    L = L +[genericfunction]
+    def shift(A,r):
+        shift = matrix(QQ,  A.transpose().nrows() , 1, lambda i, j: r);
+        zeroes = matrix(QQ, A.transpose().nrows(), A.nrows() -1 , lambda i, j: 0);
+        return A + shift.augment(zeroes).transpose()
+    def minsum(L):
+        msCurrent = L[0]
+        def minsum_step(A1,A2):
+            C = matrix(QQ,A2.nrows(),1,lambda i, j: 0)
+            for c in A1.columns():
+                for d in A2.columns():
+                    C = C.augment(d+c);
+            return C.delete_columns([0])
+        for l in L[1:]:
+            msCurrent = minsum_step(msCurrent,l)
+        return msCurrent
+    def degenerations_step(L,k,B):
+        up = shift(L[k],1)
+        base = matrix(QQ, B.inequalities_list()[:]);
+        low = L[:]; low.pop(k);
+        low = minsum(low).transpose();
+        up = up.transpose()
+        base = base.augment(matrix(QQ,  base.nrows() , 1, lambda i, j: 0)).transpose()
+        up = up.augment(matrix(QQ, up.nrows(), 1, lambda i, j: -1)).transpose()
+        low = low.augment(matrix(QQ, low.nrows(), 1, lambda i, j: 1)).transpose()
+        low = shift(low,1)
+        P = Polyhedron(ieqs = [list(v) for v in up.augment(low.augment(base)).columns()])
+        return P;
+    Polyhedra = [];
+    for k in range(len(L)):
+        Polyhedra = Polyhedra + [degenerations_step(L,k,B)];
+    return Polyhedra
+\end{lstlisting}
+

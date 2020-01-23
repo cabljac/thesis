@@ -1,0 +1,14 @@
+def projection(P,F):
+    A = F.as_polyhedron().equations()[0].A()
+    b = F.as_polyhedron().equations()[0].b()
+    A = list(A)
+    B = vector(QQ,A)
+    B = denominator(B)*B
+    A = list(B)
+    B = matrix(ZZ,B)
+    K = B.right_kernel()
+    if P.dimension() == 1:
+        K = matrix(ZZ,[0])
+    else:
+        K = matrix(ZZ,K.basis())
+    return [K,A]

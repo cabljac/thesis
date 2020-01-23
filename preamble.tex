@@ -1,0 +1,240 @@
+\documentclass[12pt,twoside]{muthesis}
+
+  %% this block is for solitons tables
+
+\usepackage{listings}
+
+
+\usepackage{multirow}
+
+
+
+\usepackage{float}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{cite}
+\usepackage{amscd,amssymb,amsmath,nccmath,microtype}
+\usepackage{calligra,mathrsfs}
+\usepackage{graphicx}
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\usepackage{changepage}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{nicefrac}
+\usepackage{stmaryrd}
+
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+%\PassOptionsToPackage{gray}{xcolor}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage[most]{tcolorbox}
+\usepackage{booktabs}
+\usepackage{longtable}
+
+\usepackage{xypic}
+
+\usepackage{tikz}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{subcaption} 
+\usepackage{mathtools}
+\usepackage[draft,multiuser,layout={margin,index}]{fixme}
+\usepackage{pifont}
+
+
+\usepackage{tikz-cd}
+
+\usepackage{tikz-3dplot}
+\tdplotsetmaincoords{70}{110}
+
+\usepackage{subcaption}
+
+\usetikzlibrary{shapes.geometric}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+
+\makeatletter
+\newcommand*{\@rowstyle}{}
+
+\newcommand*{\rowstyle}[1]{% sets the style of the next row
+  \gdef\@rowstyle{#1}%
+  \@rowstyle\ignorespaces%
+}
+
+\newcolumntype{=}{% resets the row style
+  >{\gdef\@rowstyle{}}%
+}
+
+\newcolumntype{+}{% adds the current row style to the next column
+  >{\@rowstyle}%
+}
+
+\makeatother
+
+
+\newtheorem*{ttheorem}{Tian's criterion}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{construction}{Construction}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{remark}{Remark}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+
+
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\pt}{\{\mathbf{pt}\}}
+\renewcommand{\Vert}{\mathcal{V}}
+\newcommand{\Hor}{\mathcal{H}}
+%\newcommand{\QGIT}{/^{^{\mathsf{GIT}}}}
+\newcommand{\QGIT}{{\!/\!\!/}}
+\newcommand{\tXn}{{\widetilde{X}^\circ}}
+\newcommand{\Xn}{{X^\circ}}
+\newcommand{\tX}{{\widetilde{X}}}
+\newcommand{\tD}{{\widetilde{D}}}
+\newcommand{\tL}{{\widetilde{\L}}}
+\newcommand{\T}{{\mathcal{T}}}
+\newcommand{\tY}{{\widetilde{Y}}}
+\newcommand{\CC}{\mathbb{C}}
+\renewcommand{\L}{\mathcal{L}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\lin}[1]{\text{span}\,(#1)}
+\newcommand{\equivn}{{\stackrel{\scriptscriptstyle\text{num}}{\sim}}}
+\newcommand{\KK}{k}
+\newcommand{\xx}{\mathrm{x}}
+
+\newcommand{\savefootnote}[2]{\footnote{\label{#1}#2}}
+\newcommand{\repeatfootnote}[1]{\textsuperscript{\ref{#1}}}
+
+\newcommand{\fan}{\Xi}
+\newcommand{\CO}{{\mathcal{O}}}
+\newcommand{\f}{{\mathfrak{f}}}
+\newcommand{\h}{{\mathfrak{h}}}
+\newcommand{\cA}{{\mathcal{A}}}
+\newcommand{\X}{{\mathcal{X}}}
+\newcommand{\Y}{{\mathcal{Y}}}
+\newcommand{\Z}{{\mathcal{Z}}}
+\newcommand{\D}{{\mathfrak{D}}}
+\newcommand{\R}{{\mathcal{R}}}
+\newcommand{\bphi}{\bar \Phi}
+\newcommand{\sufficient}{valuable }
+\renewcommand{\O}{\mathcal{O}}
+\renewcommand{\div}{\text{div}}
+\DeclareMathOperator{\TV}{TV}
+\DeclareMathOperator{\barycenter}{bary}
+\DeclareMathOperator{\DF}{DF}
+\DeclareMathOperator{\Sl}{Sl}
+\DeclareMathOperator{\GIT}{GIT}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\Bl}{Bl}
+\DeclareMathOperator{\Loc}{Loc}
+\DeclareMathOperator{\ray}{ray}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\NE}{NE}
+\DeclareMathOperator{\face}{face}
+\DeclareMathOperator{\quot}{Quot}
+\DeclareMathOperator{\rk}{rank}
+\DeclareMathOperator{\relint}{relint}
+\DeclareMathOperator{\tail}{tail}
+\DeclareMathOperator{\SF}{SF}
+\DeclareMathOperator{\tcadiv}{T-CaDiv}
+\DeclareMathOperator{\tdiv}{T-Div}
+\DeclareMathOperator{\PD}{PD}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\divisor}{div}
+\DeclareMathOperator{\cadiv}{CaDiv}
+\DeclareMathOperator{\wdiv}{Div}
+\DeclareMathOperator{\pic}{Pic}
+\DeclareMathOperator{\spec}{Spec}
+\DeclareMathOperator{\proj}{Proj}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Pol}{Pol}
+\DeclareMathOperator{\loc}{Loc}
+\DeclareMathOperator{\SPEC}{\mathbf{Spec}}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\pos}{pos}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\cl}{Cl}
+\DeclareMathOperator{\num}{NS}
+\DeclareMathOperator{\syz}{Rel}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\lct}{g\bf{lct}}
+\DeclareMathOperator{\init}{in}
+\DeclareMathOperator{\numq}{NS_{\hspace{.2pt}\QQ}}
+\DeclareMathOperator{\Div}{div}
+\DeclareMathOperator{\Cox}{Cox}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\Ric}{Ric}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\glct}{glct}
+
+
+\providecommand{\Ric}{\mathop{\rm Ric}\nolimits}
+\providecommand{\bc}{\mathop{\rm bc}\nolimits}
+\providecommand{\Aut}{\mathop{\rm Aut}\nolimits}
+\providecommand{\DF}{\mathop{\rm DF}\nolimits}
+
+\providecommand{\inte}{\text{int}}
+\renewcommand{\L}{\mathcal{L}}
+\providecommand{\vol}{\mathop{\rm vol}\nolimits}
+
+\def\diagram1{
+
+\definecolor{wrwrwr}{rgb}{0.3803921568627451,0.3803921568627451,0.3803921568627451}
+\definecolor{rvwvcq}{rgb}{0.08235294117647059,0.396078431372549,0.7529411764705882}
+
+\begin{tikzpicture}[scale=0.4,line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\clip(-8.69388785352341,-6.85149354395804) rectangle (12.217649006953684,5.977670174126094);
+\fill[line width=0.4pt,color=rvwvcq,fill=rvwvcq,fill opacity=0.10000000149011612] (3.95,-3.22) -- (-4.499755258769425,-0.465188547516475) -- (-4.021306091512521,1.7101502921524365) -- (3.8019942792933907,3.9467619721580767) -- (9.206358516755902,2.6979556386504635) -- (7.16248304580607,-1.3101637913940103) -- cycle;
+\draw [line width=0.4pt,color=wrwrwr] (-4.499755258769425,-0.465188547516475)-- (-4.021306091512521,1.7101502921524365);
+\draw [line width=0.4pt,color=wrwrwr] (-4.021306091512521,1.7101502921524365)-- (3.8019942792933907,3.9467619721580767);
+\draw [line width=0.4pt,color=wrwrwr] (-4.499755258769425,-0.465188547516475)-- (3.95,-3.22);
+\draw [line width=0.4pt,color=wrwrwr] (2.4376800090649002,0.7867993541259463)-- (-16.628346540838827,-10.065412601807587);
+\draw [line width=0.4pt,color=rvwvcq] (3.95,-3.22)-- (-4.499755258769425,-0.465188547516475);
+\draw [line width=0.4pt,color=rvwvcq] (-4.499755258769425,-0.465188547516475)-- (-4.021306091512521,1.7101502921524365);
+\draw [line width=0.4pt,color=rvwvcq] (-4.021306091512521,1.7101502921524365)-- (3.8019942792933907,3.9467619721580767);
+\draw [line width=0.4pt,color=rvwvcq] (3.8019942792933907,3.9467619721580767)-- (9.206358516755902,2.6979556386504635);
+\draw [line width=0.4pt,color=rvwvcq] (9.206358516755902,2.6979556386504635)-- (7.16248304580607,-1.3101637913940103);
+\draw [line width=0.4pt,color=rvwvcq] (7.16248304580607,-1.3101637913940103)-- (3.95,-3.22);
+\draw [line width=0.4pt,color=wrwrwr] (-4.499755258769425,-0.465188547516475)-- (-6.0703572252974505,-0.590007254352775);
+\draw [line width=0.4pt,color=wrwrwr,domain=-8.69388785352341:12.217649006953684] plot(\x,{(-7.125388691254146-1.5706019665280255*\x)/0.12481870683630003});
+\draw [line width=0.4pt,color=wrwrwr] (-0.2748776293847124,-1.8425942737582377)-- (-0.6233328024886629,-2.9114009714819993);
+\draw (2.430829827729521,1.0842605845140028) node[anchor=north west] {$b$};
+\draw (-4.2953174358945745,-2.746161154171117) node[anchor=north west] {$p_w$};
+\draw (-2,-1.4) node[anchor=north west] {$q$};
+\draw (-0.65,-2.471250503069314) node[anchor=north west] {$n$};
+\draw (-8.3,4) node[anchor=north west] {$\Pi(w,a)$};
+\draw [->,line width=0.05pt,color=wrwrwr] (-0.2748776293847124,-1.8425942737582377) -- (-0.6233328024886629,-2.9114009714819993);
+\draw [->,line width=0.05pt,color=wrwrwr] (-4.499755258769425,-0.465188547516475) -- (-6.0703572252974505,-0.590007254352775);
+\draw (-6.3296562540479115,-0.505) node[anchor=north west] {$w$};
+\draw (-0.20831242284778076,2.0372841750002526) node[anchor=north west] {$\Huge{P}$};
+\draw (-0.4648956972094629,-0.5652033220968145) node[anchor=north west] {$O$};
+\draw (-4.533573333516137,0.2) node[anchor=north west] {$a$};
+\begin{scriptsize}
+\draw [fill=wrwrwr] (-4.499755258769425,-0.465188547516475) circle (1.5pt);
+\draw [fill=wrwrwr] (-0.4676952405849731,-0.8669142782450808) circle (1.5pt);
+\draw [fill=wrwrwr] (2.4376800090649002,0.7867993541259463) circle (1.5pt);
+\draw [fill=wrwrwr] (-4.294715291030033,-3.0452198962684096) circle (2pt);
+\draw [fill=wrwrwr] (-1.4873591410315417,-1.4472978596114847) circle (1.5pt);
+\end{scriptsize}
+\end{tikzpicture}
+}
