@@ -1,8 +1,5 @@
 \chapter{K\"ahler-Einstein metrics on symmetric general arrangement varieties} \label{chap:gav}
-In this chapter we prove Theorem~\ref{thm:KE1} and Theorem~\ref{thm:KE2}. Recall the constructions of \(X_{\alpha,\beta}^{2n-1}\) and \(W^{2n}\), see \ref{content:generalarrangement}. Note there is a natural \(S_{n+1}\)-action on \(X^{2n-1}_{\alpha,\beta}\) permuting the indices of variables. Additionally, by results of \cite{li06}, the \(S_{n+1}\)-action on \(Q^{2n}\) permuting the \(Z_i\) induces an action on \(W^{2n}\). To prove Theorems \ref{thm:KE1}, \ref{thm:KE2} we would like to apply Theorem~\ref{thm:SU} and then Tian's criterion \ref{thm:tcrit}.
-
-
-The first examples we are interested in are some hypersurfaces of  bidegree \((\alpha,\beta)\). Consider the following varieties
+In this chapter we use equivariant methods to find new K\"ahler-Einstein metrics on some complexity two \(T\)-varieties. The first examples we are interested in are some hypersurfaces of  bidegree \((\alpha,\beta)\). Consider the following varieties:
 \[
 X_{\alpha,\beta}^{2n-1} := V \left( \sum_{i=0}^n x_i^\alpha y_i^\beta \right) \subseteq \PP^n \times \PP^n
 \]
@@ -18,11 +15,9 @@ Let \(K\) be the maximal compact torus of \(T\). There is a homeomorphism:
 \[
 X_{\alpha,\beta}^{2n-1}/K \cong S^{n-1} \ast \PP^{n-1}.
 \]
-Where the later is the topological join of the \((n-1)\)-sphere and complex projective \((n-1)\)-space. 
+Where the later is the topological join of the \((n-1)\)-sphere and complex projective \((n-1)\)-space. In particular, this shows that the \(K\)-orbit space of the flag manifold \(F(1,n-1,\CC^n) = X_{1,1}^{2n-1}\) is of this form.
 \end{corollary}
-In particular, this shows that the \(K\)-orbit space of the flag manifold \(F(1,n-1,\CC^n) = X_{1,1}^{2n-1}\) is of this form.
-
-Our second example is an iterated blow-up of the even-dimensional quadric hypersurface. Consider the following representation:
+Our third example is an iterated blow-up of the even-dimensional quadric hypersurface. Consider the following representation:
 \begin{align*}
 Q^{2n} &:= V \left( \sum_{i=0}^{n} x_{2i}x_{2i+1} \right) \subset \PP^{2n+1}.
 \end{align*}
@@ -30,152 +25,11 @@ Let \(Z_i := V(x_{2i},x_{2i+1}) \subset Q^{2n}\) for \(i=0,\dots,n\). Let \(W^{2
 \begin{theorem}[{\cite[Theorem 1.2]{cable2019general}}]\label{thm:KE2}
 \(W^6\) admits a \(T'\)-invariant K\"ahler-Einstein metric.
 \end{theorem}
-\section{Log canonical thresholds and Tian's criterion}
-In this section we recall the definition of the log canonical threshold, and its relation to Tian's alpha invariant.
-\subsection{Log canonical thresholds}
-Here we recall the definition of the global log canonical threshold of of a log pair, which features in Theorem~\ref{thm:SU} and Lemma~\ref{lem:alph}. A log pair \((Y,D)\) consists of a normal variety \(Y\) and a \(\QQ\)-divisor \(D\), where the coefficients of the irreducible components of \(D\) lie in \([0,1]\). The canonical divisor of such a pair is \(K_Y+D\). A pair \((Y,D)\) is called smooth if \(Y\) is smooth and \(D\) is a simple normal crossings divisor. A log resolution of a log pair \((Y,D)\) is a birational map \(\pi: \tilde{Y} \to Y\) such that \((\tilde{Y},\varphi^*D)\) is smooth.
-
-\begin{definition}
-Suppose \(\pi: \tilde{Y} \to Y\) is a log resolution of a pair \((Y,D)\). Write \(D = \sum a_i D_i\) for prime \(D_i\) and rational \(a_i\). Then:
-\[
-\pi^*(K_Y+ D) - K_{\tilde{Y}}\sim_{\QQ} \sum_i a_i \tilde{D_i} + \sum_j b_j E_j
-\]
-where \(\tilde{D_i}\) is the proper transform of \(D_i\) and the \(E_j\) are the \(\pi\)-exceptional divisors. We say \((Y,D)\) is log canonical at \(P \in Y\) if we have \(a_i \le 1 \) for \(P \in D_i\), and \(b_j \le 1\) for \(E_j\) such that \(\pi(E_j) = P\). This condition is independent of the choice of resolution. If \((Y,D)\) is log canonical at all \(P  \in Y\) then we say \((Y,D)\) is (globally) log canonical.
-\end{definition}
-\begin{example} \label{examplelct}
-Consider the pair \(Y = \PP^2\) and \(D = \sum a_i L_i\) where \(L_i\) are all lines through a point \(P \in Y\). Blowing up at \(P\) we obtain the following:
-\[
-\pi^*(K_Y+D) - K_{\tilde{Y}} \sim_{\QQ} (\deg D - 1) E + \sum a_i \tilde{L}_i
-\]
-Where \(E\) is the exceptional divisor  of the blow-up. Therefore \((Y,D)\) is log-canonical whenever we have \(\deg D \le 2\) and all \(a_i \le 1\).
-\end{example}
-Recall the following consequence of the main theorem of \cite{demailly2001}, as stated in the proof of \cite[Lemma 5.1]{cheltsov08}. This allows us to degenerate a pair under a \(\CC^*\)-action if we want to show it is log canonical.
-\begin{proposition} \label{degenpair}
-Let \((Y,D)\) be a log pair. Suppose \(\{ D_t | t \in \CC\}\) is a family of \(\QQ\)-divisors such that \(D_t \sim_\QQ D\), \(D_1 = D\), and for \(t \neq 0\) there exists \(\phi_t \in \Aut(X)\) such that \(D_t = \phi_t(D)\). Then \((Y,D)\) is log canonical if \((Y,D_0)\) is.
-\end{proposition}
-Now we recall the definition of the global log canonical threshold of a pair, as given in \cite{suess18-2}.
-\begin{definition}
-The global \(G\)-equivariant log canonical threshold of a log pair \((Y,B)\)  is defined to be:
-\[
-\glct_{G}(Y,B) := \sup \{ \lambda | (Y,B+ \lambda D) \text{ log canonical } \forall D \in | -K_X - B |_{\QQ}^G \}
-\]
-When \(B\) is trivial we will suppress it in our notation, writing \(\glct_G(X)\) for the \(G\)-equivariant log canonical threshold of a normal variety \(X\).
-\end{definition}
-\subsection{Tian's alpha invariant and criterion} \label{prelim:alphainvariant}
-Here we recall the definition of Tian's alpha invariant and its relation to the global log canonical threshold. We extend a result by Demailley finite groups to a finite group semi-direct product an algebraic torus, which we will need for calculations later in Chapter~\ref{chap:gav}. The paper \cite{cheltsov08} serves as a good reference for the definitions in this section.
-
-Tian's alpha invariant is a generalization of the complex singularity exponent of a polynomial \(f \in \CC[z_1,\dots,z_n]\), defined as follows:
-\[
-c_O(f) := \sup \{ \epsilon | \ |f|^{-2 \epsilon} \text{ integrable  in a neighborhood of } O \in \CC^n \} .
-\]
-Let \(X\) be a complex manifold. Let \(G \subset \Aut( X)\) be a compact group of automorphisms acting on \(X\). Let \(L\) be a \(G\)-invariant line bundle on \(X\), equipped with a \(G\)-invariant singular Hermitian metric \(h\). Locally \(L \cong U \times \CC\) and on \(U\) we can write \(||\xi||_h^2 = |\xi|^2 e^{-2 \phi(x)}\) for \(z \in U, \xi \in L_z\), where \(\xi \in L_z \cong \CC\). Assume \(\phi\) is a locally integrable function for the Lebesgue measure, and that the curvature form \(\Theta{L,h} := \frac{i}{\pi} \partial \bar{\partial} \phi\) is non-negative as a \((1,1)\)-current. We say that locally \(h = e^{-2 \phi}\).
-\begin{definition}
-For any compact \(G\)-stable subset \(K \subset X\), the complex singularity exponent of \(h\) is defined to be:
-\[
-c_K(h) = \sup \{ \epsilon | \ \forall x \in K \ h^\epsilon = e^{-2 \epsilon \phi} \text{ is integrable in a neighbourhood of } x\}
-\]
-Tian's alpha invariant is then the value
-\[
-\alpha_{G,K}(L) := \inf_{\{h \text{ is } G-\text{equivariant } : \ \Theta_{L,h} \ge 0\}} c_K(h)
-\]
-Where \(h\) runs over all Hermitian metrics on \(L\) such that \(\Theta_{L,h} \ge 0\).
-\end{definition}
-We restate Tian's criterion:
-\begin{ttheorem}\label{thm:tcrit}
-Let \(X\) be a Fano manifold and \(G \subset \Aut(X)\) reductive group of symmetries. If
-\[
-\alpha_{G} (X) > \frac{\dim(X)}{\dim(X) + 1}
-\]
-Then \(X\) admits a \(G\)-invariant K\"ahler-Einstein metric.
-\end{ttheorem}
-In Demailley's appendix of \cite{cheltsov08} it is shown that \(\glct_{G}(X) = \alpha_G(X)\) for \(G \subseteq \Aut(X)\) a finite subgroup. The same proof may be easily extended to our setting, where \(G\) is the semidirect product of a torus \(T\) and a finite subgroup  \(H\) of the normalizer of \(T\) in \(\Aut(X)\). We outline one way of doing this in the following lemma.
-\begin{lemma}
-Suppose that \(X\) is a \(T\)-variety and \(H\) is a finite subgroup of the normalizer \( \mathcal{N}_{\Aut(X)}(T)\). Then \(\glct_{HT}(X) = \alpha_{HT}(X)\).
-\end{lemma}
-\begin{proof}
-One may define the log canonical threshold of a linear system \(|\Sigma| \subset |mL|\) for any Hermitian line bundle \(L\) on \(X\), see remarks succeeding \cite[Definition A.2]{cheltsov08}. Note by definition if \(D \in |\Sigma|\) then \(\lct(\frac{1}{m} D) \le \lct( \frac{1}{m} |\Sigma|)\) with equality when \(\Sigma\) is one-dimensional. As stated in \cite[(A.1)]{cheltsov08}, we have:
-\[
-\alpha_{HT}(L) = \inf_{m \in \mathbb{Z}_{>0}} \inf_{|\Sigma| \subset |mL|, \Sigma^{HT} = \Sigma} \lct ( \frac{1}{m} |\Sigma| ) 
-\]
-Clearly we have the inequality:
-\[
-\alpha_{HT}(L)  \le \inf_{m \in \mathbb{Z}_{>0}} \inf_{D \in |mL|^{HT}} \lct (\frac{1}{m} D) 
-\]
-Now suppose \(|\Sigma| \subset |mL|\) such that \(|\Sigma|^{HT} = |\Sigma|\). Take \(D \in |\Sigma|\). We may repeatedly degenerate \(D\) along \(\CC^*\)-actions to obtain \(D' \in |mL|^{T}\), with \(\lct(\frac{1}{m}D') \le \lct(\frac{1}{m}D) \le \lct( \frac{1}{m}|\Sigma|)\) by Proposition~\ref{degenpair}. Let \(r = |H|\). Since \(H\) normalizes \(T\), we may take \(D'':= \sum_{h \in H} h \cdot D''\), and then:
-\[
-\lct(\frac{1}{m r }D'') \le \lct( \frac{1}{mr} | r\Sigma|) = \lct( \frac{1}{m}|\Sigma|).
-\]
-Then we have:
-\[
-\alpha_{HT}(L) = \inf_{m \in \mathbb{Z}_{>0}} \inf_{D \in |mL|^{HT}} \lct (\frac{1}{m} D).
-\]
-In particular when \(L = -K_X\) the left hand side is equal to \(\glct_{HT}(X)\).
-\end{proof}
-As a consequence we may check Tian's criterion on the Chow quotient pair, for a symmetric \(T\)-variety. Let \(X\) be a symmetric \(T\)-variety. Let \(\pi:X \dashrightarrow Y\) be the Chow quotient map by the torus action. Since \(H\) is in the normalizer of \(T\), then its action descends to \(Y\). The action of \(H\) extends to the whole of \(Y\). For any prime divisor \(Z\) on \(Y\) the generic stabilizer on a component of \(\pi^{-1}(Z)\) is a finite abelian group. The maximal order across these components is denoted \(m_Z\). We then obtain a boundary divisor for \(\pi\) given by:
-\[
-B := \sum_Z \frac{m_Z-1}{m_Z} \cdot Z.
-\]
-S{\"u}{\ss}, showed that the global log canonical threshold of \(X\) with respect to \(HT\) coincides with that of the pair \((Y,B)\) with respect to \(H\):
-\begin{theorem}[ {\cite[Theorem 1.2]{Su13}}]\label{thm:SU}
-Let \(X\) be a symmetric log terminal Fano \(T\)-variety. Assume that the Chow quotient \(\pi:X \dashrightarrow Y\) is surjective. Then:
-\[
-\glct_{HT}(X) = \min \{1, \glct_H(Y,B) \}.
-\]
-\end{theorem}
-%
-%
-%
-%
-%
-%
-
-We begin by calculating a bound on the log canonical threshold of a candidate log pair for the Chow quotient pair of our examples. We do this by degenerating along a \(\CC^*\)-action. We then calculate the Chow quotient pairs of our examples. As discussed in \ref{basics:Chowquotients}, the Chow quotient coincides with the GIT limit quotient.
-
-For the varieties \(X_{\alpha,\beta}^{2n-1}\) we use the Kempf-Ness theorem to calculate GIT quotients. The inverse system is simple enough in this case to then deduce the Chow quotient pair and in addition prove Corollary~\ref{cor:topquot}. Using results of \cite{kirwan} we may obtain the Chow quotient of \(W^{2n}\) from that of \(Q^{2n}\).
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-%
-\section{Log canonical threshold bounds}
-Let \(Y = \PP^2\), with projective coordinates \(x_1,x_2,x_3\), and consider the boundary divisor \(B_\gamma  := \gamma \sum_{i=0}^3  H_i\), where \(H_1,H_2,H_3\) are the coordinate hyperplanes, and \(H_0 = V (\sum_i x_i) \). Consider the subgroup \(G \cong S_4\) of \(\text{Aut}(Y)\) permuting the hyperplanes \(H_0,\dots,H_3\).
-
-We provide the following lower bound on the global log canonical threshold of the pair \((\PP^2,B_\gamma)\), by considering degenerations under a \(\CC^*\)-action. 
-\begin{lemma}\label{lem:alph}
-Consider a log pair \((\PP^2,B_\gamma)\), where \(B_\gamma = \gamma \sum_i H_i\). We then have:
-\[
-\glct_{S_4}(\PP^2, B_\gamma) \ge
-\begin{cases}
-\infty, & \text{for } \gamma \ge \frac{3}{4};\\
-\frac{2(1-\gamma)}{3-4\gamma}, & \text{for } \frac{3}{4} \ge \gamma \ge \frac{1}{2};\\
-\frac{1}{3-4 \gamma} & \text{for } \frac{1}{2} \ge \gamma.
-\end{cases}
-\]
-\end{lemma}
-\begin{proof} \
-
-To show \(\glct_{G}(Y,B_\gamma) \ge \lambda\) it is sufficient to show that \(B_\gamma+\lambda D\) is log canonical for any \( D \in |-K_Y - B_\gamma|_{\QQ}^G\). Fix such a \(D\) and take \(P \in Y\). At most two of the \(H_i\) pass through \(P\), so without loss of generality suppose \(H_0,H_3\) do not. Modify \(B_\gamma+\lambda D\) by removing any components supported at \(H_0,H_3\), to obtain a divisor \(D'\). Note \(B_\gamma+\lambda D\) is log canonical at \(P\) if \(D'\) is globally log canonical. Note also that although \(D'\) may not be \(G\)-invariant, it is still invariant under the involution \(\sigma \) swapping \(x_1\) and \(x_2\). Finally note \(D' \ge \gamma H_1 + \gamma H_2\).
-
-Consider the \(\CC^*\)-action \(t \cdot [x_1:x_2:x_3] = [ t x_1: t x_2 : x_3]\). By \ref{degenpair}, \(D'\) is log canonical if \(D_0' := \lim_{t \to 0} \left( t \cdot D' \right) \) is log canonical. This \(\CC^*\)-action commutes with \(\sigma \), and so \(D_0'\) is invariant under \(\sigma\). Moreover is is clear that each component of \(D_0'\) must be a line through the point \([0,0,1]\). By \(\sigma\)-invariance \(D_0'\) must be of the form:
-\[
-D_0' = \gamma (H_1+H_2) + a V (x_1+x_2) + b V(x_1-x_2) + \sum_i c_i (L_i + \sigma L_i)
-\]
-Where \(a + b + \sum_i 2 c_i \le 2 \gamma + 3\lambda - 4 \gamma \lambda\). This is a divisor of the form described in Example \ref{examplelct}. It is therefore log canonical iff the following inequalities hold:
-\begin{align*}
-2\gamma + 3 \lambda - 4\gamma \lambda &< 2 \\
-3\gamma - 4\gamma \lambda &\le 1
-\end{align*}
-Basic manipulation of inequalities gives our bounds on the global threshold.
-\end{proof}
-\section{Bidegree $(\alpha,\beta)$ hypersurfaces} \label{subsec:hypersurfaces}
-Fix natural numbers \(n,\alpha,\beta>0\), and consider:
+Note that these examples admit additional symmetries. There is a natural \(S_{n+1}\)-action on \(X^{2n-1}_{\alpha,\beta}\) permuting the indices of variables. By results of \cite{li06}, the \(S_{n+1}\)-action on \(Q^{2n}\) permuting the \(Z_i\) induces an action on \(W^{2n}\).
+\section{Chow quotient calculations}
+We now calculate the Chow quotient pairs of our examples. As discussed in \ref{basics:Chowquotients}, the Chow quotient coincides with the GIT limit quotient.
+\subsection{Bidegree $(\alpha,\beta)$ hypersurfaces} \label{subsec:hypersurfaces}
+For the varieties \(X_{\alpha,\beta}^{2n-1}\) we use the Kempf-Ness theorem to calculate GIT quotients. The inverse system is simple enough in this case to then deduce the Chow quotient pair and in addition prove Corollary~\ref{cor:topquot}. Fix natural numbers \(n,\alpha,\beta>0\), and consider:
 \[
 X = X_{\alpha,\beta}^{2n-1} := V \left( \sum_{i=0}^n x_i^\alpha y_i^\beta \right) \subseteq \PP^n \times \PP^n.
 \]
@@ -277,8 +131,8 @@ By \ref{lem:3.2} and \ref{lem:3.3} we see that the \(T\)-action on \(X^{2n-1}_{\
 \begin{proof}[Proof of Theorem \ref{thm:KE2}]
 By Lemma~\ref{lem:1.4} the Chow quotient pairs of \(X_{1,2}^{5},X_{1,3}^{5}\) by their torus action are \((\PP^2,B_{\nicefrac{1}{2}}), (\PP^2,B_{\nicefrac{2}{3}})\) respectively. By Lemma~\ref{lem:alph} and Theorem~\ref{thm:SU} then \(\alpha_{S_4}(X_{1,2}^{5}),\alpha_{S_4}(X_{1,3}^{5}) > 5/6\). Apply Theorem~\ref{thm:tcrit}.
 \end{proof}
-\section{A wonderful compactification on the quadric} \label{subsec:wonderful}
-We construct a wonderful compactification of an arrangement on an even dimensional quadric. We show that this compactification is Fano and we calculate the Chow quotient pair with respect to an induced torus action. First recall the notion of wonderful compactifications of arrangements of subvarieties, as introduced in \cite{li06}.
+\subsection{$W^{2n}$: a wonderful compactification on the quadric} \label{subsec:wonderful}
+Using results of \cite{kirwan} we may obtain the Chow quotient of \(W^{2n}\) from that of \(Q^{2n}\). We construct \(W^{2n}\) as a \textit{wonderful compactification} of an arrangement on an even dimensional quadric. We show that this compactification is Fano and we calculate the Chow quotient pair with respect to an induced torus action. First recall the notion of wonderful compactifications of arrangements of subvarieties, as introduced in \cite{li06}.
 \begin{definition}
 Let \(X\) be a nonsingular algebraic variety. An arrangement of subvarieties of \(X\) is a finite collection \(\mathcal{S}\) of subvarieties closed under pairwise scheme-theoretic intersection. A building set of \(\mathcal{S}\) is a subset \(\mathcal{G} \subset \mathcal{S}\) such that for any \(S \in \mathcal{S} \backslash \mathcal{G}\) the minimal elements of \(\{G \in \mathcal{G} | G \supset S\}\) intersect transversally and the intersection is \(S\). We will say that \(\mathcal{S}\) is built by \(\mathcal{G}\) if \(\mathcal{G}\) is a building set for \(\mathcal{S}\).
 \end{definition}
@@ -334,4 +188,142 @@ There is an induced \(T\)-action on \(\Bl_{Z_0}\), under which the equation \(vx
 \end{proof}
 \begin{proof}[Proof of Theorem \ref{thm:KE2}]
 By Lemma~\ref{lem:1.4} the Chow quotient pair of \(W^6\) by its effective torus action is \((\PP^2,B_{\nicefrac{1}{2}})\). By Lemma~\ref{lem:alph} and Theorem~\ref{thm:SU} then \(\alpha_{S_4}(W^6) > 6/7\). Apply Theorem~\ref{thm:tcrit}.
+\end{proof}
+\section{Log canonical thresholds and Tian's criterion}
+We will use a version of \textit{Tian's criterion} mentioned briefly in the introduction to this thesis. This is a sufficient condition for the existence of a K\"ahler-Einstein metric on a K\"ahler manifold. In order to use this criterion we must first recall the definition of the log canonical threshold, Tian's alpha invariant, and their relation.
+\subsection{Log canonical thresholds}
+Here we recall the definition of the global log canonical threshold of of a log pair, which features in Theorem~\ref{thm:SU} and Lemma~\ref{lem:alph}. Recall that a log pair \((Y,D)\) consists of a normal variety \(Y\) and a \(\QQ\)-divisor \(D\), where the coefficients of the irreducible components of \(D\) lie in \([0,1]\). The canonical divisor of such a pair is \(K_Y+D\). A pair \((Y,D)\) is called smooth if \(Y\) is smooth and \(D\) is a simple normal crossings divisor. A log resolution of a log pair \((Y,D)\) is a birational map \(\pi: \tilde{Y} \to Y\) such that \((\tilde{Y},\varphi^*D)\) is smooth.
+
+\begin{definition}
+Suppose \(\pi: \tilde{Y} \to Y\) is a log resolution of a pair \((Y,D)\). Write \(D = \sum a_i D_i\) for prime \(D_i\) and rational \(a_i\). Then:
+\[
+\pi^*(K_Y+ D) - K_{\tilde{Y}}\sim_{\QQ} \sum_i a_i \tilde{D_i} + \sum_j b_j E_j
+\]
+where \(\tilde{D_i}\) is the proper transform of \(D_i\) and the \(E_j\) are the \(\pi\)-exceptional divisors. We say \((Y,D)\) is log canonical at \(P \in Y\) if we have \(a_i \le 1 \) for \(P \in D_i\), and \(b_j \le 1\) for \(E_j\) such that \(\pi(E_j) = P\). This condition is independent of the choice of resolution. If \((Y,D)\) is log canonical at all \(P  \in Y\) then we say \((Y,D)\) is (globally) log canonical.
+\end{definition}
+\begin{example} \label{examplelct}
+Consider the pair \(Y = \PP^2\) and \(D = \sum a_i L_i\) where \(L_i\) are all lines through a point \(P \in Y\). Blowing up at \(P\) we obtain the following:
+\[
+\pi^*(K_Y+D) - K_{\tilde{Y}} \sim_{\QQ} (\deg D - 1) E + \sum a_i \tilde{L}_i
+\]
+Where \(E\) is the exceptional divisor  of the blow-up. Therefore \((Y,D)\) is log-canonical whenever we have \(\deg D \le 2\) and all \(a_i \le 1\).
+\end{example}
+Recall the following consequence of the main theorem of \cite{demailly2001}, as stated in the proof of \cite[Lemma 5.1]{cheltsov08}. This allows us to degenerate a pair under a \(\CC^*\)-action if we want to show it is log canonical.
+\begin{proposition} \label{degenpair}
+Let \((Y,D)\) be a log pair. Suppose \(\{ D_t | t \in \CC\}\) is a family of \(\QQ\)-divisors such that \(D_t \sim_\QQ D\), \(D_1 = D\), and for \(t \neq 0\) there exists \(\phi_t \in \Aut(X)\) such that \(D_t = \phi_t(D)\). Then \((Y,D)\) is log canonical if \((Y,D_0)\) is.
+\end{proposition}
+Now we recall the definition of the global log canonical threshold of a pair, as given in \cite{suess18-2}.
+\begin{definition}
+The global \(G\)-equivariant log canonical threshold of a log pair \((Y,B)\)  is defined to be:
+\[
+\glct_{G}(Y,B) := \sup \{ \lambda | (Y,B+ \lambda D) \text{ log canonical } \forall D \in | -K_X - B |_{\QQ}^G \}
+\]
+When \(B\) is trivial we will suppress it in our notation, writing \(\glct_G(X)\) for the \(G\)-equivariant log canonical threshold of a normal variety \(X\).
+\end{definition}
+\subsection{Tian's alpha invariant and criterion} \label{prelim:alphainvariant}
+Here we recall the definition of Tian's alpha invariant and its relation to the global log canonical threshold. We extend a result by Demailley finite groups to a finite group semi-direct product an algebraic torus, which we will need for calculations later in this chapter. The paper \cite{cheltsov08} serves as a good reference for the definitions in this section.
+
+Tian's alpha invariant is a generalization of the complex singularity exponent of a polynomial \(f \in \CC[z_1,\dots,z_n]\), defined as follows:
+\[
+c_O(f) := \sup \{ \epsilon | \ |f|^{-2 \epsilon} \text{ integrable  in a neighborhood of } O \in \CC^n \} .
+\]
+Let \(X\) be a complex manifold. Let \(G \subset \Aut( X)\) be a compact group of automorphisms acting on \(X\). Let \(L\) be a \(G\)-invariant line bundle on \(X\), equipped with a \(G\)-invariant singular Hermitian metric \(h\). Locally \(L \cong U \times \CC\) and on \(U\) we can write \(||\xi||_h^2 = |\xi|^2 e^{-2 \phi(x)}\) for \(z \in U, \xi \in L_z\), where \(\xi \in L_z \cong \CC\). Assume \(\phi\) is a locally integrable function for the Lebesgue measure, and that the curvature form \(\Theta{L,h} := \frac{i}{\pi} \partial \bar{\partial} \phi\) is non-negative as a \((1,1)\)-current. We say that locally \(h = e^{-2 \phi}\).
+\begin{definition}
+For any compact \(G\)-stable subset \(K \subset X\), the complex singularity exponent of \(h\) is defined to be:
+\[
+c_K(h) = \sup \{ \epsilon | \ \forall x \in K \ h^\epsilon = e^{-2 \epsilon \phi} \text{ is integrable in a neighbourhood of } x\}
+\]
+Tian's alpha invariant is then the value
+\[
+\alpha_{G,K}(L) := \inf_{\{h \text{ is } G-\text{equivariant } : \ \Theta_{L,h} \ge 0\}} c_K(h)
+\]
+Where \(h\) runs over all Hermitian metrics on \(L\) such that \(\Theta_{L,h} \ge 0\).
+\end{definition}
+Recall Tian's criterion:
+\begin{theorem}[Tian's Criterion]\label{thm:tcrit}
+Let \(X\) be a Fano manifold and \(G \subset \Aut(X)\) reductive group of symmetries. If
+\[
+\alpha_{G} (X) > \frac{\dim(X)}{\dim(X) + 1}
+\]
+Then \(X\) admits a \(G\)-invariant K\"ahler-Einstein metric.
+\end{theorem}
+In Demailley's appendix of \cite{cheltsov08} it is shown that \(\glct_{G}(X) = \alpha_G(X)\) for \(G \subseteq \Aut(X)\) a finite subgroup. The same proof may be easily extended to our setting, where \(G\) is the semidirect product of a torus \(T\) and a finite subgroup  \(H\) of the normalizer of \(T\) in \(\Aut(X)\). We outline one way of doing this in the following lemma.
+\begin{lemma}
+Suppose that \(X\) is a \(T\)-variety and \(H\) is a finite subgroup of the normalizer \( \mathcal{N}_{\Aut(X)}(T)\). Then \(\glct_{HT}(X) = \alpha_{HT}(X)\).
+\end{lemma}
+\begin{proof}
+One may define the log canonical threshold of a linear system \(|\Sigma| \subset |mL|\) for any Hermitian line bundle \(L\) on \(X\), see remarks succeeding \cite[Definition A.2]{cheltsov08}. Note by definition if \(D \in |\Sigma|\) then \(\lct(\frac{1}{m} D) \le \lct( \frac{1}{m} |\Sigma|)\) with equality when \(\Sigma\) is one-dimensional. As stated in \cite[(A.1)]{cheltsov08}, we have:
+\[
+\alpha_{HT}(L) = \inf_{m \in \mathbb{Z}_{>0}} \inf_{|\Sigma| \subset |mL|, \Sigma^{HT} = \Sigma} \lct ( \frac{1}{m} |\Sigma| ) 
+\]
+Clearly we have the inequality:
+\[
+\alpha_{HT}(L)  \le \inf_{m \in \mathbb{Z}_{>0}} \inf_{D \in |mL|^{HT}} \lct (\frac{1}{m} D) 
+\]
+Now suppose \(|\Sigma| \subset |mL|\) such that \(|\Sigma|^{HT} = |\Sigma|\). Take \(D \in |\Sigma|\). We may repeatedly degenerate \(D\) along \(\CC^*\)-actions to obtain \(D' \in |mL|^{T}\), with \(\lct(\frac{1}{m}D') \le \lct(\frac{1}{m}D) \le \lct( \frac{1}{m}|\Sigma|)\) by Proposition~\ref{degenpair}. Let \(r = |H|\). Since \(H\) normalizes \(T\), we may take \(D'':= \sum_{h \in H} h \cdot D''\), and then:
+\[
+\lct(\frac{1}{m r }D'') \le \lct( \frac{1}{mr} | r\Sigma|) = \lct( \frac{1}{m}|\Sigma|).
+\]
+Then we have:
+\[
+\alpha_{HT}(L) = \inf_{m \in \mathbb{Z}_{>0}} \inf_{D \in |mL|^{HT}} \lct (\frac{1}{m} D).
+\]
+In particular when \(L = -K_X\) the left hand side is equal to \(\glct_{HT}(X)\).
+\end{proof}
+As a consequence we may check Tian's criterion on the Chow quotient pair, for a symmetric \(T\)-variety. Let \(X\) be a symmetric \(T\)-variety. Let \(\pi:X \dashrightarrow Y\) be the Chow quotient map by the torus action with boundary divisor \(B := \sum_Z \frac{m_Z-1}{m_Z} \cdot Z.\), see \ref{}. Since \(H\) is in the normalizer of \(T\), then its action descends to \(Y\). The action of \(H\) extends to the whole of \(Y\). S{\"u}{\ss}, showed that the global log canonical threshold of \(X\) with respect to \(HT\) coincides with that of the pair \((Y,B)\) with respect to \(H\):
+\begin{theorem}[ {\cite[Theorem 1.2]{Su13}}]\label{thm:SU}
+Let \(X\) be a symmetric log terminal Fano \(T\)-variety. Assume that the Chow quotient \(\pi:X \dashrightarrow Y\) is surjective. Then:
+\[
+\glct_{HT}(X) = \min \{1, \glct_H(Y,B) \}.
+\]
+\end{theorem}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\subsection{Log canonical threshold bounds}
+We now turn to our examples. We begin by calculating a bound on the log canonical threshold of a candidate log pair for the Chow quotient pair of our examples. We do this by degenerating along a \(\CC^*\)-action.
+
+Let \(Y = \PP^2\), with projective coordinates \(x_1,x_2,x_3\), and consider the boundary divisor \(B_\gamma  := \gamma \sum_{i=0}^3  H_i\), where \(H_1,H_2,H_3\) are the coordinate hyperplanes, and \(H_0 = V (\sum_i x_i) \). Consider the subgroup \(G \cong S_4\) of \(\text{Aut}(Y)\) permuting the hyperplanes \(H_0,\dots,H_3\).
+
+We provide the following lower bound on the global log canonical threshold of the pair \((\PP^2,B_\gamma)\), by considering degenerations under a \(\CC^*\)-action. 
+\begin{lemma}\label{lem:alph}
+Consider a log pair \((\PP^2,B_\gamma)\), where \(B_\gamma = \gamma \sum_i H_i\). We then have:
+\[
+\glct_{S_4}(\PP^2, B_\gamma) \ge
+\begin{cases}
+\infty, & \text{for } \gamma \ge \frac{3}{4};\\
+\frac{2(1-\gamma)}{3-4\gamma}, & \text{for } \frac{3}{4} \ge \gamma \ge \frac{1}{2};\\
+\frac{1}{3-4 \gamma} & \text{for } \frac{1}{2} \ge \gamma.
+\end{cases}
+\]
+\end{lemma}
+\begin{proof} \
+
+To show \(\glct_{G}(Y,B_\gamma) \ge \lambda\) it is sufficient to show that \(B_\gamma+\lambda D\) is log canonical for any \( D \in |-K_Y - B_\gamma|_{\QQ}^G\). Fix such a \(D\) and take \(P \in Y\). At most two of the \(H_i\) pass through \(P\), so without loss of generality suppose \(H_0,H_3\) do not. Modify \(B_\gamma+\lambda D\) by removing any components supported at \(H_0,H_3\), to obtain a divisor \(D'\). Note \(B_\gamma+\lambda D\) is log canonical at \(P\) if \(D'\) is globally log canonical. Note also that although \(D'\) may not be \(G\)-invariant, it is still invariant under the involution \(\sigma \) swapping \(x_1\) and \(x_2\). Finally note \(D' \ge \gamma H_1 + \gamma H_2\).
+
+Consider the \(\CC^*\)-action \(t \cdot [x_1:x_2:x_3] = [ t x_1: t x_2 : x_3]\). By \ref{degenpair}, \(D'\) is log canonical if \(D_0' := \lim_{t \to 0} \left( t \cdot D' \right) \) is log canonical. This \(\CC^*\)-action commutes with \(\sigma \), and so \(D_0'\) is invariant under \(\sigma\). Moreover is is clear that each component of \(D_0'\) must be a line through the point \([0,0,1]\). By \(\sigma\)-invariance \(D_0'\) must be of the form:
+\[
+D_0' = \gamma (H_1+H_2) + a V (x_1+x_2) + b V(x_1-x_2) + \sum_i c_i (L_i + \sigma L_i)
+\]
+Where \(a + b + \sum_i 2 c_i \le 2 \gamma + 3\lambda - 4 \gamma \lambda\). This is a divisor of the form described in Example \ref{examplelct}. It is therefore log canonical iff the following inequalities hold:
+\begin{align*}
+2\gamma + 3 \lambda - 4\gamma \lambda &< 2 \\
+3\gamma - 4\gamma \lambda &\le 1
+\end{align*}
+Basic manipulation of inequalities gives our bounds on the global threshold.
 \end{proof}

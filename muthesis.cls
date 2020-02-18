@@ -121,6 +121,8 @@
 
 \ProvidesClass{muthesis}[2013/08/12 MU Thesis Class]
 
+\setlength{\parindent}{4em}
+
 \DeclareOption{PhD}{\def\degreetitle{Doctor of Philosophy}}
 \DeclareOption{MSc}{\def\degreetitle{Master of Science}}
 \DeclareOption{MPhil}{\def\degreetitle{Master of Philosophy}}
@@ -136,6 +138,7 @@
 
 %% Manchester University PhD thesis style -- modifications to the report style
 %%
+
 \long\def\comment#1{}
 \comment{
 

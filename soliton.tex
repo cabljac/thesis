@@ -5,93 +5,85 @@
 
 In this chapter we prove the following theorem:
 \begin{theorem}[{\cite[Theorem 1.8]{cable2018classification}}] \label{thm:sol}
-The Fano threefolds \(2.30, \ 2.31, \ 3.18, \ 3.22, \ 3.23, \ 3.24, \ 4.8\) from Mori and Mukai's classification \cite{} admit a non-trivial K\"ahler-Ricci soliton.
+The Fano threefolds \(2.30, \ 2.31, \ 3.18, \ 3.22, \ 3.23, \ 3.24, \ 4.8\) from Mori and Mukai's classification \cite{mori1981classification} admit a non-trivial K\"ahler-Ricci soliton.
 \end{theorem}
-Together with \cite[Theorems. 6.1, 6.2]{ilten2015} it follows that all known smooth Fano threefolds with an effective complexity-one torus action admit a K\"ahler-Ricci soliton. We follow the joint work of \cite{cable2018classification}. We describe here the contribution of the author to this article, namely to perform calculations to test the \(K\)-stability of threefolds and thus determine which admitted K\"ahler-Ricci solitons.
+Together with \cite[Theorems. 6.1, 6.2]{ilten2015} it follows that all known smooth Fano threefolds with an effective complexity-one torus action admit a K\"ahler-Ricci soliton. We follow the joint work of \cite{cable2018classification}. We describe here the contribution of the author of this thesis to this article, namely to perform calculations to test the \(K\)-stability of threefolds and thus determine which admitted K\"ahler-Ricci solitons.
 
-\section{Proof of Theorem \ref{thm:sol}}
+\section{The method of proof}
+This proof of Theorem~\ref{thm:sol} is somewhat calculational in nature, and uses some computer assistance. We provide some context to our approach. At the end of this subsection we provide a more formal proof.
 
-Let \(X\) be a smooth complexity one Fano \(T\)-variety. Recall the definition of a K\"ahler-Ricci soliton from definition \ref{def:tKRS}. We will test for the existence of a K\"ahler-Ricci soliton on \(X\) using Theorem \ref{thm:DS}. Let \(\Phi: \Box \to \Div \PP^1\) be the divisorial polytope of \(X\) corresponding to the anticanonical polarization. 
+Let \(X\) be a smooth complexity one Fano \(T\)-variety. Recall the definition of a K\"ahler-Ricci soliton from definition \ref{def:tKRS}. We test for the existence of a K\"ahler-Ricci soliton on \(X\) using Theorem~\ref{thm:DS}. Recall from section~\ref{sec:toric} that the polarization \((X,-K_X)\) corresponds to a Fano divisorial polytope \(\Phi: \Box \to \Div \PP^1\), as defined in \ref{def:divpol}.
 
-First we use Theorem \ref{thm:BWN} to find appropriate vector fields \(\xi\). Any such \(\xi\) will satisfy the following equation: 
+First we use Theorem \ref{thm:BWN} to find candidate vector fields \(\xi \in N_\RR\) for a soliton. By Theorem~\ref{thm:BWN}, any such \(\xi\) will satisfy the following equation: 
 \begin{equation} \label{eq:producteq}
-\DF_{\xi}(X \times \mathbb{A}^1, w) = 0
+\DF_{\xi}(X \times \mathbb{A}^1, w) = 0.
 \end{equation}
-For all \(w \in N'_\RR\). By (ref) this becomes:
+For all \(w \in N'_\RR\). By \ref{eq:futaki-character} this becomes:
 \begin{equation} \label{eq:combproducteq}
-(eq)
+\int_{\Box} \langle u, v \rangle \cdot \deg \bar \Phi(u) \cdot e^{\langle u, \xi \rangle}\, du = 0
 \end{equation}
-By the arguments in \cite[Section~3.1]{donaldson2008kahler} there always exist a unique choice $\xi \in N_\RR$ for which this holds. We call this $\xi$ a \textit{soliton canditate}.
+By the arguments in \cite[Section~3.1]{donaldson2008kahler} there always exist a unique choice $\xi \in N_\RR$ for which this holds. We refer to such a $\xi$ as a \textit{soliton canditate}.
 
-The integral in (\ref{eq:producteq}) may be solved symbolically, outputting an exponential polynomial \(g(\xi, e^{\xi})\) in \(\xi\). In practice however, the domain \(P\) can complicate the calculation for \(\dim X > 2\). To deal with this we developed a recursive algorithm, based on results of Barvinok (cite), which reduces the integral to evaluations at the vertices of \(P\). We explain this algorithm at the end of the chapter.
+The integral (\ref{eq:combproducteq}) may be solved symbolically, outputting an exponential polynomial \(g(\xi, e^{\xi})\) in \(\xi\). In practice however, the domain \(P\) can complicate the calculation for \(\dim X > 2\). To deal with this we developed a recursive algorithm, based on results of Barvinok \cite{Barvinok1992}, which reduces the integral to evaluations at the vertices of \(P\). We explain this algorithm at the end of this chapter.
 
-For our examples the equation \(g(\xi,e^{\xi}) = 0\) is impossible to solve analytically. To get around this we use \textit{real interval arithmetic} (RIA) estimates to find some hypercube \(D\) in which the solution \(\xi\) lies. We then use further RIA to show that \(DF>0\) on the whole of \(D\).
+For our examples the equation \(g(\xi,e^{\xi}) = 0\) is impossible to solve analytically. To get around this we use \textit{real interval arithmetic} (RIA) estimates to find some hypercube \(D\) in which the solution \(\xi\) lies. For each special test configuration \((\X,w)\) we then use further RIA to show that \(\DF_{\xi'}(\X,W)>0\) For \(\xi \in D\). In Table~\ref{table:solitontable} below we give estimates found for the vector field \(\xi\) for each threefold in the list of \cite{suss2013fano}. The threefolds 3.8*, 3.21, 4.5 were shown to admit a non-trivial K\"ahler-Ricci soliton in \cite{ilten2015}. We can show that our approximations are correct to the nearest \(10^{-5}\).
 
-In the Table~\ref{solitontable} below we give the estimates found for the vector field \(\xi\) for each threefold in the list of \cite{suss2013fano}. The threefolds 3.8*, 3.21, 4.5 were shown to admit a non-trivial K\"ahler-Ricci soliton in \cite{ilten2015} Applying 
-steps (\ref{item:closed-form})-(\ref{item:bounds}) from the proof of Theorem~\ref{thm:sol} provides also an approximation for the vector field \(\xi\) for these threefolds. These are included in the table, together with those threefolds shown in \cite{ilten2015} to be K\"ahler-Einstein, to show the complete picture for the Fano threefolds described in \cite{suss2013fano}. We can show that our approximations are correct to the nearest \(10^{-5}\).
+When \(\dim  X = 2\) the process of finding suitable \(D\) via RIA is a simple application of the intermediate value theorem. For \(\dim X >2 \) we cannot immediately use the intermediate value theorem to obtain \(D\). In all but one of our examples we make use of additional symmetries to reduce to a one-dimensional problem. Given an automorphism \(\sigma \in \GL(M)\) permuting the vertices of \(\Box\) such that \(\deg (\Phi \circ \sigma) = \deg \Phi\), by (\ref{eq:futaki-general-fibre}) we have:
+\[
+\DF_{X, \sigma^{\!*}\!(\xi)}  =  \DF_{X, \xi} \ \circ \ \sigma^*
+\]
+
+Since \(\xi \in N_\mathbb{R}\) is the unique solution to \(F_{X,\xi} = 0\), this gives \(\xi \in N_{\mathbb{R}}^{\sigma^*}\). For \(\dim X = 3\) we have \(\dim N_{\mathbb{R}}^{\sigma^*}  = 1\) and we are in a situation where intermediate value theorem may be used to find \(D\). Note that in threefold 3.23 there is no such involution, and we must take another approach, which we explain in the proof below and in Example~\ref{ex:assym}.
 %
 %
 %
-\begin{table}[h] \centering \label{solitontable}
+\begin{table}[H]  \centering
 \captionsetup{width=.95\linewidth}
-\caption{Fano threefolds and their soliton vector fields in the canonical coordinates coming with the representation of the combinatorial data in \cite{suss2013fano}.}
+\caption{Fano threefolds and their soliton vector fields in the canonical coordinates coming with the representation of the combinatorial data in \cite{suss2013fano}.}  \label{table:solitontable}
 \begin{tabular}{l l l}
 \toprule
 Threefold & $\xi$ & \\ \hline
-\rowstyle{\color{gray}}
 Q & $(0,0)$ \\
-\rowstyle{\color{gray}}
 2.24* & $(0,0)$ \\
-\rowstyle{\color{gray}}
 2.29 & $(0,0)$ \\
 2.30 & $(0,0.51489)$ \\
 2.31 & $(0.28550,0.28550)$\\
-\rowstyle{\color{gray}}
 2.32 & $(0,0)$ \\
 3.8* & $(0,-0.76905)$ \\
-\rowstyle{\color{gray}}
 3.10* & $(0,0)$ \\
 3.18 & $(0,0.37970)$ \\
-\rowstyle{\color{gray}}
 3.19 & $(0,0)$ \\
-\rowstyle{\color{gray}}
 3.20 & $(0,0)$ \\
 3.21 & $(-0.69622,-0.69622)$ \\
 3.22 & $(0,0.91479)$ \\
 3.23 & $(0.26618,  0.67164)$ \\
 3.24 & $(0,0.43475)$ \\
-\rowstyle{\color{gray}}
 4.4 &  $(0,0)$ \\
 4.5* &  $(-0.31043,-0.31043)$ \\
-\rowstyle{\color{gray}}
 4.7 &  $(0,0)$ \\
 4.8 &  $(0,0.62431)$ \\
 \bottomrule
 \end{tabular}
 \label{table:name}
 \end{table}
-
-When \(\dim  X = 2\) the process of finding suitable \(D\) via RIA is a simple application of the intermediate value theorem. For \(\dim X >2 \) we cannot immediately use the intermediate value theorem to obtain \(D\). In all but one of our examples we make use of additional symmetries to reduce to a one-dimensional problem.
-
-Given an automorphism \(\sigma \in \GL(M)\) permuting the vertices of \(\Box\) such that \(\deg (\Phi \circ \sigma) = \deg \Phi\), by (\ref{eq:futaki-general-fibre}) we have $F_{X, \sigma^{\!*}\!(\xi)}  =  F_{X, \xi}\circ \sigma^*$. Since \(\xi \in N_\mathbb{R}\) is the unique solution to \(F_{X,\xi} = 0\), this gives \(\xi \in N_{\mathbb{R}}^{\sigma^*}\).For \(\dim X = 3\) we have \(\dim N_{\mathbb{R}}^{\sigma^*}  = 1\) and we are in a situation where intermediate value theorem may be used to find \(D\). Note that in threefold 3.23 there is no such involution, and we must take another approach, which we explain in detail in (ref).
-
+We now give a more formal proof of Theorem~\ref{thm:sol}. The complete calculations for the proof are performed using SageMath, and can be found as an online worksheet\footnote{CoCalc:\url{https://cocalc.com/projects/ae8e1663-e2ad-40b8-aec2-30faf4e6a54f/files/threefolds.sagews}}.
 \begin{proof}[Proof of Theorem~\ref{thm:sol}]
-Note the data for this proof is collated in (ref) below. The combinatorial data for the threefolds was originally given in \cite{suss2013fano}, although the piecewise affine \(\Psi\) discussed there differs from our divisorial polytope \(\Phi\) by the divisor \(D = 2 \cdot \{ \infty \}\).
+Note the data required for this proof is collated in Appendix~\ref{appendix1}. The divisorial polytopes were originally given in \cite{suss2013fano}, although the piecewise affine \(\Psi\) discussed there differs from our divisorial polytope \(\Phi\) by the divisor \(D = 2 \cdot \{ \infty \}\).
 
-In threefolds 2.31, 3.18, 3.22, 3.24 and 4.8 $\deg \Phi$ admits a non-trivial involution which we denote $\sigma \in \GL(M)$. Choose a basis $e_1, e_2$ of $N_\RR$ with $\sigma^*(e_1)=-e_1$ and $\sigma^*(e_2)=e_2$. The soliton candidate $\xi = (\xi_1,\xi_2)$ must be contained in the line $N_\RR^{\sigma^*} = \RR e_2$. For each of these example we obtain bounds on \(\xi_2\) via the intermediate value theorem. We provide a closed form for \(h_y\) for every admissible choice of $y \in \PP^1$. By elementary estimations we provide lower bounds on \(h_y\), ensuring the positivity of $\DF_{\xi_2 e_2}(\X_{y,0,1})$.
+In threefolds 2.31, 3.18, 3.22, 3.24 and 4.8 there exists a non-trivial involution \(\sigma \in \GL(M)\) permuting the vertices of \(\Box\), such that \(\deg (\Phi \circ \sigma) = \deg \Phi\). Choose a basis $e_1, e_2$ of $N_\RR$ with $\sigma^*(e_1)=-e_1$ and $\sigma^*(e_2)=e_2$. The soliton candidate $\xi = (\xi_1,\xi_2)$ must be contained in the line $N_\RR^{\sigma^*} = \RR e_2$. For each of these example we obtain an interval \(D\) where the soliton candidate must lie, via the intermediate value theorem and RIA, see Appendix~\ref{appendix1}.
 
-For the case of threefold no. 3.23 there is no involution fixing $\deg \Phi$. In this case we take a more general approach to bound the value of the candidate \(\xi\). Here we make use of some elementary calculus. Note, that \(\xi\) is the unique solution to the equation \(\nabla G = 0 \), where 
+Recall the description of non-product special test configuration spaces from \ref{subsec:IS}. In Appendix~\ref{appendix1} we provide closed forms for \(h_y(\xi_2) := (\vol \Delta_y) \cdot \DF_{\xi_2 e_2}(\X,(0,1))\) for every admissible choice of $y \in \PP^1$, using the algorithm described in \ref{sec:barvinok}. We also provide lower bounds on \(h_y(D)\) using further RIA, ensuring the positivity of $\DF_{\xi_2 e_2}(\X_{y,0,1})$. These threefolds then admit a K\"ahler-Ricci soliton by Theorem~\ref{thm:DS}. See Example~\ref{ex:sym} for details of the computation and Appendix~\ref{appendix2} for the implementation in SageMath.
+
+For the case of threefold no. 3.23 there is no involution fixing $\deg \Phi$. In this case we take a more general approach to bound the value of the candidate \(\xi\). Here we make use of some elementary calculus. Note, that \(\xi\) is the unique solution to the equation \(\nabla_n G = 0 \), where 
 \[
 G(v) := \int_{\Box} \deg \bar \Phi(u) \cdot e^{\langle u, v \rangle}\, du = 
 \int_{\Delta_0} e^{\langle u', (v,0) \rangle} \, du'.
 \]
-Now we identify a small closed rectangular region \(D \subset \RR^2 \) such that \(\nabla_n G > 0 \) holds along \(\partial D\), for \(n\) being a outer normal of the rectangle \(D\). This guarantees a solution to \(\nabla G = 0 \) in the interior of \(D\). Indeed, due to compactness, $D$ has to contain a minimum of $G$, which by our condition cannot lie on the boundary. Hence, the minimum is located in the interior and has to coincide with $\xi$, since $\nabla G$ necessarily vanishes. After bounding the value of $\xi$ we proceed with step~(\ref{item:formulae-for-DF}). 
+We identify a rectangular region \(D \subset \RR^2 \) such that \(\nabla_n G > 0 \) holds along \(\partial D\), where \(n\) is any unit outer normal of the rectangle \(D\). Since $D$ is compact it must contain a local minimum of $G$, which then cannot lie on \(\partial D\). We then have \(\xi\) in the interior of \(D\) such that \(\nabla_n G = 0\).
 
-However, for showing positivity of $\nabla_n G$ along $\partial D$ we have to use computer assistance. The approach is simple but computational intensive. First we again determine a closed form for $\nabla G_n(\xi)$ which coincides with $F_{X,\xi}(n)$ up to a positive constant. Then we subdivide the faces of the boundary in sufficiently small segments, where one of coordinates is fixed and the other varies in a small interval. Using interval arithmetic when evaluating the closed form for $\nabla_n G(\xi)$ provides the positivity result.
-
-See also Example~\ref{exp:asymetric} for details of the computation and Appendix~\ref{App:code} for the implementation in SageMath. The complete calculations are done using SageMath and can be found as an online worksheet\footnote{CoCalc:\url{https://cocalc.com/projects/ae8e1663-e2ad-40b8-aec2-30faf4e6a54f/files/threefolds.sagews}}.
+To show $\nabla_n G >0 $ along $\partial D$ we have to again use interval arithmetic. We determine a closed form which coincides with $\nabla_n G = \DF_\xi$ up to a positive constant. We subdivide the faces of the boundary into sufficiently small segments. Using RIA on the closed form for $\nabla_n G(\xi)$ we obtain the positivity result. See Example~\ref{ex:assym} for details of the computation and Appendix~\ref{appendix2} for the implementation in SageMath.
 \end{proof}
-\section{Two example calculations in detail}
+\section{Two examples in detail}
 Here we present threefolds 2.30 and 3.23 in detail:
 \begin{example}[2.30 -- Blow up of quadric threefold in a point]
 \label{exp:threefold}
@@ -208,7 +200,7 @@ We can therefore conclude that the threefold 2.30 is \(K\)-stable, and must admi
 \end{example}
 
 \begin{example}[3.23 -- Blowup of the quadric in a point and a line passing through]
-\label{exp:asymetric}
+\label{ex:assym}
 We follow the calculations outlined in the above proof of Theorem~\ref{thm:sol}. As before we first have to find a closed form for $F_{X,\xi}(n)$ or $\nabla_n G(\xi)$, respectively. Then numerically we can find an approximation to \(\xi\) as the point:
 \[
 (x_0,x_1) = (0.26617786,  0.67164063).
@@ -240,15 +232,28 @@ h_y(\xi_2) &> 3.4443 \ \ \  ( \text{for } y
 We can therefore conclude that the threefold 3.23 is \(K\)-stable, and must admit a non-trivial K\"ahler-Ricci soliton. See also Appendix~\ref{App:code} for the SageMath code of the calculations.
 \end{example}
 
-\section{Barvinok Integration}
-The integral (ref) may be solved symbolically, outputting an exponential polynomial in \(\xi\). In practice however, the domain \(P\) can complicate the calculation for \(\dim X > 2\). To deal with this we developed a recursive algorithm, based on results of Barvinok (cite), which reduces the integral to evaluations at the vertices of \(P\). Here we explain how this algorithm works.
-\[
+\section{Barvinok Integration} \label{sec:barvinok}
+The integral (ref) may be solved symbolically, outputting an exponential polynomial in \(\xi\). In practice however, the domain \(P\) can complicate the calculation for \(\dim X > 2\). To deal with this we developed a recursive algorithm, based on results of Barvinok \cite{Barvinok1992}, which reduces the integral to evaluations at the vertices of \(P\). We are interested in integrals of the following form:
+\begin{equation} \label{eq:barintegral1}
 \int_{P} l_1(x) e^{l_2(x)}
-\]
-for some linear functions \(l_1,l_2\). If we were working with surfaces, as is done earlier in \cite{cable2018classification}, then \(P\) is just an interval and the integral can be computed easily by hand. In theory one could divide and parameterize the domain for higher dimensions, but this quickly makes the process of integration a very tedious task for even mildly complicated domains \(P\).
+\end{equation}
+for some linear functions \(l_1,l_2\). If we were working with surfaces, as is done earlier in \cite{cable2018classification}, then \(P\) is just an interval and the integral can be computed easily by hand. In theory one could subdivide and parameterize the domain for higher dimensions, but this quickly makes the process of integration a very tedious task for even mildly complicated domains \(P\).
 
 In \cite{barvinok} Stoke's theorem is applied to a polytope domain. We may use this to iteratively reduce the dimension of our problem by rewriting the integral as an integral over the facets of \(P\).
-
+\begin{lemma}[\cite{Barvinok1992}] \label{lem:bar}
+Let \(\{\Gamma_i\}_i\) be the set of all facets of a polytope \(P\) and \(\mu_i\) be the Lebesgue measure on the affine hull of \(\Gamma_i\) induced from \(dx\) on \(\RR^n\). Denote by \(n_i\) the unit outer normal to \(\Gamma_i\). Let \(c \in \CC^n\) and \(\Lambda \in \RR^n\) such that \(\langle \lambda, c \rangle \neq 0\). Then
+\[
+\int_P e^{\langle c, x \rangle} dx = \frac{1}{\langle c , \lambda \rangle} \int_{\Gamma_i} e^{\langle c, x \rangle} d \mu_i.
+\]
+\end{lemma}
+To implement this in our situation we restate this in terms of measures induced by our lattice \(N \subset N_\RR\). Although in theory we could just apply an appropriate differential operator to find the relevant formula for reducing the integral (\ref{eq:barintegral1}), in practice we only needed to calculate integrals where \(l_1 = e_1*\), and so we use integration by parts:
+\[
+h
+\]
+and now we may directly use Lemma~\ref{lem:bar}. Our algorithm goes as follows:
+\begin{itemize}
+\item pick appropriate \(\lambda\) 
+\end{itemize}
 \begin{example}
 example of Barvinok algorithm
 \end{example}	
