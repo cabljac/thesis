@@ -61,15 +61,15 @@ X.~Chen, S.~Donaldson, and S.~Sun, ``K{\"a}hler-einstein metrics on fano
   main proof,'' {\em Journal of the American Mathematical Society}, vol.~28,
   no.~1, pp.~235--278, 2015.
 
-\bibitem{wang2004}
-X.-J. Wang and X.~Zhu, ``{K}{\"a}hler--{R}icci solitons on toric manifolds with
-  positive first {C}hern class,'' {\em Advances in Mathematics}, vol.~188,
-  no.~1, pp.~87--103, 2004.
-
 \bibitem{datar2016kahler}
 V.~Datar and G.~Sz{\'e}kelyhidi, ``K{\"a}hler--einstein metrics along the
   smooth continuity method,'' {\em Geometric and Functional Analysis}, vol.~26,
   no.~4, pp.~975--1010, 2016.
+
+\bibitem{wang2004}
+X.-J. Wang and X.~Zhu, ``{K}{\"a}hler--{R}icci solitons on toric manifolds with
+  positive first {C}hern class,'' {\em Advances in Mathematics}, vol.~188,
+  no.~1, pp.~87--103, 2004.
 
 \bibitem{ilten2015}
 N.~Ilten and H.~S{\"u}{\ss}, ``K-stability for {F}ano manifolds with torus
@@ -88,6 +88,15 @@ S.~Mori and S.~Mukai, ``Classification of fano 3-folds with b 2≥ 2,'' {\em
 H.~S{\"u}{\ss}, ``Fano threefolds with 2-torus action-a picture book,'' {\em
   arXiv preprint arXiv:1308.2379}, 2013.
 
+\bibitem{cable2019greatest}
+J.~Cable, ``Greatest lower bounds on ricci curvature for fano {T}-manifolds of
+  complexity one,'' {\em Bulletin of the London Mathematical Society}, vol.~51,
+  no.~1, pp.~34--42, 2019.
+
+\bibitem{li2009greatest}
+C.~Li, ``Greatest lower bounds on ricci curvature for toric fano manifolds,''
+  {\em arXiv preprint arXiv:0909.3443}, 2009.
+
 \bibitem{hausen2018torus}
 J.~Hausen, C.~Hische, and M.~Wrobel, ``On torus actions of higher complexity,''
   {\em arXiv preprint arXiv:1802.00417}, 2018.
@@ -96,62 +105,6 @@ J.~Hausen, C.~Hische, and M.~Wrobel, ``On torus actions of higher complexity,''
 H.~S{\"u}{\ss}, ``{K}{\"a}hler-{E}instein metrics on symmetric {Fano}
   {$T$-varieties},'' {\em Advances in Mathematics}, vol.~246, pp.~100 -- 113,
   2013.
-
-\bibitem{li06}
-L.~Li, ``Wonderful compactification of an arrangement of subvarieties,'' {\em
-  Michigan Math. J.}, vol.~58, no.~2, pp.~535--563, 2009.
-
-\bibitem{da2006symplectic}
-A.~C. da~Silva, ``Symplectic geometry,'' in {\em Handbook of differential
-  geometry}, vol.~2, pp.~79--188, Elsevier, 2006.
-
-\bibitem{berman2014complex}
-R.~J. Berman and D.~W. Nystrom, ``Complex optimal transport and the
-  pluripotential theory of k$\backslash$" ahler-ricci solitons,'' {\em arXiv
-  preprint arXiv:1401.8264}, 2014.
-
-\bibitem{atiyah1982convexity}
-M.~F. Atiyah, ``Convexity and commuting {H}amiltonians,'' {\em Bulletin of the
-  London Mathematical Society}, vol.~14, no.~1, pp.~1--15, 1982.
-
-\bibitem{guillemin1982convexity}
-V.~Guillemin and S.~Sternberg, ``Convexity properties of the moment mapping,''
-  {\em Inventiones mathematicae}, vol.~67, no.~3, pp.~491--513, 1982.
-
-\bibitem{mumford1994}
-D.~Mumford, J.~Fogarty, and F.~Kirwan, {\em Geometric invariant theory},
-  vol.~34.
-\newblock Springer Science \& Business Media, 1994.
-
-\bibitem{kempf1979}
-G.~Kempf and L.~Ness, ``The length of vectors in representation spaces,'' in
-  {\em Algebraic geometry}, pp.~233--243, Springer, 1979.
-
-\bibitem{kirwan}
-F.~C. Kirwan, ``Partial desingularisations of quotients of nonsingular
-  varieties and their {B}etti numbers,'' {\em Annals of mathematics}, vol.~122,
-  no.~1, pp.~41--85, 1985.
-
-\bibitem{kapranov1993}
-M.~M. Kapranov, ``Chow quotients of {G}rassmannians. {I},'' {\em Adv. Soviet
-  Math}, vol.~16, no.~2, pp.~29--110, 1993.
-
-\bibitem{baker2012}
-H.~B{\"a}ker, J.~Hausen, and S.~Keicher, ``On {C}how quotients of torus
-  actions,'' {\em Michigan Math. J.}, vol.~64, no.~3, pp.~451--473, 2015.
-
-\bibitem{petersen2011torus}
-L.~Petersen and H.~S{\"u}{\ss}, ``Torus invariant divisors,'' {\em Israel
-  Journal of Mathematics}, vol.~182, no.~1, pp.~481--504, 2011.
-
-\bibitem{cable2018classification}
-J.~Cable and H.~S{\"u}{\ss}, ``On the classification of k{\"a}hler--ricci
-  solitons on gorenstein del pezzo surfaces,'' {\em European Journal of
-  Mathematics}, vol.~4, no.~1, pp.~137--161, 2018.
-
-\bibitem{donaldson2008kahler}
-S.~K. Donaldson, ``Kahler geometry on toric manifolds, and some other manifolds
-  with large symmetry,'' {\em arXiv preprint arXiv:0803.0985}, 2008.
 
 \bibitem{tian1992stability}
 G.~Tian, ``On stability of the tangent bundles of {F}ano varieties,'' {\em
@@ -193,33 +146,5 @@ T.~Delcroix, ``K{\"a}hler--einstein metrics on group compactifications,'' {\em
 Y.~Yao, ``Greatest lower bounds on ricci curvature of homogeneous toric
   bundles,'' {\em International Journal of Mathematics}, vol.~28, no.~04,
   p.~1750024, 2017.
-
-\bibitem{cable2019greatest}
-J.~Cable, ``Greatest lower bounds on ricci curvature for fano {T}-manifolds of
-  complexity one,'' {\em Bulletin of the London Mathematical Society}, vol.~51,
-  no.~1, pp.~34--42, 2019.
-
-\bibitem{cable2019general}
-J.~Cable, ``{K{\"a}hler-{E}instein metrics on symmetric general arrangement
-  varieties}.'' 2019.
-
-\bibitem{Matsushima}
-Y.~{M}atsushima, ``Remarks on {K}{\"a}hler-{E}instein manifolds,'' {\em Nagoya
-  {M}ath. {J}.}, vol.~46, pp.~161--173, 1972.
-
-\bibitem{demailly2001}
-J.-P. Demailly and J.~Koll{\'a}r, ``Semi-continuity of complex singularity
-  exponents and {K}{\"a}hler-{E}instein metrics on {F}ano orbifolds,'' in {\em
-  Annales scientifiques de l'Ecole normale sup{\'e}rieure}, vol.~34,
-  pp.~525--556, 2001.
-
-\bibitem{cheltsov08}
-I.~A. Cheltsov and K.~A. Shramov, ``Log canonical thresholds of smooth {F}ano
-  threefolds,'' {\em Russian Mathematical Surveys}, vol.~63, no.~5, p.~859,
-  2008.
-
-\bibitem{suess18-2}
-H.~S{\"u}{\ss}, ``{Orbit spaces of maximal torus actions on oriented
-  {G}rassmannians of planes}.'' 2018.
 
 \end{thebibliography}
