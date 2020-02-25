@@ -74,7 +74,7 @@ def intexp(P,L,c,face=None, cache=None):
             n_F = n_F/gcd(n_F)
             coeff = acoeff(F,c)*(1/L.dot_product(c))*(L.dot_product(n_F))
             c_F = ProjMatrix*c
-            L_F = ProjMatrix.insert_row(0,vector(ZZ,A)).transpose().solve_right(L)[1:]
+            L_F = ProjMatrix*L
             v_0 = F.vertices()[0].vector(); v_0
             Vert = [ProjMatrix.transpose().solve_right(v.vector() - v_0)  for v in F.vertices() ]
             face_F = tuple([face[i] for i in F._ambient_Vrepresentation_indices])
@@ -162,4 +162,4 @@ def degenerations(L,B):
         Polyhedra = Polyhedra + [degenerations_step(L,k,B)];
     return Polyhedra
 \end{lstlisting}
-
+(include R(X) visualizations code)

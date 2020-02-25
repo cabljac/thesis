@@ -243,17 +243,24 @@ In \cite{barvinok} Stoke's theorem is applied to a polytope domain. We may use t
 \begin{lemma}[\cite{Barvinok1992}] \label{lem:bar}
 Let \(\{\Gamma_i\}_i\) be the set of all facets of a polytope \(P\) and \(\mu_i\) be the Lebesgue measure on the affine hull of \(\Gamma_i\) induced from \(dx\) on \(\RR^n\). Denote by \(n_i\) the unit outer normal to \(\Gamma_i\). Let \(c \in \CC^n\) and \(\Lambda \in \RR^n\) such that \(\langle \lambda, c \rangle \neq 0\). Then
 \[
-\int_P e^{\langle c, x \rangle} dx = \frac{1}{\langle c , \lambda \rangle} \int_{\Gamma_i} e^{\langle c, x \rangle} d \mu_i.
+\int_P e^{\langle c, x \rangle} dx = \frac{1}{\langle c , \lambda \rangle} \sum_i \int_{\Gamma_i} e^{\langle c, x \rangle} d \mu_i.
 \]
 \end{lemma}
 To implement this in our situation we restate this in terms of measures induced by our lattice \(N \subset N_\RR\). Although in theory we could just apply an appropriate differential operator to find the relevant formula for reducing the integral (\ref{eq:barintegral1}), in practice we only needed to calculate integrals where \(l_1 = e_1*\), and so we use integration by parts:
 \[
 h
 \]
-and now we may directly use Lemma~\ref{lem:bar}. Our algorithm goes as follows:
-\begin{itemize}
-\item pick appropriate \(\lambda\) 
-\end{itemize}
+and now we may directly use Lemma~\ref{lem:bar}.
+
+Any facet \(F\) of a polytope \(P\) is given by some equation \(Ax + b = 0\), for some primitive element \(A \in W^*\) where we have ambient vector space \(W\) of \(P\). Denote \(W_F = \ker A\). Denote by \(p: W \to W_F\) the projection  represented as a matrix with rows forming a basis of primitive lattice elements of \(K_F\). Define \(P_F = p(F), c_F = p(c), \lambda_F = p(\lambda)\).
+
+Call \(\lambda\) sufficiently general if after any sequence of facet inclusions \(F_1 \subset \dots F_r\) with \(F_1\) at least one-dimensional, \(\lambda_{F_1}\) is non-zero.
+
+\begin{enumerate}
+\item If \(c = 0\) we simply calculate \(\vol(P)\) and we're done
+\item Choose \(\lambda\)
+\item 
+\end{enumerate}
 \begin{example}
 example of Barvinok algorithm
 \end{example}	

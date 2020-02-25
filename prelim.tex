@@ -2,15 +2,15 @@
 
 \section{K\"ahler geometry}
 
-In this section we recall the basics of K\"ahler geometry. We then review some important results on the existence of canonical metrics on compact K\"ahler manifolds. A good reference for the material here is (ref) and (ref).
+In this section we recall the basics of K\"ahler geometry. We then review some important results on the existence of canonical metrics on compact K\"ahler manifolds. A good reference for the material here is \cite{griffiths} and \cite{szebook}.
 
-Let \(X\) denote a compact real manifold of dimension \(2n\). Suppose we have an almost complex structure \(J\) on \(X\), that is an automorphism \(J\) of \(T_\RR X\) such that \(J^2 = - \text{Id}\). Recall that the complexified tangent bundle \(T_\CC X := T_\RR X \otimes \CC\) decomposes via eigenspaces of \(J\):
+Let \(X\) denote a compact real manifold of dimension \(2n\). Suppose we have an almost complex structure \(J\) on \(X\), that is an automorphism \(J\) of \(T_\RR X\) such that \(J^2 = - \text{Id}\). Recall that the complexified tangent bundle, \(T_\CC X := T_\RR X \otimes \CC\), decomposes via eigenspaces of \(J\):
 \[
 T_\CC X = T^{1,0} X \oplus T^{0,1} X,
 \]
 where \(T^{(1,0)} X\) has local generators \(\frac{\partial}{\partial z_i} = \frac{1}{2} \left( \frac{\partial}{\partial x_i}  - \sqrt{-1} \frac{\partial}{\partial y_i}  \right) \), and \(T^{(0,1)} X = \overline{T^{(1,0)} X}\) has local generators \(\frac{\partial}{\partial \bar{z}_i} = \frac{1}{2} \left( \frac{\partial}{\partial x_i}  + \sqrt{-1} \frac{\partial}{\partial y_i}  \right)\).
 
-Recall we have a natural isomorphism of real vector bundles \(T_\RR X \to T^{(1,0)}\), given by the composition \(T_\RR X \to T_\CC \to T^{1,0}X\), and note by definition the action of \(J\) is described by  multiplying by \(\sqrt{-1}\) on \(T^{1,0} X\). The decomposition above induces a decomposition of the complexified cotangent bundle \(T^*_\CC X = T^*_{1,0} X \oplus T^*_{0,1} X\), and moreover a decomposition:
+Recall also that we have a natural isomorphism of real vector bundles \(T_\RR X \cong T^{(1,0)}\), given by the composition \(T_\RR X \to T_\CC \to T^{1,0}X\). Note, by definition, the action of \(J\) is described by multiplying by \(\sqrt{-1}\) on \(T^{1,0} X\). The decomposition above induces a decomposition of the complexified cotangent bundle \(T^*_\CC X = T^*_{1,0} X \oplus T^*_{0,1} X\), and moreover a decomposition:
 \[
 \bigwedge^n T^*_\CC X = \bigoplus_{p+q = n} \left(\bigwedge^p T^*_{1,0} X \otimes \bigwedge^q T^*_{0,1} X   \right)
 \]
@@ -20,7 +20,7 @@ A form \(\alpha \in A^{p,q}(X)\) is said to be \textit{of type \((p,q)\)}. We ha
 \[
 A^n(X) = \bigoplus_{p+q = n} A^{p,q}(X).
 \]
-A Hermitian metric is given by a smooth choice of positive definite hermitian inner product on the fibers of \(T^{(1,0)}X\), i.e an element of \(H^0(X, T^*_{1,0} X \otimes T^*_{0,1} X) \). Locally we write:
+A Hermitian metric is given by a smooth choice of positive definite Hermitian inner product on the fibers of \(T^{(1,0)}X\), i.e an element of \(H^0(X, T^*_{1,0} X \otimes T^*_{0,1} X) \). Locally we write:
 \[
 h(z) = \sum h_{ij}(z) dz_i \otimes d\bar{z}_j.
 \]
@@ -40,7 +40,7 @@ By definition we see \(g(v,w) = g(Jv,Jw)\) and \(\omega(v,w) = g(Jv,w) \) for an
 
 We may now recall the definition of a K\"ahler manifold.
 \begin{definition}
-A Hermitian metric is K\"ahler if the associated \((1,1)\)-form \(\omega\) is closed, i.e \(d \omega = 0\) where \(d: A^2(X,\RR) \to A^3(X,\RR)\) is the usual exterior differential.
+A Hermitian metric is K\"ahler if the associated \((1,1)\)-form \(\omega\) is closed, i.e \(d \omega = 0\), where \(d: A^2(X,\RR) \to A^3(X,\RR)\) is the usual exterior differential.
 \end{definition}
 We will bow to convention and refer to \(\omega\) as a K\"ahler metric on \(X\) in this context. The standard first example of a compact K\"ahler manifold is complex projective space:
 \begin{example}
@@ -68,21 +68,21 @@ Recall that a connection is a map
 \[
 \nabla: H^0(X,E) \to H^0(X,E \otimes T^* X)
 \]
-satisfying the Liebniz rule \(\nabla(s f) = \nabla s f + s \otimes df\). There is a unique way to extend a connection to and exterior derivative on \(E\)-valued differential forms.
+satisfying the Liebniz rule \(\nabla(s f) = \nabla s f + s \otimes df\). There is a unique way to extend a connection to an exterior derivative on \(E\)-valued differential forms.
 \[
 d^\nabla: \Omega^r(E) \to \Omega^{r+1}(E).
 \]
 The curvature of a connection is the \(2\)-form
 \[
-F^\nabla \in H^0(X, \text{End}  E \otimes \wedge^2 T^* X),
+F^\nabla \in H^0(X, \text{End}(E) \otimes \wedge^2 T^* X),
 \]
-given by
+given by:
 \[
-F^\nabla(u,v)(s) = \nabla_u \nabla_v s - \nabla_v \nabla_u s - \nabla_{[u,v]} s.
+F^\nabla(u,v)(s) := \nabla_u \nabla_v s - \nabla_v \nabla_u s - \nabla_{[u,v]} s.
 \]
-There is a canonical connection on the tangent bundle of any Riemannian manifold known as the Levi-Civita connection, satisfying \(\nabla g = 0\) and \(\nabla_u v - \nabla_v u = [u,v]\). We have a similar situation for any Hermitian vector bundle on a complex manifold:	
+There is a canonical connection on the tangent bundle of any Riemannian manifold known as the \textit{Levi-Civita connection}, satisfying \(\nabla g = 0\) and \(\nabla_u v - \nabla_v u = [u,v]\). We have a similar situation for any Hermitian vector bundle on a complex manifold:	
 \begin{example}
-Let \(E\) be a Hermitian vector bundle on a complex manifold \(X\) equipped with a holomorphic structure. There is a unique connection \(\nabla\) on \(E\) such that 
+Let \(E\) be a Hermitian vector bundle on a complex manifold \(X\) equipped with a holomorphic structure. There is a unique connection \(\nabla\) on \(E\) such that :
 \begin{itemize}
 \item  \(\pi_{1,0} \nabla s = \bar{\partial} s\)
 \item For any smooth vector field \(v\) and smooth sections \(s,t\). \(v \langle s,t \rangle = \langle \nabla_v s , t \rangle + \langle s, \nabla_v t \rangle\) 
@@ -97,9 +97,8 @@ The first Chern class of a Hermitian line bundle \(L\) is the real cohomology cl
 c_1(L) = \frac{1}{2 \pi} [  - \sqrt{-1} \partial \bar{\partial} \log(h) ] \in H^2(X, \RR)
 \]
 \end{definition}
-Prop: Every real \((1,1)\)-form in \(c_1(L)\) is the curvature of some Hermitian metric on \(L\).
 \begin{example}
-Suppose \((X,g)\) is a K\"ahler manifold. Then \(g\) induces a Hermitian metric on the holomorphic cotangent bundle \(\Omega^{1,0} X\), which in turn induces a Hermitian metric on the canonical line bundle \(K_X = \wedge^{n} \Omega^{1,0} X\), denoted \(\det(g)\). The curvature of the associated Chern connection to this Hermitian line bundle is called the Ricci curvature form of the manifold, given by
+Suppose \((X,g)\) is a K\"ahler manifold. Then \(g\) induces a Hermitian metric on the holomorphic cotangent bundle \(\Omega^{1,0} X\), which in turn induces a Hermitian metric on the canonical line bundle \(K_X = \wedge^{n} \Omega^{1,0} X\), denoted \(\det(g)\). The curvature of the associated Chern connection to this Hermitian line bundle is called the Ricci curvature form of the manifold, given by:
 \[
 \Ric(\omega) = - \sqrt{-1} \partial \bar{\partial} \log( \det(g) ).
 \]
@@ -107,7 +106,7 @@ The real cohomology class \(c_1(K_X) = \frac{1}{2 \pi} [  - \sqrt{-1} \partial \
 \end{example}
 We now recall the definition of a positively curved line bundle.
 \begin{definition}
-A real \((1,1)\)-form is called positive if the associated symmetric bilinear form defined for real tangent vectors is positive definite. A real cohomology class is called positive if it can be represented by a positive \((1,1)\) form. A line bundle \(L\) is called positive if its first Chern class is positive.
+A real \((1,1)\)-form is called positive if the associated symmetric bilinear form defined for real tangent vectors is positive definite. A real cohomology class is called positive if it can be represented by a positive \((1,1)\)-form. A line bundle \(L\) is called positive if its first Chern class is positive.
 \end{definition}
 The following theorem characterizes positive curvature as the same thing as ampleness. Recall that we say \(L\) is very ample if for some global sections \(s_0,\dots,s_n \in H^0(X,L)\) we obtain a well-defined closed embedding into a projective space, given by:
 \[
@@ -123,16 +122,17 @@ A closed complex submanifold of projective space is a projective algebraic subva
 \end{theorem}
 Now suppose \(X\) is a compact K\"ahler manifold. With example () in mind, either \(K_X = 0\) (etc)
 \section{Canonical metrics on K\"ahler manifolds}
-As put by Li \cite{li06}, a canonical metric is a choice of metric dependent only on the complex structure of the manifold, and unique up to biholomorphic automorphisms.
+A canonical metric is a choice of metric dependent only on the complex structure of the manifold, and unique up to biholomorphic automorphisms.
 
-Recall the following important result, telling us that any two K\"ahler forms of the same class differ by some real valued function.
+Recall the following important result, telling us that any two K\"ahler forms of the same class differ by some real-valued function.
 \begin{lemma}
 If \(\omega, \eta\) are two real \((1,1)\)-forms of the same cohomology class then there is a real function \(f: X \to \RR\) such that \(\omega - \eta = \sqrt{-1} \partial \bar{\partial} f\).
 \end{lemma}
+As we touched on in the introduction to this thesis, K\"ahler-Einstein metrics are an important class of canonical metric. The question of which compact K\"ahler manifolds admit a K\"ahler-Einstein metric has historically been of great interest. We recall their definition now.
 \begin{definition}
-Let \(X\) be a K\"ahler manifold. A K\"ahler-Einstein metric on \(X\) is a K\"ahler metric \(\omega\) such that \(\Ric \omega = \lambda \omega\) for some real constant \(\lambda\).
+Let \(X\) be a K\"ahler manifold. A K\"ahler-Einstein metric on \(X\) is a K\"ahler metric \(\omega \in 2 \pi c_1(X)\) such that \(\Ric \omega = \lambda \omega\) for some real constant \(\lambda\).
 \end{definition}
-For context we recall the situation in the case of negative and zero Ricci curvature:
+For context, we recall the answers to the existence question in the cases of negative and zero Ricci curvature:
 \begin{theorem}[Calabi-Yau Theorem]
 Let \((X,\omega)\) be a compact K\"ahler manifold. Let \(\alpha\) be a real \((1,1)\)-form representing \(c_1(X)\). Then there exists a real \((1,1)\)-form \(\omega'\) with \([\omega'] = [\omega]\) such that \(\Ric(\omega) = 2 \pi \alpha \)
 \end{theorem}
@@ -147,7 +147,7 @@ In fact the following theorem was also known, giving us a necessary condition fo
 \begin{theorem}
 Matsushima
 \end{theorem}
-We now introduce the most general form of canonical metric we will consider. This matches the definition given in (Datar and Szekylehidi)
+We now introduce the most general form of canonical metric we will consider. This matches the definition given in \cite[Definiton X]{datar2016kahler}
 \begin{definition} \label{def:tKRS}
 A twisted K\"ahler-Ricci soliton on a Fano manifold \((X,\omega_0)\) is a triple \((\omega,v, t)\) where \(\omega \in 2 \pi c_1(X)\) is a K\"ahler metric, \(v\) is a holomorphic vector field, and \(t \in [0,1]\), such that
 \[
@@ -157,12 +157,13 @@ When \(t = 0\) we omit it from the notation and call \((\omega,v)\) a K\"ahler-R
 \end{definition}
 As mentioned in the introduction, K\"ahler-Ricci solitons may be seen as a generalization of K\"ahler-Einstein metrics as they are more general forms of fixed points under the K\"ahler-Ricci flow. The twisted versions of K\"ahler-Einstein metrics and K\"ahler-Ricci solitons originates from the continuity path approach to the respective existence problems.
 
-In chapter () we will see various criteria for the existence of such metrics in an equivariant setting, but first we must recall some basic tools and language from algebraic geometry.
+In Section~\ref{sec:eqKstab} we will see various criteria for the existence of such metrics in an equivariant setting, but first we must recall some basic tools and language from algebraic geometry.
 \section{Tools from algebraic geometry} \label{basics}
-In this chapter we recall some definitions as we will be understanding them in this thesis.
+In this section we recall some definitions from algebraic and symplectic geometry as we will be understanding them in this thesis.
 \subsection{The algebraic torus} \label{algtorus}
 Fix an algebraic torus \(T = (\CC^*)^k\). We have mutually dual character and cocharacter lattices \(M := \Hom(T,\CC^*), \ N = \Hom(\CC^*,N)\) respectively. We denote by \(M_\mathbb{K} := M \otimes_\ZZ \mathbb{K}, \ N_\mathbb{K} := N \otimes_\ZZ \mathbb{K} \) the associated vector spaces, for \(\mathbb{K} = \QQ, \RR\). There is a perfect pairing \(M \times N \to \ZZ\) which extends to a bilinear pairing \(M_\mathbb{K} \times N_\mathbb{K} \to \mathbb{K}\). We often make the identification \( T \cong \spec \CC[M] \cong N \otimes \CC^*. \) Additionally we may identify the real Lie algebra \(\mathfrak{k}\) of the maximal compact subtorus \(K \subset T\) as \( N_\RR = N \otimes \RR.\)
 \subsection{Linearizations} \label{basics:linearizations}
+Linearizations are lifts of an algebraic group action on a scheme or variety \(X\) to an action on a line bundle on \(X\). They are needed in order to give a good definition of the quotient of \(X\) (in the sense of geometric invariant theory) by a given action.
 \begin{definition}
  Let \(X\) be a projective scheme together with an action \( \lambda : G \times X \to X\) of a reductive algebraic group \(G\). A linearization of the action \(\lambda\) on \(L\) is an action \(\tilde{\lambda}\) on \(L\) such that:
 \begin{itemize}
@@ -173,7 +174,7 @@ Fix an algebraic torus \(T = (\CC^*)^k\). We have mutually dual character and co
 %
 %
 %
-Note a linearization to \(L\) naturally induces linearizations to \(L^\vee\) and \(L^{\otimes r}\) for \(r \in \mathbb{N}\).
+Note a linearization to \(L\) naturally induces linearizations to \(L^\vee\) and \(L^{\otimes r}\) for any \(r \in \mathbb{N}\).
 %
 %
 %
@@ -218,9 +219,9 @@ Then, by Atiyah, \cite{atiyah1982convexity}, and Guillemin-Sternberg, \cite{guil
 \]
 \end{example}
 \subsection{Chow and GIT quotients} \label{basics:Chowquotients}
-Here we recall the definition of GIT, Chow, and limit quotients of a projective variety by a reductive algebraic group \(G\). We also explain how, when \(G\) is a torus, they may be explicitely calculated via the Kempf-Ness theorem, and recall how GIT quotients behave under smooth blowup.
+Here we recall the definition of GIT, Chow, and limit quotients of a projective variety by a reductive algebraic group \(G\). We also explain how, when \(G\) is a torus, they may be explicitely calculated via the Kempf-Ness theorem, and recall how GIT quotients behave under smooth blowup. The material here is used in Chapter~\ref{chap:gav}, where we give an exposition of the results of \cite{cable2019general}. Thus, the material here may also be found in the preliminary sections of \cite{cable2019general}.
 \subsubsection{GIT quotients}
-Recall the basic setup of Mumford's geometric invariant theory, which provides a method for finding geometric quotients on open subsets of a scheme \(X\) when the acting algebraic group \(G\) is reductive. A good reference is \cite{mumford1994}.
+Recall the basic setup of Mumford's geometric invariant theory, which provides a method for finding geometric quotients on open subsets of a scheme \(X\) when the acting algebraic group \(G\) is reductive.
 %
 %
 %
@@ -354,13 +355,7 @@ First, for context, let us recall the toric situation. A cone \(\sigma \subset N
 
 Face inclusions of cones correspond to equivariant open embeddings of varieties, and so from a complete fan of cones \(\Sigma\) we may construct a normal toric variety \(X_\Sigma\).
 \begin{example}
-Consider the variety \(X = \Bl_{z_0} \PP^2 \subset \PP^2 \times \PP^1 \) where \(z_0 = [0,0,1]\). We may lift the \(2\)-torus action on \(\PP^2\) to \(X\); in terms of the standard embedding \(X \cong V(xu-yv) \subset \subset \PP^2 \times \PP^1\) with homogeneous coordinates \(([x,y,z],[u,v])\), we have weight matrix
-\[
-\begin{pmatrix}
-1 & 0 & 0 & 1 & -1 \\ 0 & 1 & 0 & -1 & 1
-\end{pmatrix}
-\]
-This action becomes effective once we replace the torus \(T\) by \(T/ \pm \text{Id}\). As a toric variety it is given by the fan \(\Sigma\) in figure 1.1.
+Consider the variety \(X = \Bl_{z} \PP^1 \times \PP^1 \) where \(z = ( [1,0],[1,0]) \). We may lift the \(2\)-torus action on \(\PP^1 \times \PP^1 \) to \(X\). This action becomes effective once we replace the torus \(T\) by \(T/ \pm \text{Id}\). As a toric variety it is given by the fan \(\Sigma\) in figure 1.1.
 
 \begin{figure}[h] \label{fig:toricfan}
 \centering
@@ -368,8 +363,9 @@ This action becomes effective once we replace the torus \(T\) by \(T/ \pm \text{
    	 \draw[dotted,step=1,gray,] (-3,-3) grid (3,3);
    	 \draw[->] (0,0) -- (0,3);
    	 \draw[->] (0,0) -- (3,0);
+   	 \draw[->] (0,0) -- (0,-3);
+   	 \draw[->] (0,0) -- (-3,0);
    	 \draw[->] (0,0) -- (-3,-3);
-   	 \draw[->] (0,0) -- (3,3);
    	    \fill[bottom color=red!50!black, top color=cyan!50, opacity=0.2]
   (0,0) -- (3,0) -- (3,3) -- (0,0);
      	 	 \fill[bottom color=red!50!black, top color=cyan!50, opacity=0.2]
@@ -394,21 +390,19 @@ To any lattice polytope \(P \subset M_\QQ\) we can associate a normal projective
 Consider the the following lattice polytope:
 \begin{figure}[h]
 \centering
-  \begin{tikzpicture}[scale=0.6]
-   	 \draw[dotted,step=1,gray,] (-3,-2) grid (3,2);
-   	 \draw[] (2,-1) -- (2,0) -- (1,1) -- (-2,1) -- (-2,-1) -- (2,-1);
+  \begin{tikzpicture}[scale=0.8]
+   	 \draw[dotted,step=1,gray,] (-2,-2) grid (2,2);
+   	 \draw[] (1,-1) -- (1,0) -- (0,1) -- (-1,1) -- (-1,-1) -- (-1,-1) -- (1,-1);
    	 \draw (0,0) node {\textbullet};
    	 \fill[bottom color=red!50!black, top color=cyan!50, opacity=0.2]
-  (2,-1) -- (2,0) -- (1,1) -- (-2,1) -- (-2,-1) -- (2,-1);   	 
+  (1,-1) -- (1,0) -- (0,1) -- (-1,1) -- (-1,-1) -- (-1,-1);	 
 	\end{tikzpicture}
 	\caption{$P \subset M_\QQ$}
 \end{figure}
-
-The normal fan \(\mathcal{N}(P)\) is that of \(\PP^1 \times \PP^1\) as in example (ref). We can calculate the corresponding divisor as
+The normal fan \(\mathcal{N}(P)\) is that of \(\Bl_z \PP^1 \times \PP^1\) as in example (ref). We can calculate the corresponding divisor as
 \[
-D_P = -2D_{e_1} - D_{e_2} -2 D_{-e_1} - D_{-e_2}  \sim -4 D_{e_1} -2 D_{e_2} 
+D_P = - \sum_{\rho \in \Sigma(1)} D_\rho \sim -K_X.
 \]
-We see that this divisor represents the line bundle \(\O(4,2)\).
 \end{example}
 Conversely the exact sequence (ref) may be used to construct a polytope from any equivariant polarization of a projective toric variety. Finally, recall that a polytope is called Fano if the origin is contained in its interior, and each vertex is a primitive lattice point of \(M\). Under the correspondence just described, Fano polytopes correspond exactly to anticanonical polarizations of toric varieties.
 \subsection{Complexity one $T$-varieties}
@@ -422,7 +416,11 @@ It is well known that this gives a representation of any polyhedron \(\Delta = P
 
 The set of \(\sigma\)-tailed polyhedra form a sub-semigroup \(\Pol_\QQ^+(N,\sigma)\). We also include \(\emptyset\) here, with \(\emptyset + \Delta := \emptyset\) for any \(\Delta\). We may now recall the definition of a polyhedral divisor:
 \begin{definition}
-Let \(\sigma \subset N_\RR\) be a cone, and \(Y\) a normal projective variety over \(\CC\). A polyhedral divisor on \((Y,N)\) with tail cone \(\sigma\) is an element \(\mathcal{D} \in \Pol_\QQ^+(N,\sigma) \otimes \cadiv_\QQ^+(Y)\), where \(\cadiv_\QQ^+(Y)\) is the semigroup of effective \(\QQ\)-Cartier divisors on \(Y\). We write \(\tail \D = \sigma\).
+Let \(\sigma \subset N_\RR\) be a cone, and \(Y\) a normal projective variety over \(\CC\). A polyhedral divisor on \((Y,N)\) with tail cone \(\sigma\) is an element
+\[
+\mathcal{D} \in \Pol_\QQ^+(N,\sigma) \otimes \cadiv_\QQ^+(Y),
+\]
+where \(\cadiv_\QQ^+(Y)\) is the semigroup of effective \(\QQ\)-Cartier divisors on \(Y\). We write \(\tail \D = \sigma\).
 \end{definition}
 Let \(\Loc \D := Y \backslash \bigcup_{\D_Z = \emptyset} Z\). The evaluation of \(\D\) at \(u \in \sigma^\vee\) is defined to be the \(\QQ\)-Cartier divisor on \(Y\) given by:
 \[
@@ -437,27 +435,85 @@ By \cite[Proposition 3.1]{hausen2018torus}, \(p\)-divisor defines an affine \(T\
 \mathcal{A} := \bigoplus_{w \in \sigma^{\vee}} \O_{\Loc \D} (\D(u)) \chi^u.
 \]
 Define \(\TV(\D) := \spec H^0(\Loc \D, \mathcal{A}) \). Note the semiample and big conditions in the definition of a \(p\)-divisor ensure that the algebra \(H^0(\Loc \D, \A)\) is finitely generated.
-\begin{example}
-Consider the \(p\)-divisor:
-\[
-\D = [1,\infty) \otimes \{0\} + [4,\infty) \otimes \{\infty\}
-\]
-This gives the graded algebra \(H^0( \PP^1, \A) = \bigoplus_n \O_{\PP^1}( n \{0\} + 4n \{\infty\}).\)
-\end{example}
+
 The resulting \(T\)-variety \(\TV(\D)\) remains unchanged if we pull back \(\D\) by some birational \(\varphi: Y' \to Y\), i.e if \(\D' := \) then \(\TV(\D') = \TV(\D)\). Moreover, modifying \(\D\) by an element in the image of the natural map
 \[
 N \otimes_\ZZ \CC(Y)^* \to \Pol_\QQ^+(N,\sigma) \otimes \cadiv_\QQ^+(Y)
 \]
-does not change \(\TV(\D)\). Such an element is known as a \textit{principal polyhedral divisor}
+does not change \(\TV(\D)\). Such an element is known as a \textit{principal polyhedral divisor}.
 
 In the converse direction, by \cite[Proposition 3.4]{hausen2018torus}, any affine \(T\)-variety \(X\) is of the form \(\TV(\D)\) for some \(p\)-divisor \(\D\). In fact one can define morphisms of \(p\)-divisors, and this correspondence turns out to be an equivlance of categories between affine \(T\)-varieties and \(p\)-divisors up to equivalence via the modifications mentioned above.
-\begin{example}
-downgrade situation, toric example,
-\end{example}
 
+Any toric variety \(X\) with torus \(T\) may be considered a higher complexity \(T\)-variety with respect to any proper subtorus \(T' \subset T\). Such a subtorus is given by some surjection of character lattices \(M \to M'\) and we have mutually dual short exact sequences:
+\begin{align*}
+0 &\rightarrow N' \rightarrow N \rightarrow N_Y \rightarrow 0 \\
+0 &\leftarrow M' \leftarrow M \leftarrow M_Y \leftarrow 0
+\end{align*}
+\begin{example}
+Consider the toric variety given by the following cone:
+\begin{figure}[H] \label{fig:toricfan}
+\centering
+  \begin{tikzpicture}[scale=0.6]
+   	 \draw[dotted,step=1,gray,] (-1,-1) grid (2,2);
+   	 \draw[->] (0,0) -- (2,-1);
+   	 \draw[->] (0,0) -- (2,2);
+   	    \fill[bottom color=red!50!black, top color=cyan!50, opacity=0.2]
+  (0,0) -- (2,-1) -- (2,2) -- (0,0);
+   	 \draw (0,0) node {\textbullet};
+	\end{tikzpicture}
+	\caption{$\sigma \subset N_\QQ$}
+\end{figure}
+and subtorus action given by sublattice \(N' := \ZZ e_2 \subset N\). We may read off the downgrade \(p\)-divisor from the following diagram:
+\begin{figure}[H]
+\centering
+
+\label{fig:data230b}
+\resizebox{0.8\textwidth}{!}{
+\begin{subfigure}[b]{0.25\linewidth}
+\centering
+  \begin{tikzpicture}[scale=0.6]
+   	 \draw[->] (0,0) -- (0,2);
+   	 \draw[->] (0,0) -- (0,-2);
+   	 \draw (0,0) node {\textbullet};
+   	 \draw (0,1) node {\tiny{\textbullet}};
+   	 \draw (0,-1) node {\tiny{\textbullet}};
+   	 \draw (0,1) node[left] {\tiny{ $\{0\}$}};
+   	 \draw (0,-1) node[left] {\tiny{ $\{\infty\}$}};
+	\end{tikzpicture}
+	\caption*{$\sigma \subset N_\QQ$}
+\end{subfigure}
+\begin{subfigure}[b]{0.2\linewidth}
+\centering
+  \begin{tikzpicture}[scale=0.6]
+   	 \draw[thick,->] (1,3) -- (-1,3);
+   	 \draw[white,->] (1,0) -- (-1,0);
+   	 \node[above] (A) at (0,3) {$p$};
+	\end{tikzpicture}
+\end{subfigure}
+\begin{subfigure}[b]{0.25\linewidth}
+	\centering
+  \begin{tikzpicture}[scale=0.6]
+   	 \draw[dotted,step=1,gray,] (-1,-2) grid (4,2);
+   	 \draw[->] (0,0) -- (4,-2);
+   	 \draw[->] (0,0) -- (2,2);
+   	 \draw[thick,->] (1,1) -- (4,1);
+   	 \draw[thick,->] (2,-1) -- (4,-1);
+   	    \fill[bottom color=red!50!black, top color=cyan!50, opacity=0.2]
+  (0,0) -- (4,-2) -- (4,2) -- (2,2) -- (0,0);
+   	 \draw (0,0) node {\textbullet};
+	\end{tikzpicture}
+	\caption*{$\sigma \subset N_\QQ$}
+\end{subfigure}
+}
+\end{figure}
+and we see this downgraded toric variety is given by the \(p\)-divisor:
+\[
+\D = \{0\} \otimes [1, \infty) + \{\infty\} \otimes [2,\infty).
+\]
+\end{example}
 In complexity one, \(Y\) is a curve. Here the degree polyhedron
 \[
-\deg \D :=
+\deg \D := \sum_{y \in \PP^1} \D_y.
 \]
 plays an important role. Note the condition (ref) becomes X. Either \(\Loc \)... Therefore any complexity one normal affine \(\T\)-variety may be realized as \(\TV(\D)\) where \(\D\) is a \(p\)-divisor over \(\PP^1\).
 
@@ -474,7 +530,96 @@ A complete \(f\)-divisor is a pair \(\mathcal{S} = \left( \sum_{y \in \PP^1} S_y
 \] such that for any \(\sigma \in \Sigma\) either \(\sigma \cap \deg \mathcal{S} = \emptyset \) or the polyhedral divisor \(S^\sigma := \sum S_y^\sigma \otimes \{y\}\) is a \(p\)-divisor. We call the finite collection of \(S_y \neq \Sigma\) the non-trivial slices of \(S\).
 \end{definition}
 \begin{example}
-Here we give an example of an \(f\)-divisor describing a complexity one threefold. 
+Let us describe the downgrade procedure for the toric variety from Example~\ref{}, with respect to the subtorus given by sublattice \(N' := \ZZ e_1 \subset N\). We may read off the downgrade \(f\)-divisor from the following diagrams:
+\begin{figure}[H]
+\centering
+
+\label{fig:data230b}
+\resizebox{0.8\textwidth}{!}{
+\begin{subfigure}[b]{0.25\linewidth}
+\centering
+  \begin{tikzpicture}[scale=0.6]
+   	 \draw[->] (0,0) -- (0,3);
+   	 \draw[->] (0,0) -- (0,-3);
+   	 \draw (0,0) node {\textbullet};
+   	 \draw (0,1) node {\tiny{\textbullet}};
+   	 \draw (0,-1) node {\tiny{\textbullet}};
+   	 \draw (0,1) node[left] {\tiny{ $\{0\}$}};
+   	 \draw (0,-1) node[left] {\tiny{ $\{\infty\}$}};
+	\end{tikzpicture}
+	\caption*{$\Sigma_Y \subset N_Y$}
+\end{subfigure}
+\begin{subfigure}[b]{0.2\linewidth}
+\centering
+  \begin{tikzpicture}[scale=0.6]
+   	 \draw[thick,->] (1,4) -- (-1,4);
+   	 \draw[white,->] (1,0) -- (-1,0);
+   	 \node[above] (A) at (0,3) {$p$};
+	\end{tikzpicture}
+\end{subfigure}
+\begin{subfigure}[b]{0.25\linewidth}
+\centering
+  \begin{tikzpicture}[scale=0.6]
+   	 \draw[dotted,step=1,gray,] (-3,-3) grid (3,3);
+   	 \draw[->] (0,0) -- (0,3);
+   	 \draw[->] (0,0) -- (3,0);
+   	 \draw[->] (0,0) -- (0,-3);
+   	 \draw[->] (0,0) -- (-3,0);
+   	 \draw[->] (0,0) -- (-3,-3);
+   	 \draw[thick,->] (0,1) -- (3,1);
+   	 \draw[thick,->] (0,1) -- (-3,1);
+   	 \draw (0,1) node {\tiny{\textbullet}};
+   	 \draw[thick,->] (0,-1) -- (3,-1);
+   	 \draw[thick,->] (-1,-1) -- (-3,-1);
+   	 \draw[thick,->] (0,1) -- (3,1);
+   	 \draw[thick] (0,-1) -- (-1,-1);
+   	 \draw (0,-1) node {\tiny{\textbullet}};
+   	 \draw (-1,-1) node {\tiny{\textbullet}};
+   	    \fill[bottom color=red!50!black, top color=cyan!50, opacity=0.2]
+  (0,0) -- (3,0) -- (3,3) -- (0,0);
+     	 	 \fill[bottom color=red!50!black, top color=cyan!50, opacity=0.2]
+  (0,0) -- (3,3) -- (0,3) -- (0,0);
+   	 	 \fill[bottom color=red!50!black, top color=cyan!50, opacity=0.2]
+  (0,0) -- (-3,-3) -- (-3,3) -- (0,3) -- (0,0);
+   	 	 \fill[bottom color=red!50!black, top color=cyan!50, opacity=0.2]
+  (0,0) -- (-3,-3) -- (3,-3) -- (3,0) -- (0,0);
+   	 \draw (0,0) node {\textbullet};
+	\end{tikzpicture}
+	\caption*{$\Sigma \subset N$}
+\end{subfigure}
+}
+\end{figure}
+and we see this downgraded toric variety is given by the \(f\)-divisor:
+\begin{figure}[H]
+\centering
+
+\label{fig:data230b}
+\resizebox{0.8\textwidth}{!}{
+\begin{subfigure}[b]{0.25\linewidth}
+\centering
+  \begin{tikzpicture}[scale=0.6]
+   	 \draw[thick,->] (0,0) -- (2,0);
+   	 \draw[thick,->] (0,0) -- (-2,0);
+   	 \draw (0,0) node {\tiny{\textbullet}};
+	\end{tikzpicture}
+	\caption*{$S_{0}$}
+\end{subfigure}
+\begin{subfigure}[b]{0.25\linewidth}
+\centering
+  \begin{tikzpicture}[scale=0.6]
+   	 \draw[thick,->] (0,0) -- (2,0);
+   	 \draw[thick,->] (-1,0) -- (-2,0);
+   	 \draw[thick] (-1,0) -- (0,0);
+   	 \draw (-1,0) node {\tiny{\textbullet}};
+   	 \draw (0,0) node {\tiny{\textbullet}};
+	\end{tikzpicture}
+	\caption*{$S_{\infty} = \deg S$}
+\end{subfigure}
+}
+\end{figure}
+\end{example}
+\begin{example}
+Here we give an example of an \(f\)-divisor describing the complexity one threefold () from the list (ref) of Mori and Mukai.
 \begin{figure}[h]
 \centering
 
@@ -611,8 +756,50 @@ Let \(\Psi\) be a divisorial polytope. We may construct a complexity one polariz
 S_k := \bigoplus_{u \in \Box \cap \frac{1}{k} M} H^0(\PP^1, \mathcal{O}(\lfloor k \cdot ( \Psi(u) +D) \rfloor),
 \]
 where \(D\) is some integral divisor of degree \(2\). We may also recover a divisorial polytope \(\Psi\) from any polarized complexity one \(T\)-variety \((X,L)\) such that \( H^0(X,L^k) = S_k\). Moreover Fano divisorial polytopes correspond to Fano \(T\)-varieties \((X,-K_X)\). Thus all Fano complexity one \(T\)-varieties may be described in this way. For more details of this construction and the correspondence see \cite{suss2013fano}.
+
+(describe operation above)
+
+We can perform a downgrade operation on a polytope describing a toric variety. Given a polytope \(P \subset M_\QQ\) and a subtorus action \(N' \subset N\), we define
 \begin{example}
-same as above
+Consider the toric downgrade we described in (). If we start with the polytope () and perform the downgrade operation, we end up with divisorial polytope:
+
+\begin{figure}[H]
+\centering
+
+\label{fig:data230b}
+\resizebox{0.8\textwidth}{!}{
+\begin{subfigure}[b]{0.25\linewidth}
+\centering
+  \begin{tikzpicture}[scale=0.6]
+   	 \draw[dotted] (-1,0) -- (1,0);
+   	 \draw[dotted] (0,-1) -- (0,1);
+   	 \draw[thick] (-1,0) -- (0,1) -- (1,1);
+   	 \draw (0,0) node {\tiny{\textbullet}};
+   	 \draw (-1,0) node[below] {\tiny{$0$}};
+   	 \draw (1,0) node[below] {\tiny{$1$}};
+   	 \draw (-1,0) node {\tiny{$[$}};
+   	 \draw (1,0) node {\tiny{$]$}};
+	\end{tikzpicture}
+	\caption*{$\{0\}$}
+\end{subfigure}
+\begin{subfigure}[b]{0.25\linewidth}
+\centering
+  \begin{tikzpicture}[scale=0.6]
+   	 \draw[dotted] (-1,0) -- (1,0);
+   	 \draw[dotted] (0,-1) -- (0,1);
+   	 \draw[thick] (-1,1) -- (1,1);
+   	 \draw (0,0) node {\tiny{\textbullet}};
+   	 \draw (-1,0) node[below] {\tiny{$0$}};
+   	 \draw (1,0) node[below] {\tiny{$1$}};
+   	 \draw (-1,0) node {\tiny{$[$}};
+   	 \draw (1,0) node {\tiny{$]$}};
+	\end{tikzpicture}
+	\caption*{$\{\infty\}$}
+\end{subfigure}
+}
+\end{figure}
+
+It is easy to see that the resulting \(f\)-divisor from the operation () coincides with the downgrade \(f\)-divisor from ().
 \end{example}
 We now recall some basic terminology for divisorial polytopes, which we will make use of in later sections. The push-forward of the measure induced by \(\omega\) is known as the Duistermaat-Heckman measure, independent of the choice of \(\omega\) and which we denote by \(\nu\). Denote the standard measure on \(M_\RR\) by \(\eta\).
 
@@ -631,10 +818,14 @@ Note by the second equality we see \(\bc(\Psi) = \bc_\nu(\Box).\)
 \]
 \end{itemize}
 \end{definition}
-
--include toric degenerations.
-
-\section{Equivariant $K$-stability}
+Finally we include a description of toric degenerations of a complexity one \(T\)-variety.
+\begin{definition}
+-include toric degeneration definition?
+\end{definition}
+\begin{example}
+Consider the toric downgrade divisorial polytope given in Example~\ref{}. It is easy to see that all toric degeneration polytopes are isomorphic to the original toric polytope in Example~\ref{}.
+\end{example}
+\section{Equivariant $K$-stability} \label{sec:eqKstab}
 In this section we recall definitions of \(K\)-stability. In summary the \(K\)-stability criteria are concerned with the positivity of certain numerical invariants associated to \textit{test configurations} of our original space. We do not go into detail about how or why \(K\)-stability should relate to the existence of canonical metrics here, but give the definitions and theorems we will rely on later in the thesis.
 \subsection{Twisted equivariant $K$-stability}
 \label{prelim:twisted}

@@ -4,45 +4,49 @@ The top-level auxiliary file: master doc.aux
 The style file: ieeetr.bst
 Database file #1: mybib.bib
 Warning--I didn't find a database entry for ""
-You've used 32 entries,
+Warning--I didn't find a database entry for "barvinok"
+Warning--empty note in cable2019general
+Warning--empty note in suess18-2
+Warning--can't use both volume and number fields in demailly2001
+You've used 52 entries,
             1876 wiz_defined-function locations,
-            673 strings with 7859 characters,
-and the built_in function-call counts, 9616 in all, are:
-= -- 1090
-> -- 176
+            783 strings with 10455 characters,
+and the built_in function-call counts, 14367 in all, are:
+= -- 1588
+> -- 298
 < -- 0
-+ -- 77
-- -- 45
-* -- 638
-:= -- 1261
-add.period$ -- 32
-call.type$ -- 32
-change.case$ -- 32
++ -- 128
+- -- 76
+* -- 952
+:= -- 1915
+add.period$ -- 54
+call.type$ -- 52
+change.case$ -- 50
 chr.to.int$ -- 0
-cite$ -- 32
-duplicate$ -- 522
-empty$ -- 916
-format.name$ -- 45
-if$ -- 2414
+cite$ -- 55
+duplicate$ -- 777
+empty$ -- 1405
+format.name$ -- 76
+if$ -- 3596
 int.to.chr$ -- 0
-int.to.str$ -- 32
-missing$ -- 32
-newline$ -- 99
-num.names$ -- 32
-pop$ -- 48
+int.to.str$ -- 52
+missing$ -- 51
+newline$ -- 161
+num.names$ -- 52
+pop$ -- 103
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 415
+skip$ -- 589
 stack$ -- 0
-substring$ -- 893
-swap$ -- 266
+substring$ -- 1212
+swap$ -- 368
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 113
-width$ -- 34
-write$ -- 339
-(There was 1 warning)
+warning$ -- 3
+while$ -- 165
+width$ -- 54
+write$ -- 534
+(There were 5 warnings)

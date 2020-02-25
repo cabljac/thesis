@@ -3,10 +3,39 @@
 \BOOKMARK [0][-]{chapter*.6}{Acknowledgements}{}% 3
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 4
 \BOOKMARK [1][-]{section.1.1}{Content of the Thesis}{chapter.1}% 5
-\BOOKMARK [0][-]{chapter.2}{R\(X\) in complexity one}{}% 6
-\BOOKMARK [1][-]{section.2.1}{A short digression into convex geometry}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.2}{Proof of Theorem 4}{chapter.2}% 8
-\BOOKMARK [2][-]{subsection.2.2.1}{Product Configurations}{section.2.2}% 9
-\BOOKMARK [2][-]{subsection.2.2.2}{Non-Product Configurations}{section.2.2}% 10
-\BOOKMARK [0][-]{appendix.A}{Threefold Data}{}% 11
-\BOOKMARK [0][-]{appendix*.23}{Bibliography}{}% 12
+\BOOKMARK [0][-]{chapter.2}{Preliminaries}{}% 6
+\BOOKMARK [1][-]{section.2.1}{K\344hler geometry}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.1.1}{Line bundles and Kodeira Embedding}{section.2.1}% 8
+\BOOKMARK [1][-]{section.2.2}{Canonical metrics on K\344hler manifolds}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.3}{Tools from algebraic geometry}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.3.1}{The algebraic torus}{section.2.3}% 11
+\BOOKMARK [2][-]{subsection.2.3.2}{Linearizations}{section.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.3.3}{Hamiltonian actions and moment maps}{section.2.3}% 13
+\BOOKMARK [2][-]{subsection.2.3.4}{Chow and GIT quotients}{section.2.3}% 14
+\BOOKMARK [1][-]{section.2.4}{T-varieties}{chapter.2}% 15
+\BOOKMARK [2][-]{subsection.2.4.1}{Toric varieties}{section.2.4}% 16
+\BOOKMARK [2][-]{subsection.2.4.2}{Complexity one T-varieties}{section.2.4}% 17
+\BOOKMARK [1][-]{section.2.5}{Equivariant K-stability}{chapter.2}% 18
+\BOOKMARK [2][-]{subsection.2.5.1}{Twisted equivariant K-stability}{section.2.5}% 19
+\BOOKMARK [2][-]{subsection.2.5.2}{K-stability of T-varieties}{section.2.5}% 20
+\BOOKMARK [0][-]{chapter.3}{K\344hler-Ricci solitons on Fano threefolds}{}% 21
+\BOOKMARK [1][-]{section.3.1}{The method of proof}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.2}{Two examples in detail}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.3}{Barvinok Integration}{chapter.3}% 24
+\BOOKMARK [0][-]{chapter.4}{R\(X\) in complexity one}{}% 25
+\BOOKMARK [1][-]{section.4.1}{A short digression into convex geometry}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.2}{Proof of Theorem 4}{chapter.4}% 27
+\BOOKMARK [2][-]{subsection.4.2.1}{Product Configurations}{section.4.2}% 28
+\BOOKMARK [2][-]{subsection.4.2.2}{Non-Product Configurations}{section.4.2}% 29
+\BOOKMARK [0][-]{chapter.5}{K\344hler-Einstein metrics on symmetric general arrangement varieties}{}% 30
+\BOOKMARK [1][-]{section.5.1}{Chow quotient calculations}{chapter.5}% 31
+\BOOKMARK [2][-]{subsection.5.1.1}{Bidegree \(,\) hypersurfaces}{section.5.1}% 32
+\BOOKMARK [2][-]{subsection.5.1.2}{W2n: a wonderful compactification on the quadric}{section.5.1}% 33
+\BOOKMARK [1][-]{section.5.2}{Log canonical thresholds and Tian's criterion}{chapter.5}% 34
+\BOOKMARK [2][-]{subsection.5.2.1}{Log canonical thresholds}{section.5.2}% 35
+\BOOKMARK [2][-]{subsection.5.2.2}{Tian's alpha invariant and criterion}{section.5.2}% 36
+\BOOKMARK [2][-]{subsection.5.2.3}{Log canonical threshold bounds}{section.5.2}% 37
+\BOOKMARK [0][-]{chapter.6}{Conclusions and further work}{}% 38
+\BOOKMARK [0][-]{appendix.A}{Threefold Data}{}% 39
+\BOOKMARK [0][-]{appendix.B}{SageMath Code}{}% 40
+\BOOKMARK [0][-]{appendix*.37}{Bibliography}{}% 41

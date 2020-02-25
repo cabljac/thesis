@@ -1,12 +1,45 @@
-\contentsline {chapter}{Declaration}{6}{chapter*.4}
-\contentsline {chapter}{Copyright}{7}{chapter*.5}
-\contentsline {chapter}{Acknowledgements}{8}{chapter*.6}
-\contentsline {chapter}{\numberline {1}Introduction}{9}{chapter.1}
-\contentsline {section}{\numberline {1.1}Content of the Thesis}{13}{section.1.1}
-\contentsline {chapter}{\numberline {2}$R(X)$ in complexity one}{15}{chapter.2}
-\contentsline {section}{\numberline {2.1}A short digression into convex geometry}{18}{section.2.1}
-\contentsline {section}{\numberline {2.2}Proof of Theorem 4}{21}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Product Configurations}{21}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Non-Product Configurations}{21}{subsection.2.2.2}
-\contentsline {chapter}{\numberline {A}Threefold Data}{23}{appendix.A}
-\contentsline {chapter}{Bibliography}{32}{appendix*.23}
+\contentsline {chapter}{Declaration}{7}{chapter*.4}
+\contentsline {chapter}{Copyright}{8}{chapter*.5}
+\contentsline {chapter}{Acknowledgements}{9}{chapter*.6}
+\contentsline {chapter}{\numberline {1}Introduction}{10}{chapter.1}
+\contentsline {section}{\numberline {1.1}Content of the Thesis}{14}{section.1.1}
+\contentsline {chapter}{\numberline {2}Preliminaries}{16}{chapter.2}
+\contentsline {section}{\numberline {2.1}K\"ahler geometry}{16}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Line bundles and Kodeira Embedding}{18}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}Canonical metrics on K\"ahler manifolds}{20}{section.2.2}
+\contentsline {section}{\numberline {2.3}Tools from algebraic geometry}{22}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}The algebraic torus}{22}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Linearizations}{22}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Hamiltonian actions and moment maps}{23}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Chow and GIT quotients}{24}{subsection.2.3.4}
+\contentsline {subsubsection}{GIT quotients}{24}{section*.11}
+\contentsline {subsubsection}{Kempf-Ness approach to GIT quotients}{25}{section*.12}
+\contentsline {subsubsection}{GIT quotients under smooth blowup}{27}{section*.13}
+\contentsline {subsubsection}{Chow and limit quotients}{28}{section*.14}
+\contentsline {section}{\numberline {2.4}$T$-varieties}{29}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Toric varieties}{29}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Complexity one $T$-varieties}{30}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}Equivariant $K$-stability}{36}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Twisted equivariant $K$-stability}{37}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}$K$-stability of $T$-varieties}{38}{subsection.2.5.2}
+\contentsline {chapter}{\numberline {3}K\"ahler-Ricci solitons on Fano threefolds}{40}{chapter.3}
+\contentsline {section}{\numberline {3.1}The method of proof}{40}{section.3.1}
+\contentsline {section}{\numberline {3.2}Two examples in detail}{43}{section.3.2}
+\contentsline {section}{\numberline {3.3}Barvinok Integration}{47}{section.3.3}
+\contentsline {chapter}{\numberline {4}$R(X)$ in complexity one}{49}{chapter.4}
+\contentsline {section}{\numberline {4.1}A short digression into convex geometry}{52}{section.4.1}
+\contentsline {section}{\numberline {4.2}Proof of Theorem 4}{55}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Product Configurations}{55}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Non-Product Configurations}{55}{subsection.4.2.2}
+\contentsline {chapter}{\numberline {5}K\"ahler-Einstein metrics on symmetric general arrangement varieties}{57}{chapter.5}
+\contentsline {section}{\numberline {5.1}Chow quotient calculations}{58}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Bidegree $(\alpha ,\beta )$ hypersurfaces}{58}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}$W^{2n}$: a wonderful compactification on the quadric}{61}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Log canonical thresholds and Tian's criterion}{64}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Log canonical thresholds}{64}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Tian's alpha invariant and criterion}{66}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Log canonical threshold bounds}{68}{subsection.5.2.3}
+\contentsline {chapter}{\numberline {6}Conclusions and further work}{70}{chapter.6}
+\contentsline {chapter}{\numberline {A}Threefold Data}{71}{appendix.A}
+\contentsline {chapter}{\numberline {B}SageMath Code}{80}{appendix.B}
+\contentsline {chapter}{Bibliography}{84}{appendix*.37}
