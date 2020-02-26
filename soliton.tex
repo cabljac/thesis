@@ -88,13 +88,14 @@ Here we present threefolds 2.30 and 3.23 in detail:
 \begin{example}[2.30 -- Blow up of quadric threefold in a point]
 \label{exp:threefold}
 Consider the threefold 2.30. The function \(\Phi\) is given in Figure~\ref{fig:data230}.
-\begin{figure}[h]
-\caption{The combinatorial data for threefold 2.30}
-\label{fig:data230}
-\resizebox{0.90\linewidth}{!}{
-\begin{subfigure}[b]{0.30\textwidth}
+\begin{figure}[H]
 \centering
-  \begin{tikzpicture}[scale=0.5]
+
+\label{fig:data230b}
+\resizebox{0.9\textwidth}{!}{
+\begin{subfigure}[b]{0.25\linewidth}
+\centering
+  \begin{tikzpicture}[scale=0.6]
    	 \draw[dotted,step=1,gray,] (-3,-3) grid (3,2); \draw[line width = 1pt] (0,-3) --
      (-3,0) -- (-2,1)--(2,1)--
  	 (3,0)--(0,-3); \draw[densely dashdotted, gray, line width = 1.2pt] (0,-3) -- (0,1);
@@ -107,9 +108,9 @@ Consider the threefold 2.30. The function \(\Phi\) is given in Figure~\ref{fig:d
 	\end{tikzpicture}
 	\caption*{$\Phi_0$}
 \end{subfigure}
-\begin{subfigure}[b]{0.30\textwidth}
+\begin{subfigure}[b]{0.25\linewidth}
 	\centering
- 	 \begin{tikzpicture}[scale=0.5]
+ 	 \begin{tikzpicture}[scale=0.6]
  	   \draw[dotted,step=1,gray] (-3,-3) grid (3,2); \draw[line width = 1.2pt] (0,-3) --
  	   (-3,0) -- (-2,1)--(2,1)--
  	   (3,0)--(0,-3); \draw[densely dashdotted, gray,line width = 1.2pt] (-3,0) -- (3,0);
@@ -121,9 +122,9 @@ Consider the threefold 2.30. The function \(\Phi\) is given in Figure~\ref{fig:d
 	\end{tikzpicture}
 	\caption*{$\Phi_1$}
 \end{subfigure}
-\begin{subfigure}[b]{0.30\textwidth}
+\begin{subfigure}[b]{0.25\linewidth}
 	\centering
- 	 \begin{tikzpicture}[scale=0.5]
+ 	 \begin{tikzpicture}[scale=0.6]
  	   \draw[dotted,step=1,gray] (-3,-3) grid (3,2); \draw[line width = 1.2pt] (0,-3) --
  	   (-3,0) -- (-2,1)--(2,1)--
  	   (3,0)--(0,-3);
@@ -135,9 +136,9 @@ Consider the threefold 2.30. The function \(\Phi\) is given in Figure~\ref{fig:d
 	\end{tikzpicture}
 	\caption*{$\Phi_\infty$}
 \end{subfigure}
-\begin{subfigure}[b]{0.40\textwidth}
+\begin{subfigure}[b]{0.25\linewidth}
 	\centering
- 	 \begin{tikzpicture}[scale=0.5]
+ 	 \begin{tikzpicture}[scale=0.6]
  	   \draw[dotted,step=1,gray] (-3,-3) grid (3,2); \draw[line width = 1.2pt] (0,-3) --
  	   (-3,0) -- (-2,1)--(2,1)--
  	   (3,0)--(0,-3); \draw[densely dashdotted, gray,line width = 1.2pt] (-3,0) -- (3,0); \draw[densely dashdotted, gray,line width = 1.2pt] (0,-3) -- (0,1) ;
@@ -261,6 +262,60 @@ Call \(\lambda\) sufficiently general if after any sequence of facet inclusions 
 \item Choose \(\lambda\)
 \item 
 \end{enumerate}
-\begin{example}
-example of Barvinok algorithm
-\end{example}	
+\begin{figure}[H]
+\begin{subfigure}[b]{0.25\linewidth}
+	\centering
+ 	 \begin{tikzpicture}[scale=1]
+ 	   \draw[dotted,step=1,gray] (-2,-2) grid (2,2); \draw[line width = 1.2pt] (1,-1) --
+ 	   (1,1) -- (-1,1)--(-1,-1)--
+ 	   (1,-1);
+ 	   \draw[densely dashdotted, gray,line width = 1.2pt] (-2,0) -- (2,0); \draw[densely dashdotted, gray,line width = 1.2pt] (0,-2) -- (0,2) ;
+ 	 \draw (0,0) node {\textbullet};
+ 	 \draw[red,->,thick] (0,0) -- (0,2);
+ 	 \node at (0,2) [above,red] {\large{$c$}};
+ 	 \draw[red,->,thick] (0,0) -- (2,2);
+ 	 \node at (2,2) [above,red] {{$\lambda$}};
+ 	 \node at (1,-1/2) [right,red] {{$\Gamma_1$}};
+ 	 \node at (-1/2,1) [above,red] {{$\Gamma_2$}};
+ 	 \node at (-1,3/8) [left,red] {{$\Gamma_3$}};
+ 	 \node at (-1/2,-1) [below,red] {{$\Gamma_4$}};
+ 	 \draw[red,->,thick] (0,0) -- (2,2);
+ 	 \node at (2,2) [above,red] {{$\lambda$}};
+	\end{tikzpicture}
+	\end{subfigure}
+\begin{subfigure}[b]{0.25\linewidth}
+	\centering
+ 	 \begin{tikzpicture}[scale=1]
+ 	 \draw[dotted,step=1,gray] (-2,-2) grid (2,2);
+ 	 \draw (0,0) node {\textbullet};
+ 	 \draw[red,->,thick] (0,0) -- (0,2);
+ 	 \node at (0,2) [above,red] {\large{$c$}};
+	\end{tikzpicture}
+\end{subfigure}
+\end{figure}
+\begin{figure}[H]
+\begin{subfigure}[b]{0.25\linewidth}
+	\centering
+ 	 \begin{tikzpicture}[scale=1]
+ 	 \draw[dotted,step=1,gray] (0,-2) -- (0,2);
+ 	 \draw[line width = 1.2pt] (0,-1) -- (0,1);
+ 	 \draw (0,0) node {\textbullet};
+ 	 \draw (0,-1) node {\tiny{\textbullet}};
+ 	 \draw (0,1) node {\tiny{\textbullet}};
+ 	 \node at (0,-1) [left] {\tiny{$\Gamma_{11}$}};
+ 	 \node at (0,1) [left] {\tiny{$\Gamma_{12}$}};
+ 	 \node at (0,0) [right,red] {{$\Gamma_1$}};
+ 	 \draw[->] (0,0) -- (0,2);
+ 	 \node at (0,2) [above] {{$\lambda$}};
+	\end{tikzpicture}
+\end{subfigure}
+\begin{subfigure}[b]{0.25\linewidth}
+	\centering
+ 	 \begin{tikzpicture}[scale=1]
+ 	 \draw[dotted,step=1,gray] (0,-2) -- (0,2);
+ 	 \draw[->] (0,0) -- (0,2);
+ 	 \node at (0,2) [above] {{$c$}};
+ 	 \draw (0,0) node {\textbullet};
+	\end{tikzpicture}
+\end{subfigure}
+\end{figure}

@@ -1,19 +1,19 @@
-\chapter{K\"ahler-Einstein metrics on symmetric general arrangement varieties} \label{chap:gav}
-In this chapter we use equivariant methods to find new K\"ahler-Einstein metrics on some complexity two \(T\)-varieties. The first examples we are interested in are some hypersurfaces of  bidegree \((\alpha,\beta)\). Consider the following varieties:
+\chapter{K\"ahler-Einstein metrics in complexity two} \label{chap:gav}
+In this chapter we use equivariant methods to find new K\"ahler-Einstein metrics on some complexity two \(T\)-varieties. The first examples we are interested in are some hypersurfaces of  bidegree \((a,b)\). Consider the following varieties:
 \[
-X_{\alpha,\beta}^{2n-1} := V \left( \sum_{i=0}^n x_i^\alpha y_i^\beta \right) \subseteq \PP^n \times \PP^n
+X_{a,b}^{2n-1} := V \left( \sum_{i=0}^n x_i^a y_i^b \right) \subseteq \PP^n \times \PP^n
 \]
 %
 %
-Let \(a = \alpha/d, b = \beta/d\), where \(d = \text{gcd}(\alpha,\beta)\). There is a \(T = (\CC^*)^n\)-action on \(X_{\alpha,\beta}^{2n-1}\) specified by weights \((0|b I_n|0|-a I_n)\) on the homogeneous coordinates. Our first result is the following:
+Let \(p = a/d, q = b/d\), where \(d = \text{gcd}(a,b)\). There is an effective \(T = (\CC^*)^n\)-action on \(X_{a,b}^{2n-1}\) specified by weights \((0|q I_n|0|-p I_n)\) on the homogeneous coordinates. Our first result is the following:
 \begin{theorem}[{\cite[Theorem 1.1]{cable2019general}}]\label{thm:KE1}
-\(X_{1,2}^5\) and \( X_{1,3}^5\) admit \(T\)-invariant K\"ahler-Einstein metrics
+\(X_{1,2}^5\) and \( X_{1,3}^5\) admit \(T\)-invariant K\"ahler-Einstein metrics.
 \end{theorem}
 Note that \(X_{1,2}^5\) and \(X_{1,3}^5\ \) appear in the classification of \cite{hausen2018torus} as varieties \(4E, 4F\) respectively. Note also that \(X_{1,1}^{2n-1}\) is the flag manifold of type \((1,n-1)\) and is known to be K\"ahler-Einstein as a homogeneous manifold, see remarks immediately preceeding \cite[Theorem 3]{Matsushima} for example. Our method of proof also allows us to calculate the topological orbit space of the compact torus action on these varieties:
 \begin{corollary}[{\cite[corollary 1.5]{cable2019general}}]\label{cor:topquot}
 Let \(K\) be the maximal compact torus of \(T\). There is a homeomorphism:
 \[
-X_{\alpha,\beta}^{2n-1}/K \cong S^{n-1} \ast \PP^{n-1}.
+X_{a,b}^{2n-1}/K \cong S^{n-1} \ast \PP^{n-1}.
 \]
 Where the later is the topological join of the \((n-1)\)-sphere and complex projective \((n-1)\)-space. In particular, this shows that the \(K\)-orbit space of the flag manifold \(F(1,n-1,\CC^n) = X_{1,1}^{2n-1}\) is of this form.
 \end{corollary}
@@ -25,20 +25,18 @@ Let \(Z_i := V(x_{2i},x_{2i+1}) \subset Q^{2n}\) for \(i=0,\dots,n\). Let \(W^{2
 \begin{theorem}[{\cite[Theorem 1.2]{cable2019general}}]\label{thm:KE2}
 \(W^6\) admits a \(T'\)-invariant K\"ahler-Einstein metric.
 \end{theorem}
-Note that these examples admit additional symmetries. There is a natural \(S_{n+1}\)-action on \(X^{2n-1}_{\alpha,\beta}\) permuting the indices of variables. By results of \cite{li06}, the \(S_{n+1}\)-action on \(Q^{2n}\) permuting the \(Z_i\) induces an action on \(W^{2n}\).
+Note that these examples admit additional symmetries: there is a natural \(S_{n+1}\)-action on \(X^{2n-1}_{a,b}\) permuting the indices of variables, and by results of \cite{li06}, the \(S_{n+1}\)-action on \(Q^{2n}\) permuting the \(Z_i\) induces a well-defined action on \(W^{2n}\).
 \section{Chow quotient calculations}
 We now calculate the Chow quotient pairs of our examples. As discussed in \ref{basics:Chowquotients}, the Chow quotient coincides with the GIT limit quotient.
-\subsection{Bidegree $(\alpha,\beta)$ hypersurfaces} \label{subsec:hypersurfaces}
-For the varieties \(X_{\alpha,\beta}^{2n-1}\) we use the Kempf-Ness theorem to calculate GIT quotients. The inverse system is simple enough in this case to then deduce the Chow quotient pair and in addition prove Corollary~\ref{cor:topquot}. Fix natural numbers \(n,\alpha,\beta>0\), and consider:
-\[
-X = X_{\alpha,\beta}^{2n-1} := V \left( \sum_{i=0}^n x_i^\alpha y_i^\beta \right) \subseteq \PP^n \times \PP^n.
-\]
-Let \(a = \alpha/d, b = \beta/d\), where \(d = \text{gcd}(\alpha,\beta)\) and let \(T\) be the \(n\)-torus acting with weights \((0|b I_n|0|-a I_n)\). Let \(K\) denote the maximal compact torus in \(T\).
+\subsection{Bidegree $(a,b)$ hypersurfaces} \label{subsec:hypersurfaces}
+For the varieties \(X_{a,b}^{2n-1}\) we use the Kempf-Ness theorem to calculate GIT quotients. The inverse system is simple enough in this case to then deduce the Chow quotient pair and in addition prove Corollary~\ref{cor:topquot}. Fix natural numbers \(n,a,b>0\) and for brevity let \(X = X_{a,b}^{2n-1} \).
+
+Let \(K\) denote the maximal compact torus in \(T\).
 First we calculate our GIT and Chow quotients. Let \(L\) be the restriction of \(  \mathcal{O}(1,1)\) to \(X\). Using (\ref{eq:mu}) we can explicitely give a moment map for the torus action:
 \[
-([x],[y]) \mapsto \frac{ \sum |x_iy_j|^2( b e_i - a e_j)}{\sum |x_iy_j|^2}.
+\mu([x],[y]) = \frac{ \sum |x_iy_j|^2( q e_i - p e_j)}{\sum |x_iy_j|^2}.
 \]
-Where we take \(e_0 := 0\). The moment image polytope \(P\) is the convex hull of the vectors \(\{ b e_i - a e_j \}_{i,j}\). Consider a boundary point \(u \in \partial P\). In this case we show that the moment fibre of \(u\) is contained in one \(T\)-orbit, and so the GIT quotient is just contraction to a point. The key observation here is the following:
+Where we define \(e_0 := 0\). The moment image polytope \(P\) is the convex hull of the vectors \(\{ q e_i - p e_j \}_{i,j}\). Consider a boundary point \(u \in \partial P\). In this case we show that the moment fibre of \(u\) is contained in one \(T\)-orbit, and thus the GIT quotient is just contraction to a point. The key observation here is the following:
 %
 %
 %
@@ -53,15 +51,15 @@ Then for each \(j\) we have \(x_i=0 \iff {x'}_i = 0\) and \(y_i = 0 \iff {y'}_i 
 %
 %
 \begin{proof}
-Suppose first \(i>0\). We have:
+Suppose first \(i>0\). For some positive real constants \(A,B,C,D\) we have:
 \[
 A \sum_{j=0}^n |x_iy_j|^2 - B\sum_{j=0}^n  |x_jy_i|^2  = C \sum_{j=0}^n  |{x'}_i{y'}_j|^2 - D \sum_{j=0}^n  |{x'}_j{y'}_i|^2.
 \] 
-For positive constants \(A,B,C,D\). The conclusion follows by considering signs. Suppose now \(i =0\). By applying the affine linear functional \(l(w) := w \cdot \left( \sum e_j \right) - (b-a)\) to  \(\mu(x,y) = \mu(x',y')\) we obtain:
+The conclusion follows by considering signs. Suppose now \(i =0\). By applying the affine linear functional \(l(w) := w \cdot \left( \sum e_j \right) - (q-p)\) to the equation \(\mu([x],[y]) = \mu([x'],[y'])\), we obtain:
 \[
  E \sum_{j=1}^n  |x_jy_0|^2  - F \sum_{j=0}^n |x_0y_j|^2 =  G \sum_{j=1}^n  |{x'}_j{y'}_0|^2 - H \sum_{j=0}^n  |{x'_0}{y'_j}|^2.
 \]
-For positive constants \(E,F,G,H\). Again by signs we obtain the result.
+For some positive real constants \(E,F,G,H\). Again by signs we obtain the result.
 \end{proof}
 %
 %
@@ -73,8 +71,9 @@ For \(u \in \partial P\) the moment fibre \(\mu^{-1}(u)\) is contained in one \(
 %
 %
 \begin{proof}
-Suppose \(\mu([x],[y]) = \mu([{x'}],[{y'}]) \in \partial P\). Since \( (\beta - \alpha)e_i \in P^\circ\) then \(x_iy_i = {x'}_i{y'}_i = 0\) for each \(i>0\). By the defining equation of \(X\) then also \(x_0y_0 = x_0y_0 = 0\). Applying Lemma~\ref{lem:X} we are done.
+Suppose \(\mu([x],[y]) = \mu([{x'}],[{y'}]) \in \partial P\). Since \( (q - p)e_i \in P^\circ\) then \(x_iy_i = {x'}_i{y'}_i = 0\) for each \(i>0\). By the defining equation of \(X\) then also \(x_0y_0 = x_0y_0 = 0\). Applying Lemma~\ref{lem:X} we are done.
 \end{proof}
+In particular Lemma~\ref{lem:3.2} implies that the GIT quotient associated to \(u \in \partial \Box\) is a contraction to a point.
 %
 %
 %
@@ -82,77 +81,78 @@ Now consider moment fibres of points in the interior of \(P\). We calculate the 
 \begin{lemma} \label{lem:3.3}
 For \(u \in P^\circ\) the topological quotient \(\mu^{-1}(u) \to \mu^{-1}(u)/K \) is:
 \[
-\mu^{-1}(u) \to \PP^{n-1}; \ \ ([x],[y]) \mapsto (x_1^a y_1^b: \dots : x_n^a y_n^b ).
+\mu^{-1}(u) \to \PP^{n-1}; \ \ ([x],[y]) \mapsto (x_1^p y_1^q: \dots : x_n^p y_n^q ).
 \]
 \end{lemma}
 %
 %
 %
 \begin{proof}
-First observe the map is  \(K\)-invariant:
+Clearly the map is \(K\)-invariant. If \((x,y), ({x'},{y'}) \in \mu^{-1}(u)\) then for any representatives \(x,y,{x'},{y'}\) we have:
 \[
-observation
+(x_1^p y_1^q: \dots : x_n^p y_n^q) = ({x'_1}^p {y'_1}^q: \dots : {x'_n}^p {y'_n}^q)
 \]
- If \((x,y), ({x'},{y'}) \in \mu^{-1}(u)\) Then for any representatives \(x,y,{x'},{y'}\) we have:
-\[
-(x_1^a y_1^b: \dots : x_n^a y_n^b) = ({x'_1}^a {y'_1}^b: \dots : {x'_n}^a {y'_n}^b)
-\]
-Fix a representative \(x\) of \([x]\). Pick a representative \(y\) of \([y]\) such that \(|x||y| = 1\). For any representatives \({x'},{y'}\) of \([x'],[y']\) respectively, there is \(\lambda \in \CC^*\) such that \( x_i^a y_i^b = \lambda {{x'_i}}^a {{y'_i}}^b\) for \(i>0\). Now, by Lemma~\ref{lem:X} we may pick a representative \({x'}\) such that \(x_0 = {{x'_0}}\).
+Fix a representative \(x\) of \([x]\). Pick a representative \(y\) of \([y]\) such that \(|x||y| = 1\). By Lemma~\ref{lem:X} we may pick a representative \({x'}\) such that \(x_0 = {{x'_0}}\). For any representatives \({x'},{y'}\) of \([x'],[y']\) respectively, there is \(\zeta \in \CC^*\) such that \( x_i^a y_i^b = \zeta {{x'_i}}^a {{y'_i}}^b\) for \(i>0\). Pick a representative \(y'\) so that we have \(\zeta = 1\).
 
-Pick a representative \(y'\) such that \(\lambda = 1\). Note that rescaling our chosen \(y'\) by an element of \(S^1\) does not change anything here. By the defining equation of \(X\) then  \(x_0^\alpha y_0^\beta = {x'_0}^\alpha {y_0'}^\beta \). Applying Lemma~\ref{lem:X} we have \(\nu \in \CC^*\) such that \(y_0 = \nu {y'}_0\). As \(x_0 = {x'}_0\) then \(\nu \in S^1\), and we may rescale \({y'}\) by \(1/\nu\) so that \({y'}_0 = y_0\).
+Note that rescaling our chosen \(y'\) by an element of \(S^1\) does not change anything here. By the defining equation of \(X\) then  \(x_0^p y_0^q = {x'_0}^p {y_0'}^q \). Applying Lemma~\ref{lem:X} we have \(\nu \in \CC^*\) such that \(y_0 = \nu {y'}_0\). As \(x_0 = {x'}_0\) then \(\nu \in S^1\), and we may rescale \({y'}\) by \(1/\nu\) so that \({y'}_0 = y_0\).
 
-If \(x_iy_i = 0\) then by Lemma~\ref{lem:X} we can pick \(t \in \CC^*\) such that \(x_i = t^\beta x_i', \ y_i = t^{-\alpha} x_i'\). Suppose now \(x_iy_i \neq 0\). Then \(x_i,y_i,{x'_i},{y'_i} \neq 0\). Pick \(t\) such that \(t^a = {y'_i}/y_i\). Now \(x_i^a = t^{a b} {x'_i}^a\). Hence there exists some \(a\)th root of unity, say \(\xi\), such that \(x_i = \xi t^b {x'_i}\).
-
-Since \(a,b\) are coprime we may pick another \(a\)th root of unity \(\gamma\) such that \(\gamma^b = \xi\). Picking \(s\) such that \(s^d = \gamma t\) we obtain \(x_i = s^\beta {x'}_i\) and \(y_i = s^{-\alpha} {y'_i}\). We then have
+If \(x_iy_i = 0\) then by Lemma~\ref{lem:X} we can pick \(t \in \CC^*\) such that \(x_i = t^q x_i', \ y_i = t^{-p} y_i'\). Suppose now \(x_iy_i \neq 0\). Then \(x_i,y_i,{x'_i},{y'_i} \neq 0\). Pick \(t\) such that \(t^p = {y'_i}/y_i\). Now \(x_i^p = t^{p q} {x'_i}^p\). Hence there exists some \(p\)th root of unity, say \(\xi\), such that \(x_i = \xi t^q {x'_i}\). Since \(p,q\) are coprime we may pick another \(p\)th root of unity \(\gamma\) such that \(\gamma^q = \xi\). Picking \(s\) such that \(s^d = \gamma t\) we obtain \(x_i = s^q {x'}_i\) and \(y_i = s^{-p} {y'_i}\). We then have
 \[
 ([x],[y]) \in T \cdot ([x'],[y']) \ \cap \ \mu^{-1}(u) = S \cdot ([x'],[y']).
 \]
-Thus we have described a closed map with fibres precisely the \(S\)-orbits of \(\mu^{-1}(u)\). This must be the topological quotient of the \(S\)-action.
+Thus we have described a closed map with fibres precisely the \(K\)-orbits of \(\mu^{-1}(u)\). This must be the topological quotient of the \(K\)-action.
 \end{proof}
 %
 %
 %
-By Lemma~\ref{lem:catquot}, we see for any \(u \in P^\circ\) the GIT quotient, according to the associated linearization of \(L\), is given by:
+By Lemma~\ref{lem:catquot}, we see that for any \(u \in P^\circ\) the associated GIT quotient is given by the map:
 \[
-([x],[y]) \mapsto (x_1^a y_1^b: \dots : x_n^a y_n^b).
+([x],[y]) \mapsto (x_1^p y_1^q: \dots : x_n^p y_n^q).
 \]
-This implies the Chow quotient is given by the same formula. We may now calculate the boundary divisor of this quotient. Fix some homogeneous coordinates \(z_1,\dots,z_n\) on \(\PP^{n-1}\). For \(\gamma \in \QQ\) define the \(\QQ\)-divisor \(B_\gamma := \gamma \sum_i H_i\), where \(H_1,\dots,H_n\) are the coordinate hyperplanes of \(\PP^{n-1}\) and \(H_0\) is the hyperplane \(V( \sum_{i=1}^n z_i)\). We will prove the following:
+This implies the Chow quotient is given by the same formula. We may now calculate the boundary divisor of this quotient. Fix some homogeneous coordinates \(z_1,\dots,z_n\) on \(\PP^{n-1}\). For \(\gamma \in \QQ\) define the \(\QQ\)-divisor
+\begin{equation} \label{eq:divisor}
+B_\gamma := \gamma \sum_i H_i,
+\end{equation}
+where \(H_1,\dots,H_n\) are the coordinate hyperplanes of \(\PP^{n-1}\) and \(H_0\) is the hyperplane \(V( \sum_{i=1}^n z_i)\). We will prove the following:
 \begin{lemma}\label{lem:1.4}
-The Chow quotient pair of \(X_{\alpha,\beta}^{2n-1}\) by \(T\) is \((\PP^{n-1},B_\gamma)\) with \(\gamma = \max \left(\frac{a-1}{a}, \frac{b - 1}{b} \right)\).
+The Chow quotient pair of \(X_{a,b}^{2n-1}\) by \(T\) is \((\PP^{n-1},B_\gamma)\) with
+\[
+\gamma = \max \left(\frac{p-1}{p}, \frac{q - 1}{q} \right).
+\]
 \end{lemma}
 \begin{proof}
 From the above discussion we know the Chow quotient map is given by:
 \[
-X \to \PP^{n-1}; \ \ ([x],[y]) \mapsto (x_1^a y_1^b: \dots : x_n^a y_n^b )
+X \to \PP^{n-1}; \ \ \pi:([x],[y]) \mapsto (x_1^p y_1^q: \dots : x_n^p y_n^q )
 \]
-Suppose that \(Z\) is a prime divisor on the quotient, and \(D\) is a component of \(q^{-1}(Z)\). If \(D\) intersects the open set where \(x_i,y_i \neq 0\), then \(t_i^a = t_i^b = 1\) for any \(t\) in the generic stabilizer of \(D\). As \(a,b\) are coprime this would imply \(t_i = 1\). Suppose \(D\) is a component of \(q^{-1}(Z)\) for some \(Z\) not of the form \(H_j\). Then for each \(i\), \(D\) intersects the open set where \(x_i,y_i \neq 0\), so \(D\) has trivial generic stabilizer.
+Suppose that \(Z\) is a prime divisor on the quotient, and \(D\) is a component of \(\pi^{-1}(Z)\). If \(D\) intersects the open set where \(x_i,y_i \neq 0\), then \(t_i^p = t_i^q = 1\) for any \(t\) in the generic stabilizer of \(D\). As \(p,q\) are coprime this would imply \(t_i = 1\). Suppose \(D\) is a component of \(\pi^{-1}(Z)\) for some \(Z\) not of the form \(H_j\). Then for each \(i\), \(D\) intersects the open set where \(x_i,y_i \neq 0\), so \(D\) has trivial generic stabilizer.
 
-Now consider the prime divisor \(H_j\) on the quotient, for some fixed \(j\). The irreducible components of \(q^{-1}(H_i)\) are given by the homogeneous ideals \((x_j^a)\), \((y_j^b)\). The generic stabilizer of the first is a cyclic group of order \(a\), generated by the element \(t \in T\) with \(t_i = 1\) for \(i \neq j\) and \(t_j\) a primitive \(a\)th root of unity. By symmetry the generic stabilizer of the second is a cyclic group of order \(b\). This gives the required boundary divisor.
+Now consider the prime divisor \(H_j\) on the quotient, for some fixed \(j\). The irreducible components of \(\pi^{-1}(H_i)\) are given by the homogeneous ideals \((x_j^p)\), \((y_j^q)\). The generic stabilizer of the first is a cyclic group of order \(p\), generated by the element \(t \in T\) with \(t_i = 1\) for \(i \neq j\) and \(t_j\) a primitive \(p\)th root of unity. By symmetry the generic stabilizer of the second is a cyclic group of order \(q\). This gives the required boundary divisor.
 \end{proof}
 \begin{proof}[Proof of Corollary~\ref{cor:topquot}]
-By \ref{lem:3.2} and \ref{lem:3.3} we see that the \(T\)-action on \(X^{2n-1}_{\alpha,\beta}\) has almost trivial variation of GIT, as defined in \cite[Definition 2.7]{suess18-2}, with \(Y = \PP^{n-1}\). The result follows by \cite[Proposition 2.9]{suess18-2}.
+By Lemma~\ref{lem:3.2} and Lemma~\ref{lem:3.3} we see that the \(T\)-action on \(X^{2n-1}_{a,b}\) has almost trivial variation of GIT, as defined in \cite[Definition 2.7]{suess18-2}, with \(Y = \PP^{n-1}\). The result follows by \cite[Proposition 2.9]{suess18-2}.
 \end{proof}
-\begin{proof}[Proof of Theorem \ref{thm:KE2}]
-By Lemma~\ref{lem:1.4} the Chow quotient pairs of \(X_{1,2}^{5},X_{1,3}^{5}\) by their torus action are \((\PP^2,B_{\nicefrac{1}{2}}), (\PP^2,B_{\nicefrac{2}{3}})\) respectively. By Lemma~\ref{lem:alph} and Theorem~\ref{thm:SU} then \(\alpha_{S_4}(X_{1,2}^{5}),\alpha_{S_4}(X_{1,3}^{5}) > 5/6\). Apply Theorem~\ref{thm:tcrit}.
-\end{proof}
-\subsection{$W^{2n}$: a wonderful compactification on the quadric} \label{subsec:wonderful}
-Using results of \cite{kirwan} we may obtain the Chow quotient of \(W^{2n}\) from that of \(Q^{2n}\). We construct \(W^{2n}\) as a \textit{wonderful compactification} of an arrangement on an even dimensional quadric. We show that this compactification is Fano and we calculate the Chow quotient pair with respect to an induced torus action. First recall the notion of wonderful compactifications of arrangements of subvarieties, as introduced in \cite{li06}.
+\subsection{A wonderful compactification on the quadric} \label{subsec:wonderful}
+Using results of \cite{kirwan}, we may obtain the Chow quotient of \(W^{2n}\) from that of \(Q^{2n}\). We construct \(W^{2n}\) as a \textit{wonderful compactification} of an arrangement on an even dimensional quadric. We show that this compactification is Fano and we calculate the Chow quotient pair with respect to an induced torus action. First recall the notion of wonderful compactifications of arrangements of subvarieties, as introduced in \cite{li06}.
 \begin{definition}
-Let \(X\) be a nonsingular algebraic variety. An arrangement of subvarieties of \(X\) is a finite collection \(\mathcal{S}\) of subvarieties closed under pairwise scheme-theoretic intersection. A building set of \(\mathcal{S}\) is a subset \(\mathcal{G} \subset \mathcal{S}\) such that for any \(S \in \mathcal{S} \backslash \mathcal{G}\) the minimal elements of \(\{G \in \mathcal{G} | G \supset S\}\) intersect transversally and the intersection is \(S\). We will say that \(\mathcal{S}\) is built by \(\mathcal{G}\) if \(\mathcal{G}\) is a building set for \(\mathcal{S}\).
+Let \(X\) be a nonsingular algebraic variety. An arrangement of subvarieties of \(X\) is a finite collection \(\mathcal{A}\) of subvarieties closed under pairwise scheme-theoretic intersection. A building set of \(\mathcal{A}\) is a subset \(\mathcal{B} \subset \mathcal{A}\) such that for any \(A \in \mathcal{A} \backslash \mathcal{B}\) the minimal elements of \(\{B \in \mathcal{B} | B \supset A\}\) intersect transversally and the intersection is \(A\). We will say that \(\mathcal{A}\) is built by \(\mathcal{B}\) if \(\mathcal{B}\) is a building set for \(\mathcal{A}\).
 \end{definition}
-Let \(X\) be a nonsingular projective variety, and \(V_1,\dots,V_k\) a collection of subvarieties such any non-empty subset of \(\{V_1,\dots, V_k\}\) forms a building set for an arrangement of subvarieties.
 \begin{theorem}[{\cite[Theorem 1.3]{li06}}] \label{thm:wonderful}
-Let \(X,V_1,\dots,V_k\) be as above. Consider the iterated blowup
+Let \(X\) be a nonsingular projective variety, and \(V_1,\dots,V_k\) a collection of subvarieties such that any non-empty subset of \(\{V_1,\dots, V_k\}\) forms a building set for an arrangement of subvarieties. Consider the iterated blowup
 \[
-W := \Bl_{\tilde{V}_k} \Bl_{\tilde{V}_{k-1}} \dots \Bl_{\tilde{V}_2} \Bl_{V_1} X
+\tilde{X} := \Bl_{\tilde{V}_k} \Bl_{\tilde{V}_{k-1}} \dots \Bl_{\tilde{V}_2} \Bl_{V_1} X
+\]
+Where \(\tilde{V_i}\) represents the strict transform of \(V_i\) under the composition
+\[
+\Bl_{\tilde{V}_{i-1}} \Bl_{\tilde{V}_{i-2}} \dots \Bl_{\tilde{V}_2} \Bl_{V_1} X \to X.
 \]
 Then:
 \begin{itemize}
-\item each blowup is along a nonsingular variety;
-\item \(W\) is isomorphic to the blowup along the ideal \(I_1 I_2 \cdots I_k\), where \(I_i\) is the homogeneous ideal corresponding to \(V_i\) for each \(i\).
+\item Each blowup is along a nonsingular variety;
+\item \(\tilde{X}\) is isomorphic to the blowup along the ideal \(I_1 I_2 \cdots I_k\), where \(I_i\) is the homogeneous ideal corresponding to \(V_i\) for each \(i\).
 \end{itemize}
 \end{theorem}
-Following \cite{li06}, we will call \(W\) the wonderful compactification of the arrangement built by \(V_1,\dots,V_k\). Note that the composition \(\pi: W \to X\) is independent of the ordering of the \(V_i\).
+Following \cite{li06}, in the situation of Theorem~\ref{thm:wonderful} we will call \(\tilde{X}\) the wonderful compactification of the arrangement built by \(V_1,\dots,V_k\). Note that the composition of blowups \(\tilde{X} \to X\) is independent of the ordering of the \(V_i\).
 
 
 Let \(W\) be the wonderful compactification of the arrangement of subvarieties of \(Q\) built by \(Z_0,\dots,Z_n\), where \(Z_i := V(x_{2i},x_{2i+1}) \subseteq Q\).
@@ -162,22 +162,22 @@ Let \(W\) be the wonderful compactification of the arrangement of subvarieties o
 \begin{proof}
 By adjunction it is enough to show that \(-K_B - W\) is ample, where \(B\) is the wonderful compactification of the arrangement of subvarieties of \(\PP^{2n+1}\) built by \(V_0,\dots,V_n\), where \(V_i := V(x_{2i},x_{2i+1}) \subseteq \PP^{2n+1}\).
 
-For each \(i\) pick \(\sigma_i \in S_n\) such that \(\sigma_i(1) = i\). Each \(\sigma_i\) corresponds to a sequence of blowups whose composition is independent of \(i\), as in Theorem~\ref{thm:wonderful}. Denote by \( \psi_i: \Bl_{V_i} \to \PP^{2n+1}\) the first blowup of this sequence, and \(\pi_i: B \to \Bl_{V_i}\) the composition of the remaining blowups, so that the wonderful compactification is given by the composition \(\pi_i \circ \psi_i\). Denote the exceptional divisor of \(\psi_i\) by \(E_i\).
+For each \(i\) pick \(\sigma_i \in S_n\) such that \(\sigma_i(1) = i\). Each \(\sigma_i\) corresponds to a sequence of blowups whose composition is independent of \(i\), as in Theorem~\ref{thm:wonderful}. Denote by \( \psi_i: \Bl_{V_i} \to \PP^{2n+1}\) the first blowup of this sequence, and \(f_i: B \to \Bl_{V_i}\) the composition of the remaining blowups, so that the wonderful compactification is given by the composition \(f_i \circ \psi_i\). Denote the exceptional divisor of \(\psi_i\) by \(E_i\).
 
-Consider the divisor \(D_i := \psi_i^* \mathcal{O}(1) - E_i\) on \(\Bl_{V_i} \PP^{2n+1}\). Note that \(D_i\) is nef, since for any curve \(C\) in \(\Bl_{V_i} \PP^{2n+1}\) we may pick a hyperplane \(H \subset \PP^{2n+1} \) such that \(C \not\subset \tilde{H}\) but \(Z_i \subset \tilde{H}\), whereupon \((\pi^* \mathcal{O}(1) - E_i) \cdot C = \tilde{H} \cdot C \ge 0\).
+Consider the divisor \(D_i := \psi_i^* \mathcal{O}(1) - E_i\) on \(\Bl_{V_i} \PP^{2n+1}\). Note that \(D_i\) is nef, since for any curve \(C\) in \(\Bl_{V_i} \PP^{2n+1}\) we may pick a hyperplane \(H \subset \PP^{2n+1} \) such that \(C \not\subset \tilde{H}\) but \(Z_i \subset \tilde{H}\), whereupon \((f^* \mathcal{O}(1) - E_i) \cdot C = \tilde{H} \cdot C \ge 0\).
 Now
 \[
--K_B - W \sim  \sum_{i=0}^{n-1} \pi_i^* D_i + (\pi_0 \circ \psi_0)^* \mathcal{O}(n).
+-K_B - W \sim  \sum_{i=0}^{n-1} f_i^* D_i + (f_0 \circ \psi_0)^* \mathcal{O}(n).
 \]
-It is easy to see that the divisors \((\pi \circ \psi)^* \mathcal{O}(n), \ \pi_0^* D_0, \dots, \pi_{n-1}^* D_{n-1} \) span a full dimensional subcone of the nef cone of \(B\), and that \(-K_B - W\) is clearly on the interior of this cone.
+It is easy to see that the divisors \((f \circ \psi)^* \mathcal{O}(n), \ f_0^* D_0, \dots, f_{n-1}^* D_{n-1} \) span a full dimensional subcone of the nef cone of \(B\), and that \(-K_B - W\) is clearly on the interior of this cone.
 \end{proof}
-By construction there is a natural morphism \(\pi: W \to Q\) which is a composition of blowups, each centered at a smooth subvariety by Theorem~\ref{thm:wonderful}. Fix the line bundle \(L = \mathcal{O}(1)_{|Q} \) on \(Q\). Recall that there is an \(n\)-torus \(T\) acting on \(Q\) prescribed by \(\deg x_{2i} = e_{i+1}, \deg x_{2i+1} = -e_{i+1}\). This torus action may be extended to the compactification \(W\). These torus actions are not effective, but we may quotient by the global stabilizer, a cyclic group of order  two generated by \(-\text{Id} = (-1,\dots,-1) \in T\), to obtain the action of an effective torus \(T'\) on \(Q\) and \(W\). Quotienting does not affect the calculation of GIT quotients. In \cite{suess18-2} the GIT quotients \(q: Q \to Q \sslash T'\) were determined. They are either trivial contractions to a point, or of the following form:
+By construction there is a natural morphism \(f: W \to Q\) which is a composition of blowups, each centered at a smooth subvariety by Theorem~\ref{thm:wonderful}. Fix the line bundle \(L = \mathcal{O}(1)_{|Q} \) on \(Q\). Recall that there is an \(n\)-torus \(T\) acting on \(Q\) prescribed by \(\deg x_{2i} = e_{i+1}, \deg x_{2i+1} = -e_{i+1}\). This torus action may be extended to the compactification \(W\). These torus actions are not effective, but we may quotient by the global stabilizer, a cyclic group of order  two generated by \(-\text{Id} = (-1,\dots,-1) \in T\), to obtain the action of an effective torus \(T'\) on \(Q\) and \(W\). Quotienting does not affect the calculation of GIT quotients. In \cite{suess18-2} the GIT quotients \(\pi: Q \to Q \sslash T'\) were determined. They are either trivial contractions to a point, or of the following form:
 \begin{equation} \label{blowupquot}
 Q \to \PP^{n-1}; \ \ [x] \mapsto (x_1x_2:\dots :x_{2n-1}x_{2n}).
 \end{equation}
-The Chow quotient is also then given by (\ref{blowupquot}). Following \cite{kirwan}, there is an ample line bundle \(\tilde{L}\) on \(W\) such that any linearization of \(\tilde{L}\) is a lift of a linearization of \(L\). Moreover, given a linearization, it can  be shown that \(W^{ss} \subset \pi^{-1}(X^{ss})\). By \cite[Lemma 3.11]{kirwan} the GIT quotients of \(W\) given by a linearization of \(\tilde{L}\) are precisely the restrictions of compositions \(q \circ \pi\), where \(q\) is the GIT quotient map for \(Q\) given by the corresponding linearization of \(L\). We can conclude that the Chow quotient is the restriction of a composition of the blowup map \(\pi\) followed by the map (\ref{blowupquot}).
+The Chow quotient is also then given by (\ref{blowupquot}). Following \cite{kirwan}, there is an ample line bundle \(\tilde{L}\) on \(W\) such that any linearization of \(\tilde{L}\) is a lift of a linearization of \(L\). Moreover, given a linearization, it can  be shown that \(W^{ss} \subset f^{-1}(X^{ss})\). By \cite[Lemma 3.11]{kirwan} the GIT quotients of \(W\) given by a linearization of \(\tilde{L}\) are precisely the restrictions of compositions \(\pi \circ f\), where \(\pi\) is the GIT quotient map for \(Q\) given by the corresponding linearization of \(L\). We can conclude that the Chow quotient is the restriction of a composition of the blowup map \(f\) followed by the map (\ref{blowupquot}).
 
-We now calculate the boundary divisor of this quotient.
+We now calculate the boundary divisor of this quotient. Recall the definition of the \(\QQ\)-divisor \(B_\gamma\) on \(\PP^{n-1}\) from (\ref{eq:divisor}).
 \begin{lemma}\label{lem:1.6}
 The Chow quotient pair of \(W^{2n}\) by its \(T'\)-action is \((\PP^{n-1},B_{\nicefrac{1}{2}})\).
 \end{lemma}
@@ -190,25 +190,23 @@ The exceptional divisor of the composition of blowup maps is of the form \(E_{n-
 
 There is an induced \(T\)-action on \(\Bl_{Z_0}\), under which the equation \(vx_0 - ux_1\) must be homogeneous with respect to the induced grading of the character lattice of \(T\). This implies that \(\deg u = \deg v + 2e_1\), and we see that the generic stabilizer of the \(T' = T/ \langle \pm \text{Id} \rangle \)-action on the exceptional divisor must be a cyclic group of order \(2\), generated by the element \((-1,1,\dots,1) + \langle \pm \text{Id} \rangle\). 
 \end{proof}
-\begin{proof}[Proof of Theorem \ref{thm:KE2}]
-By Lemma~\ref{lem:1.4} the Chow quotient pair of \(W^6\) by its effective torus action is \((\PP^2,B_{\nicefrac{1}{2}})\). By Lemma~\ref{lem:alph} and Theorem~\ref{thm:SU} then \(\alpha_{S_4}(W^6) > 6/7\). Apply Theorem~\ref{thm:tcrit}.
-\end{proof}
 \section{Log canonical thresholds and Tian's criterion}
-We will use a version of \textit{Tian's criterion} mentioned briefly in the introduction to this thesis. This is a sufficient condition for the existence of a K\"ahler-Einstein metric on a K\"ahler manifold. In order to use this criterion we must first recall the definition of the log canonical threshold, Tian's alpha invariant, and their relation.
+To prove Theorem~\ref{thm:KE1} and Theorem~\ref{thm:KE2} we will use a version of \textit{Tian's criterion}. This criterion, mentioned briefly in the introduction to the thesis, is a sufficient condition for the existence of a K\"ahler-Einstein metric on a K\"ahler manifold. In order to use this criterion we must first recall the definition of the log canonical threshold, Tian's alpha invariant, and their relation.
 \subsection{Log canonical thresholds}
-Here we recall the definition of the global log canonical threshold of of a log pair, which features in Theorem~\ref{thm:SU} and Lemma~\ref{lem:alph}. Recall that a log pair \((Y,D)\) consists of a normal variety \(Y\) and a \(\QQ\)-divisor \(D\), where the coefficients of the irreducible components of \(D\) lie in \([0,1]\). The canonical divisor of such a pair is \(K_Y+D\). A pair \((Y,D)\) is called smooth if \(Y\) is smooth and \(D\) is a simple normal crossings divisor. A log resolution of a log pair \((Y,D)\) is a birational map \(\pi: \tilde{Y} \to Y\) such that \((\tilde{Y},\varphi^*D)\) is smooth.
+Here we recall the definition of the global log canonical threshold of of a log pair. Recall that a log pair \((Y,D)\) consists of a normal variety \(Y\) and a \(\QQ\)-divisor \(D\), where the coefficients of the irreducible components of \(D\) lie in \([0,1]\). The canonical divisor of such a pair is \(K_Y+D\). A pair \((Y,D)\) is called smooth if \(Y\) is smooth and \(D\) is a simple normal crossings divisor. A log resolution of a log pair \((Y,D)\) is a birational map \(\varphi: \tilde{Y} \to Y\) such that \((\tilde{Y},\varphi^*D)\) is smooth.
 
-\begin{definition}
-Suppose \(\pi: \tilde{Y} \to Y\) is a log resolution of a pair \((Y,D)\). Write \(D = \sum a_i D_i\) for prime \(D_i\) and rational \(a_i\). Then:
+Suppose \(\varphi: \tilde{Y} \to Y\) is a log resolution of a log pair \((Y,D)\). Write \(D = \sum a_i D_i\) for prime \(D_i\) and rational \(a_i\). Then:
 \[
-\pi^*(K_Y+ D) - K_{\tilde{Y}}\sim_{\QQ} \sum_i a_i \tilde{D_i} + \sum_j b_j E_j
+\varphi^*(K_Y+ D) - K_{\tilde{Y}}\sim_{\QQ} \sum_i a_i \tilde{D_i} + \sum_j b_j E_j
 \]
-where \(\tilde{D_i}\) is the proper transform of \(D_i\) and the \(E_j\) are the \(\pi\)-exceptional divisors. We say \((Y,D)\) is log canonical at \(P \in Y\) if we have \(a_i \le 1 \) for \(P \in D_i\), and \(b_j \le 1\) for \(E_j\) such that \(\pi(E_j) = P\). This condition is independent of the choice of resolution. If \((Y,D)\) is log canonical at all \(P  \in Y\) then we say \((Y,D)\) is (globally) log canonical.
+where \(\tilde{D_i}\) is the proper transform of \(D_i\) and the \(E_j\) are the \(\varphi\)-exceptional divisors. 
+\begin{definition}
+We say \((Y,D)\) is log canonical at \(P \in Y\) if we have \(a_i \le 1 \) for \(P \in D_i\), and \(b_j \le 1\) for \(E_j\) such that \(\varphi(E_j) = P\). This condition is independent of the choice of resolution. If \((Y,D)\) is log canonical at all \(P  \in Y\) then we say \((Y,D)\) is (globally) log canonical.
 \end{definition}
 \begin{example} \label{examplelct}
 Consider the pair \(Y = \PP^2\) and \(D = \sum a_i L_i\) where \(L_i\) are all lines through a point \(P \in Y\). Blowing up at \(P\) we obtain the following:
 \[
-\pi^*(K_Y+D) - K_{\tilde{Y}} \sim_{\QQ} (\deg D - 1) E + \sum a_i \tilde{L}_i
+\varphi^*(K_Y+D) - K_{\tilde{Y}} \sim_{\QQ} (\deg D - 1) E + \sum a_i \tilde{L}_i
 \]
 Where \(E\) is the exceptional divisor  of the blow-up. Therefore \((Y,D)\) is log-canonical whenever we have \(\deg D \le 2\) and all \(a_i \le 1\).
 \end{example}
@@ -330,4 +328,10 @@ Where \(a + b + \sum_i 2 c_i \le 2 \gamma + 3\lambda - 4 \gamma \lambda\). This 
 3\gamma - 4\gamma \lambda &\le 1
 \end{align*}
 Basic manipulation of inequalities gives our bounds on the global threshold.
+\end{proof}
+\begin{proof}[Proof of Theorem \ref{thm:KE1}]
+By Lemma~\ref{lem:1.4} the Chow quotient pairs of \(X_{1,2}^{5},X_{1,3}^{5}\) by their torus action are \((\PP^2,B_{\nicefrac{1}{2}}), (\PP^2,B_{\nicefrac{2}{3}})\) respectively. By Lemma~\ref{lem:alph} and Theorem~\ref{thm:SU} then \(\alpha_{S_4}(X_{1,2}^{5}),\alpha_{S_4}(X_{1,3}^{5}) > 5/6\). Apply Theorem~\ref{thm:tcrit}.
+\end{proof}
+\begin{proof}[Proof of Theorem \ref{thm:KE2}]
+By Lemma~\ref{lem:1.4} the Chow quotient pair of \(W^6\) by its effective torus action is \((\PP^2,B_{\nicefrac{1}{2}})\). By Lemma~\ref{lem:alph} and Theorem~\ref{thm:SU} then \(\alpha_{S_4}(W^6) > 6/7\). Apply Theorem~\ref{thm:tcrit}.
 \end{proof}
