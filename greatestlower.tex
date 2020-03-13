@@ -57,43 +57,15 @@ Note, by the equation for the Donaldson Futaki invariants \ref{eq:futaki-charact
 R(X) = \min \  \left\lbrace \frac{|q|}{|q-\bc_\nu(\Box)|}  \ \right\rbrace \cup \ \left\lbrace \frac{|q_i|}{|q_i - \bc(\Delta_i)|} \right\rbrace_{i \in S} .
 \]
 \end{theorem}
-\begin{example}
-To see that this formula is truly a generalization of Li's result, consider the situation of a toric downgrade.
-\end{example}
+\begin{remark}
+To see that this formula is truly a generalization of Li's result, consider the situation of a toric downgrade. Here we have 
+\end{remark}
 \begin{example}
 Consider the \((\CC^*)^2\)-threefold 2.30 from example \ref{}. There are \(3\) normal toric degenerations, given by the polytopes \(\Delta_1,\dots,\Delta_3\). It can be checked in this case that \(S = \emptyset\), as for each \(i\) there is an outer normal \(n_i \not\in H\) to the face \(F_i\). See Figure 1 (a) for an example.
 \begin{figure}[H]
-\centering
-\begin{subfigure}[t]{0.4\textwidth}
-\begin{tikzpicture}[%
-    tdplot_main_coords,
-    scale=0.6,
-    >=stealth
-  ]
-  \draw[->, ultra thick, opacity = 1] (0, 18/46, -57/184)  -- (0, 0.6, -1.1) node[right]{$n_1$} ;
-    \draw[fill=white,opacity=1] (0,-3,1) -- (-3,0,1) -- (3,0,-2) -- cycle;
-    \draw[fill=white,opacity=0] (3,0,-2) -- (-3,0,1) -- (-2,1,1) -- (2,1,-1) -- cycle;
-    \filldraw[ultra thick, opacity = 1] (0, -6/23, 19/92) circle (1pt) node[above]{$\bc(\Delta_1)$}  -- (0,0,0) circle (1pt) node[below]{O} -- (0, 18/46, -57/184) circle (1pt) node[right]{$q_1$}	 ;
-    \draw[fill=white,opacity=0.5] (0,-3,1) -- (-3,0,1) -- (-2,1,1) -- (0,1,1) -- cycle;
-    \draw[fill=white,opacity=0.5] (0,-3,1) -- (0,1,1) -- (2,1,-1) -- (3,0,-2) -- cycle;
-    \draw[fill=white,opacity=0.5] (0,1,1) -- (-2,1,1) -- (2,1,-1) -- cycle;
-     \draw[->,dotted] (0,0,0) -- (0,0,2);
-    \draw[->,dotted] (0,0,0) -- (3,0,0);
-    \draw[->,dotted] (0,0,0) -- (0,2,0);
-\end{tikzpicture}
-\caption{The toric degeneration \(\Delta_1\)}
-\end{subfigure}
-\qquad \qquad \qquad
-\begin{subfigure}[t]{0.2\textwidth}
-\begin{tikzpicture}[scale = 0.6]
-\draw (-2,1) -- (-3,0) -- (-3,0) -- (0,-3) -- (3,0) -- (2,1) -- cycle ;
-\filldraw[ultra thick, opacity = 1] (0,-6/23) circle (1pt) node[below]{$\bc_\nu(\Box)$}  -- (0,0) circle (1pt) node[right]{O} -- (0, 1) circle (1pt) node[above]{q}	 ; 
-    \draw[dotted] (-4,0) -- (4,0);
-    \draw[dotted] (0,-4) -- (0,2);
-\end{tikzpicture}
-\caption{The moment polytope \(\Box\).}
-\end{subfigure}
-\caption{Determining \(R(X)\) for threefold 2.30.}
+	\subcaptionbox{\label{fig2:a}}{\degendiagram}\hfill%
+	\subcaptionbox{\label{fig2:b}}{\momentdiagram}%
+	\caption{Some of the calculation of $R(X)$ for threefold 2.30. (a) Degeneration polytope $\Delta_1$ with barycenter $\bc(\Delta_1)$ and $q_1,n_1$ shown, (b) Moment polytope $\Box$ with Duistermaat-Heckmann barycenter $\bc_\nu(\Box)$ and $q$ shown.}
 \end{figure}
 Therefore \(R(X)\) is given by the first term in the minimum. We calculate \(\bc_\nu(\Box)= (0,-6/23)\) and \(q = (0,1)\). Then:
 \[

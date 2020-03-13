@@ -72,7 +72,11 @@ Note the data required for this proof is collated in Appendix~\ref{appendix1}. T
 
 In threefolds 2.31, 3.18, 3.22, 3.24 and 4.8 there exists a non-trivial involution \(\sigma \in \GL(M)\) permuting the vertices of \(\Box\), such that \(\deg (\Phi \circ \sigma) = \deg \Phi\). Choose a basis $e_1, e_2$ of $N_\RR$ with $\sigma^*(e_1)=-e_1$ and $\sigma^*(e_2)=e_2$. The soliton candidate $\xi = (\xi_1,\xi_2)$ must be contained in the line $N_\RR^{\sigma^*} = \RR e_2$. For each of these example we obtain an interval \(D\) where the soliton candidate must lie, via the intermediate value theorem and RIA, see Appendix~\ref{appendix1}.
 
-Recall the description of non-product special test configuration spaces from \ref{subsec:IS}. In Appendix~\ref{appendix1} we provide closed forms for \(h_y(\xi_2) := (\vol \Delta_y) \cdot \DF_{\xi_2 e_2}(\X,(0,1))\) for every admissible choice of $y \in \PP^1$, using the algorithm described in \ref{sec:barvinok}. We also provide lower bounds on \(h_y(D)\) using further RIA, ensuring the positivity of $\DF_{\xi_2 e_2}(\X_{y,0,1})$. These threefolds then admit a K\"ahler-Ricci soliton by Theorem~\ref{thm:DS}. See Example~\ref{ex:sym} for details of the computation and Appendix~\ref{appendix2} for the implementation in SageMath.
+Recall the description of non-product special test configuration spaces from \ref{subsec:IS}. In Appendix~\ref{appendix1} we provide closed forms for \(h_y(\xi_2) := (\vol \Delta_y) \cdot \DF_{\xi_2 e_2}(\X,(0,1))\) for every admissible choice of $y \in \PP^1$. Recall by (ref) this is given by the integral
+\begin{equation} \label{eq:specialDF}
+\int
+\end{equation}
+using the algorithm described in \ref{sec:barvinok}. We also provide lower bounds on \(h_y(D)\) using further RIA, ensuring the positivity of $\DF_{\xi_2 e_2}(\X_{y,0,1})$. These threefolds then admit a K\"ahler-Ricci soliton by Theorem~\ref{thm:DS}. See Example~\ref{ex:sym} for details of the computation and Appendix~\ref{appendix2} for the implementation in SageMath.
 
 For the case of threefold no. 3.23 there is no involution fixing $\deg \Phi$. In this case we take a more general approach to bound the value of the candidate \(\xi\). Here we make use of some elementary calculus. Note, that \(\xi\) is the unique solution to the equation \(\nabla_n G = 0 \), where 
 \[
@@ -234,36 +238,68 @@ We can therefore conclude that the threefold 3.23 is \(K\)-stable, and must admi
 \end{example}
 
 \section{Barvinok Integration} \label{sec:barvinok}
-The integral (ref) may be solved symbolically, outputting an exponential polynomial in \(\xi\). In practice however, the domain \(P\) can complicate the calculation for \(\dim X > 2\). To deal with this we developed a recursive algorithm, based on results of Barvinok \cite{Barvinok1992}, which reduces the integral to evaluations at the vertices of \(P\). We are interested in integrals of the following form:
+The integrals \ref{eq:combproducteq}, \ref{eq:specialDF} may be solved symbolically, outputting exponential polynomials in the variable \(\xi\). In practice, the domain \(\Box\) can complicate these calculations for \(\dim X > 2\). To deal with this we developed a recursive algorithm, using results of Barvinok \cite{Barvinok1992}, which reduces the integral to evaluations at the vertices of \(\Box\).
+
+We are interested in integrals of the following form:
 \begin{equation} \label{eq:barintegral1}
 \int_{P} l_1(x) e^{l_2(x)}
 \end{equation}
-for some linear functions \(l_1,l_2\). If we were working with surfaces, as is done earlier in \cite{cable2018classification}, then \(P\) is just an interval and the integral can be computed easily by hand. In theory one could subdivide and parameterize the domain for higher dimensions, but this quickly makes the process of integration a very tedious task for even mildly complicated domains \(P\).
+for some linear functions \(l_1,l_2\) and some polytope \(P\). If we were working with surfaces, as is done earlier in \cite{cable2018classification}, then \(P\) is just an interval and the integral can be computed easily by hand. In theory, one could subdivide and parameterize the domain for higher dimensions, but this quickly makes the process of integration a very time-consuming and computation-heavy task, for even mildly complicated \(P\).
 
-In \cite{barvinok} Stoke's theorem is applied to a polytope domain. We may use this to iteratively reduce the dimension of our problem by rewriting the integral as an integral over the facets of \(P\).
+In \cite{barvinok}, Stoke's theorem is applied to a polytope domain to obtain formulae for integrals of a similar form. In particular we make use of the following:
 \begin{lemma}[\cite{Barvinok1992}] \label{lem:bar}
-Let \(\{\Gamma_i\}_i\) be the set of all facets of a polytope \(P\) and \(\mu_i\) be the Lebesgue measure on the affine hull of \(\Gamma_i\) induced from \(dx\) on \(\RR^n\). Denote by \(n_i\) the unit outer normal to \(\Gamma_i\). Let \(c \in \CC^n\) and \(\Lambda \in \RR^n\) such that \(\langle \lambda, c \rangle \neq 0\). Then
-\[
-\int_P e^{\langle c, x \rangle} dx = \frac{1}{\langle c , \lambda \rangle} \sum_i \int_{\Gamma_i} e^{\langle c, x \rangle} d \mu_i.
-\]
+Let \(\{\Gamma_i\}_i\) be the set of all facets of a polytope \(P\) and \(\mu_i\) be the Lebesgue measure on the affine hull of \(\Gamma_i\) induced from \(dx\) on \(\RR^n\). Denote by \(n_i\) the outer unit normal to \(\Gamma_i\). Let \(c \in \CC^n\) and \(\Lambda \in \RR^n\) such that \(\langle \lambda, c \rangle \neq 0\). Then
+\begin{equation} \label{eq:barv}
+\int_P e^{\langle c, x \rangle} dx = \frac{1}{\langle c , \lambda \rangle} \sum_i   \langle n_i, \lambda \rangle \int_{\Gamma_i} e^{\langle c, x \rangle} d \mu_i.
+\end{equation}
 \end{lemma}
-To implement this in our situation we restate this in terms of measures induced by our lattice \(N \subset N_\RR\). Although in theory we could just apply an appropriate differential operator to find the relevant formula for reducing the integral (\ref{eq:barintegral1}), in practice we only needed to calculate integrals where \(l_1 = e_1*\), and so we use integration by parts:
+We now outline how we implement this in the form of a recursive algorithm. Care must be taken to ensure the correct scaling is used when applying Lemma~\ref{} with induced Duistermaat Heckmann measures \(\nu_i\) instead of induced Lebesgue measures \(\mu_i\), but this amounts to using lattice-primitive normals rather than Lebesgue unit normals. We will only describe how our algorithm works for \(l_1 = 1\), as the general case may be obtained through integration by parts.
+
+First we describe certain constructions needed in the recursion process. Any facet \(F\) of a polytope \(P\) is given by some equation \(\langle a, x \rangle = \langle a, u_0 \rangle \) for some primitive element \(a \in N\) and a choice of vertex \(u_0 \in \Vert(F)\). Consider the sublattice \(M_F := \ker a\). Denote the inclusion \(\iota:M_F \to M\), and pick a section \(s: M \to M_F\) of \(\iota\), given by a matrix with rows forming a basis of primitive lattice elements of \(M_F\). We may identify \(F \cong P_F := F - u_0\). Set \(c_F = \iota^*(c)\), and \(\lambda_F = s(\lambda)\).
+
+We can now use the formula \ref{eq:barv} to define a recursive function \(\text{Barv}\) to compute the integral \(\int_P e^{ \langle c , \rangle x} dx\). It takes input \((N,F,c,\lambda)\). We have the following relation:
 \[
-h
+\text{Barv}(M,F,c,\lambda) = \sum_F \frac{e^{\langle c, u_0 \rangle} }{\langle c, \lambda \rangle} \cdot \langle \lambda, n_F \rangle \text{Barv}(M_F, P_F,c_F,\lambda_F)
 \]
-and now we may directly use Lemma~\ref{lem:bar}.
+We give our algorithm in pseudocode below.
+\IncMargin{1em}
+\begin{algorithm}[h] \label{alg1}
+\SetKwInOut{Input}{input}\SetKwInOut{Output}{output}
+\Input{A tuple \((N,P,c,\lambda)\) as described above, with \(\lambda\) sufficiently general.}
+\Output{The integral \(\int_P e^{\langle c, x \rangle} dx\)}
+\BlankLine
+\(I \leftarrow 0\)\;
+\eIf{\(c = 0\)}{
+   \eIf{\(\dim P = 0\)}{
+   \Return \(1\)\;
+   }{
+   \Return \(\vol_{\nu_P}(P)\)\;
+   }
+   }{
+\For{\(F\) a facet of \(P\)}{
+\(u_0 \leftarrow\) a vertex of \(F\)\;
+\(M_F \leftarrow\) the ambient lattice of \(F\)\;
+\(n_F \leftarrow\) the primitive outer normal to \(M_F\)\;
+\(s \leftarrow\) an appropriate section of \(M_F \subset M\)\;
+\(P_F \leftarrow F - u_0\)\;
+\(c_F \leftarrow \iota^*(c)\)\;
+\(\lambda_F \leftarrow s(\lambda)\)\;
+\(\text{coeff}_F \leftarrow \frac{e^{\langle c, u_0 \rangle} }{\langle c, \lambda \rangle} \cdot \langle \lambda, n_F \rangle\)\;
+\(I \leftarrow I + \text{coeff} \cdot \text{Barvinok}(N_F,P_F,c_F,\lambda_F)\)\;
+}
+}
+\Return I
+\caption{\(\text{Barv}(M,P,c,\lambda)\)}\label{algo_disjdecomp}
+\end{algorithm}
+Caching was later added, by S\"u\ss, to reduce computation time. The full SageMath code is included in \ref{appendix2}.
+\newpage
+We now describe one branch of the recursion for a simple 2-dimensional example. 
+\begin{example}
+Suppose \(P = \conv( \{ (\pm 1, \pm 1)\}), c = (0,1)\). We have facets \(F_1,\dots,F_4\) as labelled in \ref{}. In this case \(\lambda = (1,1)\) is clearly sufficiently general.
 
-Any facet \(F\) of a polytope \(P\) is given by some equation \(Ax + b = 0\), for some primitive element \(A \in W^*\) where we have ambient vector space \(W\) of \(P\). Denote \(W_F = \ker A\). Denote by \(p: W \to W_F\) the projection  represented as a matrix with rows forming a basis of primitive lattice elements of \(K_F\). Define \(P_F = p(F), c_F = p(c), \lambda_F = p(\lambda)\).
-
-Call \(\lambda\) sufficiently general if after any sequence of facet inclusions \(F_1 \subset \dots F_r\) with \(F_1\) at least one-dimensional, \(\lambda_{F_1}\) is non-zero.
-
-\begin{enumerate}
-\item If \(c = 0\) we simply calculate \(\vol(P)\) and we're done
-\item Choose \(\lambda\)
-\item 
-\end{enumerate}
 \begin{figure}[H]
-\begin{subfigure}[b]{0.25\linewidth}
+\centering
+\begin{subfigure}[b]{0.5\linewidth}
 	\centering
  	 \begin{tikzpicture}[scale=1]
  	   \draw[dotted,step=1,gray] (-2,-2) grid (2,2); \draw[line width = 1.2pt] (1,-1) --
@@ -271,8 +307,6 @@ Call \(\lambda\) sufficiently general if after any sequence of facet inclusions 
  	   (1,-1);
  	   \draw[densely dashdotted, gray,line width = 1.2pt] (-2,0) -- (2,0); \draw[densely dashdotted, gray,line width = 1.2pt] (0,-2) -- (0,2) ;
  	 \draw (0,0) node {\textbullet};
- 	 \draw[red,->,thick] (0,0) -- (0,2);
- 	 \node at (0,2) [above,red] {\large{$c$}};
  	 \draw[red,->,thick] (0,0) -- (2,2);
  	 \node at (2,2) [above,red] {{$\lambda$}};
  	 \node at (1,-1/2) [right,red] {{$\Gamma_1$}};
@@ -288,34 +322,35 @@ Call \(\lambda\) sufficiently general if after any sequence of facet inclusions 
  	 \begin{tikzpicture}[scale=1]
  	 \draw[dotted,step=1,gray] (-2,-2) grid (2,2);
  	 \draw (0,0) node {\textbullet};
- 	 \draw[red,->,thick] (0,0) -- (0,2);
- 	 \node at (0,2) [above,red] {\large{$c$}};
+ 	 \draw[red,->,thick] (0,0) -- (0,1);
+ 	 \node at (0,1) [above,red] {\large{$c$}};
 	\end{tikzpicture}
 \end{subfigure}
 \end{figure}
+The first face we consider is \(F_1\). We pick \(u_0 = (1,-1)\), and we have \(M_F = \ZZ, \ n_F = (1,0)\). Pick \(s = (0,1)\). Now \(P_{F_1} = [0,2] \subset M_F \otimes \RR\), \(c_F = 1\), \(\lambda_F = 1\). We calculate \(\text{coeff}_F = e^{-1}\).
 \begin{figure}[H]
+\centering
 \begin{subfigure}[b]{0.25\linewidth}
 	\centering
  	 \begin{tikzpicture}[scale=1]
- 	 \draw[dotted,step=1,gray] (0,-2) -- (0,2);
- 	 \draw[line width = 1.2pt] (0,-1) -- (0,1);
+ 	 \draw[dotted,step=1,gray] (0,-1) -- (0,3);
+ 	 \draw[line width = 1.2pt] (0,0) -- (0,2);
  	 \draw (0,0) node {\textbullet};
- 	 \draw (0,-1) node {\tiny{\textbullet}};
- 	 \draw (0,1) node {\tiny{\textbullet}};
- 	 \node at (0,-1) [left] {\tiny{$\Gamma_{11}$}};
- 	 \node at (0,1) [left] {\tiny{$\Gamma_{12}$}};
- 	 \node at (0,0) [right,red] {{$\Gamma_1$}};
- 	 \draw[->] (0,0) -- (0,2);
- 	 \node at (0,2) [above] {{$\lambda$}};
+ 	 \draw (0,2) node {\tiny{\textbullet}};
+ 	 \node at (0,1) [right,red] {{$P_{F_1}$}};
+ 	 \draw[->] (0,0) -- (0,1);
+ 	 \node at (0,1) [left] {{$\lambda_{F_1}$}};
 	\end{tikzpicture}
 \end{subfigure}
 \begin{subfigure}[b]{0.25\linewidth}
 	\centering
  	 \begin{tikzpicture}[scale=1]
- 	 \draw[dotted,step=1,gray] (0,-2) -- (0,2);
- 	 \draw[->] (0,0) -- (0,2);
- 	 \node at (0,2) [above] {{$c$}};
+ 	 \draw[dotted,step=1,gray] (0,-1) -- (0,3);
+ 	 \draw[->] (0,0) -- (0,1);
+ 	 \node at (0,1) [above] {{$c_{F_1}$}};
  	 \draw (0,0) node {\textbullet};
 	\end{tikzpicture}
 \end{subfigure}
 \end{figure}
+On this branch it remains to calculate \(\text{Barv}(M_F,P_F,c_F,\lambda_F) = \int_0^2 e^x dx\). Applying the algorithm again We obtain \(e^2 - e\). In sum then \(F_1\) contributes \(e^{-1}*(e^2-e) = e-1\) to the overall integral \(\int_P e^y dx\).
+\end{example}

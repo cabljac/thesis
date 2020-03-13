@@ -25,7 +25,7 @@ Key:
 \begin{tabularx}{\linewidth}{clcc}
 \toprule
 \midrule
-\textbf{Name:} & \ 2.30C \hspace{0.3\linewidth} & \textbf{Description:} & Blow up of $Q$ in a line\\
+\textbf{Name:} & \ 2.30 \hspace{0.3\linewidth} & \textbf{Description:} & Blow up of $Q$ in a point\\
 \midrule
 {\small $ \sigma = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}$ }, & \( g(\xi) = \frac{1}{\xi_{2}^{4}}\cdot\left({\left(2 \, \xi_{2}^{3} - 3 \, \xi_{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} + 12 \, \xi_{2} e^{\left(3 \, \xi_{2}\right)} + 3 \, \xi_{2} + 3\right) e^{\left(-3 \, \xi_{2}\right)} \), & $ R(X) = 23/29$ , & $\xi \sim (0,0.51489)$
 \end{tabularx}
@@ -99,14 +99,20 @@ Key:
 \begin{center}
 \begin{tabularx}{\linewidth}{ccc@{\hspace{5ex}}c@{\hspace{5ex}}c}
 \toprule
-\(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2)\) & \( h_y(\xi_2) \in\) \\
+\(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2)\) & \( h_y(\xi_2) >\) \\
 \midrule
-\(0\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) &   \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
-\(1\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) & \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
-\(\infty\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) & \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
+\(0\) & \( \scalemath{0.8}{ \begin{pmatrix} 0 & 3 & -3 & 2 & -2 & 0 \\
+-3 & 0 & 0 & 1 & 1 & 1 \\
+1 & -2 & 1 & -1 & 1 & 1 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{1\\-1\\-2} }\) &   \(\frac{{\left({\left(2 \, \xi_{2}^{3} - 3 \, \xi_{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} + 3 \, {\left(3 \, \xi_{2}^{2} + 2\right)} e^{\left(3 \, \xi_{2}\right)} - 3 \, \xi_{2} - 3\right)} e^{\left(-3 \, \xi_{2}\right)}}{3 \, \xi_{2}^{4}}\) & \(1.087\) \\ \midrule
+\(1\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & 0 & 3 & 2 & 0 & -2 \\
+0 & -3 & 0 & 1 & 1 & 1 \\
+1 & -2 & 1 & 1 & 0 & 1 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{0\\1\\-2} }\) & \(\frac{{\left({\left(8 \, \xi_{2}^{3} + 6 \, \xi_{2}^{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} - 12 \, {\left(3 \, \xi_{2}^{2} - 3 \, \xi_{2} + 1\right)} e^{\left(3 \, \xi_{2}\right)} + 12 \, \xi_{2} + 15\right)} e^{\left(-3 \, \xi_{2}\right)}}{6 \, \xi_{2}^{4}}\) & \(2.178\) \\ \midrule
+\(\infty\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & 0 & 2 & 0 & 0 & -2 & 3 \\
+0 & -3 & 1 & 0 & 1 & 1 & 0 \\
+-1 & 2 & 1 & -1 & -1 & -1 & 2 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{0\\1\\0} }\) & \(-\frac{{\left(2 \, {\left(2 \, \xi_{2}^{3} - 3 \, \xi_{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} - 3 \, {\left(3 \, \xi_{2}^{2} - 12 \, \xi_{2} + 2\right)} e^{\left(3 \, \xi_{2}\right)} + 12 \, \xi_{2} + 12\right)} e^{\left(-3 \, \xi_{2}\right)}}{6 \, \xi_{2}^{4}}\) & \(0.4465\) \\ \midrule
+\(\notin \{0,1,\infty\} \) & \( \scalemath{0.8}{ \begin{pmatrix} 0 & 0 & -3 & 2 & 0 & -2 & 3 \\
+0 & -3 & 0 & 1 & 1 & 1 & 0 \\
+-\frac{1}{2} & 1 & 1 & 1 & 0 & 1 & 1 \end{pmatrix}} \)& \ & \(\frac{{\left({\left(8 \, \xi_{2}^{3} + 6 \, \xi_{2}^{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} - 3 \, {\left(3 \, \xi_{2}^{2} - 2\right)} e^{\left(3 \, \xi_{2}\right)} - 6 \, \xi_{2} - 3\right)} e^{\left(-3 \, \xi_{2}\right)}}{6 \, \xi_{2}^{4}}\) & \(4.151\) \\ \midrule
 \midrule
 \end{tabularx}
 \end{center}
@@ -121,9 +127,9 @@ Key:
 \begin{tabularx}{\linewidth}{clcc}
 \toprule
 \midrule
-\textbf{Name:} & \ 2.30C \hspace{0.3\linewidth} & \textbf{Description:} & Blow up of $Q$ in a line\\
+\textbf{Name:} & \ 2.31 \hspace{0.3\linewidth} & \textbf{Description:} & Blow up of $Q$ in a line\\
 \midrule
-{\small $ \sigma = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}$ }, & \( g(\xi) = \frac{1}{\xi_{2}^{4}}\cdot\left({\left(2 \, \xi_{2}^{3} - 3 \, \xi_{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} + 12 \, \xi_{2} e^{\left(3 \, \xi_{2}\right)} + 3 \, \xi_{2} + 3\right) e^{\left(-3 \, \xi_{2}\right)} \), & $ R(X) = 23/29$ , & $\xi \sim (0,0.51489)$
+{\small $ \sigma = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ }, & \( g(\xi_1,\xi_1)=  \ {\mapsto}\ -\frac{{\left(9 \, \xi_{1}^{2} - 8 \, {\left(\xi_{1}^{2} - \xi_{1}\right)} e^{\left(5 \, \xi_{1}\right)} + {\left(3 \, \xi_{1}^{2} - 5 \, \xi_{1} - 3\right)} e^{\left(4 \, \xi_{1}\right)} + 9 \, \xi_{1} + 3\right)} e^{\left(-3 \, \xi_{1}\right)}}{2 \, \xi_{1}^{4}} \), & $ R(X) = 23/27$ , & $\xi \sim (0.28550,0.28550)$
 \end{tabularx}
 \begin{figure}[H]
 \centering
@@ -141,6 +147,7 @@ Key:
  	 \node at (0,2) [above] {\large{$0$}};
  	 \node at (2,0) [right] {\large{$-2$}};
  	 \node at (2,-1) [right] {\large{$-2$}};
+ 	 \draw (0,0) node {\textbullet};
 	\end{tikzpicture}
 	\caption*{$\Phi_0$}
 \end{subfigure}
@@ -156,6 +163,7 @@ Key:
  	 \node at (0,2) [above] {\large{$0$}};
  	 \node at (2,0) [right] {\large{$0$}};
  	 \node at (2,-1) [right] {\large{$-1$}};
+ 	 \draw (0,0) node {\textbullet};
 	\end{tikzpicture}
 	\caption*{$\Phi_1$}
 \end{subfigure}
@@ -171,6 +179,7 @@ Key:
  	 \node at (0,2) [right] {\large{$-2$}};
  	 \node at (2,0) [right] {\large{$0$}};
  	 \node at (2,-1) [right] {\large{$1$}};
+ 	 \draw (0,0) node {\textbullet};
 	\end{tikzpicture}
 	\caption*{$\Phi_\infty$}
 \end{subfigure}
@@ -198,14 +207,20 @@ Key:
 \begin{center}
 \begin{tabularx}{\linewidth}{ccc@{\hspace{5ex}}c@{\hspace{5ex}}c}
 \toprule
-\(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2)\) & \( h_y(\xi_2) \in\) \\
+\(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2)\) & \( h_y(\xi_2) >\) \\
 \midrule
-\(0\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) &   \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
-\(1\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) & \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
-\(\infty\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) & \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
+\(0\) & \( \scalemath{0.8}{ \begin{pmatrix} 0 & 1 & 2 & -3 & 0 & 2 & -1 \\
+-3 & 0 & -1 & 0 & 2 & 0 & 2 \\
+1 & -1 & -1 & 1 & 1 & -1 & 1 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{-2\\3\\-4} }\) &   \(\frac{{\left(12 \, \xi_{2}^{2} + {\left(4 \, \xi_{2}^{2} + 2 \, \xi_{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} + 10 \, \xi_{2} + 3\right)} e^{\left(-3 \, \xi_{2}\right)}}{8 \, \xi_{2}^{4}}\) & \(1.9509\) \\ \midrule
+\(1\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & 0 & -1 & 2 & 0 & 2 & 0 \\
+0 & -3 & 2 & -1 & 2 & 0 & 1 \\
+1 & -2 & 1 & 0 & 1 & 1 & 0 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(-\frac{{(6  \xi_2^2 - 16  {(\xi_2^2 - \xi_2)} e^{(5  \xi_2)} + {(2  \xi_2^2 - 12  \xi_2 - 3)} e^{(4  \xi_2)} + 8  \xi_2 + 3)} e^{(-3  \xi_2)}}{8  \xi_2^{4}}\) & \(1.9410\) \\ \midrule
+\(\infty\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & 0 & 0 & 2 & 0 & -1 & 2 \\
+0 & -3 & 2 & 0 & 0 & 2 & -1 \\
+-1 & 2 & -1 & 1 & -1 & -1 & 2 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(\frac{{(3  \xi_2^2 - {(3  \xi_2^2 + 4  \xi_2 + 2)} e^{(4  \xi_2)} + 4  \xi_2 + 4  e^{(5  \xi_2)} - 4  e^{(3  \xi_2)} + 2)} e^{(-3  \xi_2)}}{4  \xi_2^4}\) & \(0.4632\) \\ \midrule
+\(\notin \{0,1,\infty\} \) & \( \scalemath{0.8}{ \begin{pmatrix} 0 & 0 & -3 & 2 & 2 & 1 & 0 & -1 & 0 \\
+0 & -3 & 0 & -1 & 0 & 0 & 2 & 2 & 1 \\
+-\frac{1}{2} & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 0 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(\frac{{(6  \xi_2^2 + 4  {(2  \xi_2^2 - 2  \xi_2 + 1)} e^{(5  \xi_2)} - {(2  \xi_2^2 - 3  \xi_2 + 2)} e^{(4  \xi_2)} + 5  \xi_2 - 4 \, e^{(3 \, \xi_2)} + 2)} e^{(-3 \, \xi_2)}}{4 \, \xi_2^4}\) & \(4.370\) \\ \midrule
 \midrule
 \end{tabularx}
 \end{center}
@@ -220,9 +235,9 @@ Key:
 \begin{tabularx}{\linewidth}{clcc}
 \toprule
 \midrule
-\textbf{Name:} & \ 2.30C \hspace{0.3\linewidth} & \textbf{Description:} & Blow up of $Q$ in a line\\
+\textbf{Name:} & \ 3.18 \hspace{0.3\linewidth} & \textbf{Description:} & Blow up of $Q$ in a point and a conic\\
 \midrule
-{\small $ \sigma = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}$ }, & \( g(\xi) = \frac{1}{\xi_{2}^{4}}\cdot\left({\left(2 \, \xi_{2}^{3} - 3 \, \xi_{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} + 12 \, \xi_{2} e^{\left(3 \, \xi_{2}\right)} + 3 \, \xi_{2} + 3\right) e^{\left(-3 \, \xi_{2}\right)} \), & $ R(X) = 23/29$ , & $\xi \sim (0,0.51489)$
+{\small $ \sigma = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}$ }, & \( g(0,\xi_2) = -\frac{{\left(4 \, \xi_{2}^{2} - {\left(3 \, \xi_{2}^{3} + \xi_{2}^{2} - 6 \, \xi_{2} - 6\right)} e^{\left(3 \, \xi_{2}\right)} - 24 \, \xi_{2} e^{\left(2 \, \xi_{2}\right)} - 6\right)} e^{\left(-2 \, \xi_{2}\right)}}{2 \, \xi_{2}^{4}} \), & $ R(X) = 48/55$ , & $\xi \sim (0,0.37970)$
 \end{tabularx}
 \begin{figure}[H]
 \centering
@@ -233,13 +248,18 @@ Key:
   \begin{tikzpicture}[scale=\tfl]
    	 \draw[dotted,step=1,gray,] (-3,-3) grid (3,2); \draw[line width = 1pt] (-1,-2) --
      (-3,0) -- (-2,1)--(2,1)--
- 	 (3,0)--(1,-2) -- (-1,-2); \draw[densely dashdotted, gray, line width = 1.2pt] (0,-3) -- (0,1);
- 	 \node at (0,-3) [below] {\large{$0$}};
- 	 \node at (-3,0) [right] {\large{$0$}};
- 	 \node at (-2,1) [left] {\large{$0$}};
+ 	 (3,0)--(1,-2) -- (-1,-2);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (1,-2) -- (1,1);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (-1,-2) -- (-1,1);
+ 	 \node at (1,-2) [below] {\large{$-1$}};
+ 	 \node at (-1,-2) [below] {\large{$0$}};
+ 	 \node at (-3,0) [below] {\large{$0$}};
+ 	 \node at (-2,1) [above] {\large{$0$}};
+ 	 \node at (-1,1) [above] {\large{$0$}};
+ 	 \node at (1,1) [above] {\large{$-1$}};
  	 \node at (2,1) [right] {\large{$-2$}};
  	 \node at (3,0) [below] {\large{$-3$}};
- 	 \node at (0,1) [above] {\large{$0$}};
+ 	 \draw (0,0) node {\textbullet};
 	\end{tikzpicture}
 	\caption*{$\Phi_0$}
 \end{subfigure}
@@ -248,12 +268,15 @@ Key:
  	 \begin{tikzpicture}[scale=\tfl]
  	   \draw[dotted,step=1,gray] (-3,-3) grid (3,2); \draw[line width = 1pt] (-1,-2) --
      (-3,0) -- (-2,1)--(2,1)--
- 	 (3,0)--(1,-2) -- (-1,-2); \draw[densely dashdotted, gray,line width = 1.2pt] (-3,0) -- (3,0);
- 	 \node at (0,-3) [below] {\large{$-3$}};
- 	 \node at (-3,0) [right] {\large{$0$}};
+ 	 (3,0)--(1,-2) -- (-1,-2);
+ 	  	 \draw[densely dashdotted, gray, line width = 1.2pt] (-3,0) -- (3,0);
+ 	 \node at (1,-2) [below] {\large{$-2$}};
+ 	 \node at (-1,-2) [below] {\large{$-2$}};
+ 	 \node at (-3,0) [below] {\large{$0$}};
  	 \node at (-2,1) [left] {\large{$0$}};
  	 \node at (2,1) [right] {\large{$0$}};
  	 \node at (3,0) [below] {\large{$0$}};
+ 	 \draw (0,0) node {\textbullet};
 	\end{tikzpicture}
 	\caption*{$\Phi_1$}
 \end{subfigure}
@@ -263,11 +286,13 @@ Key:
  	   \draw[dotted,step=1,gray] (-3,-3) grid (3,2); \draw[line width = 1pt] (-1,-2) --
      (-3,0) -- (-2,1)--(2,1)--
  	 (3,0)--(1,-2) -- (-1,-2);
- 	 \node at (0,-3) [below] {\large{$1$}};
- 	 \node at (-3,0) [right] {\large{$-2$}};
+ 	 \node at (1,-2) [below] {\large{$1$}};
+ 	 \node at (-1,-2) [below] {\large{$0$}};
+ 	 \node at (-3,0) [below] {\large{$-2$}};
  	 \node at (-2,1) [left] {\large{$-2$}};
  	 \node at (2,1) [right] {\large{$0$}};
  	 \node at (3,0) [below] {\large{$1$}};
+ 	 \draw (0,0) node {\textbullet};
 	\end{tikzpicture}
 	\caption*{$\Phi_\infty$}
 \end{subfigure}
@@ -276,14 +301,19 @@ Key:
  	 \begin{tikzpicture}[scale=\tfl]
  	   \draw[dotted,step=1,gray] (-3,-3) grid (3,2); \draw[line width = 1pt] (-1,-2) --
      (-3,0) -- (-2,1)--(2,1)--
- 	 (3,0)--(1,-2) -- (-1,-2); \draw[densely dashdotted, gray,line width = 1.2pt] (-3,0) -- (3,0); \draw[densely dashdotted, gray,line width = 1.2pt] (0,-3) -- (0,1) ;
- 	 \node at (0,-3) [below] {\large{$-2$}};
- 	 \node at (-3,0) [right] {\large{$-2$}};
- 	 \node at (-2,1) [left] {\large{$-2$}};
- 	 \node at (2,1) [right] {\large{$-2$}};
- 	 \node at (3,0) [below] {\large{$-2$}};
- 	 \node at (0,0) [below left] {\large{-$\frac{1}{2}$}};
- 	 \node at (0,1) [above] {\large{$-1$}};
+ 	 (3,0)--(1,-2) -- (-1,-2); \draw[densely dashdotted, gray,line width = 1.2pt] (-3,0) -- (3,0);
+ 	  	 \draw[densely dashdotted, gray, line width = 1.2pt] (1,-2) -- (1,1);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (-1,-2) -- (-1,1);
+ 	 \node at (1,-2) [below] {\large{$0$}};
+ 	 \node at (-1,-2) [below] {\large{$0$}};
+ 	 \node at (-3,0) [below] {\large{$0$}};
+ 	 \node at (-2,1) [left] {\large{$0$}};
+ 	 \node at (-1,1) [above] {\large{$1/2$}};
+ 	 \node at (1,1) [above] {\large{$1/2$}};
+ 	 \node at (2,1) [right] {\large{$0$}};
+ 	 \node at (3,0) [below] {\large{$0$}};
+ 	 \node at (1,0) {\large{$1$}};
+ 	 \node at (-1,0) {\large{$1$}};
  	 \draw (0,0) node {\textbullet};
 	\end{tikzpicture}
 	\caption*{$\deg \Phi $}
@@ -291,16 +321,23 @@ Key:
 }
 \end{figure}
 \begin{center}
-\begin{tabularx}{\linewidth}{ccc@{\hspace{5ex}}c@{\hspace{5ex}}c}
+\begin{tabularx}{\linewidth}{ccc@{\hspace{3ex}}c@{\hspace{2ex}}c}
 \toprule
-\(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2)\) & \( h_y(\xi_2) \in\) \\
+\(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2)\) & \( h_y(\xi_2) >\) \\
 \midrule
-\(0\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) &   \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
-\(1\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) & \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
-\(\infty\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) & \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
+\(0\) & \( \scalemath{0.8}{ \begin{pmatrix} -1 & 3 & -3 & 1 & 1 & -1 & 2 & -2 \\
+-2 & 0 & 0 & -2 & 1 & 1 & 1 & 1 \\
+1 & -2 & 1 & 0 & 0 & 1 & -1 & 1 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) &   \( \frac{{\left(3 \, \xi_{2}^{2} + 2 \, {\left(\xi_{2}^{3} - 3 \, \xi_{2} - 3\right)} e^{\left(3 \, \xi_{2}\right)} + 6 \, {\left(3 \, \xi_{2}^{2} + 2\right)} e^{\left(2 \, \xi_{2}\right)} - 6\right)} e^{\left(-2 \, \xi_{2}\right)}}{6 \, \xi_{2}^{4}}\) & \(0.3681\) \\ \midrule
+\(1\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -1 & 3 & 2 & 1 & 1 & -2 & -1 \\
+0 & -2 & 0 & 1 & 1 & -2 & 1 & 1 \\
+1 & -1 & 1 & 1 & \frac{1}{2} & -1 & 1 & \frac{1}{2} \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \( \frac{{\left(12 \, \xi_{2}^{2} - {\left(14 \, \xi_{2}^{3} + 15 \, \xi_{2}^{2} - 6\right)} e^{\left(3 \, \xi_{2}\right)} + 24 \, {\left(3 \, \xi_{2}^{2} - 3 \, \xi_{2} + 1\right)} e^{\left(2 \, \xi_{2}\right)} + 6 \, \xi_{2} - 30\right)} e^{\left(-2 \, \xi_{2}\right)}}{12 \, \xi_{2}^{4}}\) & \(2.516\) \\
+\midrule
+\(\infty\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -1 & 1 & 2 & -1 & 1 & 1 & -1 & -2 & 3 \\
+0 & -2 & -2 & 1 & 0 & 0 & 1 & 1 & 1 & 0 \\
+-1 & 1 & 2 & 1 & -1 & 0 & 0 & -1 & -1 & 2 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(\frac{{\left(9 \, \xi_{2}^{2} - 2 \, {\left(\xi_{2}^{3} - 3 \, \xi_{2} - 3\right)} e^{\left(3 \, \xi_{2}\right)} + 6 \, {\left(\xi_{2}^{2} - 6 \, \xi_{2} + 1\right)} e^{\left(2 \, \xi_{2}\right)} - 12\right)} e^{\left(-2 \, \xi_{2}\right)}}{6 \, \xi_{2}^{4}}\) & \(1.013\) \\ \midrule
+\(\notin \{0,1,\infty\} \) & \( \scalemath{0.8}{ \begin{pmatrix} -1 & -1 & -3 & 2 & 1 & 3 & 1 & -2 & -1 & 1 \\
+0 & -2 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & -2 \\
+0 & 1 & 1 & 1 & \frac{1}{2} & 1 & 0 & 1 & \frac{1}{2} & 1 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(\frac{{\left(12 \, \xi_{2}^{2} + {\left(14 \, \xi_{2}^{3} + 15 \, \xi_{2}^{2} - 6\right)} e^{\left(3 \, \xi_{2}\right)} - 12 \, {\left(2 \, \xi_{2}^{2} - 1\right)} e^{\left(2 \, \xi_{2}\right)} - 6 \, \xi_{2} - 6\right)} e^{\left(-2 \, \xi_{2}\right)}}{12 \, \xi_{2}^{4}}\) & \(3.946\) \\ \midrule
 \midrule
 \end{tabularx}
 \end{center}
@@ -315,9 +352,9 @@ Key:
 \begin{tabularx}{\linewidth}{clcc}
 \toprule
 \midrule
-\textbf{Name:} & \ 2.30C \hspace{0.3\linewidth} & \textbf{Description:} & Blow up of $Q$ in a line\\
+\textbf{Name:} & \ 3.21 \hspace{0.3\linewidth} & \textbf{Description:} & Blow up of \(\PP^1 \times \PP^2\) in curve of bidegree \((2,1)\).\\
 \midrule
-{\small $ \sigma = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}$ }, & \( g(\xi) = \frac{1}{\xi_{2}^{4}}\cdot\left({\left(2 \, \xi_{2}^{3} - 3 \, \xi_{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} + 12 \, \xi_{2} e^{\left(3 \, \xi_{2}\right)} + 3 \, \xi_{2} + 3\right) e^{\left(-3 \, \xi_{2}\right)} \), & $ R(X) = 23/29$ , & $\xi \sim (0,0.51489)$
+{\small $ \sigma = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ }, & \( g(\xi_1,\xi_1) = \frac{{\left(\xi_{1}^{3} - \xi_{1}^{2} + 4 \, {\left(\xi_{1}^{2} - \xi_{1}\right)} e^{\left(3 \, \xi_{1}\right)} + 6 \, {\left(2 \, \xi_{1} - 1\right)} e^{\xi_{1}} - 2 \, \xi_{1} + 6\right)} e^{\left(-\xi_{1}\right)}}{\xi_{1}^{4}} \), & $ R(X) = 76/97$ , & $\xi \sim (-0.69622,-0.69622)$
 \end{tabularx}
 \begin{figure}[H]
 \centering
@@ -328,13 +365,16 @@ Key:
   \begin{tikzpicture}[scale=\tfl]
    	 \draw[dotted,step=1,gray,] (-3,-3) grid (3,3); \draw[line width = 1pt] (3,-3) --
      (1,-2) -- (-2,1)--(-3,3)--
- 	 (-1,3)--(3,-1) -- (3,-3); \draw[densely dashdotted, gray, line width = 1.2pt] (0,-3) -- (0,1);
- 	 \node at (0,-3) [below] {\large{$0$}};
- 	 \node at (-3,0) [right] {\large{$0$}};
- 	 \node at (-2,1) [left] {\large{$0$}};
- 	 \node at (2,1) [right] {\large{$-2$}};
- 	 \node at (3,0) [below] {\large{$-3$}};
- 	 \node at (0,1) [above] {\large{$0$}};
+ 	 (-1,3)--(3,-1) -- (3,-3);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (-1,0) -- (-1,3);
+ 	 \node at (-1,0) [above] {\large{$0$}};
+ 	 \node at (-2,1) [below] {\large{$0$}};
+ 	 \node at (-3,3) [left] {\large{$0$}};
+ 	 \node at (-1,3) [right] {\large{$0$}};
+ 	 \node at (3,-1) [right] {\large{$-2$}};
+ 	 \node at (3,-3) [right] {\large{$-2$}};
+ 	 \node at (1,-2) [left] {\large{$-1$}};
+ 	 \draw (0,0) node {\textbullet};
 	\end{tikzpicture}
 	\caption*{$\Phi_0$}
 \end{subfigure}
@@ -343,12 +383,16 @@ Key:
  	 \begin{tikzpicture}[scale=\tfl]
    	 \draw[dotted,step=1,gray,] (-3,-3) grid (3,3); \draw[line width = 1pt] (3,-3) --
      (1,-2) -- (-2,1)--(-3,3)--
- 	 (-1,3)--(3,-1) -- (3,-3); \draw[densely dashdotted, gray,line width = 1.2pt] (-3,0) -- (3,0);
- 	 \node at (0,-3) [below] {\large{$-3$}};
- 	 \node at (-3,0) [right] {\large{$0$}};
- 	 \node at (-2,1) [left] {\large{$0$}};
- 	 \node at (2,1) [right] {\large{$0$}};
- 	 \node at (3,0) [below] {\large{$0$}};
+ 	 (-1,3)--(3,-1) -- (3,-3);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (0,-1) -- (3,-1);
+ 	 \node at (0,-1) [left] {\large{$0$}};
+ 	 \node at (1,-2) [left] {\large{$0$}};
+ 	 \node at (3,-3) [right] {\large{$0$}};
+ 	 \node at (3,-1) [right] {\large{$0$}};
+ 	 \node at (-1,3) [right] {\large{$-2$}};
+ 	 \node at (-3,3) [left] {\large{$-2$}};
+ 	 \node at (-2,1) [left] {\large{$-1$}};
+ 	 \draw (0,0) node {\textbullet};
 	\end{tikzpicture}
 	\caption*{$\Phi_1$}
 \end{subfigure}
@@ -358,11 +402,14 @@ Key:
    	 \draw[dotted,step=1,gray,] (-3,-3) grid (3,3); \draw[line width = 1pt] (3,-3) --
      (1,-2) -- (-2,1)--(-3,3)--
  	 (-1,3)--(3,-1) -- (3,-3);
- 	 \node at (0,-3) [below] {\large{$1$}};
- 	 \node at (-3,0) [right] {\large{$-2$}};
- 	 \node at (-2,1) [left] {\large{$-2$}};
- 	 \node at (2,1) [right] {\large{$0$}};
- 	 \node at (3,0) [below] {\large{$1$}};
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (3,-3) -- (-3,3);
+ 	 \node at (-2,1) [left] {\large{$-1$}};
+ 	 \node at (-3,3) [left] {\large{$0$}};
+ 	 \node at (-1,3) [right] {\large{$0$}};
+ 	 \node at (3,-1) [right] {\large{$0$}};
+ 	 \node at (3,-3) [right] {\large{$0$}};
+ 	 \node at (1,-2) [below] {\large{$-1$}};
+ 	 \draw (0,0) node {\textbullet};
 	\end{tikzpicture}
 	\caption*{$\Phi_\infty$}
 \end{subfigure}
@@ -371,14 +418,20 @@ Key:
  	 \begin{tikzpicture}[scale=\tfl]
    	 \draw[dotted,step=1,gray,] (-3,-3) grid (3,3); \draw[line width = 1pt] (3,-3) --
      (1,-2) -- (-2,1)--(-3,3)--
- 	 (-1,3)--(3,-1) -- (3,-3); \draw[densely dashdotted, gray,line width = 1.2pt] (-3,0) -- (3,0); \draw[densely dashdotted, gray,line width = 1.2pt] (0,-3) -- (0,1) ;
- 	 \node at (0,-3) [below] {\large{$-2$}};
- 	 \node at (-3,0) [right] {\large{$-2$}};
- 	 \node at (-2,1) [left] {\large{$-2$}};
- 	 \node at (2,1) [right] {\large{$-2$}};
- 	 \node at (3,0) [below] {\large{$-2$}};
- 	 \node at (0,0) [below left] {\large{-$\frac{1}{2}$}};
- 	 \node at (0,1) [above] {\large{$-1$}};
+ 	 (-1,3)--(3,-1) -- (3,-3);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (3,-3) -- (-3,3);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (-1,0) -- (-1,3);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (0,-1) -- (3,-1);
+ 	 \node at (-2,1) [left] {\large{$0$}};
+ 	 \node at (-3,3) [left] {\large{$0$}};
+ 	 \node at (-1,3) [right] {\large{$0$}};
+ 	 \node at (3,-1) [right] {\large{$-2$}};
+ 	 \node at (3,-3) [right] {\large{$-3$}};
+ 	 \node at (1,-2) [below] {\large{$0$}};
+ 	 \node at (0,-1) [below] {\large{$1/2$}};
+ 	 \node at (-1,0) [left] {\large{$1/2$}};
+ 	 \node at (1,-1) {\large{$1$}};
+ 	 \node at (-1,1) {\large{$1$}};
  	 \draw (0,0) node {\textbullet};
 	\end{tikzpicture}
 	\caption*{$\deg \Phi $}
@@ -386,16 +439,22 @@ Key:
 }
 \end{figure}
 \begin{center}
-\begin{tabularx}{\linewidth}{ccc@{\hspace{5ex}}c@{\hspace{5ex}}c}
+\begin{tabularx}{\linewidth}{ccc@{\hspace{3ex}}c@{\hspace{2ex}}c}
 \toprule
 \(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2)\) & \( h_y(\xi_2) \in\) \\
 \midrule
-\(0\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) &   \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
-\(1\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) & \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
-\(\infty\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) & \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
+\(0\) & \( \scalemath{0.8}{ \begin{pmatrix} -2 & 1 & -3 & 3 & 1 & -1 & 3 & -1 & 0 \\
+1 & -1 & 3 & -1 & -2 & 3 & -3 & 0 & -1 \\
+1 & -1 & 1 & -1 & 0 & 1 & -1 & 1 & 0 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) &   \(-\frac{{\left(\xi_{2}^{3} - \xi_{2}^{2} - 2 \, {\left(2 \, \xi_{2}^{2} - 4 \, \xi_{2} + 3\right)} e^{\xi_{2}} - 2 \, \xi_{2} + 6\right)} e^{\left(-\xi_{2}\right)}}{2 \, \xi_{2}^{4}}\) & \(0.6910\) \\ \midrule
+\(1\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 3 & 1 & 3 & -1 & -1 & 0 & -1 \\
+3 & 1 & -3 & -2 & -1 & 1 & 3 & -1 & 0 \\
+-1 & 0 & 1 & 1 & 1 & -1 & -1 & 1 & 0 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(-\frac{{\left(\xi_{2}^{3} - \xi_{2}^{2} - 2 \, {\left(2 \, \xi_{2}^{2} - 4 \, \xi_{2} + 3\right)} e^{\xi_{2}} - 2 \, \xi_{2} + 6\right)} e^{\left(-\xi_{2}\right)}}{2 \, \xi_{2}^{4}}\) & \(0.6910\) \\ \midrule
+\(\infty\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & -1 & 3 & 1 & 3 & 0 & -1 \\
+3 & 1 & 3 & -3 & -2 & -1 & -1 & 0 \\
+1 & 0 & 1 & 1 & 0 & 1 & -\frac{1}{2} & -\frac{1}{2} \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(\frac{{\left(5 \, \xi_{2}^{3} + 9 \, \xi_{2}^{2} + 6 \, {\left(8 \, \xi_{2}^{2} - 4 \, \xi_{2} + 1\right)} e^{\left(3 \, \xi_{2}\right)} - 24 \, {\left(6 \, \xi_{2}^{2} - 8 \, \xi_{2} + 5\right)} e^{\xi_{2}} - 66 \, \xi_{2} + 114\right)} e^{\left(-\xi_{2}\right)}}{24 \, \xi_{2}^{4}}\) & \(0.6910\) \\ \midrule
+\(\infty\) & \( \scalemath{0.8}{ \begin{pmatrix} -1 & -3 & -2 & 0 & 3 & 1 & -1 & 3 & 1 & -1 \\
+1 & 3 & 1 & -1 & -1 & -1 & 3 & -3 & -2 & 0 \\
+0 & 1 & 1 & \frac{1}{2} & 1 & 0 & 1 & 1 & 1 & \frac{1}{2} \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(-\frac{{\left(19 \, \xi_{2}^{3} - 33 \, \xi_{2}^{2} - 6 \, {\left(8 \, \xi_{2}^{2} - 4 \, \xi_{2} + 1\right)} e^{\left(3 \, \xi_{2}\right)} + 24 \, {\left(2 \, \xi_{2}^{2} - 1\right)} e^{\xi_{2}} + 18 \, \xi_{2} + 30\right)} e^{\left(-\xi_{2}\right)}}{24 \, \xi_{2}^{4}}\) & \(3.907\) \\ \midrule
 \midrule
 \end{tabularx}
 \end{center}
@@ -410,9 +469,9 @@ Key:
 \begin{tabularx}{\linewidth}{clcc}
 \toprule
 \midrule
-\textbf{Name:} & \ 2.30C \hspace{0.3\linewidth} & \textbf{Description:} & Blow up of $Q$ in a line\\
+\textbf{Name:} & \ 3.22 \hspace{0.3\linewidth} & \textbf{Description:} & Blow up of \(\PP^1 \times \PP^2\) in \(\{0\} \times \PP^2\)\\
 \midrule
-{\small $ \sigma = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}$ }, & \( g(\xi) = \frac{1}{\xi_{2}^{4}}\cdot\left({\left(2 \, \xi_{2}^{3} - 3 \, \xi_{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} + 12 \, \xi_{2} e^{\left(3 \, \xi_{2}\right)} + 3 \, \xi_{2} + 3\right) e^{\left(-3 \, \xi_{2}\right)} \), & $ R(X) = 23/29$ , & $\xi \sim (0,0.51489)$
+{\small $ \sigma = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}$ }, & \( g(0,\xi_2) = \frac{{\left(9 \, \xi_{2}^{3} + 9 \, \xi_{2}^{2} + {\left(\xi_{2}^{3} + 3 \, \xi_{2}^{2} - 24\right)} e^{\left(2 \, \xi_{2}\right)} + 24 \, {\left(\xi_{2} + 1\right)} e^{\xi_{2}}\right)} e^{\left(-\xi_{2}\right)}}{2 \, \xi_{2}^{4}} \), & $ R(X) = 40/49$ , & $\xi \sim (0,0.91479)$
 \end{tabularx}
 \begin{figure}[H]
 \centering
@@ -424,13 +483,17 @@ Key:
   \begin{tikzpicture}[scale=\tfl]
    	 \draw[dotted,step=1,gray,] (-3,-3) grid (3,2); \draw[line width = 1pt] (-3,-1) --
      (-3,0) -- (-1,1)--(1,1)--
- 	 (3,0)--(3,-1) -- (-3,-1); \draw[densely dashdotted, gray, line width = 1.2pt] (0,-3) -- (0,1);
- 	 \node at (0,-3) [below] {\large{$0$}};
- 	 \node at (-3,0) [right] {\large{$0$}};
- 	 \node at (-2,1) [left] {\large{$0$}};
- 	 \node at (2,1) [right] {\large{$-2$}};
- 	 \node at (3,0) [below] {\large{$-3$}};
+ 	 (3,0)--(3,-1) -- (-3,-1);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (0,-1) -- (0,1);
+ 	 \node at (-3,-1) [below] {\large{$0$}};
+ 	 \node at (-3,0) [above] {\large{$0$}};
+ 	 \node at (-1,1) [above] {\large{$0$}};
  	 \node at (0,1) [above] {\large{$0$}};
+ 	 \node at (1,1) [above] {\large{$-1$}};
+ 	 \node at (3,0) [above] {\large{$-3$}};
+ 	 \node at (3,-1) [below] {\large{$-3$}};
+ 	 \node at (0,-1) [below] {\large{$0$}};
+ 	 \draw (0,0) node {\textbullet};
 	\end{tikzpicture}
 	\caption*{$\Phi_0$}
 \end{subfigure}
@@ -439,12 +502,15 @@ Key:
  	 \begin{tikzpicture}[scale=\tfl]
  	   \draw[dotted,step=1,gray] (-3,-3) grid (3,2); \draw[line width = 1pt] (-3,-1) --
      (-3,0) -- (-1,1)--(1,1)--
- 	 (3,0)--(3,-1) -- (-3,-1); \draw[densely dashdotted, gray,line width = 1.2pt] (-3,0) -- (3,0);
- 	 \node at (0,-3) [below] {\large{$-3$}};
- 	 \node at (-3,0) [right] {\large{$0$}};
- 	 \node at (-2,1) [left] {\large{$0$}};
- 	 \node at (2,1) [right] {\large{$0$}};
- 	 \node at (3,0) [below] {\large{$0$}};
+ 	 (3,0)--(3,-1) -- (-3,-1);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (-3,0) -- (3,0);
+ 	 \node at (-3,-1) [below] {\large{$0$}};
+ 	 \node at (-3,0) [above] {\large{$0$}};
+ 	 \node at (-1,1) [above] {\large{$-1$}};
+ 	 \node at (1,1) [above] {\large{$-1$}};
+ 	 \node at (3,0) [above] {\large{$0$}};
+ 	 \node at (3,-1) [below] {\large{$0$}};
+ 	 \draw (0,0) node {\textbullet};
 	\end{tikzpicture}
 	\caption*{$\Phi_1$}
 \end{subfigure}
@@ -454,11 +520,13 @@ Key:
  	   \draw[dotted,step=1,gray] (-3,-3) grid (3,2); \draw[line width = 1pt] (-3,-1) --
      (-3,0) -- (-1,1)--(1,1)--
  	 (3,0)--(3,-1) -- (-3,-1);
- 	 \node at (0,-3) [below] {\large{$1$}};
- 	 \node at (-3,0) [right] {\large{$-2$}};
- 	 \node at (-2,1) [left] {\large{$-2$}};
- 	 \node at (2,1) [right] {\large{$0$}};
- 	 \node at (3,0) [below] {\large{$1$}};
+ 	 \node at (-3,-1) [below] {\large{$-2$}};
+ 	 \node at (-3,0) [above] {\large{$-2$}};
+ 	 \node at (-1,1) [above] {\large{$-1$}};
+ 	 \node at (1,1) [above] {\large{$0$}};
+ 	 \node at (3,0) [above] {\large{$1$}};
+ 	 \node at (3,-1) [below] {\large{$1$}};
+ 	 \draw (0,0) node {\textbullet};
 	\end{tikzpicture}
 	\caption*{$\Phi_\infty$}
 \end{subfigure}
@@ -467,14 +535,18 @@ Key:
  	 \begin{tikzpicture}[scale=\tfl]
  	   \draw[dotted,step=1,gray] (-3,-3) grid (3,2); \draw[line width = 1pt] (-3,-1) --
      (-3,0) -- (-1,1)--(1,1)--
- 	 (3,0)--(3,-1) -- (-3,-1); \draw[densely dashdotted, gray,line width = 1.2pt] (-3,0) -- (3,0); \draw[densely dashdotted, gray,line width = 1.2pt] (0,-3) -- (0,1) ;
- 	 \node at (0,-3) [below] {\large{$-2$}};
- 	 \node at (-3,0) [right] {\large{$-2$}};
- 	 \node at (-2,1) [left] {\large{$-2$}};
- 	 \node at (2,1) [right] {\large{$-2$}};
- 	 \node at (3,0) [below] {\large{$-2$}};
- 	 \node at (0,0) [below left] {\large{-$\frac{1}{2}$}};
- 	 \node at (0,1) [above] {\large{$-1$}};
+ 	 (3,0)--(3,-1) -- (-3,-1);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (0,-1) -- (0,1);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (-3,0) -- (3,0);
+ 	 \node at (-3,-1) [below] {\large{$-2$}};
+ 	 \node at (-3,0) [above] {\large{$-2$}};
+ 	 \node at (-1,1) [left] {\large{$-2$}};
+ 	 \node at (0,1) [above] {\large{$-\nicefrac{1}{2}$}};
+ 	 \node at (1,1) [right] {\large{$-2$}};
+ 	 \node at (3,0) [above] {\large{$-2$}};
+ 	 \node at (3,-1) [below] {\large{$-2$}};
+ 	 \node at (0,0) [left] {\large{$-\nicefrac{1}{2}$}};
+ 	 \node at (0,-1) [below] {\large{$-\nicefrac{1}{2}$}};
  	 \draw (0,0) node {\textbullet};
 	\end{tikzpicture}
 	\caption*{$\deg \Phi $}
@@ -484,14 +556,20 @@ Key:
 \begin{center}
 \begin{tabularx}{\linewidth}{ccc@{\hspace{5ex}}c@{\hspace{5ex}}c}
 \toprule
-\(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2)\) & \( h_y(\xi_2) \in\) \\
+\(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2)\) & \( h_y(\xi_2) >\) \\
 \midrule
-\(0\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) &   \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
-\(1\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) & \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
-\(\infty\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) & \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
+\(0\) & \( \scalemath{0.8}{ \begin{pmatrix} 3 & -3 & 3 & -3 & 1 & 0 & 0 & -1 \\
+0 & 0 & -1 & -1 & 1 & -1 & 1 & 1 \\
+-2 & 1 & -2 & 1 & 0 & 1 & 1 & 1 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) &   \(\frac{9 \, \xi_{2}^{2} + {\left(\xi_{2}^{3} + 3 \, \xi_{2}^{2} - 24\right)} e^{\xi_{2}} + 24 \, \xi_{2} + 24}{3 \, \xi_{2}^{4}}\) & \(0.8323\) \\ \midrule
+\(1\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -1 & -3 & 3 & 1 & 3 & 0 & 0 \\
+0 & 1 & -1 & 0 & 1 & -1 & -1 & 1 \\
+1 & 0 & 1 & 1 & 0 & 1 & -\frac{1}{2} & -\frac{1}{2} \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(-\frac{{\left(27 \, \xi_{2}^{3} + {\left(\xi_{2}^{3} - 24 \, \xi_{2} - 96\right)} e^{\left(2 \, \xi_{2}\right)} + 24 \, {\left(3 \, \xi_{2}^{2} + 5 \, \xi_{2} + 4\right)} e^{\xi_{2}}\right)} e^{\left(-\xi_{2}\right)}}{12 \, \xi_{2}^{4}}\) & \(2.164\) \\ \midrule
+\(\infty\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -3 & 3 & 1 & -1 & 0 & 0 & 0 & 3 \\
+0 & -1 & 0 & 1 & 1 & 0 & -1 & 1 & -1 \\
+-1 & -1 & 2 & 1 & 0 & -1 & -1 & 0 & 2 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \( \frac{9 \, \xi_{2}^{2} + {\left(\xi_{2}^{3} + 3 \, \xi_{2}^{2} - 24\right)} e^{\xi_{2}} + 24 \, \xi_{2} + 24}{6 \, \xi_{2}^{4}}\) & \(0.4161\) \\ \midrule
+\(\notin \{0,1,\infty\} \) & \( \scalemath{0.8}{ \begin{pmatrix} 0 & -3 & -3 & 3 & 1 & 0 & -1 & 3 & 0 \\
+0 & -1 & 0 & -1 & 1 & 1 & 1 & 0 & -1 \\
+-\frac{1}{2} & 1 & 1 & 1 & 1 & \frac{1}{2} & 1 & 1 & -\frac{1}{2} \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(-\frac{{\left(27 \, \xi_{2}^{3} - {\left(5 \, \xi_{2}^{3} + 18 \, \xi_{2}^{2} + 24 \, \xi_{2} - 48\right)} e^{\left(2 \, \xi_{2}\right)} + 6 \, {\left(3 \, \xi_{2}^{2} - 4 \, \xi_{2} - 8\right)} e^{\xi_{2}}\right)} e^{\left(-\xi_{2}\right)}}{12 \, \xi_{2}^{4}}\) & \(3.419\) \\ \midrule
 \midrule
 \end{tabularx}
 \end{center}
@@ -506,104 +584,9 @@ Key:
 \begin{tabularx}{\linewidth}{clcc}
 \toprule
 \midrule
-\textbf{Name:} & \ 2.30C \hspace{0.3\linewidth} & \textbf{Description:} & Blow up of $Q$ in a line\\
+\textbf{Name:} & \ 3.24 \hspace{0.3\linewidth} & \textbf{Description:} & Blow up of \(W\) in \((0:0:1:*:*:0)\).\\
 \midrule
-{\small $ \sigma = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}$ }, & \( g(\xi) = \frac{1}{\xi_{2}^{4}}\cdot\left({\left(2 \, \xi_{2}^{3} - 3 \, \xi_{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} + 12 \, \xi_{2} e^{\left(3 \, \xi_{2}\right)} + 3 \, \xi_{2} + 3\right) e^{\left(-3 \, \xi_{2}\right)} \), & $ R(X) = 23/29$ , & $\xi \sim (0,0.51489)$
-\end{tabularx}
-\begin{figure}[H]
-\centering
-\label{fig:data323}
-\resizebox{!}{0.25\textheight}{
-\begin{subfigure}[b]{0.25\linewidth}
-\centering
-  \begin{tikzpicture}[scale=\tfl]
-   	 \draw[dotted,step=1,gray,] (-3,-3) grid (3,2); \draw[line width = 1pt] (0,-3) --
-     (-3,0) -- (-2,1)--(1,1)--
- 	 (2,0)--(2,-1) -- (0,-3); \draw[densely dashdotted, gray, line width = 1.2pt] (0,-3) -- (0,1);
- 	 \node at (0,-3) [below] {\large{$0$}};
- 	 \node at (-3,0) [right] {\large{$0$}};
- 	 \node at (-2,1) [left] {\large{$0$}};
- 	 \node at (2,1) [right] {\large{$-2$}};
- 	 \node at (3,0) [below] {\large{$-3$}};
- 	 \node at (0,1) [above] {\large{$0$}};
-	\end{tikzpicture}
-	\caption*{$\Phi_0$}
-\end{subfigure}
-\begin{subfigure}[b]{0.25\linewidth}
-	\centering
- 	 \begin{tikzpicture}[scale=\tfl]
- 	   \draw[dotted,step=1,gray] (-3,-3) grid (3,2); \draw[line width = 1pt] (0,-3) --
-     (-3,0) -- (-2,1)--(1,1)--
- 	 (2,0)--(2,-1) -- (0,-3); \draw[densely dashdotted, gray,line width = 1.2pt] (-3,0) -- (3,0);
- 	 \node at (0,-3) [below] {\large{$-3$}};
- 	 \node at (-3,0) [right] {\large{$0$}};
- 	 \node at (-2,1) [left] {\large{$0$}};
- 	 \node at (2,1) [right] {\large{$0$}};
- 	 \node at (3,0) [below] {\large{$0$}};
-	\end{tikzpicture}
-	\caption*{$\Phi_1$}
-\end{subfigure}
-\begin{subfigure}[b]{0.25\linewidth}
-	\centering
- 	 \begin{tikzpicture}[scale=\tfl]
- 	   \draw[dotted,step=1,gray] (-3,-3) grid (3,2); \draw[line width = 1pt] (0,-3) --
-     (-3,0) -- (-2,1)--(1,1)--
- 	 (2,0)--(2,-1) -- (0,-3);
- 	 \node at (0,-3) [below] {\large{$1$}};
- 	 \node at (-3,0) [right] {\large{$-2$}};
- 	 \node at (-2,1) [left] {\large{$-2$}};
- 	 \node at (2,1) [right] {\large{$0$}};
- 	 \node at (3,0) [below] {\large{$1$}};
-	\end{tikzpicture}
-	\caption*{$\Phi_\infty$}
-\end{subfigure}
-\begin{subfigure}[b]{0.25\linewidth}
-	\centering
- 	 \begin{tikzpicture}[scale=\tfl]
- 	   \draw[dotted,step=1,gray] (-3,-3) grid (3,2); \draw[line width = 1pt] (0,-3) --
-     (-3,0) -- (-2,1)--(1,1)--
- 	 (2,0)--(2,-1) -- (0,-3); \draw[densely dashdotted, gray,line width = 1.2pt] (-3,0) -- (3,0); \draw[densely dashdotted, gray,line width = 1.2pt] (0,-3) -- (0,1) ;
- 	 \node at (0,-3) [below] {\large{$-2$}};
- 	 \node at (-3,0) [right] {\large{$-2$}};
- 	 \node at (-2,1) [left] {\large{$-2$}};
- 	 \node at (2,1) [right] {\large{$-2$}};
- 	 \node at (3,0) [below] {\large{$-2$}};
- 	 \node at (0,0) [below left] {\large{-$\frac{1}{2}$}};
- 	 \node at (0,1) [above] {\large{$-1$}};
- 	 \draw (0,0) node {\textbullet};
-	\end{tikzpicture}
-	\caption*{$\deg \Phi $}
-\end{subfigure}
-}
-\end{figure}
-\begin{center}
-\begin{tabularx}{\linewidth}{ccc@{\hspace{5ex}}c@{\hspace{5ex}}c}
-\toprule
-\(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2)\) & \( h_y(\xi_2) \in\) \\
-\midrule
-\(0\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) &   \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
-\(1\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) & \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
-\(\infty\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) & \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
-\midrule
-\end{tabularx}
-\end{center}
-\newpage
-%
-%
-%
-%
-%
-%
-%
-\begin{tabularx}{\linewidth}{clcc}
-\toprule
-\midrule
-\textbf{Name:} & \ 2.30C \hspace{0.3\linewidth} & \textbf{Description:} & Blow up of $Q$ in a line\\
-\midrule
-{\small $ \sigma = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}$ }, & \( g(\xi) = \frac{1}{\xi_{2}^{4}}\cdot\left({\left(2 \, \xi_{2}^{3} - 3 \, \xi_{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} + 12 \, \xi_{2} e^{\left(3 \, \xi_{2}\right)} + 3 \, \xi_{2} + 3\right) e^{\left(-3 \, \xi_{2}\right)} \), & $ R(X) = 23/29$ , & $\xi \sim (0,0.51489)$
+{\small $ \sigma = \begin{pmatrix} -1 & -1 \\ 1 & 0 \end{pmatrix}$ }, & \( g_1(0,\xi_2) = \xi_{2} \ {\mapsto}\ \frac{2 \, {\left({\left(\xi_{2}^{2} - 2\right)} e^{\left(3 \, \xi_{2}\right)} - 2 \, \xi_{2} + 4 \, e^{\left(2 \, \xi_{2}\right)} - 2\right)} e^{\left(-2 \, \xi_{2}\right)}}{\xi_{2}^{3}} \), & $ R(X) = 21/25$ , & $\xi \sim (0,0.43475)$
 \end{tabularx}
 \begin{figure}[H]
 \centering
@@ -616,13 +599,16 @@ Key:
   \begin{tikzpicture}[scale=\tfl]
    	 \draw[dotted,step=1,gray,] (-3,-3) grid (3,2); \draw[line width = 1pt] (0,-2) --
      (-2,0) -- (-2,1)--(1,1)--
- 	 (2,0)--(2,-2) -- (0,-2); \draw[densely dashdotted, gray, line width = 1.2pt] (0,-3) -- (0,1);
- 	 \node at (0,-3) [below] {\large{$0$}};
- 	 \node at (-3,0) [right] {\large{$0$}};
- 	 \node at (-2,1) [left] {\large{$0$}};
- 	 \node at (2,1) [right] {\large{$-2$}};
- 	 \node at (3,0) [below] {\large{$-3$}};
+ 	 (2,0)--(2,-2) -- (0,-2);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (0,-2) -- (0,1);
+ 	 \node at (0,-2) [below] {\large{$0$}};
+ 	 \node at (-2,0) [left] {\large{$-2$}};
+ 	 \node at (-2,1) [left] {\large{$-2$}};
  	 \node at (0,1) [above] {\large{$0$}};
+ 	 \node at (1,1) [right] {\large{$0$}};
+ 	 \node at (2,0) [right] {\large{$0$}};
+ 	 \node at (2,-2) [below] {\large{$0$}};
+ 	 \draw (0,0) node {\textbullet};
 	\end{tikzpicture}
 	\caption*{$\Phi_0$}
 \end{subfigure}
@@ -631,12 +617,15 @@ Key:
  	 \begin{tikzpicture}[scale=\tfl]
  	   \draw[dotted,step=1,gray] (-3,-3) grid (3,2); \draw[line width = 1pt] (0,-2) --
      (-2,0) -- (-2,1)--(1,1)--
- 	 (2,0)--(2,-2) -- (0,-2); \draw[densely dashdotted, gray,line width = 1.2pt] (-3,0) -- (3,0);
- 	 \node at (0,-3) [below] {\large{$-3$}};
- 	 \node at (-3,0) [right] {\large{$0$}};
+ 	 (2,0)--(2,-2) -- (0,-2);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (-2,0) -- (2,0);
+ 	 \node at (0,-2) [below] {\large{$-2$}};
+ 	 \node at (-2,0) [left] {\large{$0$}};
  	 \node at (-2,1) [left] {\large{$0$}};
- 	 \node at (2,1) [right] {\large{$0$}};
- 	 \node at (3,0) [below] {\large{$0$}};
+ 	 \node at (1,1) [right] {\large{$0$}};
+ 	 \node at (2,0) [right] {\large{$0$}};
+ 	 \node at (2,-2) [below] {\large{$-2$}};
+ 	 \draw (0,0) node {\textbullet};
 	\end{tikzpicture}
 	\caption*{$\Phi_1$}
 \end{subfigure}
@@ -646,11 +635,15 @@ Key:
  	   \draw[dotted,step=1,gray] (-3,-3) grid (3,2); \draw[line width = 1pt] (0,-2) --
      (-2,0) -- (-2,1)--(1,1)--
  	 (2,0)--(2,-2) -- (0,-2);
- 	 \node at (0,-3) [below] {\large{$1$}};
- 	 \node at (-3,0) [right] {\large{$-2$}};
- 	 \node at (-2,1) [left] {\large{$-2$}};
- 	 \node at (2,1) [right] {\large{$0$}};
- 	 \node at (3,0) [below] {\large{$1$}};
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (2,-2) -- (-1,1);
+ 	 \node at (0,-2) [below] {\large{$0$}};
+ 	 \node at (-2,0) [left] {\large{$0$}};
+ 	 \node at (-2,1) [left] {\large{$0$}};
+ 	 \node at (-1,1) [above] {\large{$0$}};
+ 	 \node at (1,1) [right] {\large{$-2$}};
+ 	 \node at (2,0) [right] {\large{$-2$}};
+ 	 \node at (2,-2) [below] {\large{$0$}};
+ 	 \draw (0,0) node {\textbullet};
 	\end{tikzpicture}
 	\caption*{$\Phi_\infty$}
 \end{subfigure}
@@ -659,14 +652,19 @@ Key:
  	 \begin{tikzpicture}[scale=\tfl]
  	   \draw[dotted,step=1,gray] (-3,-3) grid (3,2); \draw[line width = 1pt] (0,-2) --
      (-2,0) -- (-2,1)--(1,1)--
- 	 (2,0)--(2,-2) -- (0,-2); \draw[densely dashdotted, gray,line width = 1.2pt] (-3,0) -- (3,0); \draw[densely dashdotted, gray,line width = 1.2pt] (0,-3) -- (0,1) ;
- 	 \node at (0,-3) [below] {\large{$-2$}};
- 	 \node at (-3,0) [right] {\large{$-2$}};
+ 	 (2,0)--(2,-2) -- (0,-2);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (0,-2) -- (0,1);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (-2,0) -- (2,0);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (2,-2) -- (-1,1);
+ 	 \node at (0,-2) [below] {\large{$-2$}};
+ 	 \node at (-2,0) [left] {\large{$-2$}};
  	 \node at (-2,1) [left] {\large{$-2$}};
- 	 \node at (2,1) [right] {\large{$-2$}};
- 	 \node at (3,0) [below] {\large{$-2$}};
- 	 \node at (0,0) [below left] {\large{-$\frac{1}{2}$}};
+ 	 \node at (-1,1) [above] {\large{$-1$}};
+ 	 \node at (1,1) [right] {\large{$-2$}};
+ 	 \node at (2,0) [right] {\large{$-2$}};
+ 	 \node at (2,-2) [below] {\large{$-2$}};
  	 \node at (0,1) [above] {\large{$-1$}};
+ 	 \node at (0,0) [below left] {\large{$-\nicefrac{1}{2}$}};
  	 \draw (0,0) node {\textbullet};
 	\end{tikzpicture}
 	\caption*{$\deg \Phi $}
@@ -676,14 +674,12 @@ Key:
 \begin{center}
 \begin{tabularx}{\linewidth}{ccc@{\hspace{5ex}}c@{\hspace{5ex}}c}
 \toprule
-\(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2)\) & \( h_y(\xi_2) \in\) \\
+\(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2)\) & \( h_y(\xi_2) >\) \\
 \midrule
-\(0\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) &   \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
-\(1\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) & \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
-\(\infty\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) & \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
+\(0\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) &   \( \frac{2 \, {\left({\left(\xi_{2} - 1\right)} e^{\left(2 \, \xi_{2}\right)} + \xi_{2} + 1\right)} e^{\left(-2 \, \xi_{2}\right)}}{\xi_{2}^{3}}\) & \(0.8793\) \\ \midrule
+\(1\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \( -\frac{{\left(12 \, \xi_{2}^{2} - {\left(7 \, \xi_{2}^{3} + 3 \, \xi_{2}^{2} - 6 \, \xi_{2} + 6\right)} e^{\left(3 \, \xi_{2}\right)} + 12 \, {\left(2 \, \xi_{2}^{2} - 2 \, \xi_{2} + 1\right)} e^{\left(2 \, \xi_{2}\right)} + 12 \, \xi_{2} - 6\right)} e^{\left(-2 \, \xi_{2}\right)}}{6 \, \xi_{2}^{4}}\) & \(1.2944\) \\ \midrule
+\(\infty\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \( \frac{2 \, {\left({\left(\xi_{2} - 1\right)} e^{\left(2 \, \xi_{2}\right)} + \xi_{2} + 1\right)} e^{\left(-2 \, \xi_{2}\right)}}{\xi_{2}^{3}}\) & \(0.8793\) \\ \midrule
+\(\notin \{0,1,\infty\} \) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \( \frac{{\left(12 \, \xi_{2}^{2} + {\left(7 \, \xi_{2}^{3} + 3 \, \xi_{2}^{2} - 6 \, \xi_{2} + 6\right)} e^{\left(3 \, \xi_{2}\right)} + 12 \, \xi_{2} - 12 \, e^{\left(2 \, \xi_{2}\right)} + 6\right)} e^{\left(-2 \, \xi_{2}\right)}}{6 \, \xi_{2}^{4}}\) & \(3.0544\) \\ \midrule
 \midrule
 \end{tabularx}
 \end{center}
@@ -698,9 +694,9 @@ Key:
 \begin{tabularx}{\linewidth}{clcc}
 \toprule
 \midrule
-\textbf{Name:} & \ 2.30C \hspace{0.3\linewidth} & \textbf{Description:} & Blow up of $Q$ in a line\\
+\textbf{Name:} & \ 4.8 \hspace{0.3\linewidth} & \textbf{Description:} & Blow up of \((\PP^1)^3\) in a curve.\\
 \midrule
-{\small $ \sigma = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}$ }, & \( g(\xi) = \frac{1}{\xi_{2}^{4}}\cdot\left({\left(2 \, \xi_{2}^{3} - 3 \, \xi_{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} + 12 \, \xi_{2} e^{\left(3 \, \xi_{2}\right)} + 3 \, \xi_{2} + 3\right) e^{\left(-3 \, \xi_{2}\right)} \), & $ R(X) = 23/29$ , & $\xi \sim (0,0.51489)$
+{\small $ \sigma = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}$ }, & \( g(0,\xi_2) = \frac{{\left(4 \, \xi_{2}^{3} + 4 \, \xi_{2}^{2} + {\left(\xi_{2}^{3} + \xi_{2}^{2} - 2 \, \xi_{2} - 6\right)} e^{\left(2 \, \xi_{2}\right)} + 2 \, {\left(4 \, \xi_{2} + 3\right)} e^{\xi_{2}}\right)} e^{\left(-\xi_{2}\right)}}{\xi_{2}^{4}}\), & $ R(X) = 76/89$ , & $\xi \sim (0,0.62431)$
 \end{tabularx}
 \begin{figure}[H]
 \centering
@@ -731,15 +727,14 @@ Key:
  	 \begin{tikzpicture}[scale=\tfl]
  	   \draw[dotted,step=1,gray] (-3,-3) grid (3,2); \draw[line width = 1pt] (-2,-1) --
      (-2,0) -- (-1,1)--(1,1)--
- 	 (2,0)--(2,-1) -- (-2,-1); \draw[densely dashdotted, gray,line width = 1.2pt] (0,-1) -- (0,1); 
+ 	 (2,0)--(2,-1) -- (-2,-1);
+ 	 \draw[densely dashdotted, gray,line width = 1.2pt] (-2,0) -- (2,0); 
  	 \node at (-2,-1) [left] {\large{$0$}};
  	 \node at (-2,0) [left] {\large{$0$}};
- 	 \node at (-1,1) [left] {\large{$0$}};
- 	 \node at (0,1) [above] {\large{$0$}};
+ 	 \node at (-1,1) [left] {\large{$-1$}};
  	 \node at (1,1) [right] {\large{$-1$}};
- 	 \node at (2,0) [right] {\large{$-2$}};
- 	 \node at (2,-1) [right] {\large{$-2$}};
- 	 \node at (0,-1) [below] {\large{$0$}};
+ 	 \node at (2,0) [right] {\large{$0$}};
+ 	 \node at (2,-1) [right] {\large{$0$}};
  	 \draw (0,0) node {\textbullet};
 	\end{tikzpicture}
 	\caption*{$\Phi_1$}
@@ -749,13 +744,16 @@ Key:
  	 \begin{tikzpicture}[scale=\tfl]
  	   \draw[dotted,step=1,gray] (-3,-3) grid (3,2); \draw[line width = 1pt] (-2,-1) --
      (-2,0) -- (-1,1)--(1,1)--
- 	 (2,0)--(2,-1) -- (-2,-1); \draw[densely dashdotted, gray,line width = 1.2pt] (-2,0) -- (2,0) ;
- 	 \node at (-2,-1) [left] {\large{$0$}};
+ 	 (2,0)--(2,-1) -- (-2,-1);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (0,-1) -- (0,1);
+ 	 \node at (2,-1) [right] {\large{$-2$}};
+ 	 \node at (2,0) [right] {\large{$-2$}};
+ 	 \node at (1,1) [right] {\large{$-1$}};
+ 	 \node at (0,1) [above] {\large{$0$}};
+ 	 \node at (-1,1) [left] {\large{$0$}};
  	 \node at (-2,0) [left] {\large{$0$}};
- 	 \node at (-1,1) [left] {\large{$-1$}};
- 	 \node at (0,1) [above] {\large{$-1$}};
- 	 \node at (1,1) [right] {\large{$0$}};
- 	 \node at (2,0) [right] {\large{$0$}};
+ 	 \node at (-2,-1) [left] {\large{$0$}};
+ 	 \node at (0,-1) [below] {\large{$0$}};
  	 \draw (0,0) node {\textbullet};
 	\end{tikzpicture}
 	\caption*{$\Phi_\infty$}
@@ -784,14 +782,12 @@ Key:
 \begin{center}
 \begin{tabularx}{\linewidth}{ccc@{\hspace{5ex}}c@{\hspace{5ex}}c}
 \toprule
-\(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2)\) & \( h_y(\xi_2) \in\) \\
+\(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2)\) & \( h_y(\xi_2) >\) \\
 \midrule
-\(0\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) &   \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
-\(1\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) & \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
-\(\infty\) & \(\begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}\)& \(\colvec{a\\b\\c}\) & \(\frac{1}{3\xi_2^{4}} \cdot
- ( \ (2   \xi_2^{3} - 3   \xi_2 - 3) e^{4   \xi_2} +12 \xi_2 e^{3 \xi_2} + 3 \xi_2 + 3 \ ) e^{-3 \xi_2}\) & \((1.087,1.458)\) \\ \midrule
+\(0\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) &   \(\frac{4 \, \xi_{2}^{2} + {\left(\xi_{2}^{3} + \xi_{2}^{2} - 2 \, \xi_{2} - 6\right)} e^{\xi_{2}} + 8 \, \xi_{2} + 6}{2 \, \xi_{2}^{4}}\) & \(0.6636\) \\ \midrule
+\(1\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(\frac{4 \, \xi_{2}^{2} + {\left(\xi_{2}^{3} + \xi_{2}^{2} - 2 \, \xi_{2} - 6\right)} e^{\xi_{2}} + 8 \, \xi_{2} + 6}{2 \, \xi_{2}^{4}}\) & \(0.6636\) \\ \midrule
+\(\infty\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(-\frac{{\left(4 \, \xi_{2}^{3} + {\left(\xi_{2}^{3} - 6 \, \xi_{2} - 12\right)} e^{\left(2 \, \xi_{2}\right)} + 6 \, {\left(2 \, \xi_{2}^{2} + 3 \, \xi_{2} + 2\right)} e^{\xi_{2}}\right)} e^{\left(-\xi_{2}\right)}}{3 \, \xi_{2}^{4}}\) & \(1.103\) \\ \midrule
+\(\notin \{0,1,\infty\} \) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(-\frac{{\left(4 \, \xi_{2}^{3} - {\left(2 \, \xi_{2}^{3} + 3 \, \xi_{2}^{2} - 6\right)} e^{\left(2 \, \xi_{2}\right)} - 6 \, {\left(\xi_{2} + 1\right)} e^{\xi_{2}}\right)} e^{\left(-\xi_{2}\right)}}{3 \, \xi_{2}^{4}}\) & \(2.442\) \\ \midrule
 \midrule
 \end{tabularx}
 \end{center}
@@ -873,5 +869,121 @@ Key:
 %\end{subfigure}
 %}
 %\end{figure}
+\newpage
+%
+%
+%
+%
+%
+%
+%
+\begin{tabularx}{\linewidth}{clcc}
+\toprule
+\midrule
+\textbf{Name:} & \ 3.23 \hspace{0.3\linewidth} & \textbf{Description:} & $ \begin{matrix}\text{Blow up of }Q \text{ in a point and strict} \\ \ \ \ \text{transform of line passing through.} \end{matrix} $ \\
+\midrule
+\ & \ & \ $ R(X) = 168/221$ , & $\xi \sim (0.26618,0.67164)$
+\end{tabularx}
+\begin{figure}[H]
+\centering
+\label{fig:data323}
+\resizebox{!}{0.2\textheight}{
+\begin{subfigure}[b]{0.25\linewidth}
+\centering
+  \begin{tikzpicture}[scale=\tfl]
+   	 \draw[dotted,step=1,gray,] (-3,-3) grid (3,2); \draw[line width = 1pt] (0,-3) --
+     (-3,0) -- (-2,1)--(1,1)--
+ 	 (2,0)--(2,-1) -- (0,-3);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (0,-3) -- (0,1);
+ 	 \node at (0,-3) [below] {\large{$0$}};
+ 	 \node at (-3,0) [right] {\large{$0$}};
+ 	 \node at (-2,1) [left] {\large{$0$}};
+ 	 \node at (1,1) [right] {\large{$-1$}};
+ 	 \node at (2,0) [right] {\large{$-2$}};
+ 	 \node at (2,-1) [right] {\large{$-2$}};
+ 	 \node at (0,1) [above] {\large{$0$}};
+ 	 \draw (0,0) node {\textbullet};
+	\end{tikzpicture}
+	\caption*{$\Phi_0$}
+\end{subfigure}
+\begin{subfigure}[b]{0.25\linewidth}
+	\centering
+ 	 \begin{tikzpicture}[scale=\tfl]
+ 	   \draw[dotted,step=1,gray] (-3,-3) grid (3,2); \draw[line width = 1pt] (0,-3) --
+     (-3,0) -- (-2,1)--(1,1)--
+ 	 (2,0)--(2,-1) -- (0,-3);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (-3,0) -- (2,0);
+ 	 \node at (0,-3) [below] {\large{$-3$}};
+ 	 \node at (-3,0) [left] {\large{$0$}};
+ 	 \node at (-2,1) [left] {\large{$0$}};
+ 	 \node at (1,1) [right] {\large{$0$}};
+ 	 \node at (2,0) [right] {\large{$0$}};
+ 	 \node at (2,-1) [right] {\large{$-1$}};
+ 	 \draw (0,0) node {\textbullet};
+	\end{tikzpicture}
+	\caption*{$\Phi_1$}
+\end{subfigure}
+\begin{subfigure}[b]{0.25\linewidth}
+	\centering
+ 	 \begin{tikzpicture}[scale=\tfl]
+ 	   \draw[dotted,step=1,gray] (-3,-3) grid (3,2); \draw[line width = 1pt] (0,-3) --
+     (-3,0) -- (-2,1)--(1,1)--
+ 	 (2,0)--(2,-1) -- (0,-3);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (2,-1) -- (0,1);
+ 	 \node at (0,-3) [below] {\large{$1$}};
+ 	 \node at (-3,0) [right] {\large{$-2$}};
+ 	 \node at (-2,1) [left] {\large{$-2$}};
+ 	 \node at (1,1) [right] {\large{$-1$}};
+ 	 \node at (0,1) [above] {\large{$-1$}};
+ 	 \node at (2,0) [right] {\large{$0$}};
+ 	 \node at (2,-1) [right] {\large{$1$}};
+ 	 \draw (0,0) node {\textbullet};
+	\end{tikzpicture}
+	\caption*{$\Phi_\infty$}
+\end{subfigure}
+\begin{subfigure}[b]{0.25\linewidth}
+	\centering
+ 	 \begin{tikzpicture}[scale=\tfl]
+ 	   \draw[dotted,step=1,gray] (-3,-3) grid (3,2); \draw[line width = 1pt] (0,-3) --
+     (-3,0) -- (-2,1)--(1,1)--
+ 	 (2,0)--(2,-1) -- (0,-3);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (0,-3) -- (0,1);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (-3,0) -- (2,0);
+ 	 \draw[densely dashdotted, gray, line width = 1.2pt] (2,-1) -- (0,1);
+ 	 \node at (0,-3) [below] {\large{$-2$}};
+ 	 \node at (-3,0) [right] {\large{$-2$}};
+ 	 \node at (-2,1) [left] {\large{$-2$}};
+ 	 \node at (1,1) [right] {\large{$-2$}};
+ 	 \node at (2,0) [right] {\large{$-2$}};
+ 	 \node at (2,-1) [right] {\large{$-2$}};
+ 	 \node at (0,1) [above] {\large{$-1$}};
+ 	 \node at (0,0) [below left] {\large{$-\nicefrac{1}{2}$}};
+ 	 \node at (1,0) [below] {\large{$-1$}};
+ 	 \draw (0,0) node {\textbullet};
+	\end{tikzpicture}
+	\caption*{$\deg \Phi $}
+\end{subfigure}
+}
+\end{figure}
+\begin{center}
+\begin{tabularx}{\linewidth}{ccc@{\hspace{5ex}}c}
+\toprule
+\(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2) > \) \\
+\midrule
+\(0\) & \( \scalemath{0.8}{ \begin{pmatrix} 0 & 2 & 1 & -3 & -2 & 0 & 1 & 0 & 2 \\
+-3 & -1 & 0 & 0 & 1 & 1 & 1 & 1 & 0 \\
+1 & -1 & -1 & 1 & 1 & 1 & 0 & 0 & -1 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(1.2766\) \\ \midrule
+\(1\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & 0 & -2 & 2 & 1 & 2 & 0 \\
+0 & -3 & 1 & 0 & 1 & -1 & 1 \\
+1 & -2 & 1 & 1 & 1 & 0 & 0 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(1.8402\) \\ \midrule
+\(\infty\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & 0 & 0 & 2 & 1 & 0 & -2 & 0 & 2 \\
+0 & -3 & 0 & 0 & 1 & 1 & 1 & 1 & -1 \\
+-1 & 2 & -1 & 1 & 0 & -1 & -1 & 0 & 2 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(0.1005\) \\ \midrule
+\(\notin \{0,1,\infty\} \) & \( \scalemath{0.8}{ \begin{pmatrix} 0 & 0 & -3 & 2 & 1 & 1 & 2 & -2 & 0 \\
+0 & -3 & 0 & -1 & 1 & 0 & 0 & 1 & 1 \\
+-\frac{1}{2} & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 0 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(3.4443\) \\ \midrule
+\midrule
+\end{tabularx}
+\end{center}
 \end{landscape}
 }

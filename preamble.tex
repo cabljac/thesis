@@ -2,8 +2,11 @@
 
   %% this block is for solitons tables
 
-\usepackage{listings}
 
+\usepackage[ruled,vlined]{algorithm2e}
+
+\usepackage{listings}
+\renewcommand{\thefigure}{\arabic{figure}} 
 
 \usepackage{pdflscape}  % this block for appendix A
 \usepackage{tabularx}
@@ -12,13 +15,24 @@
 \usepackage{float}
 
 
+\usepackage{pgfplots}
 
 \usepackage{amsmath}
 \usepackage{amsthm}
+
+\newcounter{nmdthmcnt}
+\newenvironment{namedthm}[2][]{\addtocounter{nmdthmcnt}{1}%
+    \theoremstyle{plain}\newtheorem*{nmdthm\roman{nmdthmcnt}}{#2}%
+    \begin{nmdthm\roman{nmdthmcnt}}[#1]}{\end{nmdthm\roman{nmdthmcnt}}}
+
+  
 \usepackage{cite}
 \usepackage{amscd,amssymb,amsmath,nccmath,microtype}
 \usepackage{calligra,mathrsfs}
 \usepackage{graphicx}
+
+\newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}
+
 \usepackage[hyphens]{url}
 \usepackage{hyperref}
 \usepackage{changepage}
@@ -171,6 +185,9 @@
 \DeclareMathOperator{\glct}{glct}
 
 
+
+
+
 \providecommand{\Ric}{\mathop{\rm Ric}\nolimits}
 \providecommand{\bc}{\mathop{\rm bc}\nolimits}
 \providecommand{\Aut}{\mathop{\rm Aut}\nolimits}
@@ -180,12 +197,41 @@
 \renewcommand{\L}{\mathcal{L}}
 \providecommand{\vol}{\mathop{\rm vol}\nolimits}
 
+\def\momentdiagram{
+\begin{tikzpicture}[scale = 1]
+\draw (-2,1) -- (-3,0) -- (-3,0) -- (0,-3) -- (3,0) -- (2,1) -- cycle ;
+\filldraw[ultra thick, opacity = 1] (0,-6/23) circle (1pt) node[below]{$\bc_\nu(\Box)$}  -- (0,0) circle (1pt) node[right]{O} -- (0, 1) circle (1pt) node[above]{q}	 ; 
+    \draw[dotted] (-4,0) -- (4,0);
+    \draw[dotted] (0,-4) -- (0,2);
+\end{tikzpicture}
+}
+
+
+\def\degendiagram{
+\begin{tikzpicture}[%
+    tdplot_main_coords,scale=1,
+    >=stealth
+  ]
+  \draw[->, ultra thick, opacity = 1] (0, 18/46, -57/184)  -- (0, 0.6, -1.1) node[right]{$n_1$} ;
+    \draw[fill=white,opacity=1] (0,-3,1) -- (-3,0,1) -- (3,0,-2) -- cycle;
+    \draw[fill=white,opacity=0] (3,0,-2) -- (-3,0,1) -- (-2,1,1) -- (2,1,-1) -- cycle;
+    \filldraw[ultra thick, opacity = 1] (0, -6/23, 19/92) circle (1pt) node[above]{$\bc(\Delta_1)$}  -- (0,0,0) circle (1pt) node[below]{O} -- (0, 18/46, -57/184) circle (1pt) node[right]{$q_1$}	 ;
+    \draw[fill=white,opacity=0.5] (0,-3,1) -- (-3,0,1) -- (-2,1,1) -- (0,1,1) -- cycle;
+    \draw[fill=white,opacity=0.5] (0,-3,1) -- (0,1,1) -- (2,1,-1) -- (3,0,-2) -- cycle;
+    \draw[fill=white,opacity=0.5] (0,1,1) -- (-2,1,1) -- (2,1,-1) -- cycle;
+     \draw[->,dotted] (0,0,0) -- (0,0,2);
+    \draw[->,dotted] (0,0,0) -- (3,0,0);
+    \draw[->,dotted] (0,0,0) -- (0,2,0);
+\end{tikzpicture}
+}
+
+
 \def\diagram1{
 
 \definecolor{wrwrwr}{rgb}{0.380,0.380,0.380}
 \definecolor{rvwvcq}{rgb}{0.082,0.396,0.752}
 
-\begin{tikzpicture}[scale=0.4,line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\begin{tikzpicture}[scale=0.6,line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
 \clip(-8.693,-6.851) rectangle (12.217,5.977);
 \fill[line width=0.4pt,color=rvwvcq,fill=rvwvcq,fill opacity=0.1000] (3.95,-3.22) -- (-4.499,-0.465) -- (-4.021,1.710) -- (3.801,3.946) -- (9.206,2.697) -- (7.162,-1.310) -- cycle;
 \draw [line width=0.4pt,color=wrwrwr] (-4.499,-0.465)-- (-4.021,1.710);
