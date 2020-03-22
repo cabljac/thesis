@@ -1,119 +1,41 @@
 \begin{thebibliography}{10}
 
-\bibitem{suss2013fano}
-H.~S{\"u}{\ss}, ``Fano threefolds with 2-torus action-a picture book,'' {\em
-  arXiv preprint arXiv:1308.2379}, 2013.
-
-\bibitem{poincare1908uniformisation}
-H.~Poincar{\'e}, ``Sur l'uniformisation des fonctions analytiques,'' {\em Acta
-  mathematica}, vol.~31, no.~1, pp.~1--63, 1908.
-
-\bibitem{koebe1909uniformisierung}
-P.~Koebe, ``{\"U}ber die uniformisierung der algebraischen kurven. i,'' {\em
-  Mathematische Annalen}, vol.~67, no.~2, pp.~145--224, 1909.
-
-\bibitem{koebe1910uniformisierung}
-P.~Koebe, ``{\"U}ber die uniformisierung der algebraischen kurven. ii,'' {\em
-  Mathematische Annalen}, vol.~69, no.~1, pp.~1--81, 1910.
-
-\bibitem{calabi54}
-E.~Calabi, ``The space of {K}{\"a}hler metrics,'' {\em Proceedings of the
-  International Congress of Mathematicians}, vol.~2, pp.~206--207, 1956.
-
-\bibitem{calabi57}
-E.~Calabi, ``On {K}{\"a}hler manifolds with vanishing canonical class,'' {\em
-  Princeton Mathematical Series}, no.~12, pp.~78--89, 1957.
-
-\bibitem{Aubin1976}
-T.~Aubin, ``Equations du type monge-ampere sur la varietes kahleriennes
-  compactes,'' {\em CR Acad. Sci. Paris}, vol.~283, pp.~119--121, 1976.
-
-\bibitem{Yau1977}
-S.-T. Yau, ``Calabi's conjecture and some new results in algebraic geometry,''
-  {\em Proceedings of the National Academy of Sciences}, vol.~74, no.~5,
-  pp.~1798--1799, 1977.
-
-\bibitem{matsushima1957structure}
-Y.~Matsushima, ``Sur la structure du groupe d’hom{\'e}omorphismes analytiques
-  d’une certaine vari{\'e}t{\'e} kaehl{\'e}rinne,'' {\em Kähler-Einstein
-  metrics on symmetric general arrangement varietiesNagoya Mathematical
-  Journal}, vol.~11, pp.~145--150, 1957.
-
-\bibitem{futaki1983obstruction}
-A.~Futaki, ``An obstruction to the existence of einstein k{\"a}hler metrics,''
-  {\em Inventiones mathematicae}, vol.~73, no.~3, pp.~437--443, 1983.
-
-\bibitem{tian1987kahler}
-G.~Tian, ``On k{\"a}hler-einstein metrics on certain k{\"a}hler manifolds withc
-  1 (m)> 0,'' {\em Inventiones mathematicae}, vol.~89, no.~2, pp.~225--246,
-  1987.
-
-\bibitem{chen2015kahler1}
-X.~Chen, S.~Donaldson, and S.~Sun, ``K{\"a}hler-einstein metrics on fano
-  manifolds. i: Approximation of metrics with cone singularities,'' {\em
-  Journal of the American Mathematical Society}, vol.~28, no.~1, pp.~183--197,
-  2015.
-
-\bibitem{chen2015kahler2}
-X.~Chen, S.~Donaldson, and S.~Sun, ``K{\"a}hler-einstein metrics on fano
-  manifolds. ii: Limits with cone angle less than 2𝜋,'' {\em Journal of the
-  American Mathematical Society}, vol.~28, no.~1, pp.~199--234, 2015.
-
-\bibitem{chen2015kahler3}
-X.~Chen, S.~Donaldson, and S.~Sun, ``K{\"a}hler-einstein metrics on fano
-  manifolds. iii: Limits as cone angle approaches 2𝜋 and completion of the
-  main proof,'' {\em Journal of the American Mathematical Society}, vol.~28,
-  no.~1, pp.~235--278, 2015.
-
-\bibitem{datar2016kahler}
-V.~Datar and G.~Sz{\'e}kelyhidi, ``K{\"a}hler--einstein metrics along the
-  smooth continuity method,'' {\em Geometric and Functional Analysis}, vol.~26,
-  no.~4, pp.~975--1010, 2016.
-
-\bibitem{wang2004}
-X.-J. Wang and X.~Zhu, ``{K}{\"a}hler--{R}icci solitons on toric manifolds with
-  positive first {C}hern class,'' {\em Advances in Mathematics}, vol.~188,
-  no.~1, pp.~87--103, 2004.
-
-\bibitem{ilten2015}
-N.~Ilten and H.~S{\"u}{\ss}, ``K-stability for {F}ano manifolds with torus
-  action of complexity 1,'' {\em Duke Math. J.}, vol.~166, no.~1, pp.~177--204,
-  2017.
-
-\bibitem{suss2013kahler}
-H.~S{\"u}{\ss}, ``K{\"a}hler--einstein metrics on symmetric fano t-varieties,''
-  {\em Advances in Mathematics}, vol.~246, pp.~100--113, 2013.
-
-\bibitem{mori1981classification}
-S.~Mori and S.~Mukai, ``Classification of fano 3-folds with b 2≥ 2,'' {\em
-  manuscripta mathematica}, vol.~36, no.~2, pp.~147--162, 1981.
-
-\bibitem{cable2019greatest}
-J.~Cable, ``Greatest lower bounds on ricci curvature for fano {T}-manifolds of
-  complexity one,'' {\em Bulletin of the London Mathematical Society}, vol.~51,
-  no.~1, pp.~34--42, 2019.
-
-\bibitem{li2009greatest}
-C.~Li, ``Greatest lower bounds on ricci curvature for toric fano manifolds,''
-  {\em arXiv preprint arXiv:0909.3443}, 2009.
-
-\bibitem{hausen2018torus}
-J.~Hausen, C.~Hische, and M.~Wrobel, ``On torus actions of higher complexity,''
-  {\em arXiv preprint arXiv:1802.00417}, 2018.
-
-\bibitem{Su13}
-H.~S{\"u}{\ss}, ``{K}{\"a}hler-{E}instein metrics on symmetric {Fano}
-  {$T$-varieties},'' {\em Advances in Mathematics}, vol.~246, pp.~100 -- 113,
-  2013.
-
 \bibitem{griffiths}
 P.~Griffiths and J.~Harris, ``Principles of algebraic geometry, pure and
   applied mathematics,'' 1978.
+
+\bibitem{kodaira1954kahler}
+K.~Kodaira, ``On kahler varieties of restricted type an intrinsic
+  characterization of algebraic varieties,'' {\em Annals of Mathematics},
+  pp.~28--48, 1954.
+
+\bibitem{chow1949compact}
+W.-L. Chow, ``On compact complex analytic varieties,'' {\em American Journal of
+  Mathematics}, vol.~71, no.~4, pp.~893--914, 1949.
 
 \bibitem{szebook}
 G.~Sz{\'e}kelyhidi, {\em An introduction to extremal {K}{\"a}hler metrics},
   vol.~152.
 \newblock American Mathematical Soc., 2014.
+
+\bibitem{yau1977calabi}
+S.-T. Yau, ``Calabi's conjecture and some new results in algebraic geometry,''
+  {\em Proceedings of the National Academy of Sciences}, vol.~74, no.~5,
+  pp.~1798--1799, 1977.
+
+\bibitem{Aubin1976}
+T.~Aubin, ``Equations du type monge-ampere sur la varietes kahleriennes
+  compactes,'' {\em CR Acad. Sci. Paris}, vol.~283, pp.~119--121, 1976.
+
+\bibitem{matsushima1957structure}
+Y.~Matsushima, ``Sur la structure du groupe d’hom{\'e}omorphismes analytiques
+  d’une certaine vari{\'e}t{\'e} kaehl{\'e}rinne,'' {\em Nagoya Mathematical
+  Journal}, vol.~11, pp.~145--150, 1957.
+
+\bibitem{datar2016kahler}
+V.~Datar and G.~Sz{\'e}kelyhidi, ``K{\"a}hler--einstein metrics along the
+  smooth continuity method,'' {\em Geometric and Functional Analysis}, vol.~26,
+  no.~4, pp.~975--1010, 2016.
 
 \bibitem{da2006symplectic}
 A.~C. da~Silva, ``Symplectic geometry,'' in {\em Handbook of differential
@@ -158,81 +80,30 @@ M.~M. Kapranov, ``Chow quotients of {G}rassmannians. {I},'' {\em Adv. Soviet
 H.~B{\"a}ker, J.~Hausen, and S.~Keicher, ``On {C}how quotients of torus
   actions,'' {\em Michigan Math. J.}, vol.~64, no.~3, pp.~451--473, 2015.
 
-\bibitem{cable2018classification}
-J.~Cable and H.~S{\"u}{\ss}, ``On the classification of k{\"a}hler--ricci
-  solitons on gorenstein del pezzo surfaces,'' {\em European Journal of
-  Mathematics}, vol.~4, no.~1, pp.~137--161, 2018.
+\bibitem{hausen2018torus}
+J.~Hausen, C.~Hische, and M.~Wrobel, ``On torus actions of higher complexity,''
+  {\em arXiv preprint arXiv:1802.00417}, 2018.
 
-\bibitem{donaldson2008kahler}
-S.~K. Donaldson, ``Kahler geometry on toric manifolds, and some other manifolds
-  with large symmetry,'' {\em arXiv preprint arXiv:0803.0985}, 2008.
-
-\bibitem{Barvinok1992}
-Barvinok, ``Exponential sums and integrals overconvex polytopes,'' {\em Funct.
-  Anal. Appl.}, vol.~26(2):1, 1992.
-
-\bibitem{tian1992stability}
-G.~Tian, ``On stability of the tangent bundles of {F}ano varieties,'' {\em
-  Internat. J. Math}, vol.~3, no.~3, pp.~401--413, 1992.
-
-\bibitem{Tian87}
-G.~Tian, ``On {K}{\"a}hler-{E}instein metrics on certain {K}{\"a}hler manifolds
-  with $c_1 (m)> 0$,'' {\em Inventiones mathematicae}, vol.~89, no.~2,
-  pp.~225--246, 1987.
-
-\bibitem{rubinstein2008}
-Y.~A. Rubinstein, ``Some discretizations of geometric evolution equations and
-  the ricci iteration on the space of k{\"a}hler metrics,'' {\em Advances in
-  Mathematics}, vol.~218, no.~5, pp.~1526--1565, 2008.
-
-\bibitem{szekelyhidi2011}
-G.~Sz{\'e}kelyhidi, ``Greatest lower bounds on the ricci curvature of fano
-  manifolds,'' {\em Compositio Mathematica}, vol.~147, no.~1, pp.~319--331,
-  2011.
-
-\bibitem{rubinstein2009}
-Y.~Rubinstein, ``On the construction of nadel multiplier ideal sheaves and the
-  limiting behavior of the ricci flow,'' {\em Transactions of the American
-  Mathematical Society}, vol.~361, no.~11, pp.~5839--5850, 2009.
-
-\bibitem{li2017}
-C.~Li {\em et~al.}, ``K-semistability is equivariant volume minimization,''
-  {\em Duke Mathematical Journal}, vol.~166, no.~16, pp.~3147--3218, 2017.
-
-\bibitem{li2011}
-C.~Li, ``Greatest lower bounds on ricci curvature for toric fano manifolds,''
-  {\em Advances in Mathematics}, vol.~226, no.~6, pp.~4921--4932, 2011.
-
-\bibitem{delcroix2017}
-T.~Delcroix, ``K{\"a}hler--einstein metrics on group compactifications,'' {\em
-  Geometric and Functional Analysis}, vol.~27, no.~1, pp.~78--129, 2017.
-
-\bibitem{yao2017}
-Y.~Yao, ``Greatest lower bounds on ricci curvature of homogeneous toric
-  bundles,'' {\em International Journal of Mathematics}, vol.~28, no.~04,
-  p.~1750024, 2017.
-
-\bibitem{Matsushima}
-Y.~{M}atsushima, ``Remarks on {K}{\"a}hler-{E}instein manifolds,'' {\em Nagoya
-  {M}ath. {J}.}, vol.~46, pp.~161--173, 1972.
-
-\bibitem{li06}
-L.~Li, ``Wonderful compactification of an arrangement of subvarieties,'' {\em
-  Michigan Math. J.}, vol.~58, no.~2, pp.~535--563, 2009.
-
-\bibitem{suess18-2}
-H.~S{\"u}{\ss}, ``{Orbit spaces of maximal torus actions on oriented
-  {G}rassmannians of planes}.'' 2018.
-
-\bibitem{demailly2001}
-J.-P. Demailly and J.~Koll{\'a}r, ``Semi-continuity of complex singularity
-  exponents and {K}{\"a}hler-{E}instein metrics on {F}ano orbifolds,'' in {\em
-  Annales scientifiques de l'Ecole normale sup{\'e}rieure}, vol.~34,
-  pp.~525--556, 2001.
-
-\bibitem{cheltsov08}
-I.~A. Cheltsov and K.~A. Shramov, ``Log canonical thresholds of smooth {F}ano
-  threefolds,'' {\em Russian Mathematical Surveys}, vol.~63, no.~5, p.~859,
+\bibitem{altmann2008gluing}
+K.~Altmann, J.~Hausen, and H.~S{\"u}ss, ``Gluing affine torus actions via
+  divisorial fans,'' {\em Transformation Groups}, vol.~13, no.~2, pp.~215--242,
   2008.
+
+\bibitem{ilten2009polarized}
+N.~O. Ilten and H.~S{\"u}{\ss}, ``Polarized complexity-one t-varieties,'' {\em
+  arXiv preprint arXiv:0910.5919}, 2009.
+
+\bibitem{mori1981classification}
+S.~Mori and S.~Mukai, ``Classification of fano 3-folds with b 2≥ 2,'' {\em
+  manuscripta mathematica}, vol.~36, no.~2, pp.~147--162, 1981.
+
+\bibitem{suss2013fano}
+H.~S{\"u}{\ss}, ``Fano threefolds with 2-torus action-a picture book,'' {\em
+  arXiv preprint arXiv:1308.2379}, 2013.
+
+\bibitem{ilten2015}
+N.~Ilten and H.~S{\"u}{\ss}, ``K-stability for {F}ano manifolds with torus
+  action of complexity 1,'' {\em Duke Math. J.}, vol.~166, no.~1, pp.~177--204,
+  2017.
 
 \end{thebibliography}
