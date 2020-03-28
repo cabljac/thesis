@@ -1,27 +1,34 @@
 \contentsline {chapter}{Declaration}{7}{chapter*.4}
 \contentsline {chapter}{Copyright}{8}{chapter*.5}
 \contentsline {chapter}{Acknowledgements}{9}{chapter*.6}
-\contentsline {chapter}{\numberline {1}Preliminaries}{10}{chapter.1}
-\contentsline {section}{\numberline {1.1}K\"ahler geometry}{10}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Basic definitions}{10}{subsection.1.1.1}
-\contentsline {subsubsection}{K\"ahler manifolds}{10}{section*.7}
-\contentsline {subsubsection}{Hermitian and K\"ahler metrics}{11}{section*.8}
-\contentsline {subsection}{\numberline {1.1.2}Line bundles and Kodaira Embedding}{13}{subsection.1.1.2}
-\contentsline {subsection}{\numberline {1.1.3}Canonical metrics on K\"ahler manifolds}{15}{subsection.1.1.3}
-\contentsline {section}{\numberline {1.2}Tools from algebraic and symplectic geometry}{16}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}The algebraic torus}{16}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Linearizations}{17}{subsection.1.2.2}
-\contentsline {subsection}{\numberline {1.2.3}Hamiltonian actions and moment maps}{18}{subsection.1.2.3}
-\contentsline {subsection}{\numberline {1.2.4}Chow and GIT quotients}{19}{subsection.1.2.4}
-\contentsline {subsubsection}{GIT quotients}{19}{section*.9}
-\contentsline {subsubsection}{Kempf-Ness approach to GIT quotients}{20}{section*.10}
-\contentsline {subsubsection}{GIT quotients under smooth blowup}{22}{section*.11}
-\contentsline {subsubsection}{Chow and limit quotients}{23}{section*.12}
-\contentsline {section}{\numberline {1.3}$T$-varieties}{23}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Toric varieties}{24}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Higher complexity $T$-varieties}{25}{subsection.1.3.2}
-\contentsline {subsection}{\numberline {1.3.3}\(f\)-divisors and divisorial polytopes}{29}{subsection.1.3.3}
-\contentsline {section}{\numberline {1.4}Equivariant $K$-stability}{33}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Twisted equivariant $K$-stability}{33}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}$K$-stability of $T$-varieties}{34}{subsection.1.4.2}
-\contentsline {chapter}{Bibliography}{36}{appendix*.21}
+\contentsline {chapter}{\numberline {1}Introduction}{10}{chapter.1}
+\contentsline {section}{\numberline {1.1}Content of the Thesis}{14}{section.1.1}
+\contentsline {chapter}{\numberline {2}Preliminaries}{16}{chapter.2}
+\contentsline {section}{\numberline {2.1}K\"ahler geometry}{16}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Basic definitions}{16}{subsection.2.1.1}
+\contentsline {subsubsection}{K\"ahler manifolds}{16}{section*.12}
+\contentsline {subsubsection}{Hermitian and K\"ahler metrics}{17}{section*.13}
+\contentsline {subsection}{\numberline {2.1.2}Line bundles and Kodaira Embedding}{19}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Canonical metrics on K\"ahler manifolds}{21}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Algebraic and symplectic tools}{22}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}The algebraic torus}{22}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Linearizations}{23}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Hamiltonian actions and moment maps}{24}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Chow and GIT quotients}{25}{subsection.2.2.4}
+\contentsline {subsubsection}{GIT quotients}{25}{section*.14}
+\contentsline {subsubsection}{Kempf-Ness approach to GIT quotients}{26}{section*.15}
+\contentsline {subsubsection}{GIT quotients under smooth blowup}{28}{section*.16}
+\contentsline {subsubsection}{Chow and limit quotients}{29}{section*.17}
+\contentsline {section}{\numberline {2.3}$T$-varieties}{29}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Toric varieties}{30}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Higher complexity $T$-varieties}{31}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}\(f\)-divisors and divisorial polytopes}{35}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Equivariant $K$-stability}{40}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Twisted equivariant $K$-stability}{40}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}$K$-stability of $T$-varieties}{42}{subsection.2.4.2}
+\contentsline {chapter}{\numberline {3}$R(X)$ in complexity one}{44}{chapter.3}
+\contentsline {section}{\numberline {3.1}A short digression into convex geometry}{47}{section.3.1}
+\contentsline {section}{\numberline {3.2}Proof of Theorem 4}{50}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Product Configurations}{50}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Non-Product Configurations}{50}{subsection.3.2.2}
+\contentsline {chapter}{Bibliography}{52}{appendix*.30}

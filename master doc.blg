@@ -3,46 +3,47 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: master doc.aux
 The style file: ieeetr.bst
 Database file #1: mybib.bib
+Warning--I didn't find a database entry for ""
 Warning--empty note in cable2019general
-You've used 24 entries,
+You've used 52 entries,
             1876 wiz_defined-function locations,
-            633 strings with 6876 characters,
-and the built_in function-call counts, 6222 in all, are:
-= -- 667
-> -- 156
+            778 strings with 10163 characters,
+and the built_in function-call counts, 14886 in all, are:
+= -- 1663
+> -- 305
 < -- 0
-+ -- 64
-- -- 40
-* -- 412
-:= -- 854
-add.period$ -- 26
-call.type$ -- 24
-change.case$ -- 22
++ -- 130
+- -- 78
+* -- 989
+:= -- 1971
+add.period$ -- 54
+call.type$ -- 52
+change.case$ -- 50
 chr.to.int$ -- 0
-cite$ -- 25
-duplicate$ -- 327
-empty$ -- 622
-format.name$ -- 40
-if$ -- 1543
+cite$ -- 53
+duplicate$ -- 797
+empty$ -- 1442
+format.name$ -- 78
+if$ -- 3726
 int.to.chr$ -- 0
-int.to.str$ -- 24
-missing$ -- 24
-newline$ -- 77
-num.names$ -- 24
-pop$ -- 61
+int.to.str$ -- 52
+missing$ -- 52
+newline$ -- 161
+num.names$ -- 52
+pop$ -- 97
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 232
+skip$ -- 617
 stack$ -- 0
-substring$ -- 480
-swap$ -- 140
+substring$ -- 1310
+swap$ -- 386
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 71
-width$ -- 26
-write$ -- 239
-(There was 1 warning)
+while$ -- 175
+width$ -- 54
+write$ -- 540
+(There were 2 warnings)

@@ -1,10 +1,30 @@
 \documentclass[12pt,twoside]{muthesis}
 
+
+
+
+
+
+
+
+
+
   %% this block is for solitons tables
 
 \usepackage[ruled,vlined]{algorithm2e}
 
 \usepackage{listings}
+
+\usepackage{courier}
+
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+
 \renewcommand{\thefigure}{\arabic{figure}} 
 
 \usepackage{pdflscape}  % this block for appendix A
@@ -19,10 +39,18 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 
+\makeatletter
+\def\thmhead@plain#1#2#3{%
+  \thmname{#1}\thmnumber{\@ifnotempty{#1}{ }\@upn{#2}}%
+  \thmnote{ {\the\thm@notefont#3}}}
+\let\thmhead\thmhead@plain
+\makeatother
+
+
 \newcounter{nmdthmcnt}
-\newenvironment{namedthm}[2][]{\addtocounter{nmdthmcnt}{1}%
+\newenvironment{namedthm}[2][]{ \addtocounter{nmdthmcnt}{1}%
     \theoremstyle{plain}\newtheorem*{nmdthm\roman{nmdthmcnt}}{#2}%
-    \begin{nmdthm\roman{nmdthmcnt}}[#1]}{\end{nmdthm\roman{nmdthmcnt}}}
+    \begin{nmdthm\roman{nmdthmcnt}}#1}{\end{nmdthm\roman{nmdthmcnt}}}
 
   
 \usepackage{cite}
@@ -45,8 +73,14 @@
 
 \usepackage[hyphens]{url}
 \usepackage{hyperref}
-\PassOptionsToPackage{gray}{xcolor}
+
 \usepackage{xcolor}
+\PassOptionsToPackage{gray}{xcolor}
+\definecolor{mycyan}{RGB}{42,161,152}
+\definecolor{myorange}{RGB}{203,75,22}
+
+
+
 \usepackage{booktabs}
 \usepackage{longtable}
 
@@ -188,8 +222,8 @@
 \DeclareMathOperator{\PGL}{PGL}
 \DeclareMathOperator{\glct}{glct}
 \DeclareMathOperator{\orb}{orb}
-
-
+\DeclareMathOperator{\CaSF}{CaSF}
+\DeclareMathOperator{\gen}{gen}
 
 
 \providecommand{\Ric}{\mathop{\rm Ric}\nolimits}
@@ -205,8 +239,11 @@
 \begin{tikzpicture}[scale = 1]
 \draw (-2,1) -- (-3,0) -- (-3,0) -- (0,-3) -- (3,0) -- (2,1) -- cycle ;
 \filldraw[ultra thick, opacity = 1] (0,-6/23) circle (1pt) node[below]{$\bc_\nu(\Box)$}  -- (0,0) circle (1pt) node[right]{O} -- (0, 1) circle (1pt) node[above]{q}	 ; 
-    \draw[dotted] (-4,0) -- (4,0);
-    \draw[dotted] (0,-4) -- (0,2);
+    \foreach \i in {-3,...,3}{
+   	 	\foreach \j in {-3,...,2}{
+   	 		\draw[gray] (\i,\j) node {\tiny{$\circ$}};
+   	 	}
+   	 }
 \end{tikzpicture}
 }
 
@@ -237,27 +274,27 @@
 
 \begin{tikzpicture}[scale=0.6,line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
 \clip(-8.693,-6.851) rectangle (12.217,5.977);
-\fill[line width=0.4pt,color=rvwvcq,fill=rvwvcq,fill opacity=0.1000] (3.95,-3.22) -- (-4.499,-0.465) -- (-4.021,1.710) -- (3.801,3.946) -- (9.206,2.697) -- (7.162,-1.310) -- cycle;
-\draw [line width=0.4pt,color=wrwrwr] (-4.499,-0.465)-- (-4.021,1.710);
-\draw [line width=0.4pt,color=wrwrwr] (-4.021,1.710)-- (3.801,3.946);
-\draw [line width=0.4pt,color=wrwrwr] (-4.499,-0.465)-- (3.95,-3.22);
-\draw [line width=0.4pt,color=wrwrwr] (2.437,0.786)-- (-16.628,-10.065);
-\draw [line width=0.4pt,color=rvwvcq] (3.95,-3.22)-- (-4.499,-0.465);
-\draw [line width=0.4pt,color=rvwvcq] (-4.499,-0.465)-- (-4.0213,1.710);
-\draw [line width=0.4pt,color=rvwvcq] (-4.0213,1.710)-- (3.801,3.946);
-\draw [line width=0.4pt,color=rvwvcq] (3.801,3.946)-- (9.206,2.697);
-\draw [line width=0.4pt,color=rvwvcq] (9.206,2.697)-- (7.162,-1.310);
-\draw [line width=0.4pt,color=rvwvcq] (7.162,-1.310)-- (3.95,-3.22);
-\draw [line width=0.4pt,color=wrwrwr] (-4.499,-0.465)-- (-6.070,-0.590);
-\draw [line width=0.4pt,color=wrwrwr,domain=-8.693:12.217] plot(\x,{(-7.125-1.570*\x)/0.124});
-\draw [line width=0.4pt,color=wrwrwr] (-0.274,-1.842)-- (-0.623,-2.911);
+\fill[fill=mycyan,opacity=0.8] (3.95,-3.22) -- (-4.499,-0.465) -- (-4.021,1.710) -- (3.801,3.946) -- (9.206,2.697) -- (7.162,-1.310) -- cycle;
+\draw [] (-4.499,-0.465)-- (-4.021,1.710);
+\draw [] (-4.021,1.710)-- (3.801,3.946);
+\draw [] (-4.499,-0.465)-- (3.95,-3.22);
+\draw [] (2.437,0.786)-- (-16.628,-10.065);
+\draw [] (3.95,-3.22)-- (-4.499,-0.465);
+\draw [] (-4.499,-0.465)-- (-4.0213,1.710);
+\draw [] (-4.0213,1.710)-- (3.801,3.946);
+\draw [] (3.801,3.946)-- (9.206,2.697);
+\draw [] (9.206,2.697)-- (7.162,-1.310);
+\draw [] (7.162,-1.310)-- (3.95,-3.22);
+\draw [] (-4.499,-0.465)-- (-6.070,-0.590);
+\draw [,domain=-8.693:12.217] plot(\x,{(-7.125-1.570*\x)/0.124});
+\draw [] (-0.274,-1.842)-- (-0.623,-2.911);
 \draw (2.430,1.084) node[anchor=north west] {$b$};
 \draw (-4.295,-2.746) node[anchor=north west] {$p_w$};
 \draw (-2,-1.4) node[anchor=north west] {$q$};
 \draw (-0.65,-2.471) node[anchor=north west] {$n$};
-\draw (-8.3,4) node[anchor=north west] {$\Pi(w,a)$};
-\draw [->,line width=0.05pt,color=wrwrwr] (-0.274,-1.842) -- (-0.623,-2.911);
-\draw [->,line width=0.05pt,color=wrwrwr] (-4.499,-0.465) -- (-6.070,-0.590);
+\draw (-7.6,4) node[anchor=north west] {$\Pi(w,a)$};
+\draw [->,line width=0.05pt] (-0.274,-1.842) -- (-0.623,-2.911);
+\draw [->,line width=0.05pt] (-4.499,-0.465) -- (-6.070,-0.590);
 \draw (-6.329,-0.505) node[anchor=north west] {$w$};
 \draw (-0.208,2.037) node[anchor=north west] {$\Huge{P}$};
 \draw (-0.464,-0.565) node[anchor=north west] {$O$};

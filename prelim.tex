@@ -27,7 +27,7 @@ A form \(\alpha \in A^{p,q}(X)\) is said to be \textit{of type \((p,q)\)}. The d
 A^n(X) = \bigoplus_{p+q = n} A^{p,q}(X).
 \]
 \subsubsection{Hermitian and K\"ahler metrics}
-Roughly speaking, a metric measures distances on a manifold. On real manifolds one usually \textit{Riemannian metrics}. Complex manifolds come with more structure, and the analogous object, compatible with this structure, is a \textit{Hermitian metric}. A Hermitian metric is given by a smooth choice of positive definite Hermitian inner product on the fibers of \(T^{(1,0)}X\), i.e an element of \(H^0(X, T^*_{1,0} X \otimes T^*_{0,1} X) \). Locally we write:
+Roughly speaking, a metric measures distances on a manifold. On real manifolds one usually \textit{Riemannian metrics}. Complex manifolds come with more structure, and the analogous object compatible with this structure, is a \textit{Hermitian metric}. A Hermitian metric is given by a smooth choice of positive definite Hermitian inner product on the fibers of \(T^{(1,0)}X\), i.e an element of \(H^0(X, T^*_{1,0} X \otimes T^*_{0,1} X) \). Locally we write:
 \[
 h(z) = \sum h_{ij}(z) dz_i \otimes d\bar{z}_j.
 \]
@@ -65,7 +65,7 @@ This is positive definite, and so defines a K\"ahler metric on \(\PP^n\).
 \end{example}
 This leads to a large class of examples including any smooth projective algebraic variety:
 \begin{example}
-The restriction of \(\omega_{FS}\) to any closed submanifold \(Y \subseteq \PP^n\) produces a K\"ahler structure on \(Y\), as the exterior differential commutes with pulling back differential forms.
+The restriction of \(\omega_{FS}\) to any closed submanifold \(Y \subseteq \PP^n\) induces a K\"ahler structure on \(Y\), as the exterior differential commutes with pulling back differential forms.
 \end{example}
 Recall the following important result, telling us that any two K\"ahler forms of the same class differ by some real-valued function.
 \begin{namedthm}{\(\partial \bar{\partial}\)-lemma}
@@ -76,7 +76,7 @@ Recall that we can extend the notion of Hermitian metric to an arbitrary complex
 \[
 \nabla: H^0(X,E) \to H^0(X,E \otimes T^* X)
 \]
-satisfying the Liebniz rule \(\nabla(s f) = \nabla s f + s \otimes df\). There is a unique way to extend a connection to an exterior derivative on \(E\)-valued differential forms.
+satisfying the Liebniz rule \(\nabla(s f) = \nabla s f + s \otimes df\). There is a unique way to extend a connection to an exterior derivative on \(E\)-valued differential forms:
 \[
 d^\nabla: \Omega^r(E) \to \Omega^{r+1}(E).
 \]
@@ -118,36 +118,30 @@ We now recall the definition of a positively curved line bundle.
 \begin{definition}
 A real \((1,1)\)-form is called positive if the associated symmetric bilinear form defined for real tangent vectors is positive definite. A real cohomology class is called positive if it can be represented by a positive \((1,1)\)-form. A line bundle \(L\) is called positive if its first Chern class is positive.
 \end{definition}
-The following theorem characterizes smooth projective varieties amongst compact K\"ahler manifolds. Recall that a line bundle \(L\) is very ample if for some global sections \(s_0,\dots,s_n \in H^0(X,L)\) we obtain a well-defined closed embedding into a projective space, given by:
+The following theorem, by Kodaira, characterizes smooth projective varieties amongst compact K\"ahler manifolds. Recall that a line bundle \(L\) is very ample if for some global sections \(s_0,\dots,s_n \in H^0(X,L)\) we obtain a well-defined closed embedding into a projective space, given by:
 \[
 \varphi_L: p \mapsto [s_0(p),\dots,s_n(p)] \in \PP^n
 \]
 We say \(L\) is ample if some multiple of \(L\) is very ample.
-\begin{namedthm}{Kodaira Embedding Theorem}[\cite{kodaira1954kahler}]
+\begin{namedthm}{Kodaira Embedding Theorem}[{\cite[Theorem 4]{kodaira1954kahler}}]
 A holomorphic line bundle over a compact complex manifold is ample if and only if it is positive.
 \end{namedthm}
-\begin{remark}
-Note that in its original stated form, Kodaira's theorem says
-
-This can be seen as equivalent to the above, if we note...
-\end{remark}
-
-Paired with the following theorem of Chow, we can talk either about projective K\"ahler manifolds or polarized projective algebraic varieties.
-\begin{namedthm}{Chow's Theorem}[\cite{chow1949compact}]
+Paired with the following theorem we can talk either about projective K\"ahler manifolds or polarized projective algebraic varieties.
+\begin{namedthm}{Chow's Theorem}[{\cite[Theorem 5]{chow1949compact}}]
 A closed complex submanifold of projective space is a projective algebraic subvariety.
 \end{namedthm}
-\subsection{Canonical metrics on K\"ahler manifolds}
+\subsection{Canonical metrics on K\"ahler manifolds} \label{sec:canonmetric}
 In this section we recall some facts about canonical metrics. A canonical metric is a choice of metric dependent only on the complex structure of the manifold, unique up to biholomorphic automorphisms. The material in this section may be found in \cite{szebook}, for example.
 
-As we touched on in the introduction, K\"ahler-Einstein metrics are an important class of canonical metric and the question of which compact K\"ahler manifolds admit a K\"ahler-Einstein metric has historically received a lot of attention. Recall the definition of a K\"ahler-Einstein metric:
+As we touched on in the introduction, K\"ahler-Einstein metrics are an important class of canonical metric, and the question of which compact K\"ahler manifolds admit a K\"ahler-Einstein metric has historically received a lot of attention. Recall the definition of a K\"ahler-Einstein metric:
 \begin{definition}
 Let \(X\) be a K\"ahler manifold. A K\"ahler-Einstein metric on \(X\) is a K\"ahler metric \(\omega \in 2 \pi c_1(X)\) such that \(\Ric \omega = \lambda \omega\) for some real constant \(\lambda\).
 \end{definition}
 Note if \(X\) is K\"ahler-Einstein then we must have either \(K_X = 0\), \(K_X\) ample, or \(-K_X\) ample. Via Kodaira embedding these correspond to Ricci flat, Ricci positive, and Ricci negative manifolds respectively. We briefly recall the answers to the existence question in the cases of negative and zero Ricci curvature:
-\begin{namedthm}{Calabi-Yau Theorem}[\cite{yau1977calabi}]
+\begin{namedthm}{Calabi-Yau Theorem}[{\cite[Theorem 1]{yau1977calabi}}]
 Let \((X,\omega)\) be a compact K\"ahler manifold. Let \(\alpha\) be a real \((1,1)\)-form representing \(c_1(X)\). Then there exists a real \((1,1)\)-form \(\omega'\) with \([\omega'] = [\omega]\) such that \(\Ric(\omega) = 2 \pi \alpha \).
 \end{namedthm}
-\begin{namedthm}{Aubin-Yau Theorem}[\cite{Aubin1976}]
+\begin{namedthm}{Aubin-Yau Theorem}[{\cite{yau1975,Aubin1976}}]
 Let \(X\) be a compact K\"ahler manifold with \(c_1(X) < 0 \). Then there exists a unique K\"ahler metric \(\omega \in -2 \pi c_1(X)\) such that \(\Ric(\omega) = -\omega\).
 \end{namedthm}
 However the following necessary criterion illustrates that the same is not true in the Fano case \(c_1(X)> 0\). Recall that a complex algebraic group is reductive if it is the complexification of a compact connected real Lie group.
@@ -163,8 +157,8 @@ When \(t = 0\) we omit it from the notation and call \((\omega,v)\) a K\"ahler-R
 \end{definition}
 
 In Section~\ref{sec:eqKstab} we will describe various criteria for the existence of such metrics, but to do so we must first recall some basic tools and language from algebraic and symplectic geometry.
-\section{Tools from algebraic and symplectic geometry} \label{basics}
-In this section we give some definitions from algebraic and symplectic geometry as we will be understanding them throughout the rest of the thesis. In particular we recall some basic geometry invariant theory, which is needed for the arguments Chapter~\ref{chap:gav}.
+\section{Algebraic and symplectic tools} \label{basics}
+In this section we give some definitions from algebraic and symplectic geometry as we will be understanding them throughout the rest of the thesis. In particular we recall some basic geometry invariant theory, which is needed for the arguments in Chapter~\ref{chap:gav}.
 \subsection{The algebraic torus} \label{algtorus}
 Fix an algebraic torus \(T = (\CC^*)^k\). We have mutually dual character and cocharacter lattices:
 \[
@@ -207,7 +201,7 @@ The above example tells us that any two linearizations \(\lambda_1,\lambda_2\) o
 Recall that an action of \(G\) on \(X\) induces a canonical linearization on the tangent and cotangent bundles of \(X\), and so induces a canonical linearization on the anti-canonical bundle \(-K_X\) as the top exterior power of the cotangent bundle.
 \end{example}
 \subsection{Hamiltonian actions and moment maps} \label{basics:momentmaps}
-Here we recall some basic notions of Hamiltonian actions and moment maps. We will follow conventions of \cite{da2006symplectic} and \cite{berman2014complex}. We illustrate the theory with the case of an algebraic torus action. Suppose \((X,\omega)\) is a symplectic manifold.
+Here we recall some basic notions of Hamiltonian actions and moment maps. We will follow conventions of \cite{da2006symplectic} and \cite{berman2014complex}. We illustrate the theory with the case of an algebraic torus action. Suppose that \((X,\omega)\) is a symplectic manifold.
 \begin{definition}
 Let \(\theta: X \to \RR\) be a smooth function. A vector field \(v\) such that  \(\iota_v \omega = d \theta\) is called a Hamiltonian vector field, with Hamiltonian function \(\theta\). 
 \end{definition}
@@ -223,7 +217,11 @@ Let \(X \subseteq \PP^N\) be a nonsingular complex projective variety and let \(
 \begin{equation}\label{eq:mu}
 \mu([x]) \cdot a := \frac{x^t \rho_*(a) \hat{x}}{ |x|^2},
 \end{equation}
-where \(x\) is any representative of \([x] \in X \subseteq \PP^N\). A different choice of linearization in this setting corresponds to multiplying \(\rho\) by some character \(\chi \in \mathfrak{X}(G)\). Since \(\chi(K)\) is compact, it sits inside \(S^1 \subset \CC^*\), and hence we do not need to change coordinates when considering the effect on the moment map. When we plug this into (\ref{eq:mu}) we see that we have translated the moment map by \(\chi \in \mathfrak{X}(G) \otimes \RR \cong \mathfrak{k}^*\). Moreover, taking the \(r\)th power of \(L\) corresponds to scaling the moment map by a factor of \(r\). This gives a correspondence between rational elements \(\chi \in \mathfrak{X}(G) \otimes \QQ \subset \mathfrak{k}^*\) and linearizations of powers of \(L\).
+where \(x\) is any representative of \([x] \in X \subseteq \PP^N\). A different choice of linearization in this setting corresponds to multiplying \(\rho\) by some character \(\chi \in \mathfrak{X}(G)\). Since \(\chi(K)\) is compact, it sits inside \(S^1 \subset \CC^*\), and hence we do not need to change coordinates when considering the effect on the moment map. When we plug this into (\ref{eq:mu}) we see that we have translated the moment map by \(\chi \in \mathfrak{X}(G) \otimes \RR \cong \mathfrak{k}^*\). Moreover, taking the \(r\)th power of \(L\) corresponds to scaling the moment map by a factor of \(r\). This gives a correspondence between rational elements
+\[
+\chi \in \mathfrak{X}(G) \otimes \QQ \subset \mathfrak{k}^*
+\]
+and linearizations of powers of \(L\).
 \end{example}
 \begin{example}
 Suppose \(G = T\) is an algebraic torus with character and cocharacter lattices \(M,N\) respectively. Then \(\rho\) is a diagonal matrix of characters \(u_0,\dots,u_{N}\) and we obtain:
@@ -366,7 +364,7 @@ B := \sum_Z \frac{m_Z-1}{m_Z} \cdot Z
 We call the pair \((Y,B)\) the Chow quotient pair of the \(T\)-variety \(X\).
 \end{definition}
 \section{$T$-varieties} \label{prelim:Tvar}
-In this section we briefly recall the theory of complex \(T\)-varieties. By a \(T\)-variety we will always mean a normal variety with an effective action of an algebraic torus \(T\). Let \(T,M,N\) be as described in \ref{algtorus}. Let us fix some additional definitions. By a \textit{polyhedron} we wil mean the intersection of finitely many closed affine halfspaces of \(N_\QQ\), or its dual \(M_\QQ\). By a \textit{cone} we mean the intersection of finitely many closed linear halfspaces of \(N_\QQ\) or its dual \(M_\QQ\). We will assume all cones are generated by primitive elements of their respective lattices.
+In this section we briefly recall the theory of complex \(T\)-varieties. The best reference for more details is \cite{altmann2006polyhedral}. By a \(T\)-variety we will always mean a normal variety with an effective action of an algebraic torus \(T\). Let \(T,M,N\) be as described in \ref{algtorus}. Let us fix some additional definitions. By a \textit{polyhedron} we wil mean the intersection of finitely many closed affine halfspaces of \(N_\QQ\), or its dual \(M_\QQ\). By a \textit{cone} we mean the intersection of finitely many closed linear halfspaces of \(N_\QQ\) or its dual \(M_\QQ\). We will assume all cones are generated by primitive elements of their respective lattices.
 \subsection{Toric varieties}
 First, for context, let us recall the toric situation. A cone \(\sigma \subset N_\RR\) has a dual cone \(\sigma^\vee := \{m \in M_\RR | \langle m, n \rangle \ge 0 \ \forall n \in N_\RR\}\), and we may construct the normal toric variety \(\spec \CC[\sigma^\vee \cap M]\). The torus action is given by the \(M\)-grading of the algebra \(\CC[\sigma^\vee \cap M]\). 
 
@@ -405,7 +403,7 @@ We also recall the description of equivariant polarizations of toric varieties v
 and relations \(\div(\chi^u) = \sum_{\rho \in \Sigma(1)} \langle u, v_\rho \rangle D_\rho\).
 
 To any lattice polytope \(P \subset M_\QQ\) we can associate a normal projective toric variety \(X_P\) given by its dual fan, and an ample divisor \(D_P\) given by coefficients on the ray generators of \(\Sigma(1)\) specified by the equations of halfspaces defining \(P\).
-\begin{example}
+\begin{example} \label{ex:toricpolytope}
 Consider the the following lattice polytope:
 \begin{figure}[h]
 \centering
@@ -456,13 +454,11 @@ By \cite[Proposition 3.1]{hausen2018torus}, \(p\)-divisor defines an affine \(T\
 \[
 \mathcal{A} := \bigoplus_{w \in \sigma^{\vee}} \O_{\Loc \D} (\D(u)) \chi^u.
 \]
-Note the semiample and big conditions in the definition of a \(p\)-divisor ensure that the algebra \(H^0(\Loc \D, \A)\) is finitely generated. We obtain \(T\)-varieties
+Note the semiample and big conditions in the definition of a \(p\)-divisor ensure that the algebra \(H^0(\Loc \D, \A)\) is finitely generated. We obtain \(T\)-varieties:
 \[
 \tilde{\TV}(\D) := \spec_{\Loc \D} \mathcal{A} , \ \TV(\D) := \spec H^0(\Loc \D, \mathcal{A})
 \]
-together with a good quotient \(\tilde{\TV}(\D) \to Y\) (the Chow quotient) of the torus action, and an equivariant contraction \(r: \tilde{\TV}(\D) \to \TV(\D) \).
-
-The \(T\)-variety \(\TV(\D)\) remains unchanged if we pull back \(\D\) by some birational \(\varphi: Y' \to Y\). Moreover, modifying \(\D\) by an element in the image of the natural map:
+together with a good quotient \(\tilde{\TV}(\D) \to Y\) (the Chow quotient) of the torus action, and an equivariant contraction \(r: \tilde{\TV}(\D) \to \TV(\D) \). The \(T\)-variety \(\TV(\D)\) remains unchanged if we pull back \(\D\) by some birational \(\varphi: Y' \to Y\). Moreover, modifying \(\D\) by an element in the image of the natural map:
 \[
 N \otimes_\ZZ \CC(Y)^* \to \Pol_\QQ^+(N,\sigma) \otimes \cadiv_\QQ^+(Y)
 \]
@@ -580,31 +576,33 @@ We have the following characterization of open embeddings:
 \begin{theorem}[\cite{ilten2009polarized}]
 Let \(Y\) be a curve and \(\D,\D'\) polyhedral and \(p\)-divisors respectively, such that \(\D' \le \D\). Then \(\D'\) is a \(p\)-divisor and \(\TV(\D') \to \TV(\D) \) is an open embedding if and only if \(\deg \D' = \deg \D \cap \tail \D'\).
 \end{theorem}
-Note that in complexity one \(\Loc \D \) is always birational to \(\PP^1\). Therefore, via pullback, any complexity one normal affine \(\T\)-variety may be realized as \(\TV(\D)\) where \(\D\) is a \(p\)-divisor over \(Y = \PP^1\). Note that in this case that condition 2. above is automatically satisfied. In complexity one, the object taking the place of a fan of cones is an \(f\)-divisor, first introduced in \cite{ilten2009polarized}. We recall this construction now.
+Note that in complexity one \(\Loc \D \) is always birational to \(\PP^1\). Therefore, via pullback, any complexity one normal affine \(\T\)-variety may be realized as \(\TV(\D)\) where \(\D\) is a \(p\)-divisor over \(Y = \PP^1\). Note that in this case that condition 2. above is automatically satisfied.
 
-By a \textit{polyhedral decomposition} we mean a decomposition of \(N_\QQ\) into a collection of polyhedra, closed under intersection. A polyhedral decomposition has a \textit{tail fan}: a fan comprised of exactly the tail cones of the polyhedra in the decomposition. If \(\mathcal{G}\) is a polyhedral decomposition then we write \(\tail \mathcal{G}\) for its tail fan.
+In complexity one, the object taking the place of a fan of cones is an \(f\)-divisor, first introduced in \cite{ilten2009polarized}. We recall this construction now. By a \textit{polyhedral decomposition} we mean a decomposition of \(N_\QQ\) into a collection of polyhedra, closed under intersection. A polyhedral decomposition has a \textit{tail fan}: a fan comprised of exactly the tail cones of the polyhedra in the decomposition. If \(\mathcal{G}\) is a polyhedral decomposition then we write \(\tail \mathcal{G}\) for its tail fan.
 \begin{definition}
-An \(f\)-divisor is a pair \( \left( \sum_{y \in \PP^1} S_y \otimes \{y\}, \ \deg \mathcal{S} \right)\), such that:
+An \(f\)-divisor is a pair \( \mathcal{S} = \left( \sum_{y \in \PP^1} S_y \otimes \{y\}, \ \mathfrak{deg} \right)\), where:
 \begin{enumerate}
-\item For each point \(y \in \PP^1\),  \(S_y\) is a polyhedral subdivision with tail fan \(\Sigma\)
-\item For any full-dimensional \(\sigma \in \Sigma\), if \(\sigma \cap \deg \mathcal{S} \neq \emptyset \) then
+\item \(S_y\) are polyhedral subdivisions sharing a tail fan \(\Sigma\).
+\item \(\mathfrak{deg}\) is some subset of \(|\Sigma|\).
+\item For any full-dimensional marked \(\sigma \in \Sigma\) then
 \[
 \D^\sigma := \sum \D_y^\sigma \otimes \{y\}
 \]
-is a \(p\)-divisor, where \(\D_y^\sigma\) is the unique polyhedron in \(S_y\) with \(\tail(\D_y^\sigma) = \sigma\).
+is a \(p\)-divisor, where \(\D_y^\sigma\) is the unique polyhedron in \(S_y\) with \(\tail(\D_y^\sigma) = \sigma\), and we have \(\deg \D^\sigma = \mathfrak{deg} \cap \sigma\).
 \item Only finitely many \(S_y\) may differ from the tailfan \(\Sigma\). We call the finite collection of \(S_y \neq \Sigma\) the \textit{non-trivial slices} of \(\mathcal{S}\).
 \end{enumerate}
 \end{definition}
-\begin{example}
+In fact to construct \(\mathfrak{deg}\) from the rest of the data it is only necessary to know whether \(\deg \D^\sigma\) is empty or not for each \(\sigma\). We call those cones \(\sigma\) with \(\deg \D^\sigma \neq \emptyset\) the \textit{marked} tailcones of an \(f\)-divisor.
+\begin{example} \label{ex:downgradedfan}
 Let us describe the downgrade procedure for the toric variety from Example~\ref{toricexample}, with respect to the subtorus given by sublattice \(N' := \ZZ e_1 \subset N\). We may read off the downgrade \(f\)-divisor from the following diagrams:
 \begin{figure}[H]
 \centering
 
 \label{fig:data230b}
 \resizebox{0.8\textwidth}{!}{
-\begin{subfigure}[b]{0.25\linewidth}
+\begin{subfigure}[b]{0.3\textwidth}
 \centering
-  \begin{tikzpicture}[scale=0.8]
+  \begin{tikzpicture}
    	 \draw[->] (0,0) -- (0,3);
    	 \draw[->] (0,0) -- (0,-3);
    	 \draw[dotted,step=1,gray,] (0,-3) grid (0,3);
@@ -621,26 +619,29 @@ Let us describe the downgrade procedure for the toric variety from Example~\ref{
 	\end{tikzpicture}
 	\caption*{$\Sigma_Y \subset N_Y$}
 \end{subfigure}
-\begin{subfigure}[b]{0.2\linewidth}
+\begin{subfigure}[b]{0.3\textwidth}
 \centering
-  \begin{tikzpicture}[scale=0.8]
+  \begin{tikzpicture}
    	 \draw[thick,->] (1,4) -- (-1,4);
    	 \draw[white,->] (1,0) -- (-1,0);
    	 \node[above] (A) at (0,3) {$p$};
 	\end{tikzpicture}
 \end{subfigure}
-\begin{subfigure}[b]{0.25\linewidth}
+\begin{subfigure}[b]{0.3\textwidth}
 \centering
-  \begin{tikzpicture}[scale=0.8]
+  \begin{tikzpicture}
   	\fill[color=lightgray,opacity=0.8]
-  (0,0) -- (3,0) -- (3,3) -- (0,0);
-     	 	 \fill[color=lightgray,opacity=0.8]
-  (0,0) -- (3,3) -- (0,3) -- (0,0);
+  (0,0) -- (3,0) -- (3,3) -- (0,3) -- cycle;
+  \fill[color=lightgray,opacity=0.8]
+  (0,0) -- (-3,0) -- (-3,3) -- (0,3) -- cycle;
    	 	 \fill[color=lightgray,opacity=0.8]
-  (0,0) -- (-3,-3) -- (-3,3) -- (0,3) -- (0,0);
+  (0,0) -- (-3,-3) -- (-3,0) -- cycle;
    	 	 \fill[color=lightgray,opacity=0.8]
-  (0,0) -- (-3,-3) -- (3,-3) -- (3,0) -- (0,0);
-   	 \draw[dotted,step=1,gray,] (-3,-3) grid (3,3);
+  (0,0) -- (-3,-3) -- (0,-3) -- (0,0);
+  		\fill[color=lightgray,opacity=0.8]
+  (0,0) -- (0,-3) -- (3,-3) -- (3,0) -- cycle;
+  
+   	 %\draw[dotted,step=1,gray,] (-3,-3) grid (3,3);
    	 \draw[->] (0,0) -- (0,3);
    	 \draw[->] (0,0) -- (3,0);
    	 \draw[->] (0,0) -- (0,-3);
@@ -826,14 +827,33 @@ Here we give an example of an \(f\)-divisor describing the complexity one threef
 	\caption*{$\deg \mathcal{S}$}
 \end{subfigure}
 }
+\caption{\(f\)-divisor of a complexity one threefold}
 \end{figure}
 \end{example}
 
-In complexity one there is a generalization of the correspondence between lattice polytopes and polarized projective toric varieties. We recall the definition of a divisorial polytope, which is to polarized complexity one \(T\)-varieties what the associated polytope is to an equivariantly polarized toric variety. 
+In complexity one there is a generalization of the correspondence between lattice polytopes and polarized projective toric varieties. First we recall the description of Cartier divisors on the \(T\)-variety \(\TV(\mathcal{S})\) of an \(f\)-divisor \(\mathcal{S}\) from \cite{petersen2011torus}:
+\begin{definition}
+A Cartier support function on an \(f\)-divisor \(\mathcal{S}\) is a sum:
+\[
+h = \sum_{y \in \PP^1} h_y \otimes y,
+\]
+where:
+\begin{enumerate}
+\item For all \(y \in \PP^1\), \(h_y: N_\QQ \to \QQ\) is a piecewise affine function with respect to the decomposition \(S_y\).
+\item For all \(y \in \PP^1\) and \(v \in N\) if \(k \cdot v\) is a lattice point then \(k \cdot h_y(v) \in ZZ\)
+\item For each \(y\), the linear part \(\text{lin}(h_y)\) is independent of \(y\).
+\item We have \(h_y \neq \text{lin}(h_y)\) for at most finitely many \(y \in \PP^1\).
+\item Writing \(h_{|_\sigma}(0) = \sum a_y \cdot y\), where \(a_y\) is the evaluation of the restriction of \(h_y\) to \(\mathcal{S}_y^\sigma\) at \(0\), then for every marked \(\sigma \in \tail \mathcal{S}\), the divisor \(h_{|_\sigma}(0)\) is principal.
+\end{enumerate}
+We write \(\CaSF(\mathcal{S})\) for the group of Cartier support functions on \(\mathcal{S}\).
+\end{definition}
+It is shown in \cite{petersen2011torus} that \(\CaSF(\mathcal{S})\) is isomorphic to the group of \(T\)-invariant Cartier Divisors on \(\TV(\mathcal{S})\). If \(h\) is a Cartier support function we denote the corresponding divisor by \(D_h\). We call \(h\) ample if \(D_h\) is ample.
+
+From what we have recalled so far, an equivariantly polarized \(T\)-variety \((X,L)\) may be given by an \(f\)-divisor \(\mathcal{S}\) and a choice of ample Cartier support function \(h \in \CaSF(\mathcal{S})\). We finally recall the construction the novel results of this thesis make most use of, namely the dual picture. A divisorial polytope may be thought of to polarized complexity one \(T\)-varieties what a polytope is to a toric variety. Note the following definition differs from that of say \cite{suss2013fano} by a shift of a divisor of degree \(2\).
 \begin{definition} \label{def:divpol}
 A divisorial polytope is a function \(\Psi\) on a lattice polytope \(\Box \subset M_\RR\):
 \[
-\Psi: \Box \to \wdiv_\RR \PP^1, \ u \mapsto \Sigma_{y \in \PP^1} \Psi_y(u) \cdot \{y\},
+\Psi: \Box \to \wdiv_\QQ \PP^1, \ u \mapsto \Sigma_{y \in \PP^1} \Psi_y(u) \cdot \{y\},
 \]
 such that:
 \begin{itemize}
@@ -841,27 +861,28 @@ such that:
 \item Each \(\Psi_y\) takes integral values at the vertices of the polyhedral decomposition its regions of affine linearity induce on \(\Box\).
 \item \(\deg \Psi(u) > -2\) for \(u \in \text{int} (\Box)\);
 \end{itemize}
-A divisorial polytope is said to be Fano if additionally we have that:
+\end{definition}
+
+Let \(\Psi: \Box \to \cadiv_\QQ Y\) be a divisorial polytope. For \(y \in \PP^1\) consider the piecewise affine concave function on \(N_\QQ\) given by:
+\[
+\Psi^*_y(u) := \min_{v \in \Box}( \langle v,u\rangle - \Psi_P(u) ),
+\]
+Let \(S_y \) be the polyhedral subdivision induced by \(\Psi_y^*\), with tailfan \(\Sigma\). Let \(\mathfrak{deg}\) be the set of cones \(\sigma \in \Sigma\) such that \(\deg \circ \Psi _{|F_\sigma}  \equiv 0\), where \(F_\sigma\) is the face of \(\Box\) where \(\langle \cdot, v \rangle\) takes its minimum value for \(v \in \sigma\). This defines an \(f\)-divisor \(\mathcal{S} = \sum_{y \in \PP^1} S_y \otimes \{y\}\), and \(\Psi_y^*\) is seen to be a Cartier support function on \(\mathcal{S}\). Moreover may reverse the above construction and obtain a divisoral polytope from any pair \(\mathcal{S},h\) where \(\mathcal{S}\) is an \(f\)-divisor and \(h\) is an ample Cartier support function.
+
+For our results we are particularly interested in Fano \(T\)-varieties. We recall the notion of a Fano divisorial polytope. By \cite{}, Fano divisorial polytopes correspond to Fano \(T\)-varieties \((X,-K_X)\).
+\begin{definition}
+A divisorial polytope \(\Psi: \Box \to \wdiv_\QQ \PP^1\) is said to be Fano if additionally we have that:
 \begin{itemize}
 \item The origin is an interior lattice point of \(\Box\).
 \item The affine linear pieces of each  \(\Psi_y\) are of the form \(u \mapsto \frac{\langle v,u \rangle - \beta + 1}{\beta}\) for some primitive lattice element \(v \in N\);
 \item Every facet \(F\) of \(\Box\) with \((\deg \circ \Psi _{|F}) \neq -2\) has lattice distance \(1\) from the origin.
 \end{itemize}
 \end{definition}
-Let \(\Psi\) be a divisorial polytope. We may construct a complexity one polarized \(T\)-variety from the graded ring \(S\) given by: 
-\[
-S_k := \bigoplus_{u \in \Box \cap \frac{1}{k} M} H^0(\PP^1, \mathcal{O}(\lfloor k \cdot ( \Psi(u) +D) \rfloor),
-\]
-where \(D\) is some integral divisor of degree \(2\). We may also recover a divisorial polytope \(\Psi\) from any polarized complexity one \(T\)-variety \((X,L)\) such that \( H^0(X,L^k) = S_k\).
-
-From a divisorial polytope \(\Psi\) and \(P \in \PP^1\) consider the piecewise affine concave function \(\Psi^*_P(u) := \min_{v \in \Box}( \langle v,u\rangle - \Psi_P(u) ) \). Let \(S_P \) be the polyhedral subdivision induced by \(\Psi_P^*\), with tailfan \(\Sigma\). Let \(\mathfrak{deg}\) be the set of cones \(\sigma \in \Sigma\) such that \(\deg \circ \Psi _{|F_\sigma}  \equiv 0\), where \(F_\sigma\) is the face of \(\Box\) where \(\langle \cdot, v \rangle\) takes its minimum value for \(v \in \sigma\).
-
-Moreover, Fano divisorial polytopes correspond to Fano \(T\)-varieties \((X,-K_X)\). Thus all Fano complexity one \(T\)-varieties may be described in this way. For more details of this construction and the correspondence see \cite{suss2013fano}.
-\begin{example}
+\begin{example} \label{ex:polytopedowngrade}
 We can perform a downgrade operation on a polytope describing a toric variety. Given a polytope \(P \subset M_\QQ\) and a complexity one subtorus action given by some surjection \(p:M \to M'\), choose a section \(s: M' \to M\). Set \(\Box = p(P)\) and \(\Psi_0(u) := \max( p^{-1}(u) - s(u))\), \(\Psi_\infty := \min(p^{-1}(u) - s(u))\). We obtain a divisorial polytope \(\Psi := \Psi_0 \otimes \{0\} + \Psi_\infty \otimes \{\infty\}\). The corresponding \(T\)-variety is then isomorphic to the toric variety associated to \(P\).
 \end{example}
 \begin{example}
-Consider the toric downgrade we described in (). If we start with the polytope () and perform the downgrade operation, we end up with divisorial polytope:
+Consider the toric variety \(\Bl_z \PP^1 \times \PP^1\) with its anticanonical polarization. If we start with the corresponding polytope given in Example~\ref{ex:toricpolytope} and perform the downgrade operation, we end up with divisorial polytope:
 
 \begin{figure}[H]
 \centering
@@ -899,15 +920,15 @@ Consider the toric downgrade we described in (). If we start with the polytope (
 }
 \end{figure}
 
-It is easy to see that the resulting \(f\)-divisor from the operation () coincides with the downgrade \(f\)-divisor from ().
+It is easy to see, for example, that the resulting \(f\)-divisor from the operation Example~\ref{ex:polytopedowngrade} coincides with the downgrade \(f\)-divisor from Example~\ref{ex:downgradedfan}.
 \end{example}
-We now recall some basic terminology for divisorial polytopes, which we will make use of in later sections. The push-forward of the measure induced by \(\omega\) is known as the Duistermaat-Heckman measure, independent of the choice of \(\omega\) and which we denote by \(\nu\). Denote the standard measure on \(M_\RR\) by \(\eta\).
+We conclide this section with a few pieces of terminology for divisorial polytopes. The push-forward of the measure induced by \(\omega\) is known as the Duistermaat-Heckman measure, independent of the choice of \(\omega\) and which we denote by \(\nu\). Denote the standard measure on \(M_\RR\) by \(\eta\).
 
 \begin{definition}
 Let \(\Psi\) be a divisorial polytope.
 \begin{itemize}
 \item The degree of \(\Psi\) is the map \( \deg \Psi : \Box \to \RR\) given by \( u \mapsto \deg (\Psi(u))\).
-\item The barycenter of \(\Psi\) is \(\bc(\Psi) \in \Box\), such that for all \(v \in N_\RR\):
+\item The barycenter of \(\Psi\) is the point \(\bc(\Psi) \in \Box\) such that for all \(v \in N_\RR\):
 \[
 \langle \bc(\Psi), v \rangle = \int_\Box v \cdot \deg \Psi \ d \eta = \int_\Box v d \nu. 
 \]
@@ -919,63 +940,86 @@ Note by the second equality we see \(\bc(\Psi) = \bc_\nu(\Box).\)
 \end{itemize}
 \end{definition}
 \section{Equivariant $K$-stability} \label{sec:eqKstab}
-In this section we recall definitions of \(K\)-stability. In summary the \(K\)-stability criteria are concerned with the positivity of certain numerical invariants associated to \textit{test configurations} of our original space. We do not go into detail about how or why \(K\)-stability should relate to the existence of canonical metrics here, but give the definitions and theorems we will rely on later in the thesis.
+In this section we recall definitions of \(K\)-stability. In summary the \(K\)-stability criteria are concerned with the positivity of certain numerical invariants associated to \textit{test configurations} of our original space. We do not go into technical detail about how \(K\)-stability relates to the existence of canonical metrics here, but give the definitions and theorems we will rely on later in the thesis.
 \subsection{Twisted equivariant $K$-stability}
 \label{prelim:twisted}
-Here we recall notions of Twisted equivariant $K$-stability, following \cite{datar2016kahler}. Let \(X\) be a Fano manifold with the action of a complex reductive group \(G\) of automorphisms containing a maximal torus \(T\). Fix a \(T\)-invariant K\"ahler form \(\omega \in 2 \pi c_1(X)\) induced by the Fano condition. Recall that the Lie algebra \(\mathfrak{t}\) of the maximal compact torus in \(T\) may be identified with \(N_\RR = N \otimes \RR\).
+Here we recall notions of Twisted equivariant $K$-stability, following \cite{datar2016kahler}. Let \(X\) be a Fano manifold with the action of a complex reductive group \(G\) of automorphisms containing a maximal torus \(T\). Fix a \(T\)-invariant K\"ahler form \(\omega \in 2 \pi c_1(X)\) induced by the Fano condition. First we define test-configurations of \(X\).
 \begin{definition}
-A \(G\)-equivariant test configuration for \((X,L)\) is a \(\CC^*\)-equivariant flat family \(\X\) over the affine line equipped with a relatively ample equivariant \(\QQ\)-line bundle \(\mathcal{L}\) such that:
+A \(G\)-equivariant test configuration for \((X,L)\) is a \(\CC^*\)-equivariant flat family \(\X\) over the affine line equipped with a relatively ample equivariant \(\QQ\)-line bundle \(\mathcal{L}\), such that:
 \begin{enumerate}
 \item The \(\CC^*\)-action \(\lambda\) on \((\X, \mathcal{L})\) lifts the standard action on \(\mathbb{A}^1\);
 \item The general fiber is isomorphic to \(X\) and \(\mathcal{L}\) is the relative anti-canonical bundle of \(\X \to \mathbb{A}^1\).
 \item The action of \(G\) extends to \((\X,\mathcal{L})\) and commutes with the \(\CC^*\)-action \(\lambda\).
 \end{enumerate}
-A test configuration with \(\X \cong X \times \mathbb{A}^1\) is called a product configuration. If such an isomorphism exists and is \(\CC^*\)-equivariant then we call the test configuration trivial. Finally a test configuration with normal special fiber is called special.
 \end{definition}
-We work with \(G = T\) being a maximal torus in \(\Aut(X)\). We then have an induced \(T' = T \times \CC^*\)-action on the special fiber. The canonical lift of \(T'\)-action to \(-K_{\X_0}\) induces a canonical choice of moment map \(\mu: \X_0 \to M_\RR'\). The restriction of \(\lambda\) to \(\X_0\) is generated by the imaginary part of a \(T'\)-invariant vector field \(w\), and by an abuse of notation we also write \(w \in N'_\RR\) for the corresponding  one-parameter subgroup. The moment map \(\mu\) then specifies Hamiltonian functions \(\theta_w := \langle \mu, w \rangle: \X_0 \to \RR  \), as we have seen in Section~\ref{basics:momentmaps}.
+A test configuration with \(\X \cong X \times \mathbb{A}^1\) is called a product configuration. If such an isomorphism exists and is \(\CC^*\)-equivariant then we call the test configuration \textit{trivial}. Finally a test configuration with normal special fiber is called \textit{special}.
+
+Suppose from now on \(G = T\) is a maximal torus in \(\Aut(X)\). We then have an induced \(T' = T \times \CC^*\)-action on the special fiber. The canonical lift of \(T'\)-action to \(-K_{\X_0}\) induces a canonical choice of moment map \(\mu: \X_0 \to M_\RR'\) as in \ref{}. The restriction of \(\lambda\) to \(\X_0\) is generated by the imaginary part of a \(T'\)-invariant vector field \(w\), and by an abuse of notation we also write \(w \in N'_\RR\) for the corresponding  one-parameter subgroup. The moment map \(\mu\) then specifies Hamiltonian functions
+\[
+\theta_w := \langle \mu, w \rangle: \X_0 \to \RR,
+\]
+as we have seen in Section~\ref{basics:momentmaps}. We now recall a definition of the Donaldson-Futaki invariant in the twisted modified setting.
 \begin{definition}
-The twisted Donaldson-Futaki character of a special test configuration \((\X, \mathcal{L}) \) is given by:
+The twisted modified Donaldson-Futaki character of a special test configuration \((\X, \mathcal{L}) \) is given by:
 \[
 \DF_{t,\xi}(\X,\mathcal{L},w) = \DF_{\xi}(\X,\mathcal{L},w) + \frac{(1-t)}{V} \int_{\X_0} ( \max_{\X_0} \theta_w - \theta_w)e^{\theta_\xi} \ \omega^n . 
 \]
 where \(V = \frac{1}{n!} \int_{\X_0} \omega^n\) is the volume of \(\X_0\), and \(\DF_\xi(\X,\L,w) = \frac{1}{V} \int_{\X_0} \theta_w \omega^n\) is the modified Donaldson-Futaki invariant of the configuration, in the form given in \cite[Lemma 3.4]{berman2014complex}.
 \end{definition}
-Note if \((\X,\L)\) is a product configuration then we have \(\X_0 \cong X\). Assuming \(X\) is non-toric, the maximality of \(T\) in \(\Aut(X)\) ensures that the restriction of \(\lambda\) to \(\X_0\) is a one parameter subgroup of \(T\), given by a choice of \(w \in N\).
+Note that if \((\X,\L)\) is a product configuration then we have \(\X_0 \cong X\). Assuming \(X\) is non-toric, in this case the maximality of \(T\) in \(\Aut(X)\) ensures that the restriction of \(\lambda\) to \(\X_0\) is a one parameter subgroup of \(T\), given by a choice of \(w \in N\). We will use the following definition of \(K\)-stability, as given in \cite{datar2016kahler}.
 \begin{definition}
-We say the triple  \((X,t,\xi)\) is \(G\)-equivariantly \(K\)-semistable if \( \DF_{t,\xi}(\X,\mathcal{L},w) \ge 0\) for all \(G\)-equivariant special configurations \((\X,\mathcal{L},w)\). We say \((X,t,\xi)\) is \(K\)-stable if in addition equality holds precisely for product configurations. 
+We say the triple  \((X,t,\xi)\) is \(G\)-equivariantly \(K\)-semistable if \( \DF_{t,\xi}(\X,\mathcal{L},w) \ge 0\) for all \(G\)-equivariant special configurations \((\X,\mathcal{L},w)\). We say \((X,t,\xi)\) is \(K\)-stable if, in addition, equality holds precisely for product configurations. 
 \end{definition}
-We will use the following theorem later:
+In the non-twisted case \(K\)-stability implies the existence of a K\"ahler-Ricci soliton:
 \begin{theorem}[Berman-Witt-Nystrom] \label{thm:BWN}
 If \((X,\xi)\) admits a K\"ahler-Ricci soliton then \((X,\xi)\) is \(K\)-stable.
 \end{theorem}
-From (Datar and Sze) we have a result in the converse direction:
+In \cite{datar2016kahler} a result in the converse direction is obtained, which we will make heavy use of in Chapter~\ref{3}:
 \begin{theorem}[{\cite[Proposition 10]{datar2016kahler}} ] \label{thm:DS}
-Let \(X\) be a polarized Fano manifold, with K\"ahler form \(\omega\). Let \(t \in [0,1]\) and \(\xi\) be a soliton candidate for \(X\). Then \((X,t)\) is \(G\)-equivariantly \(K\)-semistable only if for all \(s <t\)  there exists \(\omega_s \in 2 \pi c_1(X)\) such that \(\Ric(\omega_s) - \mathcal{L}_\xi \omega_s = s \omega_s + (1-s) \omega\).
+Let \(X\) be a polarized Fano manifold, with K\"ahler form \(\omega\). Let \(t \in [0,1]\) and \(\xi\) be a soliton candidate for \(X\). If \((X,t)\) is \(G\)-equivariantly \(K\)-semistable then for all \(s <t\)  there exists \(\omega_s \in 2 \pi c_1(X)\) such that \(\Ric(\omega_s) - \mathcal{L}_\xi \omega_s = s \omega_s + (1-s) \omega\).
 \end{theorem}
 \subsection{$K$-stability of $T$-varieties} \label{subsec:IS}
-Here we review \(K\)-stability in complexity one. In \cite{ilten2015} Ilten and Suess described non-product special test configurations for a \(T\)-variety of complexity one in terms of its divisorial polytope. We first recall, from \cite{ilten2015}, the description of special fibers of non-product special configurations.
-
-Let \(X\) be a Fano \(T\)-variety of complexity \(1\), corresponding to the Fano divisorial polytope \(\Psi : \Box \to Y\). Without loss of generality we may assume \(Y = \PP^1\). Then there exists some \(y \in \PP^1\), with at most one of \(\Psi_z\) having non-integral slope at any \(u \in \Box\) for \(z \neq y\), such that \(\X_0\) is the toric variety corresponding to the following polytope:
+Here we review \(K\)-stability in complexity one. In \cite{ilten2015}, Ilten and Suess described non-product special test configurations for a \(T\)-variety of complexity one in terms of its divisorial polytope. Let \(X\) be a Fano complexity one \(T\)-variety, corresponding to the Fano divisorial polytope \(\Psi : \Box \to \PP^1\). Let \(M,N\) be the usual character and cocharacter lattices respectively. Let \(M' := M \times \ZZ\) and \(N' = \Hom(M',\ZZ)\) with associated vector spaces \(M_\QQ', N_\QQ'\).
+\begin{theorem}[\cite{ilten2015}] \label{thm:iltensueskstab}
+There exists some \(y \in \PP^1\) such that for at most one \(z \neq y\) the function \(\Psi_z\) has non-integral slope at any \(u \in \Box\), such that \(\X_0\) is the toric variety corresponding to the following polytope:
 \begin{equation*}
-\Delta_y := \Big\{(u,r) \in M_\RR \times \RR \; \Big| \; u \in \Box,\; -1-\sum_{z \neq y} \Psi_z(u) \leq r \leq 1+\Psi_y(u)\Big\}.\label{eq:special-fibre}
+\Delta_y := \Big\{(u,r) \in M_\QQ' \ \Big| \; u \in \Box,\; -1-\sum_{z \neq y} \Psi_z(u) \leq r \leq 1+\Psi_y(u)\Big\}.\label{eq:special-fibre}
 \end{equation*}
-
-Furthermore, the induced \(\CC^*\)-action on \(\X_0\) is given by the one-parameter subgroup of 
- \(T' = T \times \CC^*\) corresponding to \(v'=(-mv,m) \in N \times \ZZ\), for some \(v \in N\). In fact it turns out, from \cite{ilten2015}, it is enough to consider those configurations with \(m=1\). As observed in \cite{ilten2015}, we obtain a description of the (non-twisted) Donaldson-Futaki character of $(\X_0,\xi')$:
+Furthermore, the induced \(\CC^*\)-action on \(\X_0\) is given by the one-parameter subgroup of \(T' = T \times \CC^*\) corresponding to \(v'=(-mv,m) \in N'\), for some \(v \in N\). From the point of view of \(K\)-stability it is enough to consider only those configurations with \(m=1\). 
+\end{theorem}
+By the definition of a divisorial polytope, there are only finitely many distinct polytopes \(\Delta_y\): Suppose \(\Psi\) corresponds to \(f\)-divisor \(\mathcal{S}\). For \(y\) such that \(\mathcal{S}_y \neq \tail \mathcal{S}\) we obtain a polytope \(\Delta_y\), but for all other \(y\) we observe that \(\Delta_y\) is independent of \(y\), equal to the polytope: 
+\[
+\Delta_{\gen} := \Big\{(u,r) \in M_\QQ' \ \Big| \; u \in \Box,\; -1- \deg \Psi (u) \leq r \leq 1\Big\}
+\]
+\begin{definition}
+The special configuration polytopes of a Fano \(T\)-variety are the polytopes \( \Delta_y \ (\text{ for } \mathcal{S}_y \neq \tail \mathcal{S} )  \text{ and } \Delta_{\gen} \) corresponding to normal toric varieties.
+\end{definition}
+See Figure~\ref{fig:degen230} and Figure~\ref{fig:degen323} for two examples of special configuration polytopes, and Appendix~\ref{appendix1} for the data to construct the special configurations we need for results in this thesis. As observed in \cite{ilten2015}, we also obtain a description of the (non-twisted) Donaldson-Futaki character of $(\X_0,\xi')$:
 \begin{equation}
 \DF_{\X_0, \xi'}(v') = \frac{1}{\vol \Delta_y}\left(\int_{\Delta_y} \langle u', v' \rangle \cdot e^{\langle u', \xi'\rangle} du'\right),\label{eq:futaki-character}
 \end{equation}
 with $\xi',v' \in N_\RR \times \RR$. On the other hand, for $v,\xi \in N_\RR$ one obtains:
 \begin{equation}
-\DF_{X, \xi}(v) = F_{\X_0, (\xi,0)}((v,0))
-= \frac{1}{\int_\Box \deg \bar \Phi(u) \,du }\left(\int_{\Box} \langle u, v \rangle \cdot \deg \bar \Phi(u) \cdot e^{\langle u, \xi \rangle}\, du\right)
+\DF_{X, \xi}(v) = \frac{1}{\vol \Phi }\left(\int_{\Box} \langle u, v \rangle \cdot \deg \Phi(u) \cdot e^{\langle u, \xi \rangle}\, du\right)
 , \label{eq:futaki-general-fibre}
 \end{equation}
-\begin{lemma}
+For non-product configurations the central fiber of a special test configuration is a normal toric variety. The following formula is the toric one obtained in \cite{datar2016kahler}.
+\begin{lemma}[\cite{datar2016kahler}] Let \((\X,\L,v')\) be the special test configuration of \(X\) corresponding to the polytope \(\Delta_y\) and the element \(v' = (-v,1) \in N'\), as in Theorem~\ref{thm:iltensueskstab}. Then:
 \[
-\DF_t( \X, \L )  = t \langle \bc(\Delta_y), v' \rangle + (1-t) \max_{x \in \Delta_y} \langle x, v' \rangle.
+\DF_t( \X, \L,v')  = t \langle \bc(\Delta_y), v' \rangle + (1-t) \max_{x \in \Delta_y} \langle x, v' \rangle.
+\]
+\end{lemma}
+We give the formula for the product configuration case in complexity one:
+\begin{lemma}
+Let \((\X,\L,w)\) be a product configuration of the Fano complexity one \(T\)-variety \(X\) given by divisorial polytope \(\Psi: \Box \to \wdiv_\QQ \PP^1\). Then for \(t \in [0,1]\) we have:
+\[
+\DF_t(\X,\L)() = t \langle  \bc(\Psi), w \rangle + (1-t)\max_{x \in \Box} \langle x,w \rangle.
 \]
 \end{lemma}
 \begin{proof}
-In \cite{ilten2015} the formula \(\DF(\X,\L) = \langle \bc(\Delta_y),v'\rangle\) is given. Note that the Hamiltonian function, by definition, satisfies \(\theta_w(x) = \langle \mu(x),w \rangle\). We may then calculate the remaining integrals on the image of the moment map, \(\Delta_y\).
+In \cite{ilten2015} it was shown that \(\DF(X \times \A^1,\L)(w)  = \langle  \bc(\Psi), w \rangle \). Note by definition \(\theta_w(x) = \langle \mu(x) , w \rangle\). We may now push forward the integrals to the image of the moment map \(\Box\):
+\begin{align*}
+\DF_t(\X,\L)(w) &=   \DF(\X,\L)(w) + \frac{(1-t)}{V} \int_{X} (\max \theta_w - \theta_w) \omega^n \\ &= \langle  \bc(\Psi), w \rangle + \frac{(1-t)}{\vol \Psi} \int_\Box \max_{x \in \Box} \langle x,w \rangle  - \langle \cdot, w \rangle d \eta \\
+&= t \langle  \bc(\Psi), w \rangle + (1-t)\max_{x \in \Box} \langle x,w \rangle.
+\end{align*}
 \end{proof}

@@ -1,5 +1,5 @@
 \chapter{SageMath Code}
-
+\label{app:code}
 \lstset{language=Python} 
 
 \lstset{ 
@@ -12,7 +12,7 @@
 
 Here we include the library of functions written to obtain the results in Chapter 3. We give a brief description of the purpose of each function, and an explanation on the nature of inputs and outputs.
 
-First we have some auxillary functions. The function projection does X.
+First we have some auxillary functions. The function projection returns maps used to descend from a polytope \(P\) to a facet \(F\) in the recursive integration algorithm described in section~\ref{sec:barvinok}.
 \begin{lstlisting}
 def projection(P,F):
     A = F.as_polyhedron().equations()[0].A()
@@ -29,7 +29,6 @@ def projection(P,F):
         K = matrix(ZZ,K.basis())
     return [K,A]
 \end{lstlisting}
-
 The functions acoeff and bcoeff calculate specific coefficients used at points where the Barvinok algorithm terminates. They take as input a face \(F\) of a polytope \(P\), together with a vector \(c \in N_\RR\) such that Y.
 \begin{lstlisting}
 def acoeff(F,c):
@@ -48,14 +47,7 @@ def relvolume(P):
     else:
         return P.volume()
 \end{lstlisting}
-
-The function intexp:
-Calculates the integral of exp(c*x) dx over the polyhedron P recursively using the Barvinok method. Input is a polyhedron P,
-a sufficiently general vector L (not orthogonal, after projection, to c or any face of P at any stage of the recursion),
-and a vector c for the integrand. To optimize performance values obtained at faces are cached along the way.
-
-
-
+The function intexp calculates the integral of \(e^{\langle c, x \rangle}\) over the polyhedron P recursively using the Barvinok method. It takes as input a polyhedron \(P\), a sufficiently general vector \(L\), and a vector \(c\) for the integrand. To optimize performance values obtained at faces are cached along the way.
 \begin{lstlisting}
 def intexp(P,L,c,face=None, cache=None):
     if face is None: face = tuple(range(P.n_vertices()))
@@ -84,11 +76,8 @@ def intexp(P,L,c,face=None, cache=None):
     return I
 \end{lstlisting}
 
-The function intxexp:
-Calculates the integral of <x,v>*exp(<x,c>) dx over the polyhedron P recursively using the Barvinok method. Input is a polyhedron P,
-a sufficiently general vector L (not orthogonal, after projection, to c or any face of P at any stage of the recursion),
-and vectors c and v for the integrand. To optimize performance values obtained at faces are cached along the way.
-
+The function intxexp calculates the integral of \(\langle x,v \rangle \cdot e^{\langle c,x \rangle}\) over the polyhedron \(P\) recursively using the Barvinok method. The input is a polyhedron \(P\),
+a sufficiently general vector \(L\), and vectors \(c\) and \(v\) for the integrand. To optimize performance values obtained at faces are again cached along the way.
 \begin{lstlisting}
 def intxexp(P,L,c,v,face=None,cache=None,cache2=None):
     if face is None: face = tuple(range(P.n_vertices()))
@@ -123,8 +112,10 @@ def intxexp(P,L,c,v,face=None,cache=None,cache2=None):
     return I
 \end{lstlisting}
 
-The function degenerations returns the list of degneration polytopes of given combinatorial data of a T-variety, as defined in (ref). It takes inputs L and B, where L is a list of matrices and B is the base polytope. Each matrix in L represents a piecewise affine function on B in the following way: Suppose \(v_j\) are the columns of \(M\) in the list \(L\). We then form the piecewise affine function \(\phi_M(x_1,\dots,x_n) := \min_j \{ (1,x_1,x_2,\dots,x_n) \cdot v_j \} \)
-
+The function degenerations returns the list of degeneration polytopes (normal or otherwise) of a \(T\)-variety specified by a divisorial polytope. It takes inputs \(L\) and \(B\), where \(L\) is a list of matrices and \(B\) is the base polytope, referred to as \(\Box\) in this thesis. Each matrix in \(L\) represents a piecewise affine function on \(B\) in the following way: Suppose \(v_j\) are the columns of \(M\) in the list \(L\). We then form the piecewise affine function:
+\[
+\psi_M(x_1,\dots,x_n) := \min_j \{ (1,x_1,x_2,\dots,x_n) \cdot v_j \}
+\]
 \begin{lstlisting}
 def degenerations(L,B):
     dim = L[0].nrows()
@@ -162,4 +153,3 @@ def degenerations(L,B):
         Polyhedra = Polyhedra + [degenerations_step(L,k,B)];
     return Polyhedra
 \end{lstlisting}
-(include R(X) visualizations code)

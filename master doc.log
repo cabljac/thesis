@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.22)  22 MAR 2020 20:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.22)  28 MAR 2020 20:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -116,6 +116,9 @@ File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/courier.sty
+Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 
@@ -1164,7 +1167,9 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Try loading font information for U+stmry on input line 5.
 
-(/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd))
+(/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) [2
+
+])
 \tf@toc=\write5
 \openout5 = `"master doc.toc"'.
 
@@ -1181,9 +1186,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--13
 
  []
 
-[2
-
-] [3] (./master doc.lot)
+[3] (./master doc.lot)
 \tf@lot=\write6
 \openout6 = `"master doc.lot"'.
 
@@ -1198,158 +1201,341 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--13
 ] [6] [7
 
 ]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 17.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
 Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: OT1).
+(microtype)             `pcr' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [8
 
 ] [9
 
-]
-(./prelim.tex
+] (./intro.tex
 Chapter 1.
+[10
+
+]
+<sphere.pdf, id=236, 597.50786pt x 845.04686pt>
+File: sphere.pdf Graphic file (type pdf)
+<use sphere.pdf>
+Package pdftex.def Info: sphere.pdf  used on input line 33.
+(pdftex.def)             Requested size: 185.65297pt x 262.56786pt.
+<notsphere.pdf, id=237, 597.50786pt x 845.04686pt>
+File: notsphere.pdf Graphic file (type pdf)
+<use notsphere.pdf>
+Package pdftex.def Info: notsphere.pdf  used on input line 34.
+(pdftex.def)             Requested size: 185.65297pt x 262.56786pt.
+ [11 <./sphere.pdf> <./notsphere.pdf
+
+pdfTeX warning: pdflatex (file ./notsphere.pdf): PDF inclusion: multiple pdfs w
+ith page group included in a single page
+>]
+Underfull \vbox (badness 1062) has occurred while \output is active []
+
+ [12]
+Underfull \vbox (badness 1975) has occurred while \output is active []
+
+ [13]
+
+LaTeX Warning: Reference `chap:sol' on page 14 undefined on input line 77.
+
+
+LaTeX Warning: Reference `app:code' on page 14 undefined on input line 81.
+
+[14]
+
+LaTeX Warning: Reference `chap:gav' on page 15 undefined on input line 85.
+
+) (./prelim.tex [15]
+Chapter 2.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10
+ [16
 
 ]
 Underfull \vbox (badness 7613) has occurred while \output is active []
 
- [11]
-[12]
+ [17]
+[18]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 95.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 95.
- [13] [14]
-[15]
+ [19] [20]
+[21]
 
-LaTeX Warning: Reference `chap:gav' on page 16 undefined on input line 167.
+LaTeX Warning: Reference `chap:gav' on page 22 undefined on input line 161.
 
-[16]
-LaTeX Font Info:    Try loading font information for U+euf on input line 181.
+[22]
+LaTeX Font Info:    Try loading font information for U+euf on input line 175.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-euf.cfg
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
-) [17] [18]
+) [23] [24]
 
-LaTeX Warning: Reference `chap:gav' on page 19 undefined on input line 239.
+LaTeX Warning: Reference `chap:gav' on page 25 undefined on input line 237.
 
-[19] [20]
-Underfull \hbox (badness 10000) in paragraph at lines 298--299
+[25] [26]
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
 
  []
 
-[21]
+[27]
 
-LaTeX Warning: Reference `thm:KE2' on page 22 undefined on input line 343.
-
-[22]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 368.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 368.
-
-[23]
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 390.
- [24]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 430.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 430.
-
-[25] [26] [27]
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 554.
-
-Overfull \hbox (22.33586pt too wide) in paragraph at lines 554--554
- [][] 
- []
+LaTeX Warning: Reference `thm:KE2' on page 28 undefined on input line 341.
 
 [28]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 569.
+(hyperref)                removing `math shift' on input line 366.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 366.
 
 [29]
-Overfull \hbox (45.09814pt too wide) in paragraph at lines 667--667
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 388.
+ [30]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 428.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 428.
+
+[31] [32] [33]
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 550.
+
+Overfull \hbox (22.33586pt too wide) in paragraph at lines 550--550
+ [][] 
+ []
+
+[34]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 565.
+
+[35]
+Overfull \hbox (58.61143pt too wide) in paragraph at lines 668--668
  [][] 
  []
 
 
-Overfull \hbox (1.70636pt too wide) in paragraph at lines 828--828
+Overfull \hbox (1.70636pt too wide) in paragraph at lines 829--829
  [][] 
  []
 
-[30] [31] [32]
+[36] [37] [38] [39]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 921.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 921.
+(hyperref)                removing `math shift' on input line 942.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 923.
+(hyperref)                removing `math shift' on input line 942.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 923.
-
-[33]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 955.
+(hyperref)                removing `math shift' on input line 944.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 955.
+(hyperref)                removing `math shift' on input line 944.
+
+
+LaTeX Warning: Reference `' on page 40 undefined on input line 957.
+
+[40]
+
+LaTeX Warning: Reference `3' on page 41 undefined on input line 977.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 955.
+(hyperref)                removing `math shift' on input line 981.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 955.
+(hyperref)                removing `math shift' on input line 981.
 
-[34]) (./master doc.bbl [35]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 981.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 981.
+
+[41]
+
+LaTeX Warning: Reference `fig:degen230' on page 42 undefined on input line 997.
+
+
+
+LaTeX Warning: Reference `fig:degen323' on page 42 undefined on input line 997.
+
+
+
+LaTeX Warning: Reference `appendix1' on page 42 undefined on input line 997.
+
+[42]) (./greatestlower.tex [43]
+Chapter 3.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+[44
+
+]
+
+LaTeX Warning: Reference `' on page 45 undefined on input line 27.
+
+
+LaTeX Warning: Reference `' on page 45 undefined on input line 27.
+
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+LaTeX Warning: Reference `' on page 45 undefined on input line 50.
+
+
+LaTeX Warning: Reference `' on page 45 undefined on input line 52.
+
+[45]
+
+LaTeX Warning: Reference `' on page 46 undefined on input line 65.
+
+
+LaTeX Warning: Reference `appendix1' on page 46 undefined on input line 65.
+
+
+LaTeX Warning: Reference `' on page 46 undefined on input line 77.
+
+
+LaTeX Warning: Reference `thm:sol' on page 46 undefined on input line 77.
+
+[46]
+
+LaTeX Warning: Reference `thm:sze' on page 47 undefined on input line 101.
+
+
+LaTeX Warning: Reference `' on page 47 undefined on input line 105.
+
+
+LaTeX Font Warning: Command \huge invalid in math mode on input line 110.
+
+[47] [48]
+Underfull \vbox (badness 6078) has occurred while \output is active []
+
+ [49]
+
+LaTeX Warning: Reference `' on page 50 undefined on input line 174.
+
+
+LaTeX Warning: Reference `' on page 50 undefined on input line 175.
+
+
+LaTeX Warning: Reference `' on page 50 undefined on input line 180.
+
+
+LaTeX Warning: Reference `' on page 50 undefined on input line 180.
+
+[50]
+
+LaTeX Warning: Reference `appendix1' on page 51 undefined on input line 197.
+
+
+LaTeX Warning: Reference `appendix1' on page 51 undefined on input line 197.
+
+) (./master doc.bbl [51]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
+ [52
 
-Underfull \hbox (badness 1112) in paragraph at lines 45--48
+]
+Missing character: There is no  in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ã in font cmr12!
+Missing character: There is no  in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ã in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no • in font cmr12!
+ [53]
+Underfull \hbox (badness 1112) in paragraph at lines 141--144
 \OT1/cmr/m/n/12 (+20) the pluripo-ten-tial the-ory of k$\OMS/cmsy/m/n/12 n$\OT1
 /cmr/m/n/12 (+20) " ahler-ricci soli-tons,'' \OT1/cmr/m/it/12 (+20) arXiv prepr
 int
  []
 
-[36
-
-]
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no â in font cmr12!
-Missing character: There is no • in font cmr12!
- [37])
+[54] [55])
 
 FiXme Summary: Number of notes: 0,
 (FiXme)        Number of warnings: 0,
@@ -1357,14 +1543,14 @@ FiXme Summary: Number of notes: 0,
 (FiXme)        Number of fatal errors: 0,
 (FiXme)        Total: 0.
 
-[38]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 39.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 39.
+[56]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
  (./master doc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 39.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 39.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 40.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 40.
 Package rerunfilecheck Info: File `"master doc".out' has not changed.
-(rerunfilecheck)             Checksum: 72E7E4158AB42D30A2EEF96B3AE5DC3D;1487.
+(rerunfilecheck)             Checksum: 8E1341286B2A34C8960C9E2D69DBE716;1956.
 
 
 LaTeX Warning: There were undefined references.
@@ -1372,41 +1558,42 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 39.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
  ) 
 Here is how much of TeX's memory you used:
- 35644 strings out of 492982
- 814000 string characters out of 6134895
- 1094220 words of memory out of 5000000
- 38222 multiletter control sequences out of 15000+600000
- 30144 words of font info for 178 fonts, out of 8000000 for 9000
+ 36123 strings out of 492982
+ 822234 string characters out of 6134895
+ 1097992 words of memory out of 5000000
+ 38586 multiletter control sequences out of 15000+600000
+ 35136 words of font info for 203 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,18n,98p,864b,1138s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/stmaryrd/stmary10.pfb>
-Output written on "master doc.pdf" (38 pages, 375505 bytes).
+ 66i,18n,98p,864b,1132s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sym
+bols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
+ols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/stmar
+y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on "master doc.pdf" (56 pages, 473613 bytes).
 PDF statistics:
- 575 PDF objects out of 1000 (max. 8388607)
- 507 compressed objects within 6 object streams
- 168 named destinations out of 1000 (max. 500000)
- 21173 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 885 PDF objects out of 1000 (max. 8388607)
+ 792 compressed objects within 8 object streams
+ 254 named destinations out of 1000 (max. 500000)
+ 21751 words of extra memory for PDF output out of 24883 (max. 10000000)
 
