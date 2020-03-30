@@ -211,9 +211,9 @@ Consider the pair \(Y = \PP^2\) and \(D = \sum a_i L_i\) where \(L_i\) are all l
 Where \(E\) is the exceptional divisor  of the blow-up. Therefore \((Y,D)\) is log-canonical whenever we have \(\deg D \le 2\) and all \(a_i \le 1\).
 \end{example}
 Recall the following consequence of the main theorem of \cite{demailly2001}, as stated in the proof of \cite[Lemma 5.1]{cheltsov08}. This allows us to degenerate a pair under a \(\CC^*\)-action if we want to show it is log canonical.
-\begin{proposition} \label{degenpair}
+\begin{lemma} \label{degenpair}
 Let \((Y,D)\) be a log pair. Suppose \(\{ D_t | t \in \CC\}\) is a family of \(\QQ\)-divisors such that \(D_t \sim_\QQ D\), \(D_1 = D\), and for \(t \neq 0\) there exists \(\phi_t \in \Aut(X)\) such that \(D_t = \phi_t(D)\). Then \((Y,D)\) is log canonical if \((Y,D_0)\) is.
-\end{proposition}
+\end{lemma}
 Now we recall the definition of the global log canonical threshold of a pair, as given in \cite{suess18-2}.
 \begin{definition}
 The global \(G\)-equivariant log canonical threshold of a log pair \((Y,B)\)  is defined to be:
@@ -262,7 +262,7 @@ Clearly we have the inequality:
 \[
 \alpha_{HT}(L)  \le \inf_{m \in \mathbb{Z}_{>0}} \inf_{D \in |mL|^{HT}} \lct (\frac{1}{m} D) 
 \]
-Now suppose \(|\Sigma| \subset |mL|\) such that \(|\Sigma|^{HT} = |\Sigma|\). Take \(D \in |\Sigma|\). We may repeatedly degenerate \(D\) along \(\CC^*\)-actions to obtain \(D' \in |mL|^{T}\), with \(\lct(\frac{1}{m}D') \le \lct(\frac{1}{m}D) \le \lct( \frac{1}{m}|\Sigma|)\) by Proposition~\ref{degenpair}. Let \(r = |H|\). Since \(H\) normalizes \(T\), we may take \(D'':= \sum_{h \in H} h \cdot D''\), and then:
+Now suppose \(|\Sigma| \subset |mL|\) such that \(|\Sigma|^{HT} = |\Sigma|\). Take \(D \in |\Sigma|\). We may repeatedly degenerate \(D\) along \(\CC^*\)-actions to obtain \(D' \in |mL|^{T}\), with \(\lct(\frac{1}{m}D') \le \lct(\frac{1}{m}D) \le \lct( \frac{1}{m}|\Sigma|)\) by Lemma~\ref{degenpair}. Let \(r = |H|\). Since \(H\) normalizes \(T\), we may take \(D'':= \sum_{h \in H} h \cdot D''\), and then:
 \[
 \lct(\frac{1}{m r }D'') \le \lct( \frac{1}{mr} | r\Sigma|) = \lct( \frac{1}{m}|\Sigma|).
 \]
@@ -272,7 +272,7 @@ Then we have:
 \]
 In particular when \(L = -K_X\) the left hand side is equal to \(\glct_{HT}(X)\).
 \end{proof}
-As a consequence we may check Tian's criterion on the Chow quotient pair, for a symmetric \(T\)-variety. Let \(X\) be a symmetric \(T\)-variety. Let \(\pi:X \dashrightarrow Y\) be the Chow quotient map by the torus action with boundary divisor \(B := \sum_Z \frac{m_Z-1}{m_Z} \cdot Z.\), see \ref{}. Since \(H\) is in the normalizer of \(T\), then its action descends to \(Y\). The action of \(H\) extends to the whole of \(Y\). S{\"u}{\ss}, showed that the global log canonical threshold of \(X\) with respect to \(HT\) coincides with that of the pair \((Y,B)\) with respect to \(H\):
+As a consequence we may check Tian's criterion on the Chow quotient pair, for a symmetric \(T\)-variety. Let \(X\) be a symmetric \(T\)-variety. Let \(\pi:X \dashrightarrow Y\) be the Chow quotient map by the torus action with boundary divisor \(B := \sum_Z \frac{m_Z-1}{m_Z} \cdot Z.\), see \ref{def:chowpair}. Since \(H\) is in the normalizer of \(T\), then its action descends to \(Y\). The action of \(H\) extends to the whole of \(Y\). S{\"u}{\ss}, showed that the global log canonical threshold of \(X\) with respect to \(HT\) coincides with that of the pair \((Y,B)\) with respect to \(H\):
 \begin{theorem}[ {\cite[Theorem 1.2]{Su13}}]\label{thm:SU}
 Let \(X\) be a symmetric log terminal Fano \(T\)-variety. Assume that the Chow quotient \(\pi:X \dashrightarrow Y\) is surjective. Then:
 \[
@@ -302,7 +302,7 @@ We now turn to our examples. We begin by calculating a bound on the log canonica
 
 Let \(Y = \PP^2\), with projective coordinates \(x_1,x_2,x_3\), and consider the boundary divisor \(B_\gamma  := \gamma \sum_{i=0}^3  H_i\), where \(H_1,H_2,H_3\) are the coordinate hyperplanes, and \(H_0 = V (\sum_i x_i) \). Consider the subgroup \(G \cong S_4\) of \(\text{Aut}(Y)\) permuting the hyperplanes \(H_0,\dots,H_3\).
 
-We provide the following lower bound on the global log canonical threshold of the pair \((\PP^2,B_\gamma)\), by considering degenerations under a \(\CC^*\)-action. 
+We now provide the following lower bound on the global log canonical threshold of the pair \((\PP^2,B_\gamma)\), by considering degenerations under a \(\CC^*\)-action. 
 \begin{lemma}\label{lem:alph}
 Consider a log pair \((\PP^2,B_\gamma)\), where \(B_\gamma = \gamma \sum_i H_i\). We then have:
 \[
@@ -318,7 +318,7 @@ Consider a log pair \((\PP^2,B_\gamma)\), where \(B_\gamma = \gamma \sum_i H_i\)
 
 To show \(\glct_{G}(Y,B_\gamma) \ge \lambda\) it is sufficient to show that \(B_\gamma+\lambda D\) is log canonical for any \( D \in |-K_Y - B_\gamma|_{\QQ}^G\). Fix such a \(D\) and take \(P \in Y\). At most two of the \(H_i\) pass through \(P\), so without loss of generality suppose \(H_0,H_3\) do not. Modify \(B_\gamma+\lambda D\) by removing any components supported at \(H_0,H_3\), to obtain a divisor \(D'\). Note \(B_\gamma+\lambda D\) is log canonical at \(P\) if \(D'\) is globally log canonical. Note also that although \(D'\) may not be \(G\)-invariant, it is still invariant under the involution \(\sigma \) swapping \(x_1\) and \(x_2\). Finally note \(D' \ge \gamma H_1 + \gamma H_2\).
 
-Consider the \(\CC^*\)-action \(t \cdot [x_1:x_2:x_3] = [ t x_1: t x_2 : x_3]\). By \ref{degenpair}, \(D'\) is log canonical if \(D_0' := \lim_{t \to 0} \left( t \cdot D' \right) \) is log canonical. This \(\CC^*\)-action commutes with \(\sigma \), and so \(D_0'\) is invariant under \(\sigma\). Moreover is is clear that each component of \(D_0'\) must be a line through the point \([0,0,1]\). By \(\sigma\)-invariance \(D_0'\) must be of the form:
+Consider the \(\CC^*\)-action \(t \cdot [x_1:x_2:x_3] = [ t x_1: t x_2 : x_3]\). By (\ref{degenpair}), \(D'\) is log canonical if \(D_0' := \lim_{t \to 0} \left( t \cdot D' \right) \) is log canonical. This \(\CC^*\)-action commutes with \(\sigma \), and so \(D_0'\) is invariant under \(\sigma\). Moreover is is clear that each component of \(D_0'\) must be a line through the point \([0,0,1]\). By \(\sigma\)-invariance \(D_0'\) must be of the form:
 \[
 D_0' = \gamma (H_1+H_2) + a V (x_1+x_2) + b V(x_1-x_2) + \sum_i c_i (L_i + \sigma L_i)
 \]

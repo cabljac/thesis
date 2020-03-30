@@ -26,13 +26,13 @@ By the arguments in \cite[Section~3.1]{donaldson2008kahler} there always exist a
 
 The integral (\ref{eq:combproducteq}) may be solved symbolically, outputting an exponential polynomial \(g(\xi, e^{\xi})\) in \(\xi\). In practice however, the domain \(P\) can complicate the calculation for \(\dim X > 2\). To deal with this we developed a recursive algorithm, based on results of Barvinok \cite{Barvinok1992}, which reduces the integral to evaluations at the vertices of \(P\). We explain this algorithm at the end of this chapter.
 
-For our examples the equation \(g(\xi,e^{\xi}) = 0\) is impossible to solve analytically. To get around this we use \textit{real interval arithmetic} (RIA) estimates to find some hypercube \(D\) in which the solution \(\xi\) lies. For each special test configuration \((\X,w)\) we then use further RIA to show that \(\DF_{\xi'}(\X,w)>0\) for \(\xi \in D\). In Table~\ref{table:solitontable} below we give estimates found for the vector field \(\xi\) for each threefold in the list of \cite{suss2013fano}.  We can show that our approximations are correct to the nearest \(10^{-5}\). Note that the threefolds 3.8*, 3.21, 4.5 were shown to admit a non-trivial K\"ahler-Ricci soliton in \cite{ilten2015}.
+For our examples the equation \(g(\xi,e^{\xi}) = 0\) is impossible to solve analytically. To get around this we use \textit{real interval arithmetic} (RIA) estimates to find some hypercube \(D\) in which the solution \(\xi\) lies. For each special test configuration \((\X,\L,w)\) we then use further RIA to show that \(\DF_{\xi'}(\X,,\L,w)>0\) for \(\xi \in D\). In Table~\ref{table:solitontable} below we give estimates found for the vector field \(\xi\) for each threefold in the list of \cite{suss2013fano}.  We can show that our approximations are correct to the nearest \(10^{-5}\). Note that the threefolds 3.8*, 3.21, 4.5 were shown to admit a non-trivial K\"ahler-Ricci soliton in \cite{ilten2015}.
 
 When \(\dim  X = 2\) the process of finding suitable \(D\) via RIA is a simple application of the intermediate value theorem. For \(\dim X >2 \) we cannot immediately use the intermediate value theorem to obtain \(D\). In all but one of our examples we are able to make use of additional symmetries to reduce to a one-dimensional problem.
 
 Given an automorphism \(\sigma \in \GL(M)\) permuting the vertices of \(\Box\) such that \(\deg (\Phi \circ \sigma) = \deg \Phi\), by (\ref{eq:futaki-general-fibre}) we have:
 \[
-\DF_{X, \sigma^{\!*}\!(\xi)}  =  \DF_{X, \xi} \ \circ \ \sigma^*
+\DF_{\sigma^{\!*}\!(\xi)} (\X,\L,\cdot) =  \DF_{X, \xi}(\X,\L,\cdot) \ \circ \ \sigma^*
 \]
 Since \(\xi \in N_\mathbb{R}\) is the unique solution to \(F_{X,\xi} = 0\), this gives \(\xi \in N_{\mathbb{R}}^{\sigma^*}\). For \(\dim X = 3\) we have \(\dim N_{\mathbb{R}}^{\sigma^*}  = 1\) and we are in a situation where intermediate value theorem may be used to find \(D\). Note that in threefold 3.23 there is no such \(\sigma\). Here we must take another approach, which we explain in the proof below, and in Example~\ref{ex:assym}.
 %
@@ -73,9 +73,12 @@ The data required for this proof is collated in Appendix~\ref{appendix1}. The di
 
 For each of the threefolds \(2.30\), \(2.31\), \(3.18\), \(3.22\) , \(3.24\), and \(4.8\) there exists a non-trivial involution \(\sigma \in \GL(M)\) permuting the vertices of \(\Box\) such that \(\deg (\Phi \circ \sigma) = \deg \Phi\). Choose a basis $e_1, e_2$ of $N$ with $\sigma^*(e_1)=-e_1$ and $\sigma^*(e_2)=e_2$. The soliton candidate $\xi = (\xi_1,\xi_2)$ must be contained in the line $N_\RR^{\sigma^*} = \RR e_2$. For each of these examples we obtain an interval \(D\) in which the soliton candidate must lie, via the intermediate value theorem and RIA, see Appendix~\ref{appendix1}.
 
-Recall the description of non-product special test configuration spaces from \ref{subsec:IS}. In Appendix~\ref{appendix1} we provide closed forms for \(h_y(\xi_2) := (\vol \Delta_y) \cdot \DF_{\xi_2 e_2}(\X,(0,1))\) for every admissible choice of $y \in \PP^1$. Recall this is expressed as an integral over \(\Box\) by the formula (\ref{eq:futaki-general-fibre}).
+Recall the description of non-product special test configurations and Donaldson-Futaki invariants from \ref{subsec:IS} as integrals over \(\Delta_y \subset M'\). Let \(e_3 = (0,1) \in N \times \ZZ =: N'\). In Appendix~\ref{appendix1} we provide closed forms for the functions
+\[
+h_y(\xi_2) := (\vol \Delta_y) \cdot \DF_{\xi_2 e_2}(\X,\L,e_3)
+\] for every admissible choice of $y \in \PP^1$.
 
-In Appendix~\ref{appendix1} we also give lower bounds on \(h_y(D)\) using further RIA, ensuring the positivity of $\DF_{\xi_2 e_2}(\X_{y,0,1})$. These threefolds then admit a K\"ahler-Ricci soliton by Theorem~\ref{thm:DS}. See Example~\ref{ex:sym} for details of the computation and Appendix~\ref{app:code} for the implementation in SageMath.
+In Appendix~\ref{appendix1} we also give lower bounds on \(h_y(D)\) using further RIA, ensuring the positivity of $\DF_{\xi_2 e_2}(\X,\L,e_3)$ and hence of $\DF_{\xi_2 e_2}(\X,\L,v')$ for any special test configuration \((\X,\L,v')\). These threefolds then admit a K\"ahler-Ricci soliton by Theorem~\ref{thm:DS}. See Example~\ref{ex:sym} for details of the computation and Appendix~\ref{app:code} for the implementation in SageMath.
 
 For the case of threefold no. 3.23 there is no involution fixing $\deg \Phi$. In this case we take a more general approach to bound the value of the candidate \(\xi\). Here we make use of some elementary calculus. Note, that \(\xi\) is the unique solution to the equation \(\nabla_n G = 0 \), where 
 \[

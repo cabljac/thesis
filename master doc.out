@@ -20,9 +20,24 @@
 \BOOKMARK [1][-]{section.2.4}{Equivariant K-stability}{chapter.2}% 20
 \BOOKMARK [2][-]{subsection.2.4.1}{Twisted equivariant K-stability}{section.2.4}% 21
 \BOOKMARK [2][-]{subsection.2.4.2}{K-stability of T-varieties}{section.2.4}% 22
-\BOOKMARK [0][-]{chapter.3}{R\(X\) in complexity one}{}% 23
-\BOOKMARK [1][-]{section.3.1}{A short digression into convex geometry}{chapter.3}% 24
-\BOOKMARK [1][-]{section.3.2}{Proof of Theorem 4}{chapter.3}% 25
-\BOOKMARK [2][-]{subsection.3.2.1}{Product Configurations}{section.3.2}% 26
-\BOOKMARK [2][-]{subsection.3.2.2}{Non-Product Configurations}{section.3.2}% 27
-\BOOKMARK [0][-]{appendix*.30}{Bibliography}{}% 28
+\BOOKMARK [0][-]{chapter.3}{K\344hler-Ricci solitons on Fano threefolds}{}% 23
+\BOOKMARK [1][-]{section.3.1}{The method of proof}{chapter.3}% 24
+\BOOKMARK [1][-]{section.3.2}{Two examples in detail}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.3}{Barvinok Integration}{chapter.3}% 26
+\BOOKMARK [0][-]{chapter.4}{R\(X\) in complexity one}{}% 27
+\BOOKMARK [1][-]{section.4.1}{A short digression into convex geometry}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.2}{Proof of Theorem 4}{chapter.4}% 29
+\BOOKMARK [2][-]{subsection.4.2.1}{Product Configurations}{section.4.2}% 30
+\BOOKMARK [2][-]{subsection.4.2.2}{Non-Product Configurations}{section.4.2}% 31
+\BOOKMARK [0][-]{chapter.5}{K\344hler-Einstein metrics in complexity two}{}% 32
+\BOOKMARK [1][-]{section.5.1}{Chow quotient calculations}{chapter.5}% 33
+\BOOKMARK [2][-]{subsection.5.1.1}{Bidegree \(a,b\) hypersurfaces}{section.5.1}% 34
+\BOOKMARK [2][-]{subsection.5.1.2}{A wonderful compactification on the quadric}{section.5.1}% 35
+\BOOKMARK [1][-]{section.5.2}{Log canonical thresholds and Tian's criterion}{chapter.5}% 36
+\BOOKMARK [2][-]{subsection.5.2.1}{Log canonical thresholds}{section.5.2}% 37
+\BOOKMARK [2][-]{subsection.5.2.2}{Tian's alpha invariant and criterion}{section.5.2}% 38
+\BOOKMARK [2][-]{subsection.5.2.3}{Log canonical threshold bounds}{section.5.2}% 39
+\BOOKMARK [0][-]{chapter.6}{Conclusions and further work}{}% 40
+\BOOKMARK [0][-]{appendix.A}{Threefold Data}{}% 41
+\BOOKMARK [0][-]{appendix.B}{SageMath Code}{}% 42
+\BOOKMARK [0][-]{appendix*.50}{Bibliography}{}% 43

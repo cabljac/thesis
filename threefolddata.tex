@@ -11,8 +11,7 @@ In this Appendix we include data needed for the results in Chapters \ref{chap:so
 \item ``\(R(X)\)" - the calculated greatest lower bound on Ricci curvature (Tian's beta invariant) in Chapter~\ref{chap:R(X)}.
 \item ``\( \ \xi \sim \ \)" - an approximation of the K\"ahler-Ricci soliton found in Chapter~\ref{chap:sol}, representated an element of \(N_\RR\).
 \item ``\(\text{Vert}(\Delta_y)\)" - the degeneration polytope \(\Delta_y\) is given by convex hull of the columns of this matrix.
-\item ``\(n_y\)" - the outer normal to the face \(F_y\) for calculation of \(R(X)\). Note that in each case \(n_y\) does not lie in the halfspace \(N_\QQ \times \QQ^+\).
-\item ``\(h_y(\xi)\)" - a closed form of \(\vol \Delta_y \cdot \DF \).
+\item ``\(h_y(\xi)\)" - a positive multiple of the Donaldson-Futaki invariant of the test cofiguration corresponding to \(\Delta_y\) with \(\CC^*\)-action given by \(e_3 \in N'\).
 \item ``\(h_y(\xi_2) >\)" - a lower bound on \(h_y(\xi)\), found using real interval arithmetic.
 \end{itemize}
 
@@ -134,22 +133,22 @@ In this Appendix we include data needed for the results in Chapters \ref{chap:so
 }
 \end{figure}
 \begin{center}
-\begin{tabularx}{\linewidth}{ccc@{\hspace{5ex}}c@{\hspace{5ex}}c}
+\begin{tabularx}{\linewidth}{cc@{\hspace{5ex}}c@{\hspace{5ex}}c}
 \toprule
-\(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2)\) & \( h_y(\xi_2) >\) \\
+\(y\) & \(\text{Vert}(\Delta_y)\)  & \( h_y(\xi_2)\) & \( h_y(\xi_2) >\) \\
 \midrule
 \(0\) & \( \scalemath{0.8}{ \begin{pmatrix} 0 & 3 & -3 & 2 & -2 & 0 \\
 -3 & 0 & 0 & 1 & 1 & 1 \\
-1 & -2 & 1 & -1 & 1 & 1 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{1\\-1\\-2} }\) &   \(\frac{{\left({\left(2 \, \xi_{2}^{3} - 3 \, \xi_{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} + 3 \, {\left(3 \, \xi_{2}^{2} + 2\right)} e^{\left(3 \, \xi_{2}\right)} - 3 \, \xi_{2} - 3\right)} e^{\left(-3 \, \xi_{2}\right)}}{3 \, \xi_{2}^{4}}\) & \(1.087\) \\ \midrule
+1 & -2 & 1 & -1 & 1 & 1 \end{pmatrix}} \)& \(\frac{{\left({\left(2 \, \xi_{2}^{3} - 3 \, \xi_{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} + 3 \, {\left(3 \, \xi_{2}^{2} + 2\right)} e^{\left(3 \, \xi_{2}\right)} - 3 \, \xi_{2} - 3\right)} e^{\left(-3 \, \xi_{2}\right)}}{3 \, \xi_{2}^{4}}\) & \(1.087\) \\ \midrule
 \(1\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & 0 & 3 & 2 & 0 & -2 \\
 0 & -3 & 0 & 1 & 1 & 1 \\
-1 & -2 & 1 & 1 & 0 & 1 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{0\\1\\-2} }\) & \(\frac{{\left({\left(8 \, \xi_{2}^{3} + 6 \, \xi_{2}^{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} - 12 \, {\left(3 \, \xi_{2}^{2} - 3 \, \xi_{2} + 1\right)} e^{\left(3 \, \xi_{2}\right)} + 12 \, \xi_{2} + 15\right)} e^{\left(-3 \, \xi_{2}\right)}}{6 \, \xi_{2}^{4}}\) & \(2.178\) \\ \midrule
+1 & -2 & 1 & 1 & 0 & 1 \end{pmatrix}} \)& \(\frac{{\left({\left(8 \, \xi_{2}^{3} + 6 \, \xi_{2}^{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} - 12 \, {\left(3 \, \xi_{2}^{2} - 3 \, \xi_{2} + 1\right)} e^{\left(3 \, \xi_{2}\right)} + 12 \, \xi_{2} + 15\right)} e^{\left(-3 \, \xi_{2}\right)}}{6 \, \xi_{2}^{4}}\) & \(2.178\) \\ \midrule
 \(\infty\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & 0 & 2 & 0 & 0 & -2 & 3 \\
 0 & -3 & 1 & 0 & 1 & 1 & 0 \\
--1 & 2 & 1 & -1 & -1 & -1 & 2 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{0\\1\\0} }\) & \(-\frac{{\left(2 \, {\left(2 \, \xi_{2}^{3} - 3 \, \xi_{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} - 3 \, {\left(3 \, \xi_{2}^{2} - 12 \, \xi_{2} + 2\right)} e^{\left(3 \, \xi_{2}\right)} + 12 \, \xi_{2} + 12\right)} e^{\left(-3 \, \xi_{2}\right)}}{6 \, \xi_{2}^{4}}\) & \(0.4465\) \\ \midrule
+-1 & 2 & 1 & -1 & -1 & -1 & 2 \end{pmatrix}} \)& \(-\frac{{\left(2 \, {\left(2 \, \xi_{2}^{3} - 3 \, \xi_{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} - 3 \, {\left(3 \, \xi_{2}^{2} - 12 \, \xi_{2} + 2\right)} e^{\left(3 \, \xi_{2}\right)} + 12 \, \xi_{2} + 12\right)} e^{\left(-3 \, \xi_{2}\right)}}{6 \, \xi_{2}^{4}}\) & \(0.4465\) \\ \midrule
 \(\notin \{0,1,\infty\} \) & \( \scalemath{0.8}{ \begin{pmatrix} 0 & 0 & -3 & 2 & 0 & -2 & 3 \\
 0 & -3 & 0 & 1 & 1 & 1 & 0 \\
--\frac{1}{2} & 1 & 1 & 1 & 0 & 1 & 1 \end{pmatrix}} \)& \ & \(\frac{{\left({\left(8 \, \xi_{2}^{3} + 6 \, \xi_{2}^{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} - 3 \, {\left(3 \, \xi_{2}^{2} - 2\right)} e^{\left(3 \, \xi_{2}\right)} - 6 \, \xi_{2} - 3\right)} e^{\left(-3 \, \xi_{2}\right)}}{6 \, \xi_{2}^{4}}\) & \(4.151\) \\ \midrule
+-\frac{1}{2} & 1 & 1 & 1 & 0 & 1 & 1 \end{pmatrix}} \)& \(\frac{{\left({\left(8 \, \xi_{2}^{3} + 6 \, \xi_{2}^{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} - 3 \, {\left(3 \, \xi_{2}^{2} - 2\right)} e^{\left(3 \, \xi_{2}\right)} - 6 \, \xi_{2} - 3\right)} e^{\left(-3 \, \xi_{2}\right)}}{6 \, \xi_{2}^{4}}\) & \(4.151\) \\ \midrule
 \midrule
 \end{tabularx}
 \end{center}
@@ -266,22 +265,22 @@ In this Appendix we include data needed for the results in Chapters \ref{chap:so
 }
 \end{figure}
 \begin{center}
-\begin{tabularx}{\linewidth}{ccc@{\hspace{5ex}}c@{\hspace{5ex}}c}
+\begin{tabularx}{\linewidth}{cc@{\hspace{5ex}}c@{\hspace{5ex}}c}
 \toprule
-\(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2)\) & \( h_y(\xi_2) >\) \\
+\(y\) & \(\text{Vert}(\Delta_y)\)  & \( h_y(\xi_2)\) & \( h_y(\xi_2) >\) \\
 \midrule
 \(0\) & \( \scalemath{0.8}{ \begin{pmatrix} 0 & 1 & 2 & -3 & 0 & 2 & -1 \\
 -3 & 0 & -1 & 0 & 2 & 0 & 2 \\
-1 & -1 & -1 & 1 & 1 & -1 & 1 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{-2\\3\\-4} }\) &   \(\frac{{\left(12 \, \xi_{2}^{2} + {\left(4 \, \xi_{2}^{2} + 2 \, \xi_{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} + 10 \, \xi_{2} + 3\right)} e^{\left(-3 \, \xi_{2}\right)}}{8 \, \xi_{2}^{4}}\) & \(1.9509\) \\ \midrule
+1 & -1 & -1 & 1 & 1 & -1 & 1 \end{pmatrix}} \)& \(\frac{{\left(12 \, \xi_{2}^{2} + {\left(4 \, \xi_{2}^{2} + 2 \, \xi_{2} - 3\right)} e^{\left(4 \, \xi_{2}\right)} + 10 \, \xi_{2} + 3\right)} e^{\left(-3 \, \xi_{2}\right)}}{8 \, \xi_{2}^{4}}\) & \(1.9509\) \\ \midrule
 \(1\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & 0 & -1 & 2 & 0 & 2 & 0 \\
 0 & -3 & 2 & -1 & 2 & 0 & 1 \\
-1 & -2 & 1 & 0 & 1 & 1 & 0 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(-\frac{{(6  \xi_2^2 - 16  {(\xi_2^2 - \xi_2)} e^{(5  \xi_2)} + {(2  \xi_2^2 - 12  \xi_2 - 3)} e^{(4  \xi_2)} + 8  \xi_2 + 3)} e^{(-3  \xi_2)}}{8  \xi_2^{4}}\) & \(1.9410\) \\ \midrule
+1 & -2 & 1 & 0 & 1 & 1 & 0 \end{pmatrix}} \)& \(-\frac{{(6  \xi_2^2 - 16  {(\xi_2^2 - \xi_2)} e^{(5  \xi_2)} + {(2  \xi_2^2 - 12  \xi_2 - 3)} e^{(4  \xi_2)} + 8  \xi_2 + 3)} e^{(-3  \xi_2)}}{8  \xi_2^{4}}\) & \(1.9410\) \\ \midrule
 \(\infty\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & 0 & 0 & 2 & 0 & -1 & 2 \\
 0 & -3 & 2 & 0 & 0 & 2 & -1 \\
--1 & 2 & -1 & 1 & -1 & -1 & 2 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(\frac{{(3  \xi_2^2 - {(3  \xi_2^2 + 4  \xi_2 + 2)} e^{(4  \xi_2)} + 4  \xi_2 + 4  e^{(5  \xi_2)} - 4  e^{(3  \xi_2)} + 2)} e^{(-3  \xi_2)}}{4  \xi_2^4}\) & \(0.4632\) \\ \midrule
+-1 & 2 & -1 & 1 & -1 & -1 & 2 \end{pmatrix}} \)& \(\frac{{(3  \xi_2^2 - {(3  \xi_2^2 + 4  \xi_2 + 2)} e^{(4  \xi_2)} + 4  \xi_2 + 4  e^{(5  \xi_2)} - 4  e^{(3  \xi_2)} + 2)} e^{(-3  \xi_2)}}{4  \xi_2^4}\) & \(0.4632\) \\ \midrule
 \(\notin \{0,1,\infty\} \) & \( \scalemath{0.8}{ \begin{pmatrix} 0 & 0 & -3 & 2 & 2 & 1 & 0 & -1 & 0 \\
 0 & -3 & 0 & -1 & 0 & 0 & 2 & 2 & 1 \\
--\frac{1}{2} & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 0 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(\frac{{(6  \xi_2^2 + 4  {(2  \xi_2^2 - 2  \xi_2 + 1)} e^{(5  \xi_2)} - {(2  \xi_2^2 - 3  \xi_2 + 2)} e^{(4  \xi_2)} + 5  \xi_2 - 4 \, e^{(3 \, \xi_2)} + 2)} e^{(-3 \, \xi_2)}}{4 \, \xi_2^4}\) & \(4.370\) \\ \midrule
+-\frac{1}{2} & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 0 \end{pmatrix}} \) & \(\frac{{(6  \xi_2^2 + 4  {(2  \xi_2^2 - 2  \xi_2 + 1)} e^{(5  \xi_2)} - {(2  \xi_2^2 - 3  \xi_2 + 2)} e^{(4  \xi_2)} + 5  \xi_2 - 4 \, e^{(3 \, \xi_2)} + 2)} e^{(-3 \, \xi_2)}}{4 \, \xi_2^4}\) & \(4.370\) \\ \midrule
 \midrule
 \end{tabularx}
 \end{center}
@@ -406,23 +405,23 @@ In this Appendix we include data needed for the results in Chapters \ref{chap:so
 }
 \end{figure}
 \begin{center}
-\begin{tabularx}{\linewidth}{ccc@{\hspace{3ex}}c@{\hspace{2ex}}c}
+\begin{tabularx}{\linewidth}{cc@{\hspace{3ex}}c@{\hspace{2ex}}c}
 \toprule
-\(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2)\) & \( h_y(\xi_2) >\) \\
+\(y\) & \(\text{Vert}(\Delta_y)\)  & \( h_y(\xi_2)\) & \( h_y(\xi_2) >\) \\
 \midrule
 \(0\) & \( \scalemath{0.8}{ \begin{pmatrix} -1 & 3 & -3 & 1 & 1 & -1 & 2 & -2 \\
 -2 & 0 & 0 & -2 & 1 & 1 & 1 & 1 \\
-1 & -2 & 1 & 0 & 0 & 1 & -1 & 1 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) &   \( \frac{{\left(3 \, \xi_{2}^{2} + 2 \, {\left(\xi_{2}^{3} - 3 \, \xi_{2} - 3\right)} e^{\left(3 \, \xi_{2}\right)} + 6 \, {\left(3 \, \xi_{2}^{2} + 2\right)} e^{\left(2 \, \xi_{2}\right)} - 6\right)} e^{\left(-2 \, \xi_{2}\right)}}{6 \, \xi_{2}^{4}}\) & \(0.3681\) \\ \midrule
+1 & -2 & 1 & 0 & 0 & 1 & -1 & 1 \end{pmatrix}} \) &   \( \frac{{\left(3 \, \xi_{2}^{2} + 2 \, {\left(\xi_{2}^{3} - 3 \, \xi_{2} - 3\right)} e^{\left(3 \, \xi_{2}\right)} + 6 \, {\left(3 \, \xi_{2}^{2} + 2\right)} e^{\left(2 \, \xi_{2}\right)} - 6\right)} e^{\left(-2 \, \xi_{2}\right)}}{6 \, \xi_{2}^{4}}\) & \(0.3681\) \\ \midrule
 \(1\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -1 & 3 & 2 & 1 & 1 & -2 & -1 \\
 0 & -2 & 0 & 1 & 1 & -2 & 1 & 1 \\
-1 & -1 & 1 & 1 & \frac{1}{2} & -1 & 1 & \frac{1}{2} \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \( \frac{{\left(12 \, \xi_{2}^{2} - {\left(14 \, \xi_{2}^{3} + 15 \, \xi_{2}^{2} - 6\right)} e^{\left(3 \, \xi_{2}\right)} + 24 \, {\left(3 \, \xi_{2}^{2} - 3 \, \xi_{2} + 1\right)} e^{\left(2 \, \xi_{2}\right)} + 6 \, \xi_{2} - 30\right)} e^{\left(-2 \, \xi_{2}\right)}}{12 \, \xi_{2}^{4}}\) & \(2.516\) \\
+1 & -1 & 1 & 1 & \frac{1}{2} & -1 & 1 & \frac{1}{2} \end{pmatrix}} \) & \( \frac{{\left(12 \, \xi_{2}^{2} - {\left(14 \, \xi_{2}^{3} + 15 \, \xi_{2}^{2} - 6\right)} e^{\left(3 \, \xi_{2}\right)} + 24 \, {\left(3 \, \xi_{2}^{2} - 3 \, \xi_{2} + 1\right)} e^{\left(2 \, \xi_{2}\right)} + 6 \, \xi_{2} - 30\right)} e^{\left(-2 \, \xi_{2}\right)}}{12 \, \xi_{2}^{4}}\) & \(2.516\) \\
 \midrule
 \(\infty\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -1 & 1 & 2 & -1 & 1 & 1 & -1 & -2 & 3 \\
 0 & -2 & -2 & 1 & 0 & 0 & 1 & 1 & 1 & 0 \\
--1 & 1 & 2 & 1 & -1 & 0 & 0 & -1 & -1 & 2 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(\frac{{\left(9 \, \xi_{2}^{2} - 2 \, {\left(\xi_{2}^{3} - 3 \, \xi_{2} - 3\right)} e^{\left(3 \, \xi_{2}\right)} + 6 \, {\left(\xi_{2}^{2} - 6 \, \xi_{2} + 1\right)} e^{\left(2 \, \xi_{2}\right)} - 12\right)} e^{\left(-2 \, \xi_{2}\right)}}{6 \, \xi_{2}^{4}}\) & \(1.013\) \\ \midrule
+-1 & 1 & 2 & 1 & -1 & 0 & 0 & -1 & -1 & 2 \end{pmatrix}} \) & \(\frac{{\left(9 \, \xi_{2}^{2} - 2 \, {\left(\xi_{2}^{3} - 3 \, \xi_{2} - 3\right)} e^{\left(3 \, \xi_{2}\right)} + 6 \, {\left(\xi_{2}^{2} - 6 \, \xi_{2} + 1\right)} e^{\left(2 \, \xi_{2}\right)} - 12\right)} e^{\left(-2 \, \xi_{2}\right)}}{6 \, \xi_{2}^{4}}\) & \(1.013\) \\ \midrule
 \(\notin \{0,1,\infty\} \) & \( \scalemath{0.8}{ \begin{pmatrix} -1 & -1 & -3 & 2 & 1 & 3 & 1 & -2 & -1 & 1 \\
 0 & -2 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & -2 \\
-0 & 1 & 1 & 1 & \frac{1}{2} & 1 & 0 & 1 & \frac{1}{2} & 1 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(\frac{{\left(12 \, \xi_{2}^{2} + {\left(14 \, \xi_{2}^{3} + 15 \, \xi_{2}^{2} - 6\right)} e^{\left(3 \, \xi_{2}\right)} - 12 \, {\left(2 \, \xi_{2}^{2} - 1\right)} e^{\left(2 \, \xi_{2}\right)} - 6 \, \xi_{2} - 6\right)} e^{\left(-2 \, \xi_{2}\right)}}{12 \, \xi_{2}^{4}}\) & \(3.946\) \\ \midrule
+0 & 1 & 1 & 1 & \frac{1}{2} & 1 & 0 & 1 & \frac{1}{2} & 1 \end{pmatrix}} \) & \(\frac{{\left(12 \, \xi_{2}^{2} + {\left(14 \, \xi_{2}^{3} + 15 \, \xi_{2}^{2} - 6\right)} e^{\left(3 \, \xi_{2}\right)} - 12 \, {\left(2 \, \xi_{2}^{2} - 1\right)} e^{\left(2 \, \xi_{2}\right)} - 6 \, \xi_{2} - 6\right)} e^{\left(-2 \, \xi_{2}\right)}}{12 \, \xi_{2}^{4}}\) & \(3.946\) \\ \midrule
 \midrule
 \end{tabularx}
 \end{center}
@@ -548,22 +547,22 @@ In this Appendix we include data needed for the results in Chapters \ref{chap:so
 }
 \end{figure}
 \begin{center}
-\begin{tabularx}{\linewidth}{ccc@{\hspace{3ex}}c@{\hspace{2ex}}c}
+\begin{tabularx}{\linewidth}{cc@{\hspace{3ex}}c@{\hspace{2ex}}c}
 \toprule
-\(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2)\) & \( h_y(\xi_2) \in\) \\
+\(y\) & \(\text{Vert}(\Delta_y)\)  & \( h_y(\xi_2)\) & \( h_y(\xi_2) \in\) \\
 \midrule
 \(0\) & \( \scalemath{0.8}{ \begin{pmatrix} -2 & 1 & -3 & 3 & 1 & -1 & 3 & -1 & 0 \\
 1 & -1 & 3 & -1 & -2 & 3 & -3 & 0 & -1 \\
-1 & -1 & 1 & -1 & 0 & 1 & -1 & 1 & 0 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) &   \(-\frac{{\left(\xi_{2}^{3} - \xi_{2}^{2} - 2 \, {\left(2 \, \xi_{2}^{2} - 4 \, \xi_{2} + 3\right)} e^{\xi_{2}} - 2 \, \xi_{2} + 6\right)} e^{\left(-\xi_{2}\right)}}{2 \, \xi_{2}^{4}}\) & \(0.6910\) \\ \midrule
+1 & -1 & 1 & -1 & 0 & 1 & -1 & 1 & 0 \end{pmatrix}} \) &   \(-\frac{{\left(\xi_{2}^{3} - \xi_{2}^{2} - 2 \, {\left(2 \, \xi_{2}^{2} - 4 \, \xi_{2} + 3\right)} e^{\xi_{2}} - 2 \, \xi_{2} + 6\right)} e^{\left(-\xi_{2}\right)}}{2 \, \xi_{2}^{4}}\) & \(0.6910\) \\ \midrule
 \(1\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 3 & 1 & 3 & -1 & -1 & 0 & -1 \\
 3 & 1 & -3 & -2 & -1 & 1 & 3 & -1 & 0 \\
--1 & 0 & 1 & 1 & 1 & -1 & -1 & 1 & 0 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(-\frac{{\left(\xi_{2}^{3} - \xi_{2}^{2} - 2 \, {\left(2 \, \xi_{2}^{2} - 4 \, \xi_{2} + 3\right)} e^{\xi_{2}} - 2 \, \xi_{2} + 6\right)} e^{\left(-\xi_{2}\right)}}{2 \, \xi_{2}^{4}}\) & \(0.6910\) \\ \midrule
+-1 & 0 & 1 & 1 & 1 & -1 & -1 & 1 & 0 \end{pmatrix}} \) & \(-\frac{{\left(\xi_{2}^{3} - \xi_{2}^{2} - 2 \, {\left(2 \, \xi_{2}^{2} - 4 \, \xi_{2} + 3\right)} e^{\xi_{2}} - 2 \, \xi_{2} + 6\right)} e^{\left(-\xi_{2}\right)}}{2 \, \xi_{2}^{4}}\) & \(0.6910\) \\ \midrule
 \(\infty\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & -1 & 3 & 1 & 3 & 0 & -1 \\
 3 & 1 & 3 & -3 & -2 & -1 & -1 & 0 \\
-1 & 0 & 1 & 1 & 0 & 1 & -\frac{1}{2} & -\frac{1}{2} \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(\frac{{\left(5 \, \xi_{2}^{3} + 9 \, \xi_{2}^{2} + 6 \, {\left(8 \, \xi_{2}^{2} - 4 \, \xi_{2} + 1\right)} e^{\left(3 \, \xi_{2}\right)} - 24 \, {\left(6 \, \xi_{2}^{2} - 8 \, \xi_{2} + 5\right)} e^{\xi_{2}} - 66 \, \xi_{2} + 114\right)} e^{\left(-\xi_{2}\right)}}{24 \, \xi_{2}^{4}}\) & \(0.6910\) \\ \midrule
+1 & 0 & 1 & 1 & 0 & 1 & -\frac{1}{2} & -\frac{1}{2} \end{pmatrix}} \) & \(\frac{{\left(5 \, \xi_{2}^{3} + 9 \, \xi_{2}^{2} + 6 \, {\left(8 \, \xi_{2}^{2} - 4 \, \xi_{2} + 1\right)} e^{\left(3 \, \xi_{2}\right)} - 24 \, {\left(6 \, \xi_{2}^{2} - 8 \, \xi_{2} + 5\right)} e^{\xi_{2}} - 66 \, \xi_{2} + 114\right)} e^{\left(-\xi_{2}\right)}}{24 \, \xi_{2}^{4}}\) & \(0.6910\) \\ \midrule
 \(\infty\) & \( \scalemath{0.8}{ \begin{pmatrix} -1 & -3 & -2 & 0 & 3 & 1 & -1 & 3 & 1 & -1 \\
 1 & 3 & 1 & -1 & -1 & -1 & 3 & -3 & -2 & 0 \\
-0 & 1 & 1 & \frac{1}{2} & 1 & 0 & 1 & 1 & 1 & \frac{1}{2} \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(-\frac{{\left(19 \, \xi_{2}^{3} - 33 \, \xi_{2}^{2} - 6 \, {\left(8 \, \xi_{2}^{2} - 4 \, \xi_{2} + 1\right)} e^{\left(3 \, \xi_{2}\right)} + 24 \, {\left(2 \, \xi_{2}^{2} - 1\right)} e^{\xi_{2}} + 18 \, \xi_{2} + 30\right)} e^{\left(-\xi_{2}\right)}}{24 \, \xi_{2}^{4}}\) & \(3.907\) \\ \midrule
+0 & 1 & 1 & \frac{1}{2} & 1 & 0 & 1 & 1 & 1 & \frac{1}{2} \end{pmatrix}} \) & \(-\frac{{\left(19 \, \xi_{2}^{3} - 33 \, \xi_{2}^{2} - 6 \, {\left(8 \, \xi_{2}^{2} - 4 \, \xi_{2} + 1\right)} e^{\left(3 \, \xi_{2}\right)} + 24 \, {\left(2 \, \xi_{2}^{2} - 1\right)} e^{\xi_{2}} + 18 \, \xi_{2} + 30\right)} e^{\left(-\xi_{2}\right)}}{24 \, \xi_{2}^{4}}\) & \(3.907\) \\ \midrule
 \midrule
 \end{tabularx}
 \end{center}
@@ -687,22 +686,22 @@ In this Appendix we include data needed for the results in Chapters \ref{chap:so
 }
 \end{figure}
 \begin{center}
-\begin{tabularx}{\linewidth}{ccc@{\hspace{5ex}}c@{\hspace{5ex}}c}
+\begin{tabularx}{\linewidth}{cc@{\hspace{5ex}}c@{\hspace{5ex}}c}
 \toprule
-\(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2)\) & \( h_y(\xi_2) >\) \\
+\(y\) & \(\text{Vert}(\Delta_y)\)  & \( h_y(\xi_2)\) & \( h_y(\xi_2) >\) \\
 \midrule
 \(0\) & \( \scalemath{0.8}{ \begin{pmatrix} 3 & -3 & 3 & -3 & 1 & 0 & 0 & -1 \\
 0 & 0 & -1 & -1 & 1 & -1 & 1 & 1 \\
--2 & 1 & -2 & 1 & 0 & 1 & 1 & 1 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) &   \(\frac{9 \, \xi_{2}^{2} + {\left(\xi_{2}^{3} + 3 \, \xi_{2}^{2} - 24\right)} e^{\xi_{2}} + 24 \, \xi_{2} + 24}{3 \, \xi_{2}^{4}}\) & \(0.8323\) \\ \midrule
+-2 & 1 & -2 & 1 & 0 & 1 & 1 & 1 \end{pmatrix}} \) &   \(\frac{9 \, \xi_{2}^{2} + {\left(\xi_{2}^{3} + 3 \, \xi_{2}^{2} - 24\right)} e^{\xi_{2}} + 24 \, \xi_{2} + 24}{3 \, \xi_{2}^{4}}\) & \(0.8323\) \\ \midrule
 \(1\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -1 & -3 & 3 & 1 & 3 & 0 & 0 \\
 0 & 1 & -1 & 0 & 1 & -1 & -1 & 1 \\
-1 & 0 & 1 & 1 & 0 & 1 & -\frac{1}{2} & -\frac{1}{2} \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(-\frac{{\left(27 \, \xi_{2}^{3} + {\left(\xi_{2}^{3} - 24 \, \xi_{2} - 96\right)} e^{\left(2 \, \xi_{2}\right)} + 24 \, {\left(3 \, \xi_{2}^{2} + 5 \, \xi_{2} + 4\right)} e^{\xi_{2}}\right)} e^{\left(-\xi_{2}\right)}}{12 \, \xi_{2}^{4}}\) & \(2.164\) \\ \midrule
+1 & 0 & 1 & 1 & 0 & 1 & -\frac{1}{2} & -\frac{1}{2} \end{pmatrix}} \) & \(-\frac{{\left(27 \, \xi_{2}^{3} + {\left(\xi_{2}^{3} - 24 \, \xi_{2} - 96\right)} e^{\left(2 \, \xi_{2}\right)} + 24 \, {\left(3 \, \xi_{2}^{2} + 5 \, \xi_{2} + 4\right)} e^{\xi_{2}}\right)} e^{\left(-\xi_{2}\right)}}{12 \, \xi_{2}^{4}}\) & \(2.164\) \\ \midrule
 \(\infty\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -3 & 3 & 1 & -1 & 0 & 0 & 0 & 3 \\
 0 & -1 & 0 & 1 & 1 & 0 & -1 & 1 & -1 \\
--1 & -1 & 2 & 1 & 0 & -1 & -1 & 0 & 2 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \( \frac{9 \, \xi_{2}^{2} + {\left(\xi_{2}^{3} + 3 \, \xi_{2}^{2} - 24\right)} e^{\xi_{2}} + 24 \, \xi_{2} + 24}{6 \, \xi_{2}^{4}}\) & \(0.4161\) \\ \midrule
+-1 & -1 & 2 & 1 & 0 & -1 & -1 & 0 & 2 \end{pmatrix}} \) & \( \frac{9 \, \xi_{2}^{2} + {\left(\xi_{2}^{3} + 3 \, \xi_{2}^{2} - 24\right)} e^{\xi_{2}} + 24 \, \xi_{2} + 24}{6 \, \xi_{2}^{4}}\) & \(0.4161\) \\ \midrule
 \(\notin \{0,1,\infty\} \) & \( \scalemath{0.8}{ \begin{pmatrix} 0 & -3 & -3 & 3 & 1 & 0 & -1 & 3 & 0 \\
 0 & -1 & 0 & -1 & 1 & 1 & 1 & 0 & -1 \\
--\frac{1}{2} & 1 & 1 & 1 & 1 & \frac{1}{2} & 1 & 1 & -\frac{1}{2} \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(-\frac{{\left(27 \, \xi_{2}^{3} - {\left(5 \, \xi_{2}^{3} + 18 \, \xi_{2}^{2} + 24 \, \xi_{2} - 48\right)} e^{\left(2 \, \xi_{2}\right)} + 6 \, {\left(3 \, \xi_{2}^{2} - 4 \, \xi_{2} - 8\right)} e^{\xi_{2}}\right)} e^{\left(-\xi_{2}\right)}}{12 \, \xi_{2}^{4}}\) & \(3.419\) \\ \midrule
+-\frac{1}{2} & 1 & 1 & 1 & 1 & \frac{1}{2} & 1 & 1 & -\frac{1}{2} \end{pmatrix}} \) & \(-\frac{{\left(27 \, \xi_{2}^{3} - {\left(5 \, \xi_{2}^{3} + 18 \, \xi_{2}^{2} + 24 \, \xi_{2} - 48\right)} e^{\left(2 \, \xi_{2}\right)} + 6 \, {\left(3 \, \xi_{2}^{2} - 4 \, \xi_{2} - 8\right)} e^{\xi_{2}}\right)} e^{\left(-\xi_{2}\right)}}{12 \, \xi_{2}^{4}}\) & \(3.419\) \\ \midrule
 \midrule
 \end{tabularx}
 \end{center}
@@ -829,14 +828,14 @@ In this Appendix we include data needed for the results in Chapters \ref{chap:so
 }
 \end{figure}
 \begin{center}
-\begin{tabularx}{\linewidth}{ccc@{\hspace{5ex}}c@{\hspace{5ex}}c}
+\begin{tabularx}{\linewidth}{cc@{\hspace{5ex}}c@{\hspace{5ex}}c}
 \toprule
-\(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2)\) & \( h_y(\xi_2) >\) \\
+\(y\) & \(\text{Vert}(\Delta_y)\)  & \( h_y(\xi_2)\) & \( h_y(\xi_2) >\) \\
 \midrule
-\(0\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) &   \( \frac{2 \, {\left({\left(\xi_{2} - 1\right)} e^{\left(2 \, \xi_{2}\right)} + \xi_{2} + 1\right)} e^{\left(-2 \, \xi_{2}\right)}}{\xi_{2}^{3}}\) & \(0.8793\) \\ \midrule
-\(1\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \( -\frac{{\left(12 \, \xi_{2}^{2} - {\left(7 \, \xi_{2}^{3} + 3 \, \xi_{2}^{2} - 6 \, \xi_{2} + 6\right)} e^{\left(3 \, \xi_{2}\right)} + 12 \, {\left(2 \, \xi_{2}^{2} - 2 \, \xi_{2} + 1\right)} e^{\left(2 \, \xi_{2}\right)} + 12 \, \xi_{2} - 6\right)} e^{\left(-2 \, \xi_{2}\right)}}{6 \, \xi_{2}^{4}}\) & \(1.2944\) \\ \midrule
-\(\infty\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \( \frac{2 \, {\left({\left(\xi_{2} - 1\right)} e^{\left(2 \, \xi_{2}\right)} + \xi_{2} + 1\right)} e^{\left(-2 \, \xi_{2}\right)}}{\xi_{2}^{3}}\) & \(0.8793\) \\ \midrule
-\(\notin \{0,1,\infty\} \) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \( \frac{{\left(12 \, \xi_{2}^{2} + {\left(7 \, \xi_{2}^{3} + 3 \, \xi_{2}^{2} - 6 \, \xi_{2} + 6\right)} e^{\left(3 \, \xi_{2}\right)} + 12 \, \xi_{2} - 12 \, e^{\left(2 \, \xi_{2}\right)} + 6\right)} e^{\left(-2 \, \xi_{2}\right)}}{6 \, \xi_{2}^{4}}\) & \(3.0544\) \\ \midrule
+\(0\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \) &   \( \frac{2 \, {\left({\left(\xi_{2} - 1\right)} e^{\left(2 \, \xi_{2}\right)} + \xi_{2} + 1\right)} e^{\left(-2 \, \xi_{2}\right)}}{\xi_{2}^{3}}\) & \(0.8793\) \\ \midrule
+\(1\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \) & \( -\frac{{\left(12 \, \xi_{2}^{2} - {\left(7 \, \xi_{2}^{3} + 3 \, \xi_{2}^{2} - 6 \, \xi_{2} + 6\right)} e^{\left(3 \, \xi_{2}\right)} + 12 \, {\left(2 \, \xi_{2}^{2} - 2 \, \xi_{2} + 1\right)} e^{\left(2 \, \xi_{2}\right)} + 12 \, \xi_{2} - 6\right)} e^{\left(-2 \, \xi_{2}\right)}}{6 \, \xi_{2}^{4}}\) & \(1.2944\) \\ \midrule
+\(\infty\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \) & \( \frac{2 \, {\left({\left(\xi_{2} - 1\right)} e^{\left(2 \, \xi_{2}\right)} + \xi_{2} + 1\right)} e^{\left(-2 \, \xi_{2}\right)}}{\xi_{2}^{3}}\) & \(0.8793\) \\ \midrule
+\(\notin \{0,1,\infty\} \) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \) & \( \frac{{\left(12 \, \xi_{2}^{2} + {\left(7 \, \xi_{2}^{3} + 3 \, \xi_{2}^{2} - 6 \, \xi_{2} + 6\right)} e^{\left(3 \, \xi_{2}\right)} + 12 \, \xi_{2} - 12 \, e^{\left(2 \, \xi_{2}\right)} + 6\right)} e^{\left(-2 \, \xi_{2}\right)}}{6 \, \xi_{2}^{4}}\) & \(3.0544\) \\ \midrule
 \midrule
 \end{tabularx}
 \end{center}
@@ -961,14 +960,14 @@ In this Appendix we include data needed for the results in Chapters \ref{chap:so
 }
 \end{figure}
 \begin{center}
-\begin{tabularx}{\linewidth}{ccc@{\hspace{5ex}}c@{\hspace{5ex}}c}
+\begin{tabularx}{\linewidth}{cc@{\hspace{5ex}}c@{\hspace{5ex}}c}
 \toprule
-\(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2)\) & \( h_y(\xi_2) >\) \\
+\(y\) & \(\text{Vert}(\Delta_y)\)  & \( h_y(\xi_2)\) & \( h_y(\xi_2) >\) \\
 \midrule
-\(0\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) &   \(\frac{4 \, \xi_{2}^{2} + {\left(\xi_{2}^{3} + \xi_{2}^{2} - 2 \, \xi_{2} - 6\right)} e^{\xi_{2}} + 8 \, \xi_{2} + 6}{2 \, \xi_{2}^{4}}\) & \(0.6636\) \\ \midrule
-\(1\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(\frac{4 \, \xi_{2}^{2} + {\left(\xi_{2}^{3} + \xi_{2}^{2} - 2 \, \xi_{2} - 6\right)} e^{\xi_{2}} + 8 \, \xi_{2} + 6}{2 \, \xi_{2}^{4}}\) & \(0.6636\) \\ \midrule
-\(\infty\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(-\frac{{\left(4 \, \xi_{2}^{3} + {\left(\xi_{2}^{3} - 6 \, \xi_{2} - 12\right)} e^{\left(2 \, \xi_{2}\right)} + 6 \, {\left(2 \, \xi_{2}^{2} + 3 \, \xi_{2} + 2\right)} e^{\xi_{2}}\right)} e^{\left(-\xi_{2}\right)}}{3 \, \xi_{2}^{4}}\) & \(1.103\) \\ \midrule
-\(\notin \{0,1,\infty\} \) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(-\frac{{\left(4 \, \xi_{2}^{3} - {\left(2 \, \xi_{2}^{3} + 3 \, \xi_{2}^{2} - 6\right)} e^{\left(2 \, \xi_{2}\right)} - 6 \, {\left(\xi_{2} + 1\right)} e^{\xi_{2}}\right)} e^{\left(-\xi_{2}\right)}}{3 \, \xi_{2}^{4}}\) & \(2.442\) \\ \midrule
+\(0\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \) &   \(\frac{4 \, \xi_{2}^{2} + {\left(\xi_{2}^{3} + \xi_{2}^{2} - 2 \, \xi_{2} - 6\right)} e^{\xi_{2}} + 8 \, \xi_{2} + 6}{2 \, \xi_{2}^{4}}\) & \(0.6636\) \\ \midrule
+\(1\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \) & \(\frac{4 \, \xi_{2}^{2} + {\left(\xi_{2}^{3} + \xi_{2}^{2} - 2 \, \xi_{2} - 6\right)} e^{\xi_{2}} + 8 \, \xi_{2} + 6}{2 \, \xi_{2}^{4}}\) & \(0.6636\) \\ \midrule
+\(\infty\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \) & \(-\frac{{\left(4 \, \xi_{2}^{3} + {\left(\xi_{2}^{3} - 6 \, \xi_{2} - 12\right)} e^{\left(2 \, \xi_{2}\right)} + 6 \, {\left(2 \, \xi_{2}^{2} + 3 \, \xi_{2} + 2\right)} e^{\xi_{2}}\right)} e^{\left(-\xi_{2}\right)}}{3 \, \xi_{2}^{4}}\) & \(1.103\) \\ \midrule
+\(\notin \{0,1,\infty\} \) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & -2 & 2 & 1 & -1 & 0 \\ 0 & 1 & 1 & 0 & -3 & 1 \\ 1 & 1 & -1 & -2 & 1 & 1\end{pmatrix}} \) & \(-\frac{{\left(4 \, \xi_{2}^{3} - {\left(2 \, \xi_{2}^{3} + 3 \, \xi_{2}^{2} - 6\right)} e^{\left(2 \, \xi_{2}\right)} - 6 \, {\left(\xi_{2} + 1\right)} e^{\xi_{2}}\right)} e^{\left(-\xi_{2}\right)}}{3 \, \xi_{2}^{4}}\) & \(2.442\) \\ \midrule
 \midrule
 \end{tabularx}
 \end{center}
@@ -1061,7 +1060,7 @@ In this Appendix we include data needed for the results in Chapters \ref{chap:so
 \begin{tabularx}{\linewidth}{clcc}
 \toprule
 \midrule
-\textbf{Name:} & \ 3.23 \hspace{0.3\linewidth} & \textbf{Description:} & $ \begin{matrix}\text{Blow up of }Q \text{ in a point and strict} \\ \ \ \ \text{transform of line passing through.} \end{matrix} $ \\
+\textbf{Name:} & \ 3.23 \hspace{0.3\linewidth} & \textbf{Description:} & $ \begin{matrix}\text{Blow up of }Q \text{ in a point and strict} \\ \ \ \ \text{transform of line passing through} \end{matrix} $ \\
 \midrule
 \ & \ & \ $ R(X) = 168/221$ , & $\xi \sim (0.26618,0.67164)$
 \end{tabularx}
@@ -1171,22 +1170,22 @@ In this Appendix we include data needed for the results in Chapters \ref{chap:so
 }
 \end{figure}
 \begin{center}
-\begin{tabularx}{\linewidth}{ccc@{\hspace{5ex}}c}
+\begin{tabularx}{\linewidth}{cc@{\hspace{5ex}}c}
 \toprule
-\(y\) & \(\text{Vert}(\Delta_y)\) & \(n_y\) & \( h_y(\xi_2) > \) \\
+\(y\) & \(\text{Vert}(\Delta_y)\)  & \( h_y(\xi_1, \xi_2) > \) \\
 \midrule
 \(0\) & \( \scalemath{0.8}{ \begin{pmatrix} 0 & 2 & 1 & -3 & -2 & 0 & 1 & 0 & 2 \\
 -3 & -1 & 0 & 0 & 1 & 1 & 1 & 1 & 0 \\
-1 & -1 & -1 & 1 & 1 & 1 & 0 & 0 & -1 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(1.2766\) \\ \midrule
+1 & -1 & -1 & 1 & 1 & 1 & 0 & 0 & -1 \end{pmatrix}} \) & \(1.2766\) \\ \midrule
 \(1\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & 0 & -2 & 2 & 1 & 2 & 0 \\
 0 & -3 & 1 & 0 & 1 & -1 & 1 \\
-1 & -2 & 1 & 1 & 1 & 0 & 0 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(1.8402\) \\ \midrule
+1 & -2 & 1 & 1 & 1 & 0 & 0 \end{pmatrix}} \) & \(1.8402\) \\ \midrule
 \(\infty\) & \( \scalemath{0.8}{ \begin{pmatrix} -3 & 0 & 0 & 2 & 1 & 0 & -2 & 0 & 2 \\
 0 & -3 & 0 & 0 & 1 & 1 & 1 & 1 & -1 \\
--1 & 2 & -1 & 1 & 0 & -1 & -1 & 0 & 2 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(0.1005\) \\ \midrule
+-1 & 2 & -1 & 1 & 0 & -1 & -1 & 0 & 2 \end{pmatrix}} \) & \(0.1005\) \\ \midrule
 \(\notin \{0,1,\infty\} \) & \( \scalemath{0.8}{ \begin{pmatrix} 0 & 0 & -3 & 2 & 1 & 1 & 2 & -2 & 0 \\
 0 & -3 & 0 & -1 & 1 & 0 & 0 & 1 & 1 \\
--\frac{1}{2} & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 0 \end{pmatrix}} \)& \(\scalemath{0.8}{ \colvec{a\\b\\c} }\) & \(3.4443\) \\ \midrule
+-\frac{1}{2} & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 0 \end{pmatrix}} \) & \(3.4443\) \\ \midrule
 \midrule
 \end{tabularx}
 \end{center}

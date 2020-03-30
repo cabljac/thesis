@@ -26,9 +26,24 @@
 \contentsline {section}{\numberline {2.4}Equivariant $K$-stability}{40}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Twisted equivariant $K$-stability}{40}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}$K$-stability of $T$-varieties}{42}{subsection.2.4.2}
-\contentsline {chapter}{\numberline {3}$R(X)$ in complexity one}{44}{chapter.3}
-\contentsline {section}{\numberline {3.1}A short digression into convex geometry}{47}{section.3.1}
-\contentsline {section}{\numberline {3.2}Proof of Theorem 4}{50}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Product Configurations}{50}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Non-Product Configurations}{50}{subsection.3.2.2}
-\contentsline {chapter}{Bibliography}{52}{appendix*.30}
+\contentsline {chapter}{\numberline {3}K\"ahler-Ricci solitons on Fano threefolds}{44}{chapter.3}
+\contentsline {section}{\numberline {3.1}The method of proof}{44}{section.3.1}
+\contentsline {section}{\numberline {3.2}Two examples in detail}{48}{section.3.2}
+\contentsline {section}{\numberline {3.3}Barvinok Integration}{52}{section.3.3}
+\contentsline {chapter}{\numberline {4}$R(X)$ in complexity one}{56}{chapter.4}
+\contentsline {section}{\numberline {4.1}A short digression into convex geometry}{60}{section.4.1}
+\contentsline {section}{\numberline {4.2}Proof of Theorem 4}{63}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Product Configurations}{63}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Non-Product Configurations}{63}{subsection.4.2.2}
+\contentsline {chapter}{\numberline {5}K\"ahler-Einstein metrics in complexity two}{65}{chapter.5}
+\contentsline {section}{\numberline {5.1}Chow quotient calculations}{66}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Bidegree $(a,b)$ hypersurfaces}{66}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}A wonderful compactification on the quadric}{69}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Log canonical thresholds and Tian's criterion}{72}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Log canonical thresholds}{72}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Tian's alpha invariant and criterion}{73}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Log canonical threshold bounds}{76}{subsection.5.2.3}
+\contentsline {chapter}{\numberline {6}Conclusions and further work}{78}{chapter.6}
+\contentsline {chapter}{\numberline {A}Threefold Data}{80}{appendix.A}
+\contentsline {chapter}{\numberline {B}SageMath Code}{89}{appendix.B}
+\contentsline {chapter}{Bibliography}{93}{appendix*.50}
